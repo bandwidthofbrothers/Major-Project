@@ -26,9 +26,10 @@ Partial Class FormMainMenu
         '
         'FormMainMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(282, 253)
+        Me.ClientSize = New System.Drawing.Size(317, 316)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FormMainMenu"
         Me.Text = "User Story Application"
         Me.ResumeLayout(False)
