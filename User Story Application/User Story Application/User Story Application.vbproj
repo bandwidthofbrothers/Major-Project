@@ -72,10 +72,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Main Menu.vb">
+    <Compile Include="Interface\Main Menu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main Menu.Designer.vb">
+    <Compile Include="Interface\Main Menu.Designer.vb">
       <DependentUpon>Main Menu.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
@@ -96,7 +96,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Main Menu.resx">
+    <EmbeddedResource Include="Interface\Main Menu.resx">
       <DependentUpon>Main Menu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -117,6 +117,12 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Business\" />
+    <Folder Include="Database\" />
+    <Folder Include="Reports\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
