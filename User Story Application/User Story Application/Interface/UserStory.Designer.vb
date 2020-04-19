@@ -29,6 +29,14 @@ Partial Class UserStory
         Me.PriorityLbl = New System.Windows.Forms.Label()
         Me.StatusLbl = New System.Windows.Forms.Label()
         Me.DescriptionLbl = New System.Windows.Forms.Label()
+        Me.TitleTextbox = New System.Windows.Forms.TextBox()
+        Me.UserRoleComboBox = New System.Windows.Forms.ComboBox()
+        Me.StartDate = New System.Windows.Forms.DateTimePicker()
+        Me.EndDate = New System.Windows.Forms.DateTimePicker()
+        Me.StatusComboBox = New System.Windows.Forms.ComboBox()
+        Me.PriorityComboBox = New System.Windows.Forms.ComboBox()
+        Me.DescriptionTextBox = New System.Windows.Forms.TextBox()
+        Me.RecordUserStoryBtn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'UserStoryLbl
@@ -75,7 +83,7 @@ Partial Class UserStory
         '
         Me.PriorityLbl.AutoSize = True
         Me.PriorityLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PriorityLbl.Location = New System.Drawing.Point(301, 170)
+        Me.PriorityLbl.Location = New System.Drawing.Point(288, 170)
         Me.PriorityLbl.Name = "PriorityLbl"
         Me.PriorityLbl.Size = New System.Drawing.Size(80, 26)
         Me.PriorityLbl.TabIndex = 4
@@ -101,11 +109,86 @@ Partial Class UserStory
         Me.DescriptionLbl.TabIndex = 6
         Me.DescriptionLbl.Text = "User Story Description"
         '
+        'TitleTextbox
+        '
+        Me.TitleTextbox.Location = New System.Drawing.Point(25, 73)
+        Me.TitleTextbox.Multiline = True
+        Me.TitleTextbox.Name = "TitleTextbox"
+        Me.TitleTextbox.Size = New System.Drawing.Size(198, 59)
+        Me.TitleTextbox.TabIndex = 7
+        '
+        'UserRoleComboBox
+        '
+        Me.UserRoleComboBox.FormattingEnabled = True
+        Me.UserRoleComboBox.Items.AddRange(New Object() {"Admin", "Cashier", "Manager"})
+        Me.UserRoleComboBox.Location = New System.Drawing.Point(293, 73)
+        Me.UserRoleComboBox.Name = "UserRoleComboBox"
+        Me.UserRoleComboBox.Size = New System.Drawing.Size(138, 21)
+        Me.UserRoleComboBox.TabIndex = 8
+        '
+        'StartDate
+        '
+        Me.StartDate.Location = New System.Drawing.Point(476, 74)
+        Me.StartDate.Name = "StartDate"
+        Me.StartDate.Size = New System.Drawing.Size(156, 20)
+        Me.StartDate.TabIndex = 9
+        '
+        'EndDate
+        '
+        Me.EndDate.Location = New System.Drawing.Point(661, 74)
+        Me.EndDate.Name = "EndDate"
+        Me.EndDate.Size = New System.Drawing.Size(156, 20)
+        Me.EndDate.TabIndex = 10
+        '
+        'StatusComboBox
+        '
+        Me.StatusComboBox.FormattingEnabled = True
+        Me.StatusComboBox.Items.AddRange(New Object() {"In-Progress", "Complete"})
+        Me.StatusComboBox.Location = New System.Drawing.Point(488, 213)
+        Me.StatusComboBox.Name = "StatusComboBox"
+        Me.StatusComboBox.Size = New System.Drawing.Size(138, 21)
+        Me.StatusComboBox.TabIndex = 11
+        '
+        'PriorityComboBox
+        '
+        Me.PriorityComboBox.FormattingEnabled = True
+        Me.PriorityComboBox.Items.AddRange(New Object() {"Low", "Medium", "High"})
+        Me.PriorityComboBox.Location = New System.Drawing.Point(293, 213)
+        Me.PriorityComboBox.Name = "PriorityComboBox"
+        Me.PriorityComboBox.Size = New System.Drawing.Size(138, 21)
+        Me.PriorityComboBox.TabIndex = 12
+        '
+        'DescriptionTextBox
+        '
+        Me.DescriptionTextBox.Location = New System.Drawing.Point(25, 213)
+        Me.DescriptionTextBox.Multiline = True
+        Me.DescriptionTextBox.Name = "DescriptionTextBox"
+        Me.DescriptionTextBox.Size = New System.Drawing.Size(198, 142)
+        Me.DescriptionTextBox.TabIndex = 13
+        '
+        'RecordUserStoryBtn
+        '
+        Me.RecordUserStoryBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RecordUserStoryBtn.Location = New System.Drawing.Point(498, 263)
+        Me.RecordUserStoryBtn.Name = "RecordUserStoryBtn"
+        Me.RecordUserStoryBtn.Size = New System.Drawing.Size(134, 74)
+        Me.RecordUserStoryBtn.TabIndex = 14
+        Me.RecordUserStoryBtn.Text = "Record User Story"
+        Me.RecordUserStoryBtn.UseVisualStyleBackColor = True
+        '
         'UserStory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(786, 376)
+        Me.ClientSize = New System.Drawing.Size(841, 376)
+        Me.Controls.Add(Me.RecordUserStoryBtn)
+        Me.Controls.Add(Me.DescriptionTextBox)
+        Me.Controls.Add(Me.PriorityComboBox)
+        Me.Controls.Add(Me.StatusComboBox)
+        Me.Controls.Add(Me.EndDate)
+        Me.Controls.Add(Me.StartDate)
+        Me.Controls.Add(Me.UserRoleComboBox)
+        Me.Controls.Add(Me.TitleTextbox)
         Me.Controls.Add(Me.DescriptionLbl)
         Me.Controls.Add(Me.StatusLbl)
         Me.Controls.Add(Me.PriorityLbl)
@@ -127,4 +210,12 @@ Partial Class UserStory
     Friend WithEvents PriorityLbl As Label
     Friend WithEvents StatusLbl As Label
     Friend WithEvents DescriptionLbl As Label
+    Friend WithEvents TitleTextbox As TextBox
+    Friend WithEvents UserRoleComboBox As ComboBox
+    Friend WithEvents StartDate As DateTimePicker
+    Friend WithEvents EndDate As DateTimePicker
+    Friend WithEvents StatusComboBox As ComboBox
+    Friend WithEvents PriorityComboBox As ComboBox
+    Friend WithEvents DescriptionTextBox As TextBox
+    Friend WithEvents RecordUserStoryBtn As Button
 End Class
