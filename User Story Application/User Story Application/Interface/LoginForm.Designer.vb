@@ -31,7 +31,7 @@ Partial Class LoginForm
         Me.ButtonLogin = New System.Windows.Forms.Button()
         Me.ButtonCancel = New System.Windows.Forms.Button()
         Me.DataSetUserStory = New System.Data.DataSet()
-        Me.MemberTableAdapter1 = New User_Story_Application.DataSetTableAdapters.MemberTableAdapter()
+        Me.MemberTableAdapter = New User_Story_Application.DataSetTableAdapters.MemberTableAdapter()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSetUserStory, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -112,9 +112,9 @@ Partial Class LoginForm
         '
         Me.DataSetUserStory.DataSetName = "DataSet"
         '
-        'MemberTableAdapter1
+        'MemberTableAdapter
         '
-        Me.MemberTableAdapter1.ClearBeforeFill = True
+        Me.MemberTableAdapter.ClearBeforeFill = True
         '
         'LoginForm
         '
@@ -147,5 +147,5 @@ Partial Class LoginForm
     Friend WithEvents ButtonLogin As Button
     Friend WithEvents ButtonCancel As Button
     Friend WithEvents DataSetUserStory As Data.DataSet
-    Friend WithEvents MemberTableAdapter1 As DataSetTableAdapters.MemberTableAdapter
+    Friend WithEvents MemberTableAdapter As DataSetTableAdapters.MemberTableAdapter
 End Class
