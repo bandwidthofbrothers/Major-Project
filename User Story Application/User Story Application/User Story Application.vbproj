@@ -137,6 +137,9 @@
     <EmbeddedResource Include="Interface\Test Cases.resx">
       <DependentUpon>Test Cases.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interface\UserStory.resx">
+      <DependentUpon>UserStory.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
