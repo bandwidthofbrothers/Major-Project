@@ -26,11 +26,14 @@ Partial Class LoginForm
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBoxUserName = New System.Windows.Forms.TextBox()
+        Me.TextBoxPassword = New System.Windows.Forms.TextBox()
         Me.ButtonLogin = New System.Windows.Forms.Button()
         Me.ButtonCancel = New System.Windows.Forms.Button()
+        Me.DataSetUserStory = New System.Data.DataSet()
+        Me.MemberTableAdapter1 = New User_Story_Application.DataSetTableAdapters.MemberTableAdapter()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSetUserStory, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -67,21 +70,21 @@ Partial Class LoginForm
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Password"
         '
-        'TextBox1
+        'TextBoxUserName
         '
-        Me.TextBox1.Location = New System.Drawing.Point(315, 82)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(186, 22)
-        Me.TextBox1.TabIndex = 3
+        Me.TextBoxUserName.Location = New System.Drawing.Point(315, 82)
+        Me.TextBoxUserName.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TextBoxUserName.Name = "TextBoxUserName"
+        Me.TextBoxUserName.Size = New System.Drawing.Size(186, 22)
+        Me.TextBoxUserName.TabIndex = 3
         '
-        'TextBox2
+        'TextBoxPassword
         '
-        Me.TextBox2.Location = New System.Drawing.Point(315, 170)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(186, 22)
-        Me.TextBox2.TabIndex = 4
+        Me.TextBoxPassword.Location = New System.Drawing.Point(315, 170)
+        Me.TextBoxPassword.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TextBoxPassword.Name = "TextBoxPassword"
+        Me.TextBoxPassword.Size = New System.Drawing.Size(186, 22)
+        Me.TextBoxPassword.TabIndex = 4
         '
         'ButtonLogin
         '
@@ -105,6 +108,14 @@ Partial Class LoginForm
         Me.ButtonCancel.Text = "Cancel"
         Me.ButtonCancel.UseVisualStyleBackColor = True
         '
+        'DataSetUserStory
+        '
+        Me.DataSetUserStory.DataSetName = "DataSet"
+        '
+        'MemberTableAdapter1
+        '
+        Me.MemberTableAdapter1.ClearBeforeFill = True
+        '
         'LoginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -113,8 +124,8 @@ Partial Class LoginForm
         Me.ClientSize = New System.Drawing.Size(557, 331)
         Me.Controls.Add(Me.ButtonCancel)
         Me.Controls.Add(Me.ButtonLogin)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TextBoxPassword)
+        Me.Controls.Add(Me.TextBoxUserName)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
@@ -122,6 +133,7 @@ Partial Class LoginForm
         Me.Name = "LoginForm"
         Me.Text = "LoginForm"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSetUserStory, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -130,8 +142,10 @@ Partial Class LoginForm
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBoxUserName As TextBox
+    Friend WithEvents TextBoxPassword As TextBox
     Friend WithEvents ButtonLogin As Button
     Friend WithEvents ButtonCancel As Button
+    Friend WithEvents DataSetUserStory As Data.DataSet
+    Friend WithEvents MemberTableAdapter1 As DataSetTableAdapters.MemberTableAdapter
 End Class
