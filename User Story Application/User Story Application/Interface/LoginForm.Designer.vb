@@ -36,10 +36,10 @@ Partial Class LoginForm
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(11, 46)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox1.Location = New System.Drawing.Point(8, 37)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(273, 218)
+        Me.PictureBox1.Size = New System.Drawing.Size(205, 177)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -49,9 +49,10 @@ Partial Class LoginForm
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(316, 49)
+        Me.Label1.Location = New System.Drawing.Point(237, 40)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(73, 17)
+        Me.Label1.Size = New System.Drawing.Size(55, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Username"
         '
@@ -60,51 +61,52 @@ Partial Class LoginForm
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(316, 137)
+        Me.Label2.Location = New System.Drawing.Point(237, 111)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 17)
+        Me.Label2.Size = New System.Drawing.Size(53, 13)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Password"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(315, 82)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TextBox1.Location = New System.Drawing.Point(236, 67)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(186, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(140, 20)
         Me.TextBox1.TabIndex = 3
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(315, 170)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TextBox2.Location = New System.Drawing.Point(236, 138)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(186, 22)
+        Me.TextBox2.Size = New System.Drawing.Size(140, 20)
         Me.TextBox2.TabIndex = 4
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(315, 235)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button1.Location = New System.Drawing.Point(236, 191)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(93, 32)
+        Me.Button1.Size = New System.Drawing.Size(70, 26)
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "Login"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'LoginForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(557, 331)
+        Me.ClientSize = New System.Drawing.Size(418, 269)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "LoginForm"
         Me.Text = "LoginForm"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
