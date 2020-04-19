@@ -35,6 +35,7 @@ Partial Class Test_Cases
         '
         'PictureBox1
         '
+        Me.PictureBox1.BackgroundImage = Global.User_Story_Application.My.Resources.Resources.Background
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(12, 56)
         Me.PictureBox1.Name = "PictureBox1"
