@@ -28,7 +28,7 @@ Partial Class LoginForm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ButtonLogin = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -82,15 +82,16 @@ Partial Class LoginForm
         Me.TextBox2.Size = New System.Drawing.Size(186, 22)
         Me.TextBox2.TabIndex = 4
         '
-        'Button1
+        'ButtonLogin
         '
-        Me.Button1.Location = New System.Drawing.Point(315, 235)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(93, 32)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Login"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ButtonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonLogin.Location = New System.Drawing.Point(315, 235)
+        Me.ButtonLogin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ButtonLogin.Name = "ButtonLogin"
+        Me.ButtonLogin.Size = New System.Drawing.Size(93, 32)
+        Me.ButtonLogin.TabIndex = 5
+        Me.ButtonLogin.Text = "Login"
+        Me.ButtonLogin.UseVisualStyleBackColor = True
         '
         'LoginForm
         '
@@ -98,7 +99,7 @@ Partial Class LoginForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(557, 331)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ButtonLogin)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label2)
@@ -118,5 +119,5 @@ Partial Class LoginForm
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents ButtonLogin As Button
 End Class
