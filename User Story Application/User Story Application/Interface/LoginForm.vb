@@ -6,4 +6,8 @@
     Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
         Me.Close()
     End Sub
+
+    Private Sub ButtonLogin_Click(sender As Object, e As EventArgs) Handles ButtonLogin.Click
+
+    End Sub
 End Class
