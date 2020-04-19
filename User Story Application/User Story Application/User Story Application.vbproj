@@ -91,6 +91,12 @@
     <Compile Include="Interface\MemberControlForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Interface\Test Cases.Designer.vb">
+      <DependentUpon>Test Cases.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Test Cases.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\MemberControlForm.resx">
       <DependentUpon>MemberControlForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Test Cases.resx">
+      <DependentUpon>Test Cases.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
