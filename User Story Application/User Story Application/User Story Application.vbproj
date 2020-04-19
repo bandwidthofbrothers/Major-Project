@@ -72,6 +72,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Interface\Main Menu.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -85,10 +90,16 @@
     <Compile Include="Interface\LoginForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interface\UserStory.Designer.vb">
-      <DependentUpon>UserStory.vb</DependentUpon>
+    <Compile Include="Interface\MemberControlForm.Designer.vb">
+      <DependentUpon>MemberControlForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Interface\UserStory.vb">
+    <Compile Include="Interface\MemberControlForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Test Cases.Designer.vb">
+      <DependentUpon>Test Cases.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Test Cases.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -114,8 +125,11 @@
     <EmbeddedResource Include="Interface\LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interface\UserStory.resx">
-      <DependentUpon>UserStory.vb</DependentUpon>
+    <EmbeddedResource Include="Interface\MemberControlForm.resx">
+      <DependentUpon>MemberControlForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Test Cases.resx">
+      <DependentUpon>Test Cases.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -125,6 +139,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -143,6 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Background.jpg" />
+    <None Include="Resources\Background1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
