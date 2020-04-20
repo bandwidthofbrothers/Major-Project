@@ -168,6 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Background.jpg" />
+    <Content Include="Resources\Main Logo.png" />
     <None Include="Resources\Background1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
