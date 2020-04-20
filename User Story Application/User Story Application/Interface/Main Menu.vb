@@ -1,6 +1,14 @@
 ﻿Public Class FormMainMenu
     Private Sub LoginToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoginToolStripMenuItem.Click
-        FormSetUp(LoginForm)
+        If MenuAccessControl.DropDownItems(0).Text = "Sign Out" Then
+            MenuMemberControl.Enabled = False
+            MenuUserStoryControl.Enabled = False
+            MenuTestCaseControl.Enabled = False
+
+            MenuAccessControl.DropDownItems(0).Text = "Login"
+        Else
+            FormSetUp(LoginForm)
+        End If
     End Sub
 
     Friend Sub FormSetUp(ByVal ChildForm As Form)

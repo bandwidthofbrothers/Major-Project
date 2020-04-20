@@ -13,6 +13,7 @@
                 .MenuMemberControl.Enabled = True
                 .MenuUserStoryControl.Enabled = True
                 .MenuTestCaseControl.Enabled = True
+                .MenuAccessControl.DropDownItems(0).Text = "Sign Out"
             End With
 
             Me.Close()
