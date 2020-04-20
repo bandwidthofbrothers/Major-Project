@@ -30,7 +30,7 @@ Partial Class LoginForm
         Me.TextBoxPassword = New System.Windows.Forms.TextBox()
         Me.ButtonLogin = New System.Windows.Forms.Button()
         Me.ButtonCancel = New System.Windows.Forms.Button()
-        Me.DataSetUserStory = New System.Data.DataSet()
+        Me.DataSetUserStory = New User_Story_Application.DataSet()
         Me.MemberTableAdapter = New User_Story_Application.DataSetTableAdapters.MemberTableAdapter()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSetUserStory, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -111,6 +111,7 @@ Partial Class LoginForm
         'DataSetUserStory
         '
         Me.DataSetUserStory.DataSetName = "DataSet"
+        Me.DataSetUserStory.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'MemberTableAdapter
         '
@@ -122,6 +123,7 @@ Partial Class LoginForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(557, 331)
+        Me.ControlBox = False
         Me.Controls.Add(Me.ButtonCancel)
         Me.Controls.Add(Me.ButtonLogin)
         Me.Controls.Add(Me.TextBoxPassword)
@@ -146,6 +148,6 @@ Partial Class LoginForm
     Friend WithEvents TextBoxPassword As TextBox
     Friend WithEvents ButtonLogin As Button
     Friend WithEvents ButtonCancel As Button
-    Friend WithEvents DataSetUserStory As Data.DataSet
+    Friend WithEvents DataSetUserStory As DataSet
     Friend WithEvents MemberTableAdapter As DataSetTableAdapters.MemberTableAdapter
 End Class
