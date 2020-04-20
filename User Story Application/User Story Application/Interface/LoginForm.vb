@@ -1,7 +1,4 @@
 ﻿Public Class LoginForm
-    Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
         Me.Close()
@@ -11,6 +8,14 @@
         MemberTableAdapter.FillBy(DataSetUserStory.Member, TextBoxUserName.Text, TextBoxPassword.Text)
         If DataSetUserStory.Member.Rows.Count > 0 Then
             MessageBox.Show("Welcome! You will now be directed to the system")
+
+            With FormMainMenu
+                .MenuMemberControl.Enabled = True
+                .MenuUserStoryControl.Enabled = True
+                .MenuTestCaseControl.Enabled = True
+            End With
+
+            Me.Close()
         Else
             MessageBox.Show("Invalid User Details")
         End If

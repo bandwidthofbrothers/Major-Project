@@ -27,16 +27,16 @@ Partial Class FormMainMenu
         Me.AccessToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoginToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MemberControlToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuMemberControl = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SearchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UserStoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuUserStoryControl = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SearchToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TestCasesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuTestCaseControl = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -47,7 +47,7 @@ Partial Class FormMainMenu
         'MenuStrip
         '
         Me.MenuStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AccessToolStripMenuItem, Me.MemberControlToolStripMenuItem, Me.UserStoryToolStripMenuItem, Me.TestCasesToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AccessToolStripMenuItem, Me.MenuMemberControl, Me.MenuUserStoryControl, Me.MenuTestCaseControl})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
         Me.MenuStrip.Size = New System.Drawing.Size(866, 28)
@@ -64,21 +64,22 @@ Partial Class FormMainMenu
         'LoginToolStripMenuItem
         '
         Me.LoginToolStripMenuItem.Name = "LoginToolStripMenuItem"
-        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(121, 26)
         Me.LoginToolStripMenuItem.Text = "Login"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(121, 26)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
-        'MemberControlToolStripMenuItem
+        'MenuMemberControl
         '
-        Me.MemberControlToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem, Me.SearchToolStripMenuItem, Me.EditToolStripMenuItem})
-        Me.MemberControlToolStripMenuItem.Name = "MemberControlToolStripMenuItem"
-        Me.MemberControlToolStripMenuItem.Size = New System.Drawing.Size(130, 24)
-        Me.MemberControlToolStripMenuItem.Text = "Member Control"
+        Me.MenuMemberControl.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem, Me.SearchToolStripMenuItem, Me.EditToolStripMenuItem})
+        Me.MenuMemberControl.Enabled = False
+        Me.MenuMemberControl.Name = "MenuMemberControl"
+        Me.MenuMemberControl.Size = New System.Drawing.Size(130, 24)
+        Me.MenuMemberControl.Text = "Member Control"
         '
         'ViewToolStripMenuItem
         '
@@ -98,12 +99,13 @@ Partial Class FormMainMenu
         Me.EditToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.EditToolStripMenuItem.Text = "Edit"
         '
-        'UserStoryToolStripMenuItem
+        'MenuUserStoryControl
         '
-        Me.UserStoryToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem1, Me.EditToolStripMenuItem1, Me.DeleteToolStripMenuItem, Me.SearchToolStripMenuItem1})
-        Me.UserStoryToolStripMenuItem.Name = "UserStoryToolStripMenuItem"
-        Me.UserStoryToolStripMenuItem.Size = New System.Drawing.Size(88, 24)
-        Me.UserStoryToolStripMenuItem.Text = "User Story"
+        Me.MenuUserStoryControl.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem1, Me.EditToolStripMenuItem1, Me.DeleteToolStripMenuItem, Me.SearchToolStripMenuItem1})
+        Me.MenuUserStoryControl.Enabled = False
+        Me.MenuUserStoryControl.Name = "MenuUserStoryControl"
+        Me.MenuUserStoryControl.Size = New System.Drawing.Size(88, 24)
+        Me.MenuUserStoryControl.Text = "User Story"
         '
         'ViewToolStripMenuItem1
         '
@@ -129,12 +131,13 @@ Partial Class FormMainMenu
         Me.SearchToolStripMenuItem1.Size = New System.Drawing.Size(181, 26)
         Me.SearchToolStripMenuItem1.Text = "Search"
         '
-        'TestCasesToolStripMenuItem
+        'MenuTestCaseControl
         '
-        Me.TestCasesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem2, Me.EditToolStripMenuItem2, Me.NewToolStripMenuItem, Me.DeleteToolStripMenuItem1})
-        Me.TestCasesToolStripMenuItem.Name = "TestCasesToolStripMenuItem"
-        Me.TestCasesToolStripMenuItem.Size = New System.Drawing.Size(88, 24)
-        Me.TestCasesToolStripMenuItem.Text = "Test Cases"
+        Me.MenuTestCaseControl.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem2, Me.EditToolStripMenuItem2, Me.NewToolStripMenuItem, Me.DeleteToolStripMenuItem1})
+        Me.MenuTestCaseControl.Enabled = False
+        Me.MenuTestCaseControl.Name = "MenuTestCaseControl"
+        Me.MenuTestCaseControl.Size = New System.Drawing.Size(88, 24)
+        Me.MenuTestCaseControl.Text = "Test Cases"
         '
         'ViewToolStripMenuItem2
         '
@@ -182,16 +185,16 @@ Partial Class FormMainMenu
     Friend WithEvents AccessToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LoginToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents MemberControlToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MenuMemberControl As ToolStripMenuItem
     Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SearchToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents UserStoryToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MenuUserStoryControl As ToolStripMenuItem
     Friend WithEvents ViewToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents EditToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SearchToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents TestCasesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MenuTestCaseControl As ToolStripMenuItem
     Friend WithEvents ViewToolStripMenuItem2 As ToolStripMenuItem
     Friend WithEvents EditToolStripMenuItem2 As ToolStripMenuItem
     Friend WithEvents NewToolStripMenuItem As ToolStripMenuItem
