@@ -22,190 +22,185 @@ Partial Class MemberControlForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MemberControlForm))
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBoxGroupMemberNumber = New System.Windows.Forms.TextBox()
+        Me.TextBoxFirstName = New System.Windows.Forms.TextBox()
+        Me.TextBoxSurname = New System.Windows.Forms.TextBox()
+        Me.TextBoxUsername = New System.Windows.Forms.TextBox()
+        Me.TextBoxPassword = New System.Windows.Forms.TextBox()
+        Me.LabelMemberNumber = New System.Windows.Forms.Label()
+        Me.LabelFirstName = New System.Windows.Forms.Label()
+        Me.LabelSurname = New System.Windows.Forms.Label()
+        Me.LabelUsername = New System.Windows.Forms.Label()
+        Me.LabelPassword = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ListBoxMembers = New System.Windows.Forms.ListBox()
+        Me.LabelMembers = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'TextBoxGroupMemberNumber
         '
-        Me.TextBox1.Location = New System.Drawing.Point(468, 46)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(119, 22)
-        Me.TextBox1.TabIndex = 0
+        Me.TextBoxGroupMemberNumber.Location = New System.Drawing.Point(509, 56)
+        Me.TextBoxGroupMemberNumber.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TextBoxGroupMemberNumber.Name = "TextBoxGroupMemberNumber"
+        Me.TextBoxGroupMemberNumber.Size = New System.Drawing.Size(119, 22)
+        Me.TextBoxGroupMemberNumber.TabIndex = 0
         '
-        'TextBox2
+        'TextBoxFirstName
         '
-        Me.TextBox2.Location = New System.Drawing.Point(468, 86)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(119, 22)
-        Me.TextBox2.TabIndex = 1
+        Me.TextBoxFirstName.Location = New System.Drawing.Point(509, 96)
+        Me.TextBoxFirstName.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TextBoxFirstName.Name = "TextBoxFirstName"
+        Me.TextBoxFirstName.Size = New System.Drawing.Size(119, 22)
+        Me.TextBoxFirstName.TabIndex = 1
         '
-        'TextBox3
+        'TextBoxSurname
         '
-        Me.TextBox3.Location = New System.Drawing.Point(468, 130)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(119, 22)
-        Me.TextBox3.TabIndex = 2
+        Me.TextBoxSurname.Location = New System.Drawing.Point(509, 140)
+        Me.TextBoxSurname.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TextBoxSurname.Name = "TextBoxSurname"
+        Me.TextBoxSurname.Size = New System.Drawing.Size(119, 22)
+        Me.TextBoxSurname.TabIndex = 2
         '
-        'TextBox4
+        'TextBoxUsername
         '
-        Me.TextBox4.Location = New System.Drawing.Point(468, 176)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(119, 22)
-        Me.TextBox4.TabIndex = 3
+        Me.TextBoxUsername.Location = New System.Drawing.Point(509, 186)
+        Me.TextBoxUsername.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TextBoxUsername.Name = "TextBoxUsername"
+        Me.TextBoxUsername.Size = New System.Drawing.Size(119, 22)
+        Me.TextBoxUsername.TabIndex = 3
         '
-        'TextBox5
+        'TextBoxPassword
         '
-        Me.TextBox5.Location = New System.Drawing.Point(468, 226)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(119, 22)
-        Me.TextBox5.TabIndex = 4
+        Me.TextBoxPassword.Location = New System.Drawing.Point(509, 236)
+        Me.TextBoxPassword.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TextBoxPassword.Name = "TextBoxPassword"
+        Me.TextBoxPassword.Size = New System.Drawing.Size(119, 22)
+        Me.TextBoxPassword.TabIndex = 4
         '
-        'Label1
+        'LabelMemberNumber
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(286, 46)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(157, 17)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Group Member Number"
+        Me.LabelMemberNumber.AutoSize = True
+        Me.LabelMemberNumber.BackColor = System.Drawing.Color.Transparent
+        Me.LabelMemberNumber.ForeColor = System.Drawing.Color.White
+        Me.LabelMemberNumber.Location = New System.Drawing.Point(327, 56)
+        Me.LabelMemberNumber.Name = "LabelMemberNumber"
+        Me.LabelMemberNumber.Size = New System.Drawing.Size(157, 17)
+        Me.LabelMemberNumber.TabIndex = 5
+        Me.LabelMemberNumber.Text = "Group Member Number"
         '
-        'Label2
+        'LabelFirstName
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(286, 86)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(76, 17)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "First Name"
+        Me.LabelFirstName.AutoSize = True
+        Me.LabelFirstName.BackColor = System.Drawing.Color.Transparent
+        Me.LabelFirstName.ForeColor = System.Drawing.Color.White
+        Me.LabelFirstName.Location = New System.Drawing.Point(327, 96)
+        Me.LabelFirstName.Name = "LabelFirstName"
+        Me.LabelFirstName.Size = New System.Drawing.Size(76, 17)
+        Me.LabelFirstName.TabIndex = 6
+        Me.LabelFirstName.Text = "First Name"
         '
-        'Label3
+        'LabelSurname
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(286, 130)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(65, 17)
-        Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Surname"
+        Me.LabelSurname.AutoSize = True
+        Me.LabelSurname.BackColor = System.Drawing.Color.Transparent
+        Me.LabelSurname.ForeColor = System.Drawing.Color.White
+        Me.LabelSurname.Location = New System.Drawing.Point(327, 140)
+        Me.LabelSurname.Name = "LabelSurname"
+        Me.LabelSurname.Size = New System.Drawing.Size(65, 17)
+        Me.LabelSurname.TabIndex = 7
+        Me.LabelSurname.Text = "Surname"
         '
-        'Label4
+        'LabelUsername
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(286, 176)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(73, 17)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Username"
+        Me.LabelUsername.AutoSize = True
+        Me.LabelUsername.BackColor = System.Drawing.Color.Transparent
+        Me.LabelUsername.ForeColor = System.Drawing.Color.White
+        Me.LabelUsername.Location = New System.Drawing.Point(327, 186)
+        Me.LabelUsername.Name = "LabelUsername"
+        Me.LabelUsername.Size = New System.Drawing.Size(73, 17)
+        Me.LabelUsername.TabIndex = 8
+        Me.LabelUsername.Text = "Username"
         '
-        'Label5
+        'LabelPassword
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(286, 226)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(69, 17)
-        Me.Label5.TabIndex = 9
-        Me.Label5.Text = "Password"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.PictureBox1.BackgroundImage = Global.User_Story_Application.My.Resources.Resources.Background
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(11, 48)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(260, 194)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 10
-        Me.PictureBox1.TabStop = False
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(468, 278)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(87, 25)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Login"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.LabelPassword.AutoSize = True
+        Me.LabelPassword.BackColor = System.Drawing.Color.Transparent
+        Me.LabelPassword.ForeColor = System.Drawing.Color.White
+        Me.LabelPassword.Location = New System.Drawing.Point(327, 236)
+        Me.LabelPassword.Name = "LabelPassword"
+        Me.LabelPassword.Size = New System.Drawing.Size(69, 17)
+        Me.LabelPassword.TabIndex = 9
+        Me.LabelPassword.Text = "Password"
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(468, 325)
+        Me.Button2.Location = New System.Drawing.Point(509, 288)
         Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(87, 25)
+        Me.Button2.Size = New System.Drawing.Size(119, 25)
         Me.Button2.TabIndex = 12
         Me.Button2.Text = "Cancel"
         Me.Button2.UseVisualStyleBackColor = True
+        '
+        'ListBoxMembers
+        '
+        Me.ListBoxMembers.FormattingEnabled = True
+        Me.ListBoxMembers.ItemHeight = 16
+        Me.ListBoxMembers.Location = New System.Drawing.Point(25, 53)
+        Me.ListBoxMembers.Name = "ListBoxMembers"
+        Me.ListBoxMembers.Size = New System.Drawing.Size(247, 260)
+        Me.ListBoxMembers.TabIndex = 13
+        '
+        'LabelMembers
+        '
+        Me.LabelMembers.AutoSize = True
+        Me.LabelMembers.BackColor = System.Drawing.Color.Transparent
+        Me.LabelMembers.ForeColor = System.Drawing.Color.White
+        Me.LabelMembers.Location = New System.Drawing.Point(22, 18)
+        Me.LabelMembers.Name = "LabelMembers"
+        Me.LabelMembers.Size = New System.Drawing.Size(70, 17)
+        Me.LabelMembers.TabIndex = 14
+        Me.LabelMembers.Text = "Members:"
         '
         'MemberControlForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.User_Story_Application.My.Resources.Resources.Background
-        Me.ClientSize = New System.Drawing.Size(658, 373)
+        Me.ClientSize = New System.Drawing.Size(663, 373)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.LabelMembers)
+        Me.Controls.Add(Me.ListBoxMembers)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.LabelPassword)
+        Me.Controls.Add(Me.LabelUsername)
+        Me.Controls.Add(Me.LabelSurname)
+        Me.Controls.Add(Me.LabelFirstName)
+        Me.Controls.Add(Me.LabelMemberNumber)
+        Me.Controls.Add(Me.TextBoxPassword)
+        Me.Controls.Add(Me.TextBoxUsername)
+        Me.Controls.Add(Me.TextBoxSurname)
+        Me.Controls.Add(Me.TextBoxFirstName)
+        Me.Controls.Add(Me.TextBoxGroupMemberNumber)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "MemberControlForm"
-        Me.Text = "MemberControlForm"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "Member Control"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents TextBoxGroupMemberNumber As TextBox
+    Friend WithEvents TextBoxFirstName As TextBox
+    Friend WithEvents TextBoxSurname As TextBox
+    Friend WithEvents TextBoxUsername As TextBox
+    Friend WithEvents TextBoxPassword As TextBox
+    Friend WithEvents LabelMemberNumber As Label
+    Friend WithEvents LabelFirstName As Label
+    Friend WithEvents LabelSurname As Label
+    Friend WithEvents LabelUsername As Label
+    Friend WithEvents LabelPassword As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents ListBoxMembers As ListBox
+    Friend WithEvents LabelMembers As Label
 End Class

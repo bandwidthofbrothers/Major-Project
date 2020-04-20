@@ -64,13 +64,13 @@ Partial Class FormMainMenu
         'LoginToolStripMenuItem
         '
         Me.LoginToolStripMenuItem.Name = "LoginToolStripMenuItem"
-        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(121, 26)
         Me.LoginToolStripMenuItem.Text = "Login"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(121, 26)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'MenuMemberControl
@@ -84,19 +84,19 @@ Partial Class FormMainMenu
         'ViewToolStripMenuItem
         '
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(128, 26)
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.ViewToolStripMenuItem.Text = "View"
         '
         'SearchToolStripMenuItem
         '
         Me.SearchToolStripMenuItem.Name = "SearchToolStripMenuItem"
-        Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(128, 26)
+        Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.SearchToolStripMenuItem.Text = "Search"
         '
         'EditToolStripMenuItem
         '
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(128, 26)
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.EditToolStripMenuItem.Text = "Edit"
         '
         'MenuUserStoryControl
