@@ -24,7 +24,7 @@ Partial Class FormMainMenu
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMainMenu))
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
-        Me.AccessToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuAccessControl = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoginToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuMemberControl = New System.Windows.Forms.ToolStripMenuItem()
@@ -47,30 +47,30 @@ Partial Class FormMainMenu
         'MenuStrip
         '
         Me.MenuStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AccessToolStripMenuItem, Me.MenuMemberControl, Me.MenuUserStoryControl, Me.MenuTestCaseControl})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuAccessControl, Me.MenuMemberControl, Me.MenuUserStoryControl, Me.MenuTestCaseControl})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
         Me.MenuStrip.Size = New System.Drawing.Size(866, 28)
         Me.MenuStrip.TabIndex = 1
         Me.MenuStrip.Text = "MenuStrip1"
         '
-        'AccessToolStripMenuItem
+        'MenuAccessControl
         '
-        Me.AccessToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoginToolStripMenuItem, Me.ExitToolStripMenuItem})
-        Me.AccessToolStripMenuItem.Name = "AccessToolStripMenuItem"
-        Me.AccessToolStripMenuItem.Size = New System.Drawing.Size(118, 24)
-        Me.AccessToolStripMenuItem.Text = "Access Control"
+        Me.MenuAccessControl.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoginToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.MenuAccessControl.Name = "MenuAccessControl"
+        Me.MenuAccessControl.Size = New System.Drawing.Size(118, 24)
+        Me.MenuAccessControl.Text = "Access Control"
         '
         'LoginToolStripMenuItem
         '
         Me.LoginToolStripMenuItem.Name = "LoginToolStripMenuItem"
-        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(121, 26)
+        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.LoginToolStripMenuItem.Text = "Login"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(121, 26)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'MenuMemberControl
@@ -84,19 +84,19 @@ Partial Class FormMainMenu
         'ViewToolStripMenuItem
         '
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(128, 26)
         Me.ViewToolStripMenuItem.Text = "View"
         '
         'SearchToolStripMenuItem
         '
         Me.SearchToolStripMenuItem.Name = "SearchToolStripMenuItem"
-        Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(128, 26)
         Me.SearchToolStripMenuItem.Text = "Search"
         '
         'EditToolStripMenuItem
         '
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(128, 26)
         Me.EditToolStripMenuItem.Text = "Edit"
         '
         'MenuUserStoryControl
@@ -110,25 +110,25 @@ Partial Class FormMainMenu
         'ViewToolStripMenuItem1
         '
         Me.ViewToolStripMenuItem1.Name = "ViewToolStripMenuItem1"
-        Me.ViewToolStripMenuItem1.Size = New System.Drawing.Size(181, 26)
+        Me.ViewToolStripMenuItem1.Size = New System.Drawing.Size(128, 26)
         Me.ViewToolStripMenuItem1.Text = "View"
         '
         'EditToolStripMenuItem1
         '
         Me.EditToolStripMenuItem1.Name = "EditToolStripMenuItem1"
-        Me.EditToolStripMenuItem1.Size = New System.Drawing.Size(181, 26)
+        Me.EditToolStripMenuItem1.Size = New System.Drawing.Size(128, 26)
         Me.EditToolStripMenuItem1.Text = "Edit"
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(128, 26)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'SearchToolStripMenuItem1
         '
         Me.SearchToolStripMenuItem1.Name = "SearchToolStripMenuItem1"
-        Me.SearchToolStripMenuItem1.Size = New System.Drawing.Size(181, 26)
+        Me.SearchToolStripMenuItem1.Size = New System.Drawing.Size(128, 26)
         Me.SearchToolStripMenuItem1.Text = "Search"
         '
         'MenuTestCaseControl
@@ -142,25 +142,25 @@ Partial Class FormMainMenu
         'ViewToolStripMenuItem2
         '
         Me.ViewToolStripMenuItem2.Name = "ViewToolStripMenuItem2"
-        Me.ViewToolStripMenuItem2.Size = New System.Drawing.Size(181, 26)
+        Me.ViewToolStripMenuItem2.Size = New System.Drawing.Size(128, 26)
         Me.ViewToolStripMenuItem2.Text = "View"
         '
         'EditToolStripMenuItem2
         '
         Me.EditToolStripMenuItem2.Name = "EditToolStripMenuItem2"
-        Me.EditToolStripMenuItem2.Size = New System.Drawing.Size(181, 26)
+        Me.EditToolStripMenuItem2.Size = New System.Drawing.Size(128, 26)
         Me.EditToolStripMenuItem2.Text = "Edit"
         '
         'NewToolStripMenuItem
         '
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(128, 26)
         Me.NewToolStripMenuItem.Text = "New"
         '
         'DeleteToolStripMenuItem1
         '
         Me.DeleteToolStripMenuItem1.Name = "DeleteToolStripMenuItem1"
-        Me.DeleteToolStripMenuItem1.Size = New System.Drawing.Size(181, 26)
+        Me.DeleteToolStripMenuItem1.Size = New System.Drawing.Size(128, 26)
         Me.DeleteToolStripMenuItem1.Text = "Delete"
         '
         'FormMainMenu
@@ -182,7 +182,7 @@ Partial Class FormMainMenu
     End Sub
 
     Friend WithEvents MenuStrip As MenuStrip
-    Friend WithEvents AccessToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MenuAccessControl As ToolStripMenuItem
     Friend WithEvents LoginToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MenuMemberControl As ToolStripMenuItem
