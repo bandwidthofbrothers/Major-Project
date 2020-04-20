@@ -134,7 +134,7 @@ Partial Class LoginForm
         Me.Controls.Add(Me.PictureBox1)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "LoginForm"
-        Me.Text = "LoginForm"
+        Me.Text = "Login"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSetUserStory, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
