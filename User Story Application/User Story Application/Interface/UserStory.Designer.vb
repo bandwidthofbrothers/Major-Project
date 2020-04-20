@@ -104,7 +104,7 @@ Partial Class UserStory
         '
         Me.PriorityLbl.AutoSize = True
         Me.PriorityLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PriorityLbl.Location = New System.Drawing.Point(1164, 39)
+        Me.PriorityLbl.Location = New System.Drawing.Point(1078, 212)
         Me.PriorityLbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.PriorityLbl.Name = "PriorityLbl"
         Me.PriorityLbl.Size = New System.Drawing.Size(99, 31)
@@ -115,7 +115,7 @@ Partial Class UserStory
         '
         Me.StatusLbl.AutoSize = True
         Me.StatusLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StatusLbl.Location = New System.Drawing.Point(1164, 169)
+        Me.StatusLbl.Location = New System.Drawing.Point(1078, 342)
         Me.StatusLbl.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.StatusLbl.Name = "StatusLbl"
         Me.StatusLbl.Size = New System.Drawing.Size(92, 31)
@@ -172,7 +172,7 @@ Partial Class UserStory
         '
         Me.StatusComboBox.FormattingEnabled = True
         Me.StatusComboBox.Items.AddRange(New Object() {"In-Progress", "Complete"})
-        Me.StatusComboBox.Location = New System.Drawing.Point(1171, 222)
+        Me.StatusComboBox.Location = New System.Drawing.Point(1085, 395)
         Me.StatusComboBox.Margin = New System.Windows.Forms.Padding(4)
         Me.StatusComboBox.Name = "StatusComboBox"
         Me.StatusComboBox.Size = New System.Drawing.Size(183, 24)
@@ -182,7 +182,7 @@ Partial Class UserStory
         '
         Me.PriorityComboBox.FormattingEnabled = True
         Me.PriorityComboBox.Items.AddRange(New Object() {"Low", "Medium", "High"})
-        Me.PriorityComboBox.Location = New System.Drawing.Point(1171, 92)
+        Me.PriorityComboBox.Location = New System.Drawing.Point(1085, 265)
         Me.PriorityComboBox.Margin = New System.Windows.Forms.Padding(4)
         Me.PriorityComboBox.Name = "PriorityComboBox"
         Me.PriorityComboBox.Size = New System.Drawing.Size(183, 24)
@@ -200,7 +200,7 @@ Partial Class UserStory
         'RecordUserStoryBtn
         '
         Me.RecordUserStoryBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RecordUserStoryBtn.Location = New System.Drawing.Point(1084, 544)
+        Me.RecordUserStoryBtn.Location = New System.Drawing.Point(1089, 564)
         Me.RecordUserStoryBtn.Margin = New System.Windows.Forms.Padding(4)
         Me.RecordUserStoryBtn.Name = "RecordUserStoryBtn"
         Me.RecordUserStoryBtn.Size = New System.Drawing.Size(179, 91)
@@ -353,7 +353,7 @@ Partial Class UserStory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1373, 676)
+        Me.ClientSize = New System.Drawing.Size(1293, 676)
         Me.ControlBox = False
         Me.Controls.Add(Me.ButtonRemoveTestCase)
         Me.Controls.Add(Me.ButtonAddNewTestCase)
