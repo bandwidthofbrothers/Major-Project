@@ -32,7 +32,7 @@ Partial Class MemberControlForm
         Me.LabelSurname = New System.Windows.Forms.Label()
         Me.LabelUsername = New System.Windows.Forms.Label()
         Me.LabelPassword = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.ButtonCancel = New System.Windows.Forms.Button()
         Me.ListBoxMembers = New System.Windows.Forms.ListBox()
         Me.LabelMembers = New System.Windows.Forms.Label()
         Me.SuspendLayout()
@@ -132,15 +132,15 @@ Partial Class MemberControlForm
         Me.LabelPassword.TabIndex = 9
         Me.LabelPassword.Text = "Password"
         '
-        'Button2
+        'ButtonCancel
         '
-        Me.Button2.Location = New System.Drawing.Point(509, 288)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(119, 25)
-        Me.Button2.TabIndex = 12
-        Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.ButtonCancel.Location = New System.Drawing.Point(509, 288)
+        Me.ButtonCancel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ButtonCancel.Name = "ButtonCancel"
+        Me.ButtonCancel.Size = New System.Drawing.Size(119, 25)
+        Me.ButtonCancel.TabIndex = 12
+        Me.ButtonCancel.Text = "Cancel"
+        Me.ButtonCancel.UseVisualStyleBackColor = True
         '
         'ListBoxMembers
         '
@@ -171,7 +171,7 @@ Partial Class MemberControlForm
         Me.ControlBox = False
         Me.Controls.Add(Me.LabelMembers)
         Me.Controls.Add(Me.ListBoxMembers)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.ButtonCancel)
         Me.Controls.Add(Me.LabelPassword)
         Me.Controls.Add(Me.LabelUsername)
         Me.Controls.Add(Me.LabelSurname)
@@ -200,7 +200,7 @@ Partial Class MemberControlForm
     Friend WithEvents LabelSurname As Label
     Friend WithEvents LabelUsername As Label
     Friend WithEvents LabelPassword As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents ButtonCancel As Button
     Friend WithEvents ListBoxMembers As ListBox
     Friend WithEvents LabelMembers As Label
 End Class

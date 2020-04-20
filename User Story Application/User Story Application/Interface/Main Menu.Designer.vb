@@ -41,6 +41,7 @@ Partial Class FormMainMenu
         Me.EditToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -50,7 +51,7 @@ Partial Class FormMainMenu
         Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuAccessControl, Me.MenuMemberControl, Me.MenuUserStoryControl, Me.MenuTestCaseControl})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
-        Me.MenuStrip.Size = New System.Drawing.Size(866, 28)
+        Me.MenuStrip.Size = New System.Drawing.Size(1111, 28)
         Me.MenuStrip.TabIndex = 1
         Me.MenuStrip.Text = "MenuStrip1"
         '
@@ -101,7 +102,7 @@ Partial Class FormMainMenu
         '
         'MenuUserStoryControl
         '
-        Me.MenuUserStoryControl.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem1, Me.EditToolStripMenuItem1, Me.DeleteToolStripMenuItem, Me.SearchToolStripMenuItem1})
+        Me.MenuUserStoryControl.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem, Me.ViewToolStripMenuItem1, Me.EditToolStripMenuItem1, Me.DeleteToolStripMenuItem, Me.SearchToolStripMenuItem1})
         Me.MenuUserStoryControl.Enabled = False
         Me.MenuUserStoryControl.Name = "MenuUserStoryControl"
         Me.MenuUserStoryControl.Size = New System.Drawing.Size(88, 24)
@@ -110,25 +111,25 @@ Partial Class FormMainMenu
         'ViewToolStripMenuItem1
         '
         Me.ViewToolStripMenuItem1.Name = "ViewToolStripMenuItem1"
-        Me.ViewToolStripMenuItem1.Size = New System.Drawing.Size(128, 26)
+        Me.ViewToolStripMenuItem1.Size = New System.Drawing.Size(181, 26)
         Me.ViewToolStripMenuItem1.Text = "View"
         '
         'EditToolStripMenuItem1
         '
         Me.EditToolStripMenuItem1.Name = "EditToolStripMenuItem1"
-        Me.EditToolStripMenuItem1.Size = New System.Drawing.Size(128, 26)
+        Me.EditToolStripMenuItem1.Size = New System.Drawing.Size(181, 26)
         Me.EditToolStripMenuItem1.Text = "Edit"
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(128, 26)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'SearchToolStripMenuItem1
         '
         Me.SearchToolStripMenuItem1.Name = "SearchToolStripMenuItem1"
-        Me.SearchToolStripMenuItem1.Size = New System.Drawing.Size(128, 26)
+        Me.SearchToolStripMenuItem1.Size = New System.Drawing.Size(181, 26)
         Me.SearchToolStripMenuItem1.Text = "Search"
         '
         'MenuTestCaseControl
@@ -163,12 +164,18 @@ Partial Class FormMainMenu
         Me.DeleteToolStripMenuItem1.Size = New System.Drawing.Size(128, 26)
         Me.DeleteToolStripMenuItem1.Text = "Delete"
         '
+        'AddToolStripMenuItem
+        '
+        Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.AddToolStripMenuItem.Text = "Add"
+        '
         'FormMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(866, 525)
+        Me.ClientSize = New System.Drawing.Size(1111, 654)
         Me.Controls.Add(Me.MenuStrip)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip
@@ -199,4 +206,5 @@ Partial Class FormMainMenu
     Friend WithEvents EditToolStripMenuItem2 As ToolStripMenuItem
     Friend WithEvents NewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents AddToolStripMenuItem As ToolStripMenuItem
 End Class

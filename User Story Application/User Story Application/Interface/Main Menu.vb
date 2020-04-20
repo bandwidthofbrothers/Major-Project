@@ -37,4 +37,8 @@
     Private Sub ViewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem.Click
         FormSetUp(MemberControlForm)
     End Sub
+
+    Private Sub AddToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddToolStripMenuItem.Click
+        FormSetUp(UserStory)
+    End Sub
 End Class
