@@ -4,17 +4,22 @@
     End Sub
 
     Friend Sub FormSetUp(ByVal ChildForm As Form)
-        Try
-            Me.ActiveMdiChild.Close()
-        Catch ex As Exception
 
-        End Try
+        If Not ChildForm.IsMdiChild Then
 
-        With ChildForm
-            .MdiParent = Me
-            .WindowState = FormWindowState.Maximized
-            .Show()
-        End With
+            Try
+                Me.ActiveMdiChild.Close()
+            Catch ex As Exception
+
+            End Try
+
+            With ChildForm
+                .MdiParent = Me
+                .WindowState = FormWindowState.Maximized
+                .Show()
+            End With
+
+        End If
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
