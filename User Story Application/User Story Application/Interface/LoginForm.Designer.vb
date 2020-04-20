@@ -30,8 +30,8 @@ Partial Class LoginForm
         Me.TextBoxPassword = New System.Windows.Forms.TextBox()
         Me.ButtonLogin = New System.Windows.Forms.Button()
         Me.ButtonCancel = New System.Windows.Forms.Button()
-        Me.DataSetUserStory = New System.Data.DataSet()
-        Me.MemberTableAdapter1 = New User_Story_Application.DataSetTableAdapters.MemberTableAdapter()
+        Me.DataSetUserStory = New User_Story_Application.DataSet()
+        Me.MemberTableAdapter = New User_Story_Application.DataSetTableAdapters.MemberTableAdapter()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSetUserStory, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -85,6 +85,7 @@ Partial Class LoginForm
         Me.TextBoxPassword.Name = "TextBoxPassword"
         Me.TextBoxPassword.Size = New System.Drawing.Size(186, 22)
         Me.TextBoxPassword.TabIndex = 4
+        Me.TextBoxPassword.UseSystemPasswordChar = True
         '
         'ButtonLogin
         '
@@ -111,10 +112,11 @@ Partial Class LoginForm
         'DataSetUserStory
         '
         Me.DataSetUserStory.DataSetName = "DataSet"
+        Me.DataSetUserStory.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'MemberTableAdapter1
+        'MemberTableAdapter
         '
-        Me.MemberTableAdapter1.ClearBeforeFill = True
+        Me.MemberTableAdapter.ClearBeforeFill = True
         '
         'LoginForm
         '
@@ -122,6 +124,7 @@ Partial Class LoginForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(557, 331)
+        Me.ControlBox = False
         Me.Controls.Add(Me.ButtonCancel)
         Me.Controls.Add(Me.ButtonLogin)
         Me.Controls.Add(Me.TextBoxPassword)
@@ -131,7 +134,7 @@ Partial Class LoginForm
         Me.Controls.Add(Me.PictureBox1)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "LoginForm"
-        Me.Text = "LoginForm"
+        Me.Text = "Login"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSetUserStory, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -146,6 +149,6 @@ Partial Class LoginForm
     Friend WithEvents TextBoxPassword As TextBox
     Friend WithEvents ButtonLogin As Button
     Friend WithEvents ButtonCancel As Button
-    Friend WithEvents DataSetUserStory As Data.DataSet
-    Friend WithEvents MemberTableAdapter1 As DataSetTableAdapters.MemberTableAdapter
+    Friend WithEvents DataSetUserStory As DataSet
+    Friend WithEvents MemberTableAdapter As DataSetTableAdapters.MemberTableAdapter
 End Class

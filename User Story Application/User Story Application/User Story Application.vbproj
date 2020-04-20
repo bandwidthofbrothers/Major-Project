@@ -102,6 +102,12 @@
     <Compile Include="Interface\Test Cases.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Interface\UserStory.Designer.vb">
+      <DependentUpon>UserStory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\UserStory.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\Test Cases.resx">
       <DependentUpon>Test Cases.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\UserStory.resx">
+      <DependentUpon>UserStory.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -168,6 +177,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Background.jpg" />
+    <Content Include="Resources\Main Logo.png" />
     <None Include="Resources\Background1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
