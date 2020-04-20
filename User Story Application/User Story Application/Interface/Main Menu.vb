@@ -45,4 +45,8 @@
     Private Sub ViewToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem2.Click
         FormSetUp(Test_Cases)
     End Sub
+
+    Private Sub SearchToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SearchToolStripMenuItem.Click
+        FormSetUp(SearchMember)
+    End Sub
 End Class
