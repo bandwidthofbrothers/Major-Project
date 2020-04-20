@@ -65,7 +65,7 @@ Partial Class Test_Cases
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(302, 278)
+        Me.Label3.Location = New System.Drawing.Point(302, 272)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(144, 20)
         Me.Label3.TabIndex = 3
@@ -98,7 +98,7 @@ Partial Class Test_Cases
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.User_Story_Application.My.Resources.Resources.Background
-        Me.ClientSize = New System.Drawing.Size(662, 432)
+        Me.ClientSize = New System.Drawing.Size(731, 408)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
@@ -107,7 +107,7 @@ Partial Class Test_Cases
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "Test_Cases"
-        Me.Text = "Test_Cases"
+        Me.Text = "Test Cases"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
