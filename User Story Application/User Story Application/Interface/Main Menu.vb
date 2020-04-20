@@ -24,4 +24,8 @@
     Private Sub FormMainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub SearchToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SearchToolStripMenuItem.Click
+        FormSetUp(SearchMember)
+    End Sub
 End Class

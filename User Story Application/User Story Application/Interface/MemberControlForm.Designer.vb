@@ -22,21 +22,19 @@ Partial Class MemberControlForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MemberControlForm))
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TextBoxGroupMemberNumber = New System.Windows.Forms.TextBox()
+        Me.TextBoxFirstName = New System.Windows.Forms.TextBox()
+        Me.TextBoxSurname = New System.Windows.Forms.TextBox()
+        Me.TextBoxUsername = New System.Windows.Forms.TextBox()
+        Me.TextBoxPassword = New System.Windows.Forms.TextBox()
+        Me.LabelMemberNumber = New System.Windows.Forms.Label()
+        Me.LabelFirstName = New System.Windows.Forms.Label()
+        Me.LabelSurname = New System.Windows.Forms.Label()
+        Me.LabelUsername = New System.Windows.Forms.Label()
+        Me.LabelPassword = New System.Windows.Forms.Label()
+        Me.ButtonCancel = New System.Windows.Forms.Button()
+        Me.ListBoxMembers = New System.Windows.Forms.ListBox()
+        Me.LabelMembers = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -162,36 +160,37 @@ Partial Class MemberControlForm
         Me.Button1.Text = "Login"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
+        'ButtonCancel
         '
-        Me.Button2.Location = New System.Drawing.Point(351, 264)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(65, 20)
-        Me.Button2.TabIndex = 12
-        Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.ButtonCancel.Location = New System.Drawing.Point(509, 288)
+        Me.ButtonCancel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ButtonCancel.Name = "ButtonCancel"
+        Me.ButtonCancel.Size = New System.Drawing.Size(119, 25)
+        Me.ButtonCancel.TabIndex = 12
+        Me.ButtonCancel.Text = "Cancel"
+        Me.ButtonCancel.UseVisualStyleBackColor = True
         '
         'MemberControlForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.User_Story_Application.My.Resources.Resources.Background
-        Me.ClientSize = New System.Drawing.Size(504, 303)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ClientSize = New System.Drawing.Size(663, 373)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.LabelMembers)
+        Me.Controls.Add(Me.ListBoxMembers)
+        Me.Controls.Add(Me.ButtonCancel)
+        Me.Controls.Add(Me.LabelPassword)
+        Me.Controls.Add(Me.LabelUsername)
+        Me.Controls.Add(Me.LabelSurname)
+        Me.Controls.Add(Me.LabelFirstName)
+        Me.Controls.Add(Me.LabelMemberNumber)
+        Me.Controls.Add(Me.TextBoxPassword)
+        Me.Controls.Add(Me.TextBoxUsername)
+        Me.Controls.Add(Me.TextBoxSurname)
+        Me.Controls.Add(Me.TextBoxFirstName)
+        Me.Controls.Add(Me.TextBoxGroupMemberNumber)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "MemberControlForm"
         Me.Text = "MemberControlForm"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -200,17 +199,17 @@ Partial Class MemberControlForm
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents TextBoxGroupMemberNumber As TextBox
+    Friend WithEvents TextBoxFirstName As TextBox
+    Friend WithEvents TextBoxSurname As TextBox
+    Friend WithEvents TextBoxUsername As TextBox
+    Friend WithEvents TextBoxPassword As TextBox
+    Friend WithEvents LabelMemberNumber As Label
+    Friend WithEvents LabelFirstName As Label
+    Friend WithEvents LabelSurname As Label
+    Friend WithEvents LabelUsername As Label
+    Friend WithEvents LabelPassword As Label
+    Friend WithEvents ButtonCancel As Button
+    Friend WithEvents ListBoxMembers As ListBox
+    Friend WithEvents LabelMembers As Label
 End Class
