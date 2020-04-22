@@ -37,10 +37,10 @@ Partial Class Test_Cases
         '
         Me.PictureBox1.BackgroundImage = Global.User_Story_Application.My.Resources.Resources.Background
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(11, 45)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 56)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(233, 201)
+        Me.PictureBox1.Size = New System.Drawing.Size(262, 251)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -50,9 +50,9 @@ Partial Class Test_Cases
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(268, 70)
+        Me.Label1.Location = New System.Drawing.Point(302, 88)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(126, 17)
+        Me.Label1.Size = New System.Drawing.Size(141, 20)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Test Case Number"
         '
@@ -61,9 +61,9 @@ Partial Class Test_Cases
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(268, 134)
+        Me.Label2.Location = New System.Drawing.Point(302, 168)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(119, 17)
+        Me.Label2.Size = New System.Drawing.Size(134, 20)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Test Case Details"
         '
@@ -72,43 +72,43 @@ Partial Class Test_Cases
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(268, 222)
+        Me.Label3.Location = New System.Drawing.Point(302, 278)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(129, 17)
+        Me.Label3.Size = New System.Drawing.Size(144, 20)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "User Story Number"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(428, 67)
+        Me.TextBox1.Location = New System.Drawing.Point(482, 84)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(151, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(169, 26)
         Me.TextBox1.TabIndex = 4
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(428, 218)
+        Me.TextBox2.Location = New System.Drawing.Point(482, 272)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(151, 22)
+        Me.TextBox2.Size = New System.Drawing.Size(169, 26)
         Me.TextBox2.TabIndex = 5
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(428, 132)
+        Me.RichTextBox1.Location = New System.Drawing.Point(482, 165)
         Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(151, 63)
+        Me.RichTextBox1.Size = New System.Drawing.Size(169, 78)
         Me.RichTextBox1.TabIndex = 7
         Me.RichTextBox1.Text = ""
         '
         'Test_Cases
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.User_Story_Application.My.Resources.Resources.Background
-        Me.ClientSize = New System.Drawing.Size(588, 346)
+        Me.ClientSize = New System.Drawing.Size(662, 425)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
