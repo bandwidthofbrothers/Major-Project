@@ -80,6 +80,11 @@
     <Compile Include="DataSet.vb">
       <DependentUpon>DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="group22DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>group22DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Interface\MemberControlForm.Designer.vb">
       <DependentUpon>MemberControlForm.vb</DependentUpon>
     </Compile>
@@ -179,6 +184,17 @@
     </None>
     <None Include="DataSet.xss">
       <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="group22DataSet.xsc">
+      <DependentUpon>group22DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="group22DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>group22DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="group22DataSet.xss">
+      <DependentUpon>group22DataSet.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
