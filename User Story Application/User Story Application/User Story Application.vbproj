@@ -77,23 +77,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Interface\Main Menu.vb">
+    <Compile Include="Interface\MemberControlForm.Designer.vb">
+      <DependentUpon>MemberControlForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\MemberControlForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interface\Main Menu.Designer.vb">
-      <DependentUpon>Main Menu.vb</DependentUpon>
+    <Compile Include="Interface\MainMenuForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\MainMenuForm.Designer.vb">
+      <DependentUpon>MainMenuForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interface\LoginForm.Designer.vb">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </Compile>
     <Compile Include="Interface\LoginForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface\MemberControlForm.Designer.vb">
-      <DependentUpon>MemberControlForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Interface\MemberControlForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interface\SearchMember.Designer.vb">
@@ -108,10 +108,10 @@
     <Compile Include="Interface\Test Cases.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interface\UserStory.Designer.vb">
-      <DependentUpon>UserStory.vb</DependentUpon>
+    <Compile Include="Interface\UserStoryForm.Designer.vb">
+      <DependentUpon>UserStoryForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Interface\UserStory.vb">
+    <Compile Include="Interface\UserStoryForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -131,14 +131,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Interface\Main Menu.resx">
-      <DependentUpon>Main Menu.vb</DependentUpon>
+    <EmbeddedResource Include="Interface\MemberControlForm.resx">
+      <DependentUpon>MemberControlForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\MainMenuForm.resx">
+      <DependentUpon>MainMenuForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface\MemberControlForm.resx">
-      <DependentUpon>MemberControlForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\SearchMember.resx">
       <DependentUpon>SearchMember.vb</DependentUpon>
@@ -146,8 +146,8 @@
     <EmbeddedResource Include="Interface\Test Cases.resx">
       <DependentUpon>Test Cases.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interface\UserStory.resx">
-      <DependentUpon>UserStory.vb</DependentUpon>
+    <EmbeddedResource Include="Interface\UserStoryForm.resx">
+      <DependentUpon>UserStoryForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

@@ -1,9 +1,16 @@
-﻿Public Class FormMainMenu
+﻿Public Class MainMenuForm
+
+    Public Shared View As Boolean
+    Public Shared Edit As Boolean
+    Public Shared Search As Boolean
+
     Private Sub LoginToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoginToolStripMenuItem.Click
         If MenuAccessControl.DropDownItems(0).Text = "Sign Out" Then
             MenuMemberControl.Enabled = False
             MenuUserStoryControl.Enabled = False
             MenuTestCaseControl.Enabled = False
+
+            closeActiveMdiChild()
 
             MenuAccessControl.DropDownItems(0).Text = "Login"
         Else
@@ -15,11 +22,7 @@
 
         If Not ChildForm.IsMdiChild Then
 
-            Try
-                Me.ActiveMdiChild.Close()
-            Catch ex As Exception
-
-            End Try
+            closeActiveMdiChild()
 
             With ChildForm
                 .MdiParent = Me
@@ -35,11 +38,16 @@
     End Sub
 
     Private Sub ViewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem.Click
+        View = True
+        Edit = False
+        Search = False
+
+        closeActiveMdiChild()
         FormSetUp(MemberControlForm)
     End Sub
 
     Private Sub ViewToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem1.Click
-        FormSetUp(UserStory)
+        ' FormSetUp(UserStoryForm)
     End Sub
 
     Private Sub ViewToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem2.Click
@@ -47,6 +55,32 @@
     End Sub
 
     Private Sub SearchToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SearchToolStripMenuItem.Click
-        FormSetUp(SearchMember)
+        Search = True
+        View = False
+        Edit = False
+
+        closeActiveMdiChild()
+        FormSetUp(MemberControlForm)
+    End Sub
+
+    Private Sub EditToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditToolStripMenuItem.Click
+        Edit = True
+        View = False
+        Search = False
+
+        closeActiveMdiChild()
+        FormSetUp(MemberControlForm)
+    End Sub
+
+    Private Sub closeActiveMdiChild()
+        Try
+            Me.ActiveMdiChild.Close()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub MainMenuForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
