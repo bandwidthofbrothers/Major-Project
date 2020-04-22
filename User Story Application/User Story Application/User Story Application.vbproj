@@ -77,6 +77,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet.vb">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Interface\MemberControlForm.Designer.vb">
       <DependentUpon>MemberControlForm.vb</DependentUpon>
     </Compile>
@@ -154,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\UserStoryForm.resx">
       <DependentUpon>UserStoryForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\ViewingUserStory.resx">
+      <DependentUpon>ViewingUserStory.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
