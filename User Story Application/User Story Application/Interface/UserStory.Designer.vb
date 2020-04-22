@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class UserStory
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class UserStory
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.UserStoryLbl = New System.Windows.Forms.Label()
         Me.UserRoleLbl = New System.Windows.Forms.Label()
@@ -52,11 +52,8 @@ Partial Class UserStory
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ButtonAddNewTestCase = New System.Windows.Forms.Button()
         Me.ButtonRemoveTestCase = New System.Windows.Forms.Button()
-        Me.DataSet1 = New User_Story_Application.DataSet()
-        Me.MemberTableAdapter1 = New User_Story_Application.DataSetTableAdapters.MemberTableAdapter()
         Me.GroupBoxProgrammer1.SuspendLayout()
         Me.GroupBoxProgrammer2.SuspendLayout()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'UserStoryLbl
@@ -348,15 +345,6 @@ Partial Class UserStory
         Me.ButtonRemoveTestCase.Text = "Remove Test Case"
         Me.ButtonRemoveTestCase.UseVisualStyleBackColor = True
         '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'MemberTableAdapter1
-        '
-        Me.MemberTableAdapter1.ClearBeforeFill = True
-        '
         'UserStory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -391,7 +379,6 @@ Partial Class UserStory
         Me.GroupBoxProgrammer1.PerformLayout()
         Me.GroupBoxProgrammer2.ResumeLayout(False)
         Me.GroupBoxProgrammer2.PerformLayout()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -427,6 +414,4 @@ Partial Class UserStory
     Friend WithEvents Label2 As Label
     Friend WithEvents ButtonAddNewTestCase As Button
     Friend WithEvents ButtonRemoveTestCase As Button
-    Friend WithEvents DataSet1 As DataSet
-    Friend WithEvents MemberTableAdapter1 As DataSetTableAdapters.MemberTableAdapter
 End Class
