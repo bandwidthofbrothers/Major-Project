@@ -114,6 +114,12 @@
     <Compile Include="Interface\UserStoryForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Interface\ViewingUserStory.Designer.vb">
+      <DependentUpon>ViewingUserStory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ViewingUserStory.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
