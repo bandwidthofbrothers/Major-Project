@@ -48,7 +48,11 @@ Partial Class ViewingUserStory
         Me.UserStory_MemberTableAdapter = New User_Story_Application.group22DataSetTableAdapters.UserStory_MemberTableAdapter()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
         Me.UserStoryMemberBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.UserStoryNoDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupMemberNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ResponsibilityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,6 +65,7 @@ Partial Class ViewingUserStory
         CType(Me.UserStoryMemberBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserStoryMemberBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataSet1
@@ -80,7 +85,7 @@ Partial Class ViewingUserStory
         Me.DataGridView2.DataSource = Me.UserStoryBindingSource
         Me.DataGridView2.Location = New System.Drawing.Point(12, 12)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(899, 247)
+        Me.DataGridView2.Size = New System.Drawing.Size(849, 247)
         Me.DataGridView2.TabIndex = 2
         '
         'UserStoryNoDataGridViewTextBoxColumn
@@ -153,7 +158,7 @@ Partial Class ViewingUserStory
         Me.DataGridView1.DataSource = Me.FKTestCasesUserStoryBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(12, 265)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(382, 167)
+        Me.DataGridView1.Size = New System.Drawing.Size(348, 175)
         Me.DataGridView1.TabIndex = 4
         '
         'TestCaseNoDataGridViewTextBoxColumn
@@ -201,11 +206,11 @@ Partial Class ViewingUserStory
         '
         Me.DataGridView3.AutoGenerateColumns = False
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.UserStoryNoDataGridViewTextBoxColumn2, Me.GroupMemberNoDataGridViewTextBoxColumn, Me.ResponsibilityDataGridViewTextBoxColumn})
+        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.GroupMemberNoDataGridViewTextBoxColumn, Me.ResponsibilityDataGridViewTextBoxColumn})
         Me.DataGridView3.DataSource = Me.UserStoryMemberBindingSource1
-        Me.DataGridView3.Location = New System.Drawing.Point(416, 265)
+        Me.DataGridView3.Location = New System.Drawing.Point(383, 265)
         Me.DataGridView3.Name = "DataGridView3"
-        Me.DataGridView3.Size = New System.Drawing.Size(417, 167)
+        Me.DataGridView3.Size = New System.Drawing.Size(251, 175)
         Me.DataGridView3.TabIndex = 5
         '
         'UserStoryMemberBindingSource1
@@ -213,11 +218,50 @@ Partial Class ViewingUserStory
         Me.UserStoryMemberBindingSource1.DataMember = "UserStory_Member"
         Me.UserStoryMemberBindingSource1.DataSource = Me.Group22DataSet
         '
-        'UserStoryNoDataGridViewTextBoxColumn2
+        'GroupBox1
         '
-        Me.UserStoryNoDataGridViewTextBoxColumn2.DataPropertyName = "UserStoryNo"
-        Me.UserStoryNoDataGridViewTextBoxColumn2.HeaderText = "UserStoryNo"
-        Me.UserStoryNoDataGridViewTextBoxColumn2.Name = "UserStoryNoDataGridViewTextBoxColumn2"
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.TextBox2)
+        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Location = New System.Drawing.Point(383, 468)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(349, 124)
+        Me.GroupBox1.TabIndex = 6
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Programmer Details"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(85, 34)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(130, 20)
+        Me.TextBox1.TabIndex = 0
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(85, 78)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(130, 20)
+        Me.TextBox2.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(6, 41)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(57, 13)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "First Name"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(6, 81)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(49, 13)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Surname"
         '
         'GroupMemberNoDataGridViewTextBoxColumn
         '
@@ -235,7 +279,8 @@ Partial Class ViewingUserStory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(947, 457)
+        Me.ClientSize = New System.Drawing.Size(962, 604)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.DataGridView3)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.DataGridView2)
@@ -251,6 +296,8 @@ Partial Class ViewingUserStory
         CType(Me.UserStoryMemberBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UserStoryMemberBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -278,8 +325,12 @@ Partial Class ViewingUserStory
     Friend WithEvents UserStoryMemberBindingSource As BindingSource
     Friend WithEvents UserStory_MemberTableAdapter As group22DataSetTableAdapters.UserStory_MemberTableAdapter
     Friend WithEvents DataGridView3 As DataGridView
-    Friend WithEvents UserStoryNoDataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents UserStoryMemberBindingSource1 As BindingSource
     Friend WithEvents GroupMemberNoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ResponsibilityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents UserStoryMemberBindingSource1 As BindingSource
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
 End Class
