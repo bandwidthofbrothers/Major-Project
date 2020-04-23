@@ -26,9 +26,6 @@ Partial Class ViewingUserStory
         Me.DataSet1 = New User_Story_Application.DataSet()
         Me.UserStory_MemberTableAdapter1 = New User_Story_Application.DataSetTableAdapters.UserStory_MemberTableAdapter()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.Group22DataSet = New User_Story_Application.group22DataSet()
-        Me.UserStoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.UserStoryTableAdapter = New User_Story_Application.group22DataSetTableAdapters.UserStoryTableAdapter()
         Me.UserStoryNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UserStoryTitleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UserRoleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -37,20 +34,33 @@ Partial Class ViewingUserStory
         Me.UserStoryEndDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UserStoryStatusDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UserStoryPriorityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UserStoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Group22DataSet = New User_Story_Application.group22DataSet()
+        Me.UserStoryTableAdapter = New User_Story_Application.group22DataSetTableAdapters.UserStoryTableAdapter()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Group22DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.FKTestCasesUserStoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TestCasesTableAdapter = New User_Story_Application.group22DataSetTableAdapters.TestCasesTableAdapter()
         Me.TestCaseNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TestCaseDetailsDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UserStoryNoDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FKTestCasesUserStoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Group22DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TestCasesTableAdapter = New User_Story_Application.group22DataSetTableAdapters.TestCasesTableAdapter()
+        Me.UserStoryMemberBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.UserStory_MemberTableAdapter = New User_Story_Application.group22DataSetTableAdapters.UserStory_MemberTableAdapter()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.UserStoryMemberBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.UserStoryNoDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GroupMemberNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ResponsibilityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserStoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Group22DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FKTestCasesUserStoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Group22DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UserStoryMemberBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UserStoryMemberBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataSet1
@@ -72,20 +82,6 @@ Partial Class ViewingUserStory
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.Size = New System.Drawing.Size(899, 247)
         Me.DataGridView2.TabIndex = 2
-        '
-        'Group22DataSet
-        '
-        Me.Group22DataSet.DataSetName = "group22DataSet"
-        Me.Group22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'UserStoryBindingSource
-        '
-        Me.UserStoryBindingSource.DataMember = "UserStory"
-        Me.UserStoryBindingSource.DataSource = Me.Group22DataSet
-        '
-        'UserStoryTableAdapter
-        '
-        Me.UserStoryTableAdapter.ClearBeforeFill = True
         '
         'UserStoryNoDataGridViewTextBoxColumn
         '
@@ -135,6 +131,20 @@ Partial Class ViewingUserStory
         Me.UserStoryPriorityDataGridViewTextBoxColumn.HeaderText = "UserStoryPriority"
         Me.UserStoryPriorityDataGridViewTextBoxColumn.Name = "UserStoryPriorityDataGridViewTextBoxColumn"
         '
+        'UserStoryBindingSource
+        '
+        Me.UserStoryBindingSource.DataMember = "UserStory"
+        Me.UserStoryBindingSource.DataSource = Me.Group22DataSet
+        '
+        'Group22DataSet
+        '
+        Me.Group22DataSet.DataSetName = "group22DataSet"
+        Me.Group22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'UserStoryTableAdapter
+        '
+        Me.UserStoryTableAdapter.ClearBeforeFill = True
+        '
         'DataGridView1
         '
         Me.DataGridView1.AutoGenerateColumns = False
@@ -145,20 +155,6 @@ Partial Class ViewingUserStory
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(382, 167)
         Me.DataGridView1.TabIndex = 4
-        '
-        'Group22DataSetBindingSource
-        '
-        Me.Group22DataSetBindingSource.DataSource = Me.Group22DataSet
-        Me.Group22DataSetBindingSource.Position = 0
-        '
-        'FKTestCasesUserStoryBindingSource
-        '
-        Me.FKTestCasesUserStoryBindingSource.DataMember = "FK_TestCases_UserStory"
-        Me.FKTestCasesUserStoryBindingSource.DataSource = Me.UserStoryBindingSource
-        '
-        'TestCasesTableAdapter
-        '
-        Me.TestCasesTableAdapter.ClearBeforeFill = True
         '
         'TestCaseNoDataGridViewTextBoxColumn
         '
@@ -178,22 +174,83 @@ Partial Class ViewingUserStory
         Me.UserStoryNoDataGridViewTextBoxColumn1.HeaderText = "UserStoryNo"
         Me.UserStoryNoDataGridViewTextBoxColumn1.Name = "UserStoryNoDataGridViewTextBoxColumn1"
         '
+        'FKTestCasesUserStoryBindingSource
+        '
+        Me.FKTestCasesUserStoryBindingSource.DataMember = "FK_TestCases_UserStory"
+        Me.FKTestCasesUserStoryBindingSource.DataSource = Me.UserStoryBindingSource
+        '
+        'Group22DataSetBindingSource
+        '
+        Me.Group22DataSetBindingSource.DataSource = Me.Group22DataSet
+        Me.Group22DataSetBindingSource.Position = 0
+        '
+        'TestCasesTableAdapter
+        '
+        Me.TestCasesTableAdapter.ClearBeforeFill = True
+        '
+        'UserStoryMemberBindingSource
+        '
+        Me.UserStoryMemberBindingSource.DataMember = "UserStory_Member"
+        Me.UserStoryMemberBindingSource.DataSource = Me.Group22DataSetBindingSource
+        '
+        'UserStory_MemberTableAdapter
+        '
+        Me.UserStory_MemberTableAdapter.ClearBeforeFill = True
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.AutoGenerateColumns = False
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.UserStoryNoDataGridViewTextBoxColumn2, Me.GroupMemberNoDataGridViewTextBoxColumn, Me.ResponsibilityDataGridViewTextBoxColumn})
+        Me.DataGridView3.DataSource = Me.UserStoryMemberBindingSource1
+        Me.DataGridView3.Location = New System.Drawing.Point(416, 265)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.Size = New System.Drawing.Size(417, 167)
+        Me.DataGridView3.TabIndex = 5
+        '
+        'UserStoryMemberBindingSource1
+        '
+        Me.UserStoryMemberBindingSource1.DataMember = "UserStory_Member"
+        Me.UserStoryMemberBindingSource1.DataSource = Me.Group22DataSet
+        '
+        'UserStoryNoDataGridViewTextBoxColumn2
+        '
+        Me.UserStoryNoDataGridViewTextBoxColumn2.DataPropertyName = "UserStoryNo"
+        Me.UserStoryNoDataGridViewTextBoxColumn2.HeaderText = "UserStoryNo"
+        Me.UserStoryNoDataGridViewTextBoxColumn2.Name = "UserStoryNoDataGridViewTextBoxColumn2"
+        '
+        'GroupMemberNoDataGridViewTextBoxColumn
+        '
+        Me.GroupMemberNoDataGridViewTextBoxColumn.DataPropertyName = "GroupMemberNo"
+        Me.GroupMemberNoDataGridViewTextBoxColumn.HeaderText = "GroupMemberNo"
+        Me.GroupMemberNoDataGridViewTextBoxColumn.Name = "GroupMemberNoDataGridViewTextBoxColumn"
+        '
+        'ResponsibilityDataGridViewTextBoxColumn
+        '
+        Me.ResponsibilityDataGridViewTextBoxColumn.DataPropertyName = "Responsibility"
+        Me.ResponsibilityDataGridViewTextBoxColumn.HeaderText = "Responsibility"
+        Me.ResponsibilityDataGridViewTextBoxColumn.Name = "ResponsibilityDataGridViewTextBoxColumn"
+        '
         'ViewingUserStory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(947, 457)
+        Me.Controls.Add(Me.DataGridView3)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.DataGridView2)
         Me.Name = "ViewingUserStory"
         Me.Text = "ViewingUserStory"
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UserStoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Group22DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FKTestCasesUserStoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Group22DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UserStoryMemberBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UserStoryMemberBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -218,4 +275,11 @@ Partial Class ViewingUserStory
     Friend WithEvents TestCaseNoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents TestCaseDetailsDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents UserStoryNoDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents UserStoryMemberBindingSource As BindingSource
+    Friend WithEvents UserStory_MemberTableAdapter As group22DataSetTableAdapters.UserStory_MemberTableAdapter
+    Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents UserStoryNoDataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents GroupMemberNoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ResponsibilityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UserStoryMemberBindingSource1 As BindingSource
 End Class
