@@ -42,10 +42,10 @@ Partial Class UserStoryForm
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.ComboBox5 = New System.Windows.Forms.ComboBox()
@@ -240,32 +240,6 @@ Partial Class UserStoryForm
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Programmer 1"
         '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(26, 31)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(45, 17)
-        Me.Label9.TabIndex = 0
-        Me.Label9.Text = "Name"
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(29, 51)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(178, 24)
-        Me.ComboBox3.TabIndex = 20
-        '
-        'ComboBox4
-        '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(238, 51)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(178, 24)
-        Me.ComboBox4.TabIndex = 21
-        '
         'Label10
         '
         Me.Label10.AutoSize = True
@@ -275,6 +249,32 @@ Partial Class UserStoryForm
         Me.Label10.Size = New System.Drawing.Size(95, 17)
         Me.Label10.TabIndex = 22
         Me.Label10.Text = "Responsibility"
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Location = New System.Drawing.Point(238, 51)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(178, 24)
+        Me.ComboBox4.TabIndex = 21
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(29, 51)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(178, 24)
+        Me.ComboBox3.TabIndex = 20
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(26, 31)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(45, 17)
+        Me.Label9.TabIndex = 0
+        Me.Label9.Text = "Name"
         '
         'GroupBox2
         '
@@ -340,6 +340,7 @@ Partial Class UserStoryForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1222, 593)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
