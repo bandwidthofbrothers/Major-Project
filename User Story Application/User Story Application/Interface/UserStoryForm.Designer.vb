@@ -39,8 +39,8 @@ Partial Class UserStoryForm
         Me.ComboBoxStatus = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBoxNewTestCaseDetail = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.ButtonAddNewTestCase = New System.Windows.Forms.Button()
+        Me.ButtonRemoveTestCase = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.ComboBoxProg1Responsibility = New System.Windows.Forms.ComboBox()
@@ -116,7 +116,8 @@ Partial Class UserStoryForm
         '
         'DateTimePickerStartDate
         '
-        Me.DateTimePickerStartDate.CustomFormat = "dd/mm/yyyy"
+        Me.DateTimePickerStartDate.CustomFormat = "dd MMMM yyyy"
+        Me.DateTimePickerStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePickerStartDate.Location = New System.Drawing.Point(574, 56)
         Me.DateTimePickerStartDate.Name = "DateTimePickerStartDate"
         Me.DateTimePickerStartDate.Size = New System.Drawing.Size(200, 22)
@@ -134,9 +135,11 @@ Partial Class UserStoryForm
         '
         'DateTimePickerEndDate
         '
-        Me.DateTimePickerEndDate.CustomFormat = "dd/mm/yyyy"
+        Me.DateTimePickerEndDate.CustomFormat = "dd MMMM yyyy"
+        Me.DateTimePickerEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePickerEndDate.Location = New System.Drawing.Point(798, 56)
         Me.DateTimePickerEndDate.Name = "DateTimePickerEndDate"
+        Me.DateTimePickerEndDate.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.DateTimePickerEndDate.Size = New System.Drawing.Size(200, 22)
         Me.DateTimePickerEndDate.TabIndex = 7
         '
@@ -214,23 +217,23 @@ Partial Class UserStoryForm
         Me.TextBoxNewTestCaseDetail.Size = New System.Drawing.Size(610, 76)
         Me.TextBoxNewTestCaseDetail.TabIndex = 15
         '
-        'Button1
+        'ButtonAddNewTestCase
         '
-        Me.Button1.Location = New System.Drawing.Point(432, 280)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(173, 39)
-        Me.Button1.TabIndex = 17
-        Me.Button1.Text = "Add New Test Case"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ButtonAddNewTestCase.Location = New System.Drawing.Point(432, 280)
+        Me.ButtonAddNewTestCase.Name = "ButtonAddNewTestCase"
+        Me.ButtonAddNewTestCase.Size = New System.Drawing.Size(173, 39)
+        Me.ButtonAddNewTestCase.TabIndex = 17
+        Me.ButtonAddNewTestCase.Text = "Add New Test Case"
+        Me.ButtonAddNewTestCase.UseVisualStyleBackColor = True
         '
-        'Button2
+        'ButtonRemoveTestCase
         '
-        Me.Button2.Location = New System.Drawing.Point(732, 280)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(173, 39)
-        Me.Button2.TabIndex = 18
-        Me.Button2.Text = "Remove Test Case"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.ButtonRemoveTestCase.Location = New System.Drawing.Point(732, 280)
+        Me.ButtonRemoveTestCase.Name = "ButtonRemoveTestCase"
+        Me.ButtonRemoveTestCase.Size = New System.Drawing.Size(173, 39)
+        Me.ButtonRemoveTestCase.TabIndex = 18
+        Me.ButtonRemoveTestCase.Text = "Remove Test Case"
+        Me.ButtonRemoveTestCase.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -399,8 +402,8 @@ Partial Class UserStoryForm
         Me.Controls.Add(Me.ButtonRecordUserStory)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ButtonRemoveTestCase)
+        Me.Controls.Add(Me.ButtonAddNewTestCase)
         Me.Controls.Add(Me.TextBoxNewTestCaseDetail)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.ComboBoxStatus)
@@ -447,8 +450,8 @@ Partial Class UserStoryForm
     Friend WithEvents ComboBoxStatus As ComboBox
     Friend WithEvents Label8 As Label
     Friend WithEvents TextBoxNewTestCaseDetail As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents ButtonAddNewTestCase As Button
+    Friend WithEvents ButtonRemoveTestCase As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label10 As Label
     Friend WithEvents ComboBoxProg1Responsibility As ComboBox
