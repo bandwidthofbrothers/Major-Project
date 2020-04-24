@@ -3128,7 +3128,7 @@ Namespace DataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(2) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT UserStoryNo, UserStoryTitle, UserRole, UserStoryDescription, UserStoryStar"& _ 
@@ -3139,6 +3139,21 @@ Namespace DataSetTableAdapters
             Me._commandCollection(1).CommandText = "SELECT UserStoryNo, UserStoryTitle, UserRole, UserStoryDescription, UserStoryStar"& _ 
                 "tDate, UserStoryEndDate, UserStoryStatus, UserStoryPriority FROM dbo.UserStory"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "INSERT INTO [dbo].[UserStory] ( [UserStoryTitle], [UserRole], [UserStoryDescripti"& _ 
+                "on], [UserStoryStartDate], [UserStoryEndDate], [UserStoryStatus], [UserStoryPrio"& _ 
+                "rity]) "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"OUTPUT Inserted.UserStoryNo"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES (@UserStoryTitle, @UserRole, @UserS"& _ 
+                "toryDescription, @UserStoryStartDate, @UserStoryEndDate, @UserStoryStatus, @User"& _ 
+                "StoryPriority);"
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@UserStoryTitle", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "UserStoryTitle", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@UserRole", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "UserRole", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@UserStoryDescription", Global.System.Data.SqlDbType.Text, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, "UserStoryDescription", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@UserStoryStartDate", Global.System.Data.SqlDbType.SmallDateTime, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "UserStoryStartDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@UserStoryEndDate", Global.System.Data.SqlDbType.SmallDateTime, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "UserStoryEndDate", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@UserStoryStatus", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "UserStoryStatus", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@UserStoryPriority", Global.System.Data.SqlDbType.VarChar, 15, Global.System.Data.ParameterDirection.Input, 0, 0, "UserStoryPriority", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3385,6 +3400,55 @@ Namespace DataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update(ByVal UserStoryTitle As String, ByVal UserRole As String, ByVal UserStoryDescription As String, ByVal UserStoryStartDate As Date, ByVal UserStoryEndDate As Date, ByVal UserStoryStatus As String, ByVal UserStoryPriority As String, ByVal Original_UserStoryNo As Integer, ByVal Original_UserStoryTitle As String, ByVal Original_UserRole As String, ByVal Original_UserStoryStartDate As Date, ByVal Original_UserStoryEndDate As Date, ByVal Original_UserStoryStatus As String, ByVal Original_UserStoryPriority As String) As Integer
             Return Me.Update(Original_UserStoryNo, UserStoryTitle, UserRole, UserStoryDescription, UserStoryStartDate, UserStoryEndDate, UserStoryStatus, UserStoryPriority, Original_UserStoryNo, Original_UserStoryTitle, Original_UserRole, Original_UserStoryStartDate, Original_UserStoryEndDate, Original_UserStoryStatus, Original_UserStoryPriority)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
+        Public Overloads Overridable Function InsertUserStory(ByVal UserStoryTitle As String, ByVal UserRole As String, ByVal UserStoryDescription As String, ByVal UserStoryStartDate As Date, ByVal UserStoryEndDate As Date, ByVal UserStoryStatus As String, ByVal UserStoryPriority As String) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(2)
+            If (UserStoryTitle Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("UserStoryTitle")
+            Else
+                command.Parameters(0).Value = CType(UserStoryTitle,String)
+            End If
+            If (UserRole Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("UserRole")
+            Else
+                command.Parameters(1).Value = CType(UserRole,String)
+            End If
+            If (UserStoryDescription Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("UserStoryDescription")
+            Else
+                command.Parameters(2).Value = CType(UserStoryDescription,String)
+            End If
+            command.Parameters(3).Value = CType(UserStoryStartDate,Date)
+            command.Parameters(4).Value = CType(UserStoryEndDate,Date)
+            If (UserStoryStatus Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("UserStoryStatus")
+            Else
+                command.Parameters(5).Value = CType(UserStoryStatus,String)
+            End If
+            If (UserStoryPriority Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("UserStoryPriority")
+            Else
+                command.Parameters(6).Value = CType(UserStoryPriority,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
         End Function
     End Class
     

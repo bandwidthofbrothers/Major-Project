@@ -28,39 +28,39 @@ Partial Class UserStoryForm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ComboBoxUserRole = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePickerStartDate = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePickerEndDate = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxPriority = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBoxUserStoryDescription = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxStatus = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBoxNewTestCaseDetail = New System.Windows.Forms.TextBox()
+        Me.TextBoxNewTestsCaseDetails = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxProg1Responsibility = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxProg1Name = New System.Windows.Forms.ComboBox()
+        Me.BSProg1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DSUserStory = New User_Story_Application.DataSet()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.TAMember = New User_Story_Application.DataSetTableAdapters.MemberTableAdapter()
-        Me.DSUserStory = New User_Story_Application.DataSet()
-        Me.BSProg1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ComboBoxProg2Responsibilty = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxProg2Name = New System.Windows.Forms.ComboBox()
         Me.BSProg2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.ButtonRecordUserStory = New System.Windows.Forms.Button()
+        Me.TAMember = New User_Story_Application.DataSetTableAdapters.MemberTableAdapter()
         Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        CType(Me.DSUserStory, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BSProg1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DSUserStory, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         CType(Me.BSProg2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -111,13 +111,13 @@ Partial Class UserStoryForm
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Start Date"
         '
-        'DateTimePicker1
+        'DateTimePickerStartDate
         '
-        Me.DateTimePicker1.CustomFormat = "dd/mm/yyyy"
-        Me.DateTimePicker1.Location = New System.Drawing.Point(574, 56)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 22)
-        Me.DateTimePicker1.TabIndex = 5
+        Me.DateTimePickerStartDate.CustomFormat = "dd/mm/yyyy"
+        Me.DateTimePickerStartDate.Location = New System.Drawing.Point(574, 56)
+        Me.DateTimePickerStartDate.Name = "DateTimePickerStartDate"
+        Me.DateTimePickerStartDate.Size = New System.Drawing.Size(200, 22)
+        Me.DateTimePickerStartDate.TabIndex = 5
         '
         'Label4
         '
@@ -129,13 +129,13 @@ Partial Class UserStoryForm
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "End Date"
         '
-        'DateTimePicker2
+        'DateTimePickerEndDate
         '
-        Me.DateTimePicker2.CustomFormat = "dd/mm/yyyy"
-        Me.DateTimePicker2.Location = New System.Drawing.Point(798, 56)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 22)
-        Me.DateTimePicker2.TabIndex = 7
+        Me.DateTimePickerEndDate.CustomFormat = "dd/mm/yyyy"
+        Me.DateTimePickerEndDate.Location = New System.Drawing.Point(798, 56)
+        Me.DateTimePickerEndDate.Name = "DateTimePickerEndDate"
+        Me.DateTimePickerEndDate.Size = New System.Drawing.Size(200, 22)
+        Me.DateTimePickerEndDate.TabIndex = 7
         '
         'Label5
         '
@@ -147,14 +147,14 @@ Partial Class UserStoryForm
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Priority"
         '
-        'ComboBox1
+        'ComboBoxPriority
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"High" & Global.Microsoft.VisualBasic.ChrW(9), "Medium", "Low"})
-        Me.ComboBox1.Location = New System.Drawing.Point(1015, 54)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(178, 24)
-        Me.ComboBox1.TabIndex = 9
+        Me.ComboBoxPriority.FormattingEnabled = True
+        Me.ComboBoxPriority.Items.AddRange(New Object() {"High" & Global.Microsoft.VisualBasic.ChrW(9), "Medium", "Low"})
+        Me.ComboBoxPriority.Location = New System.Drawing.Point(1015, 54)
+        Me.ComboBoxPriority.Name = "ComboBoxPriority"
+        Me.ComboBoxPriority.Size = New System.Drawing.Size(178, 24)
+        Me.ComboBoxPriority.TabIndex = 9
         '
         'Label6
         '
@@ -162,17 +162,17 @@ Partial Class UserStoryForm
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(13, 154)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(245, 29)
+        Me.Label6.Size = New System.Drawing.Size(253, 29)
         Me.Label6.TabIndex = 10
-        Me.Label6.Text = "User Story Desciption"
+        Me.Label6.Text = "User Story Description"
         '
-        'TextBox1
+        'TextBoxUserStoryDescription
         '
-        Me.TextBox1.Location = New System.Drawing.Point(18, 198)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(287, 252)
-        Me.TextBox1.TabIndex = 11
+        Me.TextBoxUserStoryDescription.Location = New System.Drawing.Point(31, 198)
+        Me.TextBoxUserStoryDescription.Multiline = True
+        Me.TextBoxUserStoryDescription.Name = "TextBoxUserStoryDescription"
+        Me.TextBoxUserStoryDescription.Size = New System.Drawing.Size(287, 252)
+        Me.TextBoxUserStoryDescription.TabIndex = 11
         '
         'Label7
         '
@@ -184,14 +184,14 @@ Partial Class UserStoryForm
         Me.Label7.TabIndex = 12
         Me.Label7.Text = "Status"
         '
-        'ComboBox2
+        'ComboBoxStatus
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Complete", "Incomplete"})
-        Me.ComboBox2.Location = New System.Drawing.Point(1015, 198)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(178, 24)
-        Me.ComboBox2.TabIndex = 13
+        Me.ComboBoxStatus.FormattingEnabled = True
+        Me.ComboBoxStatus.Items.AddRange(New Object() {"Complete", "Incomplete"})
+        Me.ComboBoxStatus.Location = New System.Drawing.Point(1015, 198)
+        Me.ComboBoxStatus.Name = "ComboBoxStatus"
+        Me.ComboBoxStatus.Size = New System.Drawing.Size(178, 24)
+        Me.ComboBoxStatus.TabIndex = 13
         '
         'Label8
         '
@@ -203,21 +203,21 @@ Partial Class UserStoryForm
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "New Test Case Detail"
         '
-        'TextBox2
+        'TextBoxNewTestCaseDetail
         '
-        Me.TextBox2.Location = New System.Drawing.Point(357, 198)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(610, 76)
-        Me.TextBox2.TabIndex = 15
+        Me.TextBoxNewTestCaseDetail.Location = New System.Drawing.Point(357, 198)
+        Me.TextBoxNewTestCaseDetail.Multiline = True
+        Me.TextBoxNewTestCaseDetail.Name = "TextBoxNewTestCaseDetail"
+        Me.TextBoxNewTestCaseDetail.Size = New System.Drawing.Size(610, 76)
+        Me.TextBoxNewTestCaseDetail.TabIndex = 15
         '
-        'TextBox3
+        'TextBoxNewTestsCaseDetails
         '
-        Me.TextBox3.Location = New System.Drawing.Point(357, 325)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(610, 125)
-        Me.TextBox3.TabIndex = 16
+        Me.TextBoxNewTestsCaseDetails.Location = New System.Drawing.Point(357, 325)
+        Me.TextBoxNewTestsCaseDetails.Multiline = True
+        Me.TextBoxNewTestsCaseDetails.Name = "TextBoxNewTestsCaseDetails"
+        Me.TextBoxNewTestsCaseDetails.Size = New System.Drawing.Size(610, 125)
+        Me.TextBoxNewTestsCaseDetails.TabIndex = 16
         '
         'Button1
         '
@@ -240,8 +240,8 @@ Partial Class UserStoryForm
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Controls.Add(Me.ComboBox4)
-        Me.GroupBox1.Controls.Add(Me.ComboBox3)
+        Me.GroupBox1.Controls.Add(Me.ComboBoxProg1Responsibility)
+        Me.GroupBox1.Controls.Add(Me.ComboBoxProg1Name)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(18, 481)
@@ -261,25 +261,35 @@ Partial Class UserStoryForm
         Me.Label10.TabIndex = 22
         Me.Label10.Text = "Responsibility"
         '
-        'ComboBox4
+        'ComboBoxProg1Responsibility
         '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Items.AddRange(New Object() {"Main" & Global.Microsoft.VisualBasic.ChrW(9), "Sub"})
-        Me.ComboBox4.Location = New System.Drawing.Point(238, 51)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(178, 24)
-        Me.ComboBox4.TabIndex = 21
+        Me.ComboBoxProg1Responsibility.FormattingEnabled = True
+        Me.ComboBoxProg1Responsibility.Items.AddRange(New Object() {"Main" & Global.Microsoft.VisualBasic.ChrW(9), "Sub"})
+        Me.ComboBoxProg1Responsibility.Location = New System.Drawing.Point(238, 51)
+        Me.ComboBoxProg1Responsibility.Name = "ComboBoxProg1Responsibility"
+        Me.ComboBoxProg1Responsibility.Size = New System.Drawing.Size(178, 24)
+        Me.ComboBoxProg1Responsibility.TabIndex = 21
         '
-        'ComboBox3
+        'ComboBoxProg1Name
         '
-        Me.ComboBox3.DataSource = Me.BSProg1
-        Me.ComboBox3.DisplayMember = "FirstName"
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(29, 51)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(178, 24)
-        Me.ComboBox3.TabIndex = 20
-        Me.ComboBox3.ValueMember = "GroupMemberNo"
+        Me.ComboBoxProg1Name.DataSource = Me.BSProg1
+        Me.ComboBoxProg1Name.DisplayMember = "FirstName"
+        Me.ComboBoxProg1Name.FormattingEnabled = True
+        Me.ComboBoxProg1Name.Location = New System.Drawing.Point(29, 51)
+        Me.ComboBoxProg1Name.Name = "ComboBoxProg1Name"
+        Me.ComboBoxProg1Name.Size = New System.Drawing.Size(178, 24)
+        Me.ComboBoxProg1Name.TabIndex = 20
+        Me.ComboBoxProg1Name.ValueMember = "GroupMemberNo"
+        '
+        'BSProg1
+        '
+        Me.BSProg1.DataMember = "Member"
+        Me.BSProg1.DataSource = Me.DSUserStory
+        '
+        'DSUserStory
+        '
+        Me.DSUserStory.DataSetName = "DataSet"
+        Me.DSUserStory.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label9
         '
@@ -294,8 +304,8 @@ Partial Class UserStoryForm
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.Label11)
-        Me.GroupBox2.Controls.Add(Me.ComboBox5)
-        Me.GroupBox2.Controls.Add(Me.ComboBox6)
+        Me.GroupBox2.Controls.Add(Me.ComboBoxProg2Responsibilty)
+        Me.GroupBox2.Controls.Add(Me.ComboBoxProg2Name)
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(532, 481)
@@ -315,25 +325,30 @@ Partial Class UserStoryForm
         Me.Label11.TabIndex = 22
         Me.Label11.Text = "Responsibility"
         '
-        'ComboBox5
+        'ComboBoxProg2Responsibilty
         '
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Items.AddRange(New Object() {"Main", "Sub"})
-        Me.ComboBox5.Location = New System.Drawing.Point(238, 51)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(178, 24)
-        Me.ComboBox5.TabIndex = 21
+        Me.ComboBoxProg2Responsibilty.FormattingEnabled = True
+        Me.ComboBoxProg2Responsibilty.Items.AddRange(New Object() {"Main", "Sub"})
+        Me.ComboBoxProg2Responsibilty.Location = New System.Drawing.Point(238, 51)
+        Me.ComboBoxProg2Responsibilty.Name = "ComboBoxProg2Responsibilty"
+        Me.ComboBoxProg2Responsibilty.Size = New System.Drawing.Size(178, 24)
+        Me.ComboBoxProg2Responsibilty.TabIndex = 21
         '
-        'ComboBox6
+        'ComboBoxProg2Name
         '
-        Me.ComboBox6.DataSource = Me.BSProg2
-        Me.ComboBox6.DisplayMember = "FirstName"
-        Me.ComboBox6.FormattingEnabled = True
-        Me.ComboBox6.Location = New System.Drawing.Point(29, 51)
-        Me.ComboBox6.Name = "ComboBox6"
-        Me.ComboBox6.Size = New System.Drawing.Size(178, 24)
-        Me.ComboBox6.TabIndex = 20
-        Me.ComboBox6.ValueMember = "GroupMemberNo"
+        Me.ComboBoxProg2Name.DataSource = Me.BSProg2
+        Me.ComboBoxProg2Name.DisplayMember = "FirstName"
+        Me.ComboBoxProg2Name.FormattingEnabled = True
+        Me.ComboBoxProg2Name.Location = New System.Drawing.Point(29, 51)
+        Me.ComboBoxProg2Name.Name = "ComboBoxProg2Name"
+        Me.ComboBoxProg2Name.Size = New System.Drawing.Size(178, 24)
+        Me.ComboBoxProg2Name.TabIndex = 20
+        Me.ComboBoxProg2Name.ValueMember = "GroupMemberNo"
+        '
+        'BSProg2
+        '
+        Me.BSProg2.DataMember = "Member"
+        Me.BSProg2.DataSource = Me.DSUserStory
         '
         'Label12
         '
@@ -345,33 +360,18 @@ Partial Class UserStoryForm
         Me.Label12.TabIndex = 0
         Me.Label12.Text = "Name"
         '
-        'Button3
+        'ButtonRecordUserStory
         '
-        Me.Button3.Location = New System.Drawing.Point(993, 492)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(217, 89)
-        Me.Button3.TabIndex = 24
-        Me.Button3.Text = "Record User Story"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.ButtonRecordUserStory.Location = New System.Drawing.Point(993, 492)
+        Me.ButtonRecordUserStory.Name = "ButtonRecordUserStory"
+        Me.ButtonRecordUserStory.Size = New System.Drawing.Size(217, 89)
+        Me.ButtonRecordUserStory.TabIndex = 24
+        Me.ButtonRecordUserStory.Text = "Record User Story"
+        Me.ButtonRecordUserStory.UseVisualStyleBackColor = True
         '
         'TAMember
         '
         Me.TAMember.ClearBeforeFill = True
-        '
-        'DSUserStory
-        '
-        Me.DSUserStory.DataSetName = "DataSet"
-        Me.DSUserStory.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'BSProg1
-        '
-        Me.BSProg1.DataMember = "Member"
-        Me.BSProg1.DataSource = Me.DSUserStory
-        '
-        'BSProg2
-        '
-        Me.BSProg2.DataMember = "Member"
-        Me.BSProg2.DataSource = Me.DSUserStory
         '
         'UserStoryForm
         '
@@ -379,23 +379,23 @@ Partial Class UserStoryForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1222, 593)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.ButtonRecordUserStory)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TextBoxNewTestsCaseDetails)
+        Me.Controls.Add(Me.TextBoxNewTestCaseDetail)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.ComboBoxStatus)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TextBoxUserStoryDescription)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.ComboBoxPriority)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.DateTimePicker2)
+        Me.Controls.Add(Me.DateTimePickerEndDate)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.DateTimePickerStartDate)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.ComboBoxUserRole)
         Me.Controls.Add(Me.Label2)
@@ -405,10 +405,10 @@ Partial Class UserStoryForm
         Me.Text = "UserStoryForm"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.BSProg1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DSUserStory, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.DSUserStory, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BSProg1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BSProg2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -420,31 +420,31 @@ Partial Class UserStoryForm
     Friend WithEvents Label2 As Label
     Friend WithEvents ComboBoxUserRole As ComboBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DateTimePickerStartDate As DateTimePicker
     Friend WithEvents Label4 As Label
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents DateTimePickerEndDate As DateTimePicker
     Friend WithEvents Label5 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ComboBoxPriority As ComboBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBoxUserStoryDescription As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents ComboBoxStatus As ComboBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBoxNewTestCaseDetail As TextBox
+    Friend WithEvents TextBoxNewTestsCaseDetails As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents ComboBox4 As ComboBox
-    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents ComboBoxProg1Responsibility As ComboBox
+    Friend WithEvents ComboBoxProg1Name As ComboBox
     Friend WithEvents Label9 As Label
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents ComboBox5 As ComboBox
-    Friend WithEvents ComboBox6 As ComboBox
+    Friend WithEvents ComboBoxProg2Responsibilty As ComboBox
+    Friend WithEvents ComboBoxProg2Name As ComboBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents Button3 As Button
+    Friend WithEvents ButtonRecordUserStory As Button
     Friend WithEvents TAMember As DataSetTableAdapters.MemberTableAdapter
     Friend WithEvents DSUserStory As DataSet
     Friend WithEvents BSProg1 As BindingSource
