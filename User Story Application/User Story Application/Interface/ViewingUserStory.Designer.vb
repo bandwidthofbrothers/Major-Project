@@ -47,14 +47,15 @@ Partial Class ViewingUserStory
         Me.UserStoryMemberBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UserStory_MemberTableAdapter = New User_Story_Application.group22DataSetTableAdapters.UserStory_MemberTableAdapter()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
-        Me.UserStoryMemberBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupMemberNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ResponsibilityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UserStoryMemberBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.MemberTableAdapter1 = New User_Story_Application.DataSetTableAdapters.MemberTableAdapter()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserStoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -213,6 +214,18 @@ Partial Class ViewingUserStory
         Me.DataGridView3.Size = New System.Drawing.Size(251, 175)
         Me.DataGridView3.TabIndex = 5
         '
+        'GroupMemberNoDataGridViewTextBoxColumn
+        '
+        Me.GroupMemberNoDataGridViewTextBoxColumn.DataPropertyName = "GroupMemberNo"
+        Me.GroupMemberNoDataGridViewTextBoxColumn.HeaderText = "GroupMemberNo"
+        Me.GroupMemberNoDataGridViewTextBoxColumn.Name = "GroupMemberNoDataGridViewTextBoxColumn"
+        '
+        'ResponsibilityDataGridViewTextBoxColumn
+        '
+        Me.ResponsibilityDataGridViewTextBoxColumn.DataPropertyName = "Responsibility"
+        Me.ResponsibilityDataGridViewTextBoxColumn.HeaderText = "Responsibility"
+        Me.ResponsibilityDataGridViewTextBoxColumn.Name = "ResponsibilityDataGridViewTextBoxColumn"
+        '
         'UserStoryMemberBindingSource1
         '
         Me.UserStoryMemberBindingSource1.DataMember = "UserStory_Member"
@@ -231,19 +244,14 @@ Partial Class ViewingUserStory
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Programmer Details"
         '
-        'TextBox1
+        'Label2
         '
-        Me.TextBox1.Location = New System.Drawing.Point(85, 34)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(130, 20)
-        Me.TextBox1.TabIndex = 0
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(85, 78)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(130, 20)
-        Me.TextBox2.TabIndex = 1
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(6, 81)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(49, 13)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Surname"
         '
         'Label1
         '
@@ -254,26 +262,23 @@ Partial Class ViewingUserStory
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "First Name"
         '
-        'Label2
+        'TextBox2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(6, 81)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(49, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Surname"
+        Me.TextBox2.Location = New System.Drawing.Point(85, 78)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(130, 20)
+        Me.TextBox2.TabIndex = 1
         '
-        'GroupMemberNoDataGridViewTextBoxColumn
+        'TextBox1
         '
-        Me.GroupMemberNoDataGridViewTextBoxColumn.DataPropertyName = "GroupMemberNo"
-        Me.GroupMemberNoDataGridViewTextBoxColumn.HeaderText = "GroupMemberNo"
-        Me.GroupMemberNoDataGridViewTextBoxColumn.Name = "GroupMemberNoDataGridViewTextBoxColumn"
+        Me.TextBox1.Location = New System.Drawing.Point(85, 34)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(130, 20)
+        Me.TextBox1.TabIndex = 0
         '
-        'ResponsibilityDataGridViewTextBoxColumn
+        'MemberTableAdapter1
         '
-        Me.ResponsibilityDataGridViewTextBoxColumn.DataPropertyName = "Responsibility"
-        Me.ResponsibilityDataGridViewTextBoxColumn.HeaderText = "Responsibility"
-        Me.ResponsibilityDataGridViewTextBoxColumn.Name = "ResponsibilityDataGridViewTextBoxColumn"
+        Me.MemberTableAdapter1.ClearBeforeFill = True
         '
         'ViewingUserStory
         '
@@ -333,4 +338,5 @@ Partial Class ViewingUserStory
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents MemberTableAdapter1 As DataSetTableAdapters.MemberTableAdapter
 End Class
