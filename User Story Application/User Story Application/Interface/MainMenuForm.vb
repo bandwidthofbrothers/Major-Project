@@ -47,7 +47,7 @@
     End Sub
 
     Private Sub ViewToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem1.Click
-        FormSetUp(UserStoryForm)
+
     End Sub
 
     Private Sub ViewToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem2.Click
@@ -80,7 +80,7 @@
         End Try
     End Sub
 
-    Private Sub MainMenuForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub AddToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddToolStripMenuItem.Click
+        FormSetUp(UserStoryForm)
     End Sub
 End Class
