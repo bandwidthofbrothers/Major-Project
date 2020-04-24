@@ -39,7 +39,6 @@ Partial Class UserStoryForm
         Me.ComboBoxStatus = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBoxNewTestCaseDetail = New System.Windows.Forms.TextBox()
-        Me.TextBoxNewTestsCaseDetails = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -51,12 +50,16 @@ Partial Class UserStoryForm
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.ComboBoxProg2Responsibilty = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxProg2Responsibility = New System.Windows.Forms.ComboBox()
         Me.ComboBoxProg2Name = New System.Windows.Forms.ComboBox()
         Me.BSProg2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label12 = New System.Windows.Forms.Label()
         Me.ButtonRecordUserStory = New System.Windows.Forms.Button()
         Me.TAMember = New User_Story_Application.DataSetTableAdapters.MemberTableAdapter()
+        Me.TAUserStory = New User_Story_Application.DataSetTableAdapters.UserStoryTableAdapter()
+        Me.TAUserMember = New User_Story_Application.DataSetTableAdapters.UserStory_MemberTableAdapter()
+        Me.ListBoxNewTestCaseDetails = New System.Windows.Forms.ListBox()
+        Me.TATestCase = New User_Story_Application.DataSetTableAdapters.TestCasesTableAdapter()
         Me.GroupBox1.SuspendLayout()
         CType(Me.BSProg1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DSUserStory, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -211,14 +214,6 @@ Partial Class UserStoryForm
         Me.TextBoxNewTestCaseDetail.Size = New System.Drawing.Size(610, 76)
         Me.TextBoxNewTestCaseDetail.TabIndex = 15
         '
-        'TextBoxNewTestsCaseDetails
-        '
-        Me.TextBoxNewTestsCaseDetails.Location = New System.Drawing.Point(357, 325)
-        Me.TextBoxNewTestsCaseDetails.Multiline = True
-        Me.TextBoxNewTestsCaseDetails.Name = "TextBoxNewTestsCaseDetails"
-        Me.TextBoxNewTestsCaseDetails.Size = New System.Drawing.Size(610, 125)
-        Me.TextBoxNewTestsCaseDetails.TabIndex = 16
-        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(432, 280)
@@ -304,7 +299,7 @@ Partial Class UserStoryForm
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.Label11)
-        Me.GroupBox2.Controls.Add(Me.ComboBoxProg2Responsibilty)
+        Me.GroupBox2.Controls.Add(Me.ComboBoxProg2Responsibility)
         Me.GroupBox2.Controls.Add(Me.ComboBoxProg2Name)
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -325,14 +320,14 @@ Partial Class UserStoryForm
         Me.Label11.TabIndex = 22
         Me.Label11.Text = "Responsibility"
         '
-        'ComboBoxProg2Responsibilty
+        'ComboBoxProg2Responsibility
         '
-        Me.ComboBoxProg2Responsibilty.FormattingEnabled = True
-        Me.ComboBoxProg2Responsibilty.Items.AddRange(New Object() {"Main", "Sub"})
-        Me.ComboBoxProg2Responsibilty.Location = New System.Drawing.Point(238, 51)
-        Me.ComboBoxProg2Responsibilty.Name = "ComboBoxProg2Responsibilty"
-        Me.ComboBoxProg2Responsibilty.Size = New System.Drawing.Size(178, 24)
-        Me.ComboBoxProg2Responsibilty.TabIndex = 21
+        Me.ComboBoxProg2Responsibility.FormattingEnabled = True
+        Me.ComboBoxProg2Responsibility.Items.AddRange(New Object() {"Main", "Sub"})
+        Me.ComboBoxProg2Responsibility.Location = New System.Drawing.Point(238, 51)
+        Me.ComboBoxProg2Responsibility.Name = "ComboBoxProg2Responsibility"
+        Me.ComboBoxProg2Responsibility.Size = New System.Drawing.Size(178, 24)
+        Me.ComboBoxProg2Responsibility.TabIndex = 21
         '
         'ComboBoxProg2Name
         '
@@ -373,18 +368,39 @@ Partial Class UserStoryForm
         '
         Me.TAMember.ClearBeforeFill = True
         '
+        'TAUserStory
+        '
+        Me.TAUserStory.ClearBeforeFill = True
+        '
+        'TAUserMember
+        '
+        Me.TAUserMember.ClearBeforeFill = True
+        '
+        'ListBoxNewTestCaseDetails
+        '
+        Me.ListBoxNewTestCaseDetails.FormattingEnabled = True
+        Me.ListBoxNewTestCaseDetails.ItemHeight = 16
+        Me.ListBoxNewTestCaseDetails.Location = New System.Drawing.Point(357, 334)
+        Me.ListBoxNewTestCaseDetails.Name = "ListBoxNewTestCaseDetails"
+        Me.ListBoxNewTestCaseDetails.Size = New System.Drawing.Size(610, 116)
+        Me.ListBoxNewTestCaseDetails.TabIndex = 25
+        '
+        'TATestCase
+        '
+        Me.TATestCase.ClearBeforeFill = True
+        '
         'UserStoryForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1222, 593)
         Me.ControlBox = False
+        Me.Controls.Add(Me.ListBoxNewTestCaseDetails)
         Me.Controls.Add(Me.ButtonRecordUserStory)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBoxNewTestsCaseDetails)
         Me.Controls.Add(Me.TextBoxNewTestCaseDetail)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.ComboBoxStatus)
@@ -431,7 +447,6 @@ Partial Class UserStoryForm
     Friend WithEvents ComboBoxStatus As ComboBox
     Friend WithEvents Label8 As Label
     Friend WithEvents TextBoxNewTestCaseDetail As TextBox
-    Friend WithEvents TextBoxNewTestsCaseDetails As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents GroupBox1 As GroupBox
@@ -441,7 +456,7 @@ Partial Class UserStoryForm
     Friend WithEvents Label9 As Label
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents ComboBoxProg2Responsibilty As ComboBox
+    Friend WithEvents ComboBoxProg2Responsibility As ComboBox
     Friend WithEvents ComboBoxProg2Name As ComboBox
     Friend WithEvents Label12 As Label
     Friend WithEvents ButtonRecordUserStory As Button
@@ -449,4 +464,8 @@ Partial Class UserStoryForm
     Friend WithEvents DSUserStory As DataSet
     Friend WithEvents BSProg1 As BindingSource
     Friend WithEvents BSProg2 As BindingSource
+    Friend WithEvents TAUserStory As DataSetTableAdapters.UserStoryTableAdapter
+    Friend WithEvents TAUserMember As DataSetTableAdapters.UserStory_MemberTableAdapter
+    Friend WithEvents ListBoxNewTestCaseDetails As ListBox
+    Friend WithEvents TATestCase As DataSetTableAdapters.TestCasesTableAdapter
 End Class
