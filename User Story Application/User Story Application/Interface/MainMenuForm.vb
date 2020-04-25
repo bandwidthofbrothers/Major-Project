@@ -47,7 +47,7 @@
     End Sub
 
     Private Sub ViewToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem1.Click
-
+        FormSetUp(ViewingUserStory)
     End Sub
 
     Private Sub ViewToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem2.Click
@@ -83,4 +83,5 @@
     Private Sub AddToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddToolStripMenuItem.Click
         FormSetUp(UserStoryForm)
     End Sub
+
 End Class
