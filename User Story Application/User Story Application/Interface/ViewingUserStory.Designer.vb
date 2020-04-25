@@ -48,6 +48,7 @@ Partial Class ViewingUserStory
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.MemberBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.DataSet1 = New User_Story_Application.DataSet()
         Me.UserStory_MemberTableAdapter1 = New User_Story_Application.DataSetTableAdapters.UserStory_MemberTableAdapter()
@@ -56,7 +57,6 @@ Partial Class ViewingUserStory
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.TestCasesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Group22DataSet1 = New User_Story_Application.group22DataSet()
-        Me.MemberBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MemberTableAdapter = New User_Story_Application.group22DataSetTableAdapters.MemberTableAdapter()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserStoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,11 +67,11 @@ Partial Class ViewingUserStory
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserStoryMemberBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.MemberBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TestCasesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Group22DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MemberBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView2
@@ -237,6 +237,11 @@ Partial Class ViewingUserStory
         Me.TextBox2.Size = New System.Drawing.Size(130, 20)
         Me.TextBox2.TabIndex = 1
         '
+        'MemberBindingSource
+        '
+        Me.MemberBindingSource.DataMember = "Member"
+        Me.MemberBindingSource.DataSource = Me.Group22DataSet
+        '
         'TextBox1
         '
         Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MemberBindingSource, "FirstName", True))
@@ -280,11 +285,6 @@ Partial Class ViewingUserStory
         Me.Group22DataSet1.DataSetName = "group22DataSet"
         Me.Group22DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'MemberBindingSource
-        '
-        Me.MemberBindingSource.DataMember = "Member"
-        Me.MemberBindingSource.DataSource = Me.Group22DataSet
-        '
         'MemberTableAdapter
         '
         Me.MemberTableAdapter.ClearBeforeFill = True
@@ -310,11 +310,11 @@ Partial Class ViewingUserStory
         CType(Me.UserStoryMemberBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.MemberBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TestCasesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Group22DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MemberBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

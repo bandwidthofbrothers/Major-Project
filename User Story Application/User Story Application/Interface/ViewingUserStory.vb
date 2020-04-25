@@ -18,4 +18,12 @@
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
 
     End Sub
+
+    Private Sub DataGridView3_SelectionChanged(sender As Object, e As EventArgs) Handles DataGridView3.SelectionChanged
+
+        If DataGridView3.Rows.Count > 0 Then
+            MemberTableAdapter1.Fill(Group22DataSet.Member, DataGridView3.Rows(DataGridView3.CurrentRow.Index).Cells(0).Value)
+
+        End If
+    End Sub
 End Class
