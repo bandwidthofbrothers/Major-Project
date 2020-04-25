@@ -108,7 +108,7 @@ Partial Class Test_Cases
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.User_Story_Application.My.Resources.Resources.Background
-        Me.ClientSize = New System.Drawing.Size(662, 425)
+        Me.ClientSize = New System.Drawing.Size(677, 407)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
