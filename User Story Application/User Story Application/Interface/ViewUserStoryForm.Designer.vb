@@ -42,16 +42,16 @@ Partial Class ViewUserStoryForm
         Me.UserStory_MemberBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UserStory_MemberTableAdapter = New User_Story_Application.DataSetTableAdapters.UserStory_MemberTableAdapter()
         Me.UserStory_MemberDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBoxProgrammerDetails = New System.Windows.Forms.GroupBox()
         Me.TextBoxSurname = New System.Windows.Forms.TextBox()
+        Me.MemberBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet1 = New User_Story_Application.DataSet()
         Me.TextBoxFirstName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.MemberBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataSet1 = New User_Story_Application.DataSet()
         Me.MemberTableAdapter = New User_Story_Application.DataSetTableAdapters.MemberTableAdapter()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserStoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserStoryDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -190,6 +190,18 @@ Partial Class ViewUserStoryForm
         Me.UserStory_MemberDataGridView.Size = New System.Drawing.Size(360, 123)
         Me.UserStory_MemberDataGridView.TabIndex = 2
         '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "GroupMemberNo"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "GroupMemberNo"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "Responsibility"
+        Me.DataGridViewTextBoxColumn11.HeaderText = "Responsibility"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        '
         'GroupBoxProgrammerDetails
         '
         Me.GroupBoxProgrammerDetails.Controls.Add(Me.TextBoxSurname)
@@ -210,6 +222,16 @@ Partial Class ViewUserStoryForm
         Me.TextBoxSurname.Name = "TextBoxSurname"
         Me.TextBoxSurname.Size = New System.Drawing.Size(210, 22)
         Me.TextBoxSurname.TabIndex = 3
+        '
+        'MemberBindingSource
+        '
+        Me.MemberBindingSource.DataMember = "Member"
+        Me.MemberBindingSource.DataSource = Me.DataSet
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'TextBoxFirstName
         '
@@ -237,31 +259,9 @@ Partial Class ViewUserStoryForm
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "First Name"
         '
-        'MemberBindingSource
-        '
-        Me.MemberBindingSource.DataMember = "Member"
-        Me.MemberBindingSource.DataSource = Me.DataSet1
-        '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'MemberTableAdapter
         '
         Me.MemberTableAdapter.ClearBeforeFill = True
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.DataPropertyName = "GroupMemberNo"
-        Me.DataGridViewTextBoxColumn10.HeaderText = "GroupMemberNo"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        Me.DataGridViewTextBoxColumn11.DataPropertyName = "Responsibility"
-        Me.DataGridViewTextBoxColumn11.HeaderText = "Responsibility"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
         '
         'ViewUserStoryForm
         '
