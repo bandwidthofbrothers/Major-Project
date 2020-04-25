@@ -9,7 +9,7 @@
         If DataSetUserStory.Member.Rows.Count > 0 Then
             MessageBox.Show("Welcome! You will now be directed to the system")
 
-            With FormMainMenu
+            With MainMenuForm
                 .MenuMemberControl.Enabled = True
                 .MenuUserStoryControl.Enabled = True
                 .MenuTestCaseControl.Enabled = True
