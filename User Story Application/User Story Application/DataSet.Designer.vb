@@ -3210,7 +3210,7 @@ Namespace DataSetTableAdapters
             Me._commandCollection(2).Connection = Me.Connection
             Me._commandCollection(2).CommandText = "INSERT INTO [dbo].[UserStory] ( [UserStoryTitle], [UserRole], [UserStoryDescripti"& _ 
                 "on], [UserStoryStartDate], [UserStoryEndDate], [UserStoryStatus], [UserStoryPrio"& _ 
-                "rity]) "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"OUTPUT Inserted.UserStoryNo"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES (@UserStoryTitle, @UserRole, @UserS"& _ 
+                "rity]) "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"OUTPUT INSERTED.UserStoryNo"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES (@UserStoryTitle, @UserRole, @UserS"& _ 
                 "toryDescription, @UserStoryStartDate, @UserStoryEndDate, @UserStoryStatus, @User"& _ 
                 "StoryPriority);"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
@@ -3473,7 +3473,7 @@ Namespace DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
-        Public Overloads Overridable Function InsertUserStory(ByVal UserStoryTitle As String, ByVal UserRole As String, ByVal UserStoryDescription As String, ByVal UserStoryStartDate As Date, ByVal UserStoryEndDate As Date, ByVal UserStoryStatus As String, ByVal UserStoryPriority As String) As Integer
+        Public Overloads Overridable Function InsertUserStory(ByVal UserStoryTitle As String, ByVal UserRole As String, ByVal UserStoryDescription As String, ByVal UserStoryStartDate As Date, ByVal UserStoryEndDate As Date, ByVal UserStoryStatus As String, ByVal UserStoryPriority As String) As Object
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(2)
             If (UserStoryTitle Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("UserStoryTitle")
@@ -3507,15 +3507,20 @@ Namespace DataSetTableAdapters
                         <> Global.System.Data.ConnectionState.Open) Then
                 command.Connection.Open
             End If
-            Dim returnValue As Integer
+            Dim returnValue As Object
             Try 
-                returnValue = command.ExecuteNonQuery
+                returnValue = command.ExecuteScalar
             Finally
                 If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
                     command.Connection.Close
                 End If
             End Try
-            Return returnValue
+            If ((returnValue Is Nothing)  _
+                        OrElse (returnValue.GetType Is GetType(Global.System.DBNull))) Then
+                Return Nothing
+            Else
+                Return CType(returnValue,Object)
+            End If
         End Function
     End Class
     

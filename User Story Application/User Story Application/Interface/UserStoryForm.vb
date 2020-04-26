@@ -6,9 +6,9 @@
     Private Sub ButtonRecordUserStory_Click(sender As Object, e As EventArgs) Handles ButtonRecordUserStory.Click
 
         Try
-            Dim UserStoryNumber As Integer
+            Dim UserStoryNumber As Integer = 0
             UserStoryNumber = TAUserStory.InsertUserStory(TextBoxUserStoryTitle.Text, ComboBoxUserRole.SelectedItem, TextBoxUserStoryDescription.Text,
-                                                          DateTimePickerStartDate.Text, DateTimePickerEndDate.Text, ComboBoxStatus.SelectedItem, ComboBoxPriority.SelectedItem)
+                                     DateTimePickerStartDate.Text, DateTimePickerEndDate.Text, ComboBoxStatus.SelectedItem, ComboBoxPriority.SelectedItem)
 
             TAUserMember.Insert(UserStoryNumber, ComboBoxProg1Name.SelectedValue, ComboBoxProg1Responsibility.SelectedItem)
             TAUserMember.Insert(UserStoryNumber, ComboBoxProg2Name.SelectedValue, ComboBoxProg2Responsibility.SelectedItem)
@@ -17,9 +17,27 @@
             For i = 0 To ListBoxNewTestCaseDetails.Items.Count - 1
                 TATestCase.Insert1(ListBoxNewTestCaseDetails.Items(i), UserStoryNumber)
             Next
+
+            MessageBox.Show("User Story added successfully")
+
+            TextBoxUserStoryTitle.Text = ""
+            TextBoxNewTestCaseDetail.Text = ""
+            ListBoxNewTestCaseDetails.Items.Clear()
+            TextBoxUserStoryDescription.Text = ""
+            ComboBoxPriority.Text = ""
+            ComboBoxStatus.Text = ""
+            ComboBoxUserRole.Text = ""
+            ComboBoxProg1Name.Text = ""
+            ComboBoxProg1Responsibility.Text = ""
+            ComboBoxProg2Name.Text = ""
+            ComboBoxProg2Responsibility.Text = ""
+            DateTimePickerStartDate.Text = ""
+            DateTimePickerEndDate.Text = ""
+
         Catch ex As Exception
             MessageBox.Show("Error: Please enter all the required fields")
         End Try
+
 
     End Sub
 
