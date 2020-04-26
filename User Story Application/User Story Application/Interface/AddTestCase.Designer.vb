@@ -22,14 +22,26 @@ Partial Class AddTestCase
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.UserStoryBox = New System.Windows.Forms.ListBox()
         Me.TestCaseBox = New System.Windows.Forms.ListBox()
         Me.TestCaseTextbox = New System.Windows.Forms.TextBox()
         Me.NewTestCaseBtn = New System.Windows.Forms.Button()
+        Me.DataSet = New User_Story_Application.DataSet()
+        Me.DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.UserStoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.UserStoryTableAdapter = New User_Story_Application.DataSetTableAdapters.UserStoryTableAdapter()
+        Me.TestCasesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TestCasesTableAdapter = New User_Story_Application.DataSetTableAdapters.TestCasesTableAdapter()
+        CType(Me.DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UserStoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TestCasesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'UserStoryBox
         '
+        Me.UserStoryBox.DataSource = Me.UserStoryBindingSource
         Me.UserStoryBox.FormattingEnabled = True
         Me.UserStoryBox.Location = New System.Drawing.Point(28, 53)
         Me.UserStoryBox.Name = "UserStoryBox"
@@ -38,6 +50,7 @@ Partial Class AddTestCase
         '
         'TestCaseBox
         '
+        Me.TestCaseBox.DataSource = Me.TestCasesBindingSource
         Me.TestCaseBox.FormattingEnabled = True
         Me.TestCaseBox.Location = New System.Drawing.Point(301, 53)
         Me.TestCaseBox.Name = "TestCaseBox"
@@ -60,6 +73,34 @@ Partial Class AddTestCase
         Me.NewTestCaseBtn.Text = "Add New Test Case"
         Me.NewTestCaseBtn.UseVisualStyleBackColor = True
         '
+        'DataSet
+        '
+        Me.DataSet.DataSetName = "DataSet"
+        Me.DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DataSetBindingSource
+        '
+        Me.DataSetBindingSource.DataSource = Me.DataSet
+        Me.DataSetBindingSource.Position = 0
+        '
+        'UserStoryBindingSource
+        '
+        Me.UserStoryBindingSource.DataMember = "UserStory"
+        Me.UserStoryBindingSource.DataSource = Me.DataSet
+        '
+        'UserStoryTableAdapter
+        '
+        Me.UserStoryTableAdapter.ClearBeforeFill = True
+        '
+        'TestCasesBindingSource
+        '
+        Me.TestCasesBindingSource.DataMember = "TestCases"
+        Me.TestCasesBindingSource.DataSource = Me.DataSet
+        '
+        'TestCasesTableAdapter
+        '
+        Me.TestCasesTableAdapter.ClearBeforeFill = True
+        '
         'AddTestCase
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -71,6 +112,10 @@ Partial Class AddTestCase
         Me.Controls.Add(Me.UserStoryBox)
         Me.Name = "AddTestCase"
         Me.Text = "AddTestCase"
+        CType(Me.DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UserStoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TestCasesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -80,4 +125,10 @@ Partial Class AddTestCase
     Friend WithEvents TestCaseBox As ListBox
     Friend WithEvents TestCaseTextbox As TextBox
     Friend WithEvents NewTestCaseBtn As Button
+    Friend WithEvents DataSetBindingSource As BindingSource
+    Friend WithEvents DataSet As DataSet
+    Friend WithEvents UserStoryBindingSource As BindingSource
+    Friend WithEvents UserStoryTableAdapter As DataSetTableAdapters.UserStoryTableAdapter
+    Friend WithEvents TestCasesBindingSource As BindingSource
+    Friend WithEvents TestCasesTableAdapter As DataSetTableAdapters.TestCasesTableAdapter
 End Class
