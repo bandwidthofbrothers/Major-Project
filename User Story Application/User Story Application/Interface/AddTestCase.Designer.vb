@@ -31,7 +31,7 @@ Partial Class AddTestCase
         'UserStory
         '
         Me.UserStory.FormattingEnabled = True
-        Me.UserStory.Location = New System.Drawing.Point(12, 53)
+        Me.UserStory.Location = New System.Drawing.Point(34, 53)
         Me.UserStory.Name = "UserStory"
         Me.UserStory.Size = New System.Drawing.Size(216, 277)
         Me.UserStory.TabIndex = 0
@@ -39,23 +39,23 @@ Partial Class AddTestCase
         'TestCases
         '
         Me.TestCases.FormattingEnabled = True
-        Me.TestCases.Location = New System.Drawing.Point(340, 53)
+        Me.TestCases.Location = New System.Drawing.Point(292, 53)
         Me.TestCases.Name = "TestCases"
         Me.TestCases.Size = New System.Drawing.Size(263, 121)
         Me.TestCases.TabIndex = 1
         '
         'TestCaseBox
         '
-        Me.TestCaseBox.Location = New System.Drawing.Point(340, 198)
+        Me.TestCaseBox.Location = New System.Drawing.Point(292, 193)
         Me.TestCaseBox.Name = "TestCaseBox"
         Me.TestCaseBox.Size = New System.Drawing.Size(263, 20)
         Me.TestCaseBox.TabIndex = 2
         '
         'TestCaseBtn
         '
-        Me.TestCaseBtn.Location = New System.Drawing.Point(424, 247)
+        Me.TestCaseBtn.Location = New System.Drawing.Point(384, 240)
         Me.TestCaseBtn.Name = "TestCaseBtn"
-        Me.TestCaseBtn.Size = New System.Drawing.Size(117, 41)
+        Me.TestCaseBtn.Size = New System.Drawing.Size(110, 38)
         Me.TestCaseBtn.TabIndex = 3
         Me.TestCaseBtn.Text = "Add New Test Case"
         Me.TestCaseBtn.UseVisualStyleBackColor = True
@@ -64,7 +64,7 @@ Partial Class AddTestCase
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(803, 355)
+        Me.ClientSize = New System.Drawing.Size(639, 367)
         Me.Controls.Add(Me.TestCaseBtn)
         Me.Controls.Add(Me.TestCaseBox)
         Me.Controls.Add(Me.TestCases)
