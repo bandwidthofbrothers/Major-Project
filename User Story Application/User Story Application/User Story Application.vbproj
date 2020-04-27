@@ -80,6 +80,12 @@
     <Compile Include="DataSet.vb">
       <DependentUpon>DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Interface\AddTestCase.Designer.vb">
+      <DependentUpon>AddTestCase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\AddTestCase.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Interface\DeleteUserStoryForm.Designer.vb">
       <DependentUpon>DeleteUserStoryForm.vb</DependentUpon>
     </Compile>
@@ -152,6 +158,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Interface\AddTestCase.resx">
+      <DependentUpon>AddTestCase.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interface\DeleteUserStoryForm.resx">
       <DependentUpon>DeleteUserStoryForm.vb</DependentUpon>
     </EmbeddedResource>
