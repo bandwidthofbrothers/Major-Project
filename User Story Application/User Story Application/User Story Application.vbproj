@@ -86,6 +86,12 @@
     <Compile Include="Interface\AddTestCase.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Interface\DeleteTestCase.Designer.vb">
+      <DependentUpon>DeleteTestCase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\DeleteTestCase.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Interface\DeleteUserStoryForm.Designer.vb">
       <DependentUpon>DeleteUserStoryForm.vb</DependentUpon>
     </Compile>
@@ -123,10 +129,10 @@
     <Compile Include="Interface\SearchUserStoryForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interface\Test Cases.Designer.vb">
-      <DependentUpon>Test Cases.vb</DependentUpon>
+    <Compile Include="Interface\ViewTestCases.Designer.vb">
+      <DependentUpon>ViewTestCases.vb</DependentUpon>
     </Compile>
-    <Compile Include="Interface\Test Cases.vb">
+    <Compile Include="Interface\ViewTestCases.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interface\UserStoryForm.Designer.vb">
@@ -161,6 +167,9 @@
     <EmbeddedResource Include="Interface\AddTestCase.resx">
       <DependentUpon>AddTestCase.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interface\DeleteTestCase.resx">
+      <DependentUpon>DeleteTestCase.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interface\DeleteUserStoryForm.resx">
       <DependentUpon>DeleteUserStoryForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -179,8 +188,8 @@
     <EmbeddedResource Include="Interface\SearchUserStoryForm.resx">
       <DependentUpon>SearchUserStoryForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interface\Test Cases.resx">
-      <DependentUpon>Test Cases.vb</DependentUpon>
+    <EmbeddedResource Include="Interface\ViewTestCases.resx">
+      <DependentUpon>ViewTestCases.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\UserStoryForm.resx">
       <DependentUpon>UserStoryForm.vb</DependentUpon>
