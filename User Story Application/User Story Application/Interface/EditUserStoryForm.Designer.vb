@@ -22,11 +22,14 @@ Partial Class EditUserStoryForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ListBoxUserStory = New System.Windows.Forms.ListBox()
-        Me.DSUserStory = New User_Story_Application.DataSet()
-        Me.TAUserStory = New User_Story_Application.DataSetTableAdapters.UserStoryTableAdapter()
-        CType(Me.DSUserStory, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.DataSet = New User_Story_Application.DataSet()
+        Me.UserStoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.UserStoryTableAdapter = New User_Story_Application.DataSetTableAdapters.UserStoryTableAdapter()
+        CType(Me.DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UserStoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -39,43 +42,51 @@ Partial Class EditUserStoryForm
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "User Story:"
         '
-        'ListBoxUserStory
+        'ListBox1
         '
-        Me.ListBoxUserStory.FormattingEnabled = True
-        Me.ListBoxUserStory.ItemHeight = 16
-        Me.ListBoxUserStory.Location = New System.Drawing.Point(17, 51)
-        Me.ListBoxUserStory.Name = "ListBoxUserStory"
-        Me.ListBoxUserStory.Size = New System.Drawing.Size(311, 548)
-        Me.ListBoxUserStory.TabIndex = 2
-        Me.ListBoxUserStory.ValueMember = "UserStoryNo"
+        Me.ListBox1.DataSource = Me.UserStoryBindingSource
+        Me.ListBox1.DisplayMember = "UserStoryTitle"
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.ItemHeight = 16
+        Me.ListBox1.Location = New System.Drawing.Point(17, 52)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(282, 580)
+        Me.ListBox1.TabIndex = 2
         '
-        'DSUserStory
+        'DataSet
         '
-        Me.DSUserStory.DataSetName = "DataSet"
-        Me.DSUserStory.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.DataSet.DataSetName = "DataSet"
+        Me.DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'TAUserStory
+        'UserStoryBindingSource
         '
-        Me.TAUserStory.ClearBeforeFill = True
+        Me.UserStoryBindingSource.DataMember = "UserStory"
+        Me.UserStoryBindingSource.DataSource = Me.DataSet
+        '
+        'UserStoryTableAdapter
+        '
+        Me.UserStoryTableAdapter.ClearBeforeFill = True
         '
         'EditUserStoryForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1140, 644)
+        Me.ClientSize = New System.Drawing.Size(1140, 652)
         Me.ControlBox = False
-        Me.Controls.Add(Me.ListBoxUserStory)
+        Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "EditUserStoryForm"
         Me.Text = "EditUserStoryForm"
-        CType(Me.DSUserStory, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UserStoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents ListBoxUserStory As ListBox
-    Friend WithEvents DSUserStory As DataSet
-    Friend WithEvents TAUserStory As DataSetTableAdapters.UserStoryTableAdapter
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents DataSet As DataSet
+    Friend WithEvents UserStoryBindingSource As BindingSource
+    Friend WithEvents UserStoryTableAdapter As DataSetTableAdapters.UserStoryTableAdapter
 End Class
