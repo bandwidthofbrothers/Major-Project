@@ -6,4 +6,5 @@
         Me.UserStoryTableAdapter.Fill(Me.DataSet.UserStory)
 
     End Sub
+
 End Class
