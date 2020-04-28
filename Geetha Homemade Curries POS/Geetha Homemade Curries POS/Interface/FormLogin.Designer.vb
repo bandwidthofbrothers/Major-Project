@@ -1,0 +1,123 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class FormLogin
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormLogin))
+        Me.PictureBoxLogo = New System.Windows.Forms.PictureBox()
+        Me.LabelUsername = New System.Windows.Forms.Label()
+        Me.LabelPassword = New System.Windows.Forms.Label()
+        Me.TextBoxUserName = New System.Windows.Forms.TextBox()
+        Me.TextBoxPassword = New System.Windows.Forms.TextBox()
+        Me.ButtonLogin = New System.Windows.Forms.Button()
+        CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'PictureBoxLogo
+        '
+        Me.PictureBoxLogo.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBoxLogo.BackgroundImage = CType(resources.GetObject("PictureBoxLogo.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBoxLogo.Location = New System.Drawing.Point(71, 12)
+        Me.PictureBoxLogo.Name = "PictureBoxLogo"
+        Me.PictureBoxLogo.Size = New System.Drawing.Size(205, 121)
+        Me.PictureBoxLogo.TabIndex = 0
+        Me.PictureBoxLogo.TabStop = False
+        '
+        'LabelUsername
+        '
+        Me.LabelUsername.AutoSize = True
+        Me.LabelUsername.BackColor = System.Drawing.Color.Transparent
+        Me.LabelUsername.ForeColor = System.Drawing.Color.White
+        Me.LabelUsername.Location = New System.Drawing.Point(13, 161)
+        Me.LabelUsername.Name = "LabelUsername"
+        Me.LabelUsername.Size = New System.Drawing.Size(81, 17)
+        Me.LabelUsername.TabIndex = 1
+        Me.LabelUsername.Text = "Username: "
+        '
+        'LabelPassword
+        '
+        Me.LabelPassword.AutoSize = True
+        Me.LabelPassword.BackColor = System.Drawing.Color.Transparent
+        Me.LabelPassword.ForeColor = System.Drawing.Color.White
+        Me.LabelPassword.Location = New System.Drawing.Point(13, 216)
+        Me.LabelPassword.Name = "LabelPassword"
+        Me.LabelPassword.Size = New System.Drawing.Size(77, 17)
+        Me.LabelPassword.TabIndex = 2
+        Me.LabelPassword.Text = "Password: "
+        '
+        'TextBoxUserName
+        '
+        Me.TextBoxUserName.Location = New System.Drawing.Point(100, 161)
+        Me.TextBoxUserName.Name = "TextBoxUserName"
+        Me.TextBoxUserName.Size = New System.Drawing.Size(222, 22)
+        Me.TextBoxUserName.TabIndex = 3
+        '
+        'TextBoxPassword
+        '
+        Me.TextBoxPassword.Location = New System.Drawing.Point(100, 216)
+        Me.TextBoxPassword.Name = "TextBoxPassword"
+        Me.TextBoxPassword.Size = New System.Drawing.Size(222, 22)
+        Me.TextBoxPassword.TabIndex = 4
+        Me.TextBoxPassword.UseSystemPasswordChar = True
+        '
+        'ButtonLogin
+        '
+        Me.ButtonLogin.BackColor = System.Drawing.SystemColors.Control
+        Me.ButtonLogin.Location = New System.Drawing.Point(71, 278)
+        Me.ButtonLogin.Name = "ButtonLogin"
+        Me.ButtonLogin.Size = New System.Drawing.Size(205, 44)
+        Me.ButtonLogin.TabIndex = 5
+        Me.ButtonLogin.Text = "Login"
+        Me.ButtonLogin.UseVisualStyleBackColor = False
+        '
+        'FormLogin
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.ClientSize = New System.Drawing.Size(354, 365)
+        Me.Controls.Add(Me.ButtonLogin)
+        Me.Controls.Add(Me.TextBoxPassword)
+        Me.Controls.Add(Me.TextBoxUserName)
+        Me.Controls.Add(Me.LabelPassword)
+        Me.Controls.Add(Me.LabelUsername)
+        Me.Controls.Add(Me.PictureBoxLogo)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "FormLogin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Login"
+        CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+    End Sub
+
+    Friend WithEvents PictureBoxLogo As PictureBox
+    Friend WithEvents LabelUsername As Label
+    Friend WithEvents LabelPassword As Label
+    Friend WithEvents TextBoxUserName As TextBox
+    Friend WithEvents TextBoxPassword As TextBox
+    Friend WithEvents ButtonLogin As Button
+End Class
