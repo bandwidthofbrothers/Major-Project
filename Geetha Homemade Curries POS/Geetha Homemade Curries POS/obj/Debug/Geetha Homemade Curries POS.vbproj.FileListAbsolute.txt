@@ -1,0 +1,15 @@
+C:\Users\micha\OneDrive\Development\Geetha Homemade Curries POS\Geetha Homemade Curries POS\bin\Debug\Geetha Homemade Curries POS.exe.config
+C:\Users\micha\OneDrive\Development\Geetha Homemade Curries POS\Geetha Homemade Curries POS\bin\Debug\Geetha Homemade Curries POS.exe
+C:\Users\micha\OneDrive\Development\Geetha Homemade Curries POS\Geetha Homemade Curries POS\bin\Debug\Geetha Homemade Curries POS.pdb
+C:\Users\micha\OneDrive\Development\Geetha Homemade Curries POS\Geetha Homemade Curries POS\bin\Debug\Geetha Homemade Curries POS.xml
+C:\Users\micha\OneDrive\Development\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.Resources.resources
+C:\Users\micha\OneDrive\Development\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha Homemade Curries POS.vbproj.GenerateResource.Cache
+C:\Users\micha\OneDrive\Development\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha Homemade Curries POS.exe
+C:\Users\micha\OneDrive\Development\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha Homemade Curries POS.xml
+C:\Users\micha\OneDrive\Development\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha Homemade Curries POS.pdb
+C:\Users\micha\OneDrive\Development\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormLogin.resources
+C:\Users\micha\OneDrive\Development\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha Homemade Curries POS.vbprojResolveAssemblyReference.cache
+C:\Users\micha\OneDrive\Development\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormMainMenu.resources
+C:\Users\micha\OneDrive\Development\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSplashScreen.resources
+C:\Users\micha\OneDrive\Development\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormMain.resources
+C:\Users\micha\OneDrive\Development\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormReports.resources
