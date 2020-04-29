@@ -23,10 +23,14 @@
                     .Items(6).Enabled = True
                 End With
 
+                .AccessControlToolStripMenuItem.DropDownItems(0).Text = "Sign Out"
+                .ToolTipLogin.SetToolTip(.ButtonLogin, "Sign Out")
             End With
 
         Else
             MessageBox.Show("Error: Incorrect Username or Password")
+            TextBoxUserName.Text = ""
+            TextBoxPassword.Text = ""
         End If
     End Sub
 

@@ -26,12 +26,14 @@ Partial Class FormMainMenu
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMainMenu))
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
         Me.AccessControlToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LoginToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaleToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AccountsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExpensesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StaffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ButtonLogin = New System.Windows.Forms.Button()
         Me.ButtonSale = New System.Windows.Forms.Button()
         Me.ButtonReports = New System.Windows.Forms.Button()
@@ -46,7 +48,6 @@ Partial Class FormMainMenu
         Me.ToolTipExpenses = New System.Windows.Forms.ToolTip(Me.components)
         Me.ToolTipExit = New System.Windows.Forms.ToolTip(Me.components)
         Me.ToolTipReports = New System.Windows.Forms.ToolTip(Me.components)
-        Me.StaffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ButtonStaff = New System.Windows.Forms.Button()
         Me.ToolTipStaff = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip.SuspendLayout()
@@ -55,7 +56,7 @@ Partial Class FormMainMenu
         'MenuStrip
         '
         Me.MenuStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AccessControlToolStripMenuItem, Me.SaleToolStripMenuItem, Me.MenuToolStripMenuItem, Me.ReportsToolStripMenuItem, Me.AccountsToolStripMenuItem, Me.ExpensesToolStripMenuItem, Me.StaffToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AccessControlToolStripMenuItem, Me.SaleToolStripMenuItem, Me.MenuToolStripMenuItem, Me.ReportsToolStripMenuItem, Me.AccountsToolStripMenuItem, Me.ExpensesToolStripMenuItem, Me.StaffToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
         Me.MenuStrip.Size = New System.Drawing.Size(1117, 28)
@@ -64,9 +65,22 @@ Partial Class FormMainMenu
         '
         'AccessControlToolStripMenuItem
         '
+        Me.AccessControlToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoginToolStripMenuItem, Me.ExitToolStripMenuItem1})
         Me.AccessControlToolStripMenuItem.Name = "AccessControlToolStripMenuItem"
         Me.AccessControlToolStripMenuItem.Size = New System.Drawing.Size(118, 24)
         Me.AccessControlToolStripMenuItem.Text = "Access Control"
+        '
+        'LoginToolStripMenuItem
+        '
+        Me.LoginToolStripMenuItem.Name = "LoginToolStripMenuItem"
+        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.LoginToolStripMenuItem.Text = "Login"
+        '
+        'ExitToolStripMenuItem1
+        '
+        Me.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
+        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(181, 26)
+        Me.ExitToolStripMenuItem1.Text = "Exit"
         '
         'SaleToolStripMenuItem
         '
@@ -103,11 +117,12 @@ Partial Class FormMainMenu
         Me.ExpensesToolStripMenuItem.Size = New System.Drawing.Size(81, 24)
         Me.ExpensesToolStripMenuItem.Text = "Expenses"
         '
-        'ExitToolStripMenuItem
+        'StaffToolStripMenuItem
         '
-        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(45, 24)
-        Me.ExitToolStripMenuItem.Text = "Exit"
+        Me.StaffToolStripMenuItem.Enabled = False
+        Me.StaffToolStripMenuItem.Name = "StaffToolStripMenuItem"
+        Me.StaffToolStripMenuItem.Size = New System.Drawing.Size(52, 24)
+        Me.StaffToolStripMenuItem.Text = "Staff"
         '
         'ButtonLogin
         '
@@ -202,13 +217,6 @@ Partial Class FormMainMenu
         '
         Me.ToolTipLogin.Tag = ""
         '
-        'StaffToolStripMenuItem
-        '
-        Me.StaffToolStripMenuItem.Enabled = False
-        Me.StaffToolStripMenuItem.Name = "StaffToolStripMenuItem"
-        Me.StaffToolStripMenuItem.Size = New System.Drawing.Size(52, 24)
-        Me.StaffToolStripMenuItem.Text = "Staff"
-        '
         'ButtonStaff
         '
         Me.ButtonStaff.BackgroundImage = CType(resources.GetObject("ButtonStaff.BackgroundImage"), System.Drawing.Image)
@@ -261,7 +269,6 @@ Partial Class FormMainMenu
     Friend WithEvents ReportsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AccountsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ButtonExit As Button
-    Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExpensesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ButtonExpenses As Button
     Friend WithEvents ToolTipLogin As ToolTip
@@ -274,4 +281,6 @@ Partial Class FormMainMenu
     Friend WithEvents StaffToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ButtonStaff As Button
     Friend WithEvents ToolTipStaff As ToolTip
+    Friend WithEvents LoginToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ExitToolStripMenuItem1 As ToolStripMenuItem
 End Class
