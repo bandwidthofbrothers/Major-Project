@@ -28,3 +28,7 @@ C:\Users\micha\OneDrive\Development\Major Project\Geetha Homemade Curries POS\Ge
 C:\Users\micha\OneDrive\Development\Major Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSplashScreen.resources
 C:\Users\micha\OneDrive\Development\Major Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.Resources.resources
 C:\Users\micha\OneDrive\Development\Major Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha Homemade Curries POS.vbproj.GenerateResource.Cache
+C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\bin\Debug\Geetha Homemade Curries POS.exe.config
+C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha Homemade Curries POS.exe
+C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha Homemade Curries POS.xml
+C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha Homemade Curries POS.pdb
