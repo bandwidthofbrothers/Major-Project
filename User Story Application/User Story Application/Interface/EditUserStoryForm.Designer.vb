@@ -43,6 +43,7 @@ Partial Class EditUserStoryForm
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.ComboBoxPriority = New System.Windows.Forms.ComboBox()
         Me.ComboBoxStatus = New System.Windows.Forms.ComboBox()
+        Me.ButtonUpdate = New System.Windows.Forms.Button()
         CType(Me.UserStoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -228,12 +229,22 @@ Partial Class EditUserStoryForm
         Me.ComboBoxStatus.Size = New System.Drawing.Size(366, 24)
         Me.ComboBoxStatus.TabIndex = 20
         '
+        'ButtonUpdate
+        '
+        Me.ButtonUpdate.Location = New System.Drawing.Point(677, 560)
+        Me.ButtonUpdate.Name = "ButtonUpdate"
+        Me.ButtonUpdate.Size = New System.Drawing.Size(366, 48)
+        Me.ButtonUpdate.TabIndex = 21
+        Me.ButtonUpdate.Text = "Update"
+        Me.ButtonUpdate.UseVisualStyleBackColor = True
+        '
         'EditUserStoryForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1140, 652)
         Me.ControlBox = False
+        Me.Controls.Add(Me.ButtonUpdate)
         Me.Controls.Add(Me.ComboBoxStatus)
         Me.Controls.Add(Me.ComboBoxPriority)
         Me.Controls.Add(Me.DateTimePicker1)
@@ -279,4 +290,5 @@ Partial Class EditUserStoryForm
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents ComboBoxPriority As ComboBox
     Friend WithEvents ComboBoxStatus As ComboBox
+    Friend WithEvents ButtonUpdate As Button
 End Class

@@ -130,4 +130,8 @@
         closeActiveMdiChild()
         FormSetUp(TestCaseViewSearchDeleteForm)
     End Sub
+
+    Private Sub EditToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles EditToolStripMenuItem2.Click
+        FormSetUp(EditTestCaseForm)
+    End Sub
 End Class

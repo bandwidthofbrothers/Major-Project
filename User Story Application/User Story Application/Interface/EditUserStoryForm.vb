@@ -7,4 +7,10 @@
 
     End Sub
 
+    Private Sub ButtonUpdate_Click(sender As Object, e As EventArgs) Handles ButtonUpdate.Click
+        'UserStoryBindingSource.EndEdit()
+        'UserStoryTableAdapter.Update(DataSet)
+
+        MessageBox.Show("Update Successful")
+    End Sub
 End Class
