@@ -42,6 +42,7 @@ Partial Class MainMenuForm
         Me.EditToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SearchToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -140,7 +141,7 @@ Partial Class MainMenuForm
         '
         'MenuTestCaseControl
         '
-        Me.MenuTestCaseControl.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem2, Me.EditToolStripMenuItem2, Me.NewToolStripMenuItem, Me.DeleteToolStripMenuItem1})
+        Me.MenuTestCaseControl.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem2, Me.EditToolStripMenuItem2, Me.NewToolStripMenuItem, Me.DeleteToolStripMenuItem1, Me.SearchToolStripMenuItem2})
         Me.MenuTestCaseControl.Enabled = False
         Me.MenuTestCaseControl.Name = "MenuTestCaseControl"
         Me.MenuTestCaseControl.Size = New System.Drawing.Size(88, 24)
@@ -169,6 +170,12 @@ Partial Class MainMenuForm
         Me.DeleteToolStripMenuItem1.Name = "DeleteToolStripMenuItem1"
         Me.DeleteToolStripMenuItem1.Size = New System.Drawing.Size(181, 26)
         Me.DeleteToolStripMenuItem1.Text = "Delete"
+        '
+        'SearchToolStripMenuItem2
+        '
+        Me.SearchToolStripMenuItem2.Name = "SearchToolStripMenuItem2"
+        Me.SearchToolStripMenuItem2.Size = New System.Drawing.Size(181, 26)
+        Me.SearchToolStripMenuItem2.Text = "Search"
         '
         'MainMenuForm
         '
@@ -207,4 +214,5 @@ Partial Class MainMenuForm
     Friend WithEvents NewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents AddToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SearchToolStripMenuItem2 As ToolStripMenuItem
 End Class

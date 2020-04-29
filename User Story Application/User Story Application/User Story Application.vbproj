@@ -104,6 +104,12 @@
     <Compile Include="Interface\EditUserStoryForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Interface\TestCaseViewSearchDeleteForm.Designer.vb">
+      <DependentUpon>TestCaseViewSearchDeleteForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\TestCaseViewSearchDeleteForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Interface\MemberControlForm.Designer.vb">
       <DependentUpon>MemberControlForm.vb</DependentUpon>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\EditUserStoryForm.resx">
       <DependentUpon>EditUserStoryForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\TestCaseViewSearchDeleteForm.resx">
+      <DependentUpon>TestCaseViewSearchDeleteForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\MemberControlForm.resx">
       <DependentUpon>MemberControlForm.vb</DependentUpon>
