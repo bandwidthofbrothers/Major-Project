@@ -98,10 +98,22 @@
     <Compile Include="Interface\DeleteUserStoryForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Interface\EditTestCaseForm.Designer.vb">
+      <DependentUpon>EditTestCaseForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\EditTestCaseForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Interface\EditUserStoryForm.Designer.vb">
       <DependentUpon>EditUserStoryForm.vb</DependentUpon>
     </Compile>
     <Compile Include="Interface\EditUserStoryForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\TestCaseViewSearchDeleteForm.Designer.vb">
+      <DependentUpon>TestCaseViewSearchDeleteForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\TestCaseViewSearchDeleteForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interface\MemberControlForm.Designer.vb">
@@ -173,8 +185,14 @@
     <EmbeddedResource Include="Interface\DeleteUserStoryForm.resx">
       <DependentUpon>DeleteUserStoryForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interface\EditTestCaseForm.resx">
+      <DependentUpon>EditTestCaseForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interface\EditUserStoryForm.resx">
       <DependentUpon>EditUserStoryForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\TestCaseViewSearchDeleteForm.resx">
+      <DependentUpon>TestCaseViewSearchDeleteForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\MemberControlForm.resx">
       <DependentUpon>MemberControlForm.vb</DependentUpon>

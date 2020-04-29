@@ -4,6 +4,10 @@
     Public Shared Edit As Boolean
     Public Shared Search As Boolean
 
+    Public Shared TestCaseView As Boolean
+    Public Shared TestCaseSearch As Boolean
+    Public Shared TestCaseDelete As Boolean
+
     Private Sub LoginToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoginToolStripMenuItem.Click
         If MenuAccessControl.DropDownItems(0).Text = "Sign Out" Then
             MenuMemberControl.Enabled = False
@@ -51,7 +55,12 @@
     End Sub
 
     Private Sub ViewToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem2.Click
-        FormSetUp(Test_Cases)
+        TestCaseView = True
+        TestCaseSearch = False
+        TestCaseDelete = False
+
+        closeActiveMdiChild()
+        FormSetUp(TestCaseViewSearchDeleteForm)
     End Sub
 
     Private Sub SearchToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SearchToolStripMenuItem.Click
@@ -102,5 +111,27 @@
 
     Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
         FormSetUp(AddTestCase)
+    End Sub
+
+    Private Sub DeleteToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles DeleteToolStripMenuItem1.Click
+        TestCaseView = False
+        TestCaseSearch = False
+        TestCaseDelete = True
+
+        closeActiveMdiChild()
+        FormSetUp(TestCaseViewSearchDeleteForm)
+    End Sub
+
+    Private Sub SearchToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles SearchToolStripMenuItem2.Click
+        TestCaseView = False
+        TestCaseSearch = True
+        TestCaseDelete = False
+
+        closeActiveMdiChild()
+        FormSetUp(TestCaseViewSearchDeleteForm)
+    End Sub
+
+    Private Sub EditToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles EditToolStripMenuItem2.Click
+        FormSetUp(EditTestCaseForm)
     End Sub
 End Class
