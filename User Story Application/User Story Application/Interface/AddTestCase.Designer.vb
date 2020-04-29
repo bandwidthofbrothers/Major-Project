@@ -23,193 +23,155 @@ Partial Class AddTestCase
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.UserStoryBox = New System.Windows.Forms.ListBox()
-        Me.UserStoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataSet = New User_Story_Application.DataSet()
+        Me.ListBoxUserStory = New System.Windows.Forms.ListBox()
         Me.TestCaseBox = New System.Windows.Forms.ListBox()
-        Me.TestCasesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TestCaseNoTextbox = New System.Windows.Forms.TextBox()
         Me.NewTestCaseBtn = New System.Windows.Forms.Button()
-        Me.DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.UserStoryTableAdapter = New User_Story_Application.DataSetTableAdapters.UserStoryTableAdapter()
-        Me.TestCasesTableAdapter = New User_Story_Application.DataSetTableAdapters.TestCasesTableAdapter()
         Me.TestCaseDetailsTextbox = New System.Windows.Forms.TextBox()
-        Me.UserStoryNoTextbox = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        CType(Me.UserStoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DataSet = New User_Story_Application.DataSet()
+        Me.UserStoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.UserStoryTableAdapter = New User_Story_Application.DataSetTableAdapters.UserStoryTableAdapter()
+        Me.FKTestCasesUserStoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TestCasesTableAdapter = New User_Story_Application.DataSetTableAdapters.TestCasesTableAdapter()
         CType(Me.DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TestCasesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UserStoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FKTestCasesUserStoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'UserStoryBox
+        'ListBoxUserStory
         '
-        Me.UserStoryBox.DataSource = Me.UserStoryBindingSource
-        Me.UserStoryBox.FormattingEnabled = True
-        Me.UserStoryBox.Location = New System.Drawing.Point(28, 53)
-        Me.UserStoryBox.Name = "UserStoryBox"
-        Me.UserStoryBox.Size = New System.Drawing.Size(220, 277)
-        Me.UserStoryBox.TabIndex = 0
-        '
-        'UserStoryBindingSource
-        '
-        Me.UserStoryBindingSource.DataMember = "UserStory"
-        Me.UserStoryBindingSource.DataSource = Me.DataSet
-        '
-        'DataSet
-        '
-        Me.DataSet.DataSetName = "DataSet"
-        Me.DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.ListBoxUserStory.DataSource = Me.UserStoryBindingSource
+        Me.ListBoxUserStory.DisplayMember = "UserStoryTitle"
+        Me.ListBoxUserStory.FormattingEnabled = True
+        Me.ListBoxUserStory.ItemHeight = 16
+        Me.ListBoxUserStory.Location = New System.Drawing.Point(37, 65)
+        Me.ListBoxUserStory.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ListBoxUserStory.Name = "ListBoxUserStory"
+        Me.ListBoxUserStory.Size = New System.Drawing.Size(292, 340)
+        Me.ListBoxUserStory.TabIndex = 0
+        Me.ListBoxUserStory.ValueMember = "UserStoryNo"
         '
         'TestCaseBox
         '
-        Me.TestCaseBox.DataSource = Me.TestCasesBindingSource
+        Me.TestCaseBox.DataSource = Me.FKTestCasesUserStoryBindingSource
+        Me.TestCaseBox.DisplayMember = "TestCaseDetails"
         Me.TestCaseBox.FormattingEnabled = True
-        Me.TestCaseBox.Location = New System.Drawing.Point(301, 53)
+        Me.TestCaseBox.ItemHeight = 16
+        Me.TestCaseBox.Location = New System.Drawing.Point(401, 65)
+        Me.TestCaseBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TestCaseBox.Name = "TestCaseBox"
-        Me.TestCaseBox.Size = New System.Drawing.Size(183, 56)
+        Me.TestCaseBox.Size = New System.Drawing.Size(503, 68)
         Me.TestCaseBox.TabIndex = 1
-        '
-        'TestCasesBindingSource
-        '
-        Me.TestCasesBindingSource.DataMember = "TestCases"
-        Me.TestCasesBindingSource.DataSource = Me.DataSet
-        '
-        'TestCaseNoTextbox
-        '
-        Me.TestCaseNoTextbox.Location = New System.Drawing.Point(301, 158)
-        Me.TestCaseNoTextbox.Name = "TestCaseNoTextbox"
-        Me.TestCaseNoTextbox.Size = New System.Drawing.Size(89, 20)
-        Me.TestCaseNoTextbox.TabIndex = 2
+        Me.TestCaseBox.ValueMember = "TestCaseNo"
         '
         'NewTestCaseBtn
         '
-        Me.NewTestCaseBtn.Location = New System.Drawing.Point(423, 219)
+        Me.NewTestCaseBtn.Location = New System.Drawing.Point(566, 327)
+        Me.NewTestCaseBtn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.NewTestCaseBtn.Name = "NewTestCaseBtn"
-        Me.NewTestCaseBtn.Size = New System.Drawing.Size(126, 45)
+        Me.NewTestCaseBtn.Size = New System.Drawing.Size(168, 55)
         Me.NewTestCaseBtn.TabIndex = 3
         Me.NewTestCaseBtn.Text = "Add New Test Case"
         Me.NewTestCaseBtn.UseVisualStyleBackColor = True
         '
-        'DataSetBindingSource
-        '
-        Me.DataSetBindingSource.DataSource = Me.DataSet
-        Me.DataSetBindingSource.Position = 0
-        '
-        'UserStoryTableAdapter
-        '
-        Me.UserStoryTableAdapter.ClearBeforeFill = True
-        '
-        'TestCasesTableAdapter
-        '
-        Me.TestCasesTableAdapter.ClearBeforeFill = True
-        '
         'TestCaseDetailsTextbox
         '
-        Me.TestCaseDetailsTextbox.Location = New System.Drawing.Point(423, 158)
+        Me.TestCaseDetailsTextbox.Location = New System.Drawing.Point(405, 182)
+        Me.TestCaseDetailsTextbox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TestCaseDetailsTextbox.Multiline = True
         Me.TestCaseDetailsTextbox.Name = "TestCaseDetailsTextbox"
-        Me.TestCaseDetailsTextbox.Size = New System.Drawing.Size(154, 20)
+        Me.TestCaseDetailsTextbox.Size = New System.Drawing.Size(499, 121)
         Me.TestCaseDetailsTextbox.TabIndex = 4
-        '
-        'UserStoryNoTextbox
-        '
-        Me.UserStoryNoTextbox.Location = New System.Drawing.Point(606, 158)
-        Me.UserStoryNoTextbox.Name = "UserStoryNoTextbox"
-        Me.UserStoryNoTextbox.Size = New System.Drawing.Size(73, 20)
-        Me.UserStoryNoTextbox.TabIndex = 5
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(301, 139)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(72, 13)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Test Case No"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(420, 139)
+        Me.Label2.Location = New System.Drawing.Point(401, 159)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(90, 13)
+        Me.Label2.Size = New System.Drawing.Size(119, 17)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Test Case Details"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(603, 139)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(73, 13)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "User Story No"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(301, 25)
+        Me.Label4.Location = New System.Drawing.Point(401, 31)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(55, 13)
+        Me.Label4.Size = New System.Drawing.Size(72, 17)
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Test Case"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(39, 25)
+        Me.Label5.Location = New System.Drawing.Point(52, 31)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(56, 13)
+        Me.Label5.Size = New System.Drawing.Size(75, 17)
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "User Story"
         '
+        'DataSet
+        '
+        Me.DataSet.DataSetName = "DataSet"
+        Me.DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'UserStoryBindingSource
+        '
+        Me.UserStoryBindingSource.DataMember = "UserStory"
+        Me.UserStoryBindingSource.DataSource = Me.DataSet
+        '
+        'UserStoryTableAdapter
+        '
+        Me.UserStoryTableAdapter.ClearBeforeFill = True
+        '
+        'FKTestCasesUserStoryBindingSource
+        '
+        Me.FKTestCasesUserStoryBindingSource.DataMember = "FK_TestCases_UserStory"
+        Me.FKTestCasesUserStoryBindingSource.DataSource = Me.UserStoryBindingSource
+        '
+        'TestCasesTableAdapter
+        '
+        Me.TestCasesTableAdapter.ClearBeforeFill = True
+        '
         'AddTestCase
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(743, 396)
+        Me.ClientSize = New System.Drawing.Size(991, 487)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.UserStoryNoTextbox)
         Me.Controls.Add(Me.TestCaseDetailsTextbox)
         Me.Controls.Add(Me.NewTestCaseBtn)
-        Me.Controls.Add(Me.TestCaseNoTextbox)
         Me.Controls.Add(Me.TestCaseBox)
-        Me.Controls.Add(Me.UserStoryBox)
+        Me.Controls.Add(Me.ListBoxUserStory)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "AddTestCase"
         Me.Text = "AddTestCase"
-        CType(Me.UserStoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TestCasesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UserStoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FKTestCasesUserStoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents UserStoryBox As ListBox
+    Friend WithEvents ListBoxUserStory As ListBox
     Friend WithEvents TestCaseBox As ListBox
-    Friend WithEvents TestCaseNoTextbox As TextBox
     Friend WithEvents NewTestCaseBtn As Button
-    Friend WithEvents DataSetBindingSource As BindingSource
+    Friend WithEvents TestCaseDetailsTextbox As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
     Friend WithEvents DataSet As DataSet
     Friend WithEvents UserStoryBindingSource As BindingSource
     Friend WithEvents UserStoryTableAdapter As DataSetTableAdapters.UserStoryTableAdapter
-    Friend WithEvents TestCasesBindingSource As BindingSource
+    Friend WithEvents FKTestCasesUserStoryBindingSource As BindingSource
     Friend WithEvents TestCasesTableAdapter As DataSetTableAdapters.TestCasesTableAdapter
-    Friend WithEvents TestCaseDetailsTextbox As TextBox
-    Friend WithEvents UserStoryNoTextbox As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
 End Class

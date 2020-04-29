@@ -96,7 +96,11 @@
         FormSetUp(SearchUserStoryForm)
     End Sub
 
-    Private Sub AddToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AddToolStripMenuItem1.Click
+    Private Sub AddToolStripMenuItem1_Click(sender As Object, e As EventArgs)
+        FormSetUp(AddTestCase)
+    End Sub
+
+    Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
         FormSetUp(AddTestCase)
     End Sub
 End Class

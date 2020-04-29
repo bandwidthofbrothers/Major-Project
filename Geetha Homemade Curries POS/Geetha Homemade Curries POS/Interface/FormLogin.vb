@@ -1,7 +1,9 @@
 ﻿Public Class FormLogin
     Private Sub ButtonLogin_Click(sender As Object, e As EventArgs) Handles ButtonLogin.Click
-        If TextBoxUserName.Text = "Admin" And TextBoxPassword.Text = "Admin" Then
-            MessageBox.Show("Welcome")
+        EmployeeTableAdapter.FillBy(DataSet.Employee, TextBoxUserName.Text, TextBoxPassword.Text)
+
+        If DataSet.Employee.Rows.Count() > 0 Then
+            MessageBox.Show("Welcome! You will now be directed to the system")
             Me.Close()
 
             With FormMainMenu
@@ -22,6 +24,10 @@
                 End With
 
             End With
+
+        Else
+            MessageBox.Show("Error: Incorrect Username or Password")
         End If
     End Sub
+
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormLogin
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FormLogin
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormLogin))
         Me.PictureBoxLogo = New System.Windows.Forms.PictureBox()
@@ -29,7 +29,10 @@ Partial Class FormLogin
         Me.TextBoxUserName = New System.Windows.Forms.TextBox()
         Me.TextBoxPassword = New System.Windows.Forms.TextBox()
         Me.ButtonLogin = New System.Windows.Forms.Button()
+        Me.DataSet = New Geetha_Homemade_Curries_POS.DataSet()
+        Me.EmployeeTableAdapter = New Geetha_Homemade_Curries_POS.DataSetTableAdapters.EmployeeTableAdapter()
         CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBoxLogo
@@ -90,6 +93,15 @@ Partial Class FormLogin
         Me.ButtonLogin.Text = "Login"
         Me.ButtonLogin.UseVisualStyleBackColor = False
         '
+        'DataSet
+        '
+        Me.DataSet.DataSetName = "DataSet"
+        Me.DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'EmployeeTableAdapter
+        '
+        Me.EmployeeTableAdapter.ClearBeforeFill = True
+        '
         'FormLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -109,6 +121,7 @@ Partial Class FormLogin
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
         CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -120,4 +133,6 @@ Partial Class FormLogin
     Friend WithEvents TextBoxUserName As TextBox
     Friend WithEvents TextBoxPassword As TextBox
     Friend WithEvents ButtonLogin As Button
+    Friend WithEvents DataSet As DataSet
+    Friend WithEvents EmployeeTableAdapter As DataSetTableAdapters.EmployeeTableAdapter
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainMenuForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MainMenuForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainMenuForm))
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
@@ -42,7 +42,6 @@ Partial Class MainMenuForm
         Me.EditToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -112,36 +111,36 @@ Partial Class MainMenuForm
         'AddToolStripMenuItem
         '
         Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
-        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(128, 26)
         Me.AddToolStripMenuItem.Text = "Add"
         '
         'ViewToolStripMenuItem1
         '
         Me.ViewToolStripMenuItem1.Name = "ViewToolStripMenuItem1"
-        Me.ViewToolStripMenuItem1.Size = New System.Drawing.Size(181, 26)
+        Me.ViewToolStripMenuItem1.Size = New System.Drawing.Size(128, 26)
         Me.ViewToolStripMenuItem1.Text = "View"
         '
         'EditToolStripMenuItem1
         '
         Me.EditToolStripMenuItem1.Name = "EditToolStripMenuItem1"
-        Me.EditToolStripMenuItem1.Size = New System.Drawing.Size(181, 26)
+        Me.EditToolStripMenuItem1.Size = New System.Drawing.Size(128, 26)
         Me.EditToolStripMenuItem1.Text = "Edit"
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(128, 26)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'SearchToolStripMenuItem1
         '
         Me.SearchToolStripMenuItem1.Name = "SearchToolStripMenuItem1"
-        Me.SearchToolStripMenuItem1.Size = New System.Drawing.Size(181, 26)
+        Me.SearchToolStripMenuItem1.Size = New System.Drawing.Size(128, 26)
         Me.SearchToolStripMenuItem1.Text = "Search"
         '
         'MenuTestCaseControl
         '
-        Me.MenuTestCaseControl.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem2, Me.EditToolStripMenuItem2, Me.NewToolStripMenuItem, Me.DeleteToolStripMenuItem1, Me.AddToolStripMenuItem1})
+        Me.MenuTestCaseControl.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem2, Me.EditToolStripMenuItem2, Me.NewToolStripMenuItem, Me.DeleteToolStripMenuItem1})
         Me.MenuTestCaseControl.Enabled = False
         Me.MenuTestCaseControl.Name = "MenuTestCaseControl"
         Me.MenuTestCaseControl.Size = New System.Drawing.Size(88, 24)
@@ -170,12 +169,6 @@ Partial Class MainMenuForm
         Me.DeleteToolStripMenuItem1.Name = "DeleteToolStripMenuItem1"
         Me.DeleteToolStripMenuItem1.Size = New System.Drawing.Size(181, 26)
         Me.DeleteToolStripMenuItem1.Text = "Delete"
-        '
-        'AddToolStripMenuItem1
-        '
-        Me.AddToolStripMenuItem1.Name = "AddToolStripMenuItem1"
-        Me.AddToolStripMenuItem1.Size = New System.Drawing.Size(181, 26)
-        Me.AddToolStripMenuItem1.Text = "Add"
         '
         'MainMenuForm
         '
@@ -214,5 +207,4 @@ Partial Class MainMenuForm
     Friend WithEvents NewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents AddToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AddToolStripMenuItem1 As ToolStripMenuItem
 End Class
