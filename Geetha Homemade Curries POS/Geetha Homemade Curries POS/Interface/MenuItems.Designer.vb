@@ -24,10 +24,16 @@ Partial Class MenuItems
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.MenuGridView = New System.Windows.Forms.DataGridView()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.MenuItemIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MenuItemNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MenuItemCostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MenuItemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet1 = New Geetha_Homemade_Curries_POS.DataSet()
+        Me.ItemTxtbox = New System.Windows.Forms.TextBox()
+        Me.AddBtn = New System.Windows.Forms.Button()
+        Me.EditGroupBox = New System.Windows.Forms.GroupBox()
+        Me.UpdateBtn = New System.Windows.Forms.Button()
+        Me.CategoryBox = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -35,21 +41,17 @@ Partial Class MenuItems
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.DataSet1 = New Geetha_Homemade_Curries_POS.DataSet()
+        Me.LargeTxtbox = New System.Windows.Forms.TextBox()
+        Me.MedTxtbox = New System.Windows.Forms.TextBox()
+        Me.SmallTxtbox = New System.Windows.Forms.TextBox()
+        Me.CostTxtbox = New System.Windows.Forms.TextBox()
+        Me.NameTxtbox = New System.Windows.Forms.TextBox()
         Me.MenuItemTableAdapter1 = New Geetha_Homemade_Curries_POS.DataSetTableAdapters.MenuItemTableAdapter()
-        Me.MenuItemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MenuItemIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MenuItemNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MenuItemCostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DeleteBtn = New System.Windows.Forms.Button()
         CType(Me.MenuGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MenuItemBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.EditGroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuGridView
@@ -63,53 +65,90 @@ Partial Class MenuItems
         Me.MenuGridView.Size = New System.Drawing.Size(542, 238)
         Me.MenuGridView.TabIndex = 0
         '
-        'TextBox1
+        'MenuItemIDDataGridViewTextBoxColumn
         '
-        Me.TextBox1.Location = New System.Drawing.Point(24, 56)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(67, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.MenuItemIDDataGridViewTextBoxColumn.DataPropertyName = "MenuItemID"
+        Me.MenuItemIDDataGridViewTextBoxColumn.HeaderText = "MenuItemID"
+        Me.MenuItemIDDataGridViewTextBoxColumn.Name = "MenuItemIDDataGridViewTextBoxColumn"
         '
-        'Button1
+        'MenuItemNameDataGridViewTextBoxColumn
         '
-        Me.Button1.Location = New System.Drawing.Point(280, 188)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(87, 24)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Add Item"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.MenuItemNameDataGridViewTextBoxColumn.DataPropertyName = "MenuItemName"
+        Me.MenuItemNameDataGridViewTextBoxColumn.HeaderText = "MenuItemName"
+        Me.MenuItemNameDataGridViewTextBoxColumn.Name = "MenuItemNameDataGridViewTextBoxColumn"
         '
-        'GroupBox1
+        'MenuItemCostDataGridViewTextBoxColumn
         '
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.TextBox7)
-        Me.GroupBox1.Controls.Add(Me.TextBox6)
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Location = New System.Drawing.Point(604, 36)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(608, 255)
-        Me.GroupBox1.TabIndex = 3
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "v"
+        Me.MenuItemCostDataGridViewTextBoxColumn.DataPropertyName = "MenuItemCost"
+        Me.MenuItemCostDataGridViewTextBoxColumn.HeaderText = "MenuItemCost"
+        Me.MenuItemCostDataGridViewTextBoxColumn.Name = "MenuItemCostDataGridViewTextBoxColumn"
         '
-        'ComboBox1
+        'MenuItemBindingSource
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(24, 111)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(141, 21)
-        Me.ComboBox1.TabIndex = 16
+        Me.MenuItemBindingSource.DataMember = "MenuItem"
+        Me.MenuItemBindingSource.DataSource = Me.DataSet1
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ItemTxtbox
+        '
+        Me.ItemTxtbox.Location = New System.Drawing.Point(24, 56)
+        Me.ItemTxtbox.Name = "ItemTxtbox"
+        Me.ItemTxtbox.Size = New System.Drawing.Size(67, 20)
+        Me.ItemTxtbox.TabIndex = 1
+        '
+        'AddBtn
+        '
+        Me.AddBtn.Location = New System.Drawing.Point(160, 204)
+        Me.AddBtn.Name = "AddBtn"
+        Me.AddBtn.Size = New System.Drawing.Size(87, 24)
+        Me.AddBtn.TabIndex = 2
+        Me.AddBtn.Text = "Add Item"
+        Me.AddBtn.UseVisualStyleBackColor = True
+        '
+        'EditGroupBox
+        '
+        Me.EditGroupBox.Controls.Add(Me.UpdateBtn)
+        Me.EditGroupBox.Controls.Add(Me.CategoryBox)
+        Me.EditGroupBox.Controls.Add(Me.Label7)
+        Me.EditGroupBox.Controls.Add(Me.Label6)
+        Me.EditGroupBox.Controls.Add(Me.Label5)
+        Me.EditGroupBox.Controls.Add(Me.Label4)
+        Me.EditGroupBox.Controls.Add(Me.Label3)
+        Me.EditGroupBox.Controls.Add(Me.Label2)
+        Me.EditGroupBox.Controls.Add(Me.Label1)
+        Me.EditGroupBox.Controls.Add(Me.LargeTxtbox)
+        Me.EditGroupBox.Controls.Add(Me.MedTxtbox)
+        Me.EditGroupBox.Controls.Add(Me.SmallTxtbox)
+        Me.EditGroupBox.Controls.Add(Me.CostTxtbox)
+        Me.EditGroupBox.Controls.Add(Me.NameTxtbox)
+        Me.EditGroupBox.Controls.Add(Me.AddBtn)
+        Me.EditGroupBox.Controls.Add(Me.ItemTxtbox)
+        Me.EditGroupBox.Location = New System.Drawing.Point(604, 36)
+        Me.EditGroupBox.Name = "EditGroupBox"
+        Me.EditGroupBox.Size = New System.Drawing.Size(608, 255)
+        Me.EditGroupBox.TabIndex = 3
+        Me.EditGroupBox.TabStop = False
+        '
+        'UpdateBtn
+        '
+        Me.UpdateBtn.Location = New System.Drawing.Point(339, 204)
+        Me.UpdateBtn.Name = "UpdateBtn"
+        Me.UpdateBtn.Size = New System.Drawing.Size(87, 24)
+        Me.UpdateBtn.TabIndex = 18
+        Me.UpdateBtn.Text = "Update Item"
+        Me.UpdateBtn.UseVisualStyleBackColor = True
+        '
+        'CategoryBox
+        '
+        Me.CategoryBox.FormattingEnabled = True
+        Me.CategoryBox.Location = New System.Drawing.Point(24, 111)
+        Me.CategoryBox.Name = "CategoryBox"
+        Me.CategoryBox.Size = New System.Drawing.Size(141, 21)
+        Me.CategoryBox.TabIndex = 16
         '
         'Label7
         '
@@ -174,96 +213,78 @@ Partial Class MenuItems
         Me.Label1.TabIndex = 9
         Me.Label1.Text = " Item ID"
         '
-        'TextBox7
+        'LargeTxtbox
         '
-        Me.TextBox7.Location = New System.Drawing.Point(24, 158)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(153, 20)
-        Me.TextBox7.TabIndex = 8
+        Me.LargeTxtbox.Location = New System.Drawing.Point(24, 158)
+        Me.LargeTxtbox.Name = "LargeTxtbox"
+        Me.LargeTxtbox.Size = New System.Drawing.Size(153, 20)
+        Me.LargeTxtbox.TabIndex = 8
         '
-        'TextBox6
+        'MedTxtbox
         '
-        Me.TextBox6.Location = New System.Drawing.Point(378, 111)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(153, 20)
-        Me.TextBox6.TabIndex = 7
+        Me.MedTxtbox.Location = New System.Drawing.Point(378, 111)
+        Me.MedTxtbox.Name = "MedTxtbox"
+        Me.MedTxtbox.Size = New System.Drawing.Size(153, 20)
+        Me.MedTxtbox.TabIndex = 7
         '
-        'TextBox5
+        'SmallTxtbox
         '
-        Me.TextBox5.Location = New System.Drawing.Point(202, 111)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(153, 20)
-        Me.TextBox5.TabIndex = 6
+        Me.SmallTxtbox.Location = New System.Drawing.Point(202, 111)
+        Me.SmallTxtbox.Name = "SmallTxtbox"
+        Me.SmallTxtbox.Size = New System.Drawing.Size(153, 20)
+        Me.SmallTxtbox.TabIndex = 6
         '
-        'TextBox3
+        'CostTxtbox
         '
-        Me.TextBox3.Location = New System.Drawing.Point(378, 56)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(153, 20)
-        Me.TextBox3.TabIndex = 4
+        Me.CostTxtbox.Location = New System.Drawing.Point(378, 56)
+        Me.CostTxtbox.Name = "CostTxtbox"
+        Me.CostTxtbox.Size = New System.Drawing.Size(153, 20)
+        Me.CostTxtbox.TabIndex = 4
         '
-        'TextBox2
+        'NameTxtbox
         '
-        Me.TextBox2.Location = New System.Drawing.Point(127, 56)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(191, 20)
-        Me.TextBox2.TabIndex = 3
-        '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.NameTxtbox.Location = New System.Drawing.Point(127, 56)
+        Me.NameTxtbox.Name = "NameTxtbox"
+        Me.NameTxtbox.Size = New System.Drawing.Size(191, 20)
+        Me.NameTxtbox.TabIndex = 3
         '
         'MenuItemTableAdapter1
         '
         Me.MenuItemTableAdapter1.ClearBeforeFill = True
         '
-        'MenuItemBindingSource
+        'DeleteBtn
         '
-        Me.MenuItemBindingSource.DataMember = "MenuItem"
-        Me.MenuItemBindingSource.DataSource = Me.DataSet1
-        '
-        'MenuItemIDDataGridViewTextBoxColumn
-        '
-        Me.MenuItemIDDataGridViewTextBoxColumn.DataPropertyName = "MenuItemID"
-        Me.MenuItemIDDataGridViewTextBoxColumn.HeaderText = "MenuItemID"
-        Me.MenuItemIDDataGridViewTextBoxColumn.Name = "MenuItemIDDataGridViewTextBoxColumn"
-        '
-        'MenuItemNameDataGridViewTextBoxColumn
-        '
-        Me.MenuItemNameDataGridViewTextBoxColumn.DataPropertyName = "MenuItemName"
-        Me.MenuItemNameDataGridViewTextBoxColumn.HeaderText = "MenuItemName"
-        Me.MenuItemNameDataGridViewTextBoxColumn.Name = "MenuItemNameDataGridViewTextBoxColumn"
-        '
-        'MenuItemCostDataGridViewTextBoxColumn
-        '
-        Me.MenuItemCostDataGridViewTextBoxColumn.DataPropertyName = "MenuItemCost"
-        Me.MenuItemCostDataGridViewTextBoxColumn.HeaderText = "MenuItemCost"
-        Me.MenuItemCostDataGridViewTextBoxColumn.Name = "MenuItemCostDataGridViewTextBoxColumn"
+        Me.DeleteBtn.Location = New System.Drawing.Point(203, 322)
+        Me.DeleteBtn.Name = "DeleteBtn"
+        Me.DeleteBtn.Size = New System.Drawing.Size(89, 26)
+        Me.DeleteBtn.TabIndex = 4
+        Me.DeleteBtn.Text = "Delete"
+        Me.DeleteBtn.UseVisualStyleBackColor = True
         '
         'MenuItems
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1200, 425)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.ClientSize = New System.Drawing.Size(1200, 368)
+        Me.Controls.Add(Me.DeleteBtn)
+        Me.Controls.Add(Me.EditGroupBox)
         Me.Controls.Add(Me.MenuGridView)
         Me.Name = "MenuItems"
         Me.Text = "MenuItems"
         CType(Me.MenuGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MenuItemBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.EditGroupBox.ResumeLayout(False)
+        Me.EditGroupBox.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents MenuGridView As DataGridView
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ItemTxtbox As TextBox
+    Friend WithEvents AddBtn As Button
+    Friend WithEvents EditGroupBox As GroupBox
+    Friend WithEvents CategoryBox As ComboBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
@@ -271,15 +292,17 @@ Partial Class MenuItems
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents LargeTxtbox As TextBox
+    Friend WithEvents MedTxtbox As TextBox
+    Friend WithEvents SmallTxtbox As TextBox
+    Friend WithEvents CostTxtbox As TextBox
+    Friend WithEvents NameTxtbox As TextBox
     Friend WithEvents MenuItemIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MenuItemNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MenuItemCostDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MenuItemBindingSource As BindingSource
     Friend WithEvents DataSet1 As DataSet
     Friend WithEvents MenuItemTableAdapter1 As DataSetTableAdapters.MenuItemTableAdapter
+    Friend WithEvents UpdateBtn As Button
+    Friend WithEvents DeleteBtn As Button
 End Class
