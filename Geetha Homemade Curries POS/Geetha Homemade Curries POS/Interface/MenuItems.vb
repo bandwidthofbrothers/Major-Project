@@ -3,14 +3,22 @@
 Public Class MenuItems
 
 
-    Dim connection As New SqlConnection("Server=146.230.177.46\IST3; Database=group22; Integrated Security=true")
+    Dim connection As New SqlConnection("Server=STUDENT-250JE01; Database=group22; integrated security = false")
 
     Private Sub MenuItems_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'DataSet1.CustomerOrder' table. You can move, or remove it, as needed.
+
+        Me.MenuItemTableAdapter1.Fill(Me.DataSet1.MenuItem)
 
 
     End Sub
 
     Private Sub AddBtn_Click(sender As Object, e As EventArgs) Handles AddBtn.Click
-        Dim command As New SqlCommand("", connection)
+
+
+
+
+
+
     End Sub
 End Class

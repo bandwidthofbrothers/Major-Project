@@ -24,9 +24,6 @@ Partial Class MenuItems
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.MenuGridView = New System.Windows.Forms.DataGridView()
-        Me.MenuItemIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MenuItemNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MenuItemCostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MenuItemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1 = New Geetha_Homemade_Curries_POS.DataSet()
         Me.ItemTxtbox = New System.Windows.Forms.TextBox()
@@ -56,32 +53,12 @@ Partial Class MenuItems
         '
         'MenuGridView
         '
-        Me.MenuGridView.AutoGenerateColumns = False
+        Me.MenuGridView.AllowUserToOrderColumns = True
         Me.MenuGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.MenuGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MenuItemIDDataGridViewTextBoxColumn, Me.MenuItemNameDataGridViewTextBoxColumn, Me.MenuItemCostDataGridViewTextBoxColumn})
-        Me.MenuGridView.DataSource = Me.MenuItemBindingSource
         Me.MenuGridView.Location = New System.Drawing.Point(12, 26)
         Me.MenuGridView.Name = "MenuGridView"
         Me.MenuGridView.Size = New System.Drawing.Size(542, 238)
         Me.MenuGridView.TabIndex = 0
-        '
-        'MenuItemIDDataGridViewTextBoxColumn
-        '
-        Me.MenuItemIDDataGridViewTextBoxColumn.DataPropertyName = "MenuItemID"
-        Me.MenuItemIDDataGridViewTextBoxColumn.HeaderText = "MenuItemID"
-        Me.MenuItemIDDataGridViewTextBoxColumn.Name = "MenuItemIDDataGridViewTextBoxColumn"
-        '
-        'MenuItemNameDataGridViewTextBoxColumn
-        '
-        Me.MenuItemNameDataGridViewTextBoxColumn.DataPropertyName = "MenuItemName"
-        Me.MenuItemNameDataGridViewTextBoxColumn.HeaderText = "MenuItemName"
-        Me.MenuItemNameDataGridViewTextBoxColumn.Name = "MenuItemNameDataGridViewTextBoxColumn"
-        '
-        'MenuItemCostDataGridViewTextBoxColumn
-        '
-        Me.MenuItemCostDataGridViewTextBoxColumn.DataPropertyName = "MenuItemCost"
-        Me.MenuItemCostDataGridViewTextBoxColumn.HeaderText = "MenuItemCost"
-        Me.MenuItemCostDataGridViewTextBoxColumn.Name = "MenuItemCostDataGridViewTextBoxColumn"
         '
         'MenuItemBindingSource
         '
@@ -297,9 +274,6 @@ Partial Class MenuItems
     Friend WithEvents SmallTxtbox As TextBox
     Friend WithEvents CostTxtbox As TextBox
     Friend WithEvents NameTxtbox As TextBox
-    Friend WithEvents MenuItemIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents MenuItemNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents MenuItemCostDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MenuItemBindingSource As BindingSource
     Friend WithEvents DataSet1 As DataSet
     Friend WithEvents MenuItemTableAdapter1 As DataSetTableAdapters.MenuItemTableAdapter
