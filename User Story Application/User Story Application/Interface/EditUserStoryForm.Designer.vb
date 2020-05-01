@@ -24,7 +24,7 @@ Partial Class EditUserStoryForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.ListBoxUserStory = New System.Windows.Forms.ListBox()
         Me.UserStoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet = New User_Story_Application.DataSet()
         Me.UserStoryTableAdapter = New User_Story_Application.DataSetTableAdapters.UserStoryTableAdapter()
@@ -36,11 +36,11 @@ Partial Class EditUserStoryForm
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TableAdapterManager = New User_Story_Application.DataSetTableAdapters.TableAdapterManager()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBoxTitle = New System.Windows.Forms.TextBox()
+        Me.TextBoxDescription = New System.Windows.Forms.TextBox()
         Me.ComboBoxUserRole = New System.Windows.Forms.ComboBox()
         Me.DateTimePickerStartDate = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePickerEndDate = New System.Windows.Forms.DateTimePicker()
         Me.ComboBoxPriority = New System.Windows.Forms.ComboBox()
         Me.ComboBoxStatus = New System.Windows.Forms.ComboBox()
         Me.ButtonUpdate = New System.Windows.Forms.Button()
@@ -58,16 +58,17 @@ Partial Class EditUserStoryForm
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "User Story:"
         '
-        'ListBox1
+        'ListBoxUserStory
         '
-        Me.ListBox1.DataSource = Me.UserStoryBindingSource
-        Me.ListBox1.DisplayMember = "UserStoryTitle"
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 16
-        Me.ListBox1.Location = New System.Drawing.Point(17, 52)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(282, 580)
-        Me.ListBox1.TabIndex = 2
+        Me.ListBoxUserStory.DataSource = Me.UserStoryBindingSource
+        Me.ListBoxUserStory.DisplayMember = "UserStoryTitle"
+        Me.ListBoxUserStory.FormattingEnabled = True
+        Me.ListBoxUserStory.ItemHeight = 16
+        Me.ListBoxUserStory.Location = New System.Drawing.Point(17, 52)
+        Me.ListBoxUserStory.Name = "ListBoxUserStory"
+        Me.ListBoxUserStory.Size = New System.Drawing.Size(282, 580)
+        Me.ListBoxUserStory.TabIndex = 2
+        Me.ListBoxUserStory.ValueMember = "UserStoryNo"
         '
         'UserStoryBindingSource
         '
@@ -162,22 +163,22 @@ Partial Class EditUserStoryForm
         Me.TableAdapterManager.UserStory_MemberTableAdapter = Nothing
         Me.TableAdapterManager.UserStoryTableAdapter = Me.UserStoryTableAdapter
         '
-        'TextBox1
+        'TextBoxTitle
         '
-        Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserStoryBindingSource, "UserStoryTitle", True))
-        Me.TextBox1.Location = New System.Drawing.Point(677, 59)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(366, 22)
-        Me.TextBox1.TabIndex = 14
+        Me.TextBoxTitle.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserStoryBindingSource, "UserStoryTitle", True))
+        Me.TextBoxTitle.Location = New System.Drawing.Point(677, 59)
+        Me.TextBoxTitle.Name = "TextBoxTitle"
+        Me.TextBoxTitle.Size = New System.Drawing.Size(366, 22)
+        Me.TextBoxTitle.TabIndex = 14
         '
-        'TextBox2
+        'TextBoxDescription
         '
-        Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserStoryBindingSource, "UserStoryDescription", True))
-        Me.TextBox2.Location = New System.Drawing.Point(677, 137)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(366, 52)
-        Me.TextBox2.TabIndex = 15
+        Me.TextBoxDescription.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserStoryBindingSource, "UserStoryDescription", True))
+        Me.TextBoxDescription.Location = New System.Drawing.Point(677, 137)
+        Me.TextBoxDescription.Multiline = True
+        Me.TextBoxDescription.Name = "TextBoxDescription"
+        Me.TextBoxDescription.Size = New System.Drawing.Size(366, 52)
+        Me.TextBoxDescription.TabIndex = 15
         '
         'ComboBoxUserRole
         '
@@ -199,15 +200,15 @@ Partial Class EditUserStoryForm
         Me.DateTimePickerStartDate.Size = New System.Drawing.Size(366, 22)
         Me.DateTimePickerStartDate.TabIndex = 17
         '
-        'DateTimePicker1
+        'DateTimePickerEndDate
         '
-        Me.DateTimePicker1.CustomFormat = "dd MMMM yyyy"
-        Me.DateTimePicker1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserStoryBindingSource, "UserStoryEndDate", True))
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(677, 352)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(366, 22)
-        Me.DateTimePicker1.TabIndex = 18
+        Me.DateTimePickerEndDate.CustomFormat = "dd MMMM yyyy"
+        Me.DateTimePickerEndDate.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserStoryBindingSource, "UserStoryEndDate", True))
+        Me.DateTimePickerEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePickerEndDate.Location = New System.Drawing.Point(677, 352)
+        Me.DateTimePickerEndDate.Name = "DateTimePickerEndDate"
+        Me.DateTimePickerEndDate.Size = New System.Drawing.Size(366, 22)
+        Me.DateTimePickerEndDate.TabIndex = 18
         '
         'ComboBoxPriority
         '
@@ -247,11 +248,11 @@ Partial Class EditUserStoryForm
         Me.Controls.Add(Me.ButtonUpdate)
         Me.Controls.Add(Me.ComboBoxStatus)
         Me.Controls.Add(Me.ComboBoxPriority)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.DateTimePickerEndDate)
         Me.Controls.Add(Me.DateTimePickerStartDate)
         Me.Controls.Add(Me.ComboBoxUserRole)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TextBoxDescription)
+        Me.Controls.Add(Me.TextBoxTitle)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -259,7 +260,7 @@ Partial Class EditUserStoryForm
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.ListBoxUserStory)
         Me.Controls.Add(Me.Label1)
         Me.Name = "EditUserStoryForm"
         Me.Text = "EditUserStoryForm"
@@ -271,7 +272,7 @@ Partial Class EditUserStoryForm
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents ListBoxUserStory As ListBox
     Friend WithEvents DataSet As DataSet
     Friend WithEvents UserStoryBindingSource As BindingSource
     Friend WithEvents UserStoryTableAdapter As DataSetTableAdapters.UserStoryTableAdapter
@@ -283,11 +284,11 @@ Partial Class EditUserStoryForm
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents TableAdapterManager As DataSetTableAdapters.TableAdapterManager
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBoxTitle As TextBox
+    Friend WithEvents TextBoxDescription As TextBox
     Friend WithEvents ComboBoxUserRole As ComboBox
     Friend WithEvents DateTimePickerStartDate As DateTimePicker
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DateTimePickerEndDate As DateTimePicker
     Friend WithEvents ComboBoxPriority As ComboBox
     Friend WithEvents ComboBoxStatus As ComboBox
     Friend WithEvents ButtonUpdate As Button

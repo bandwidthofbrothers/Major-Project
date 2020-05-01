@@ -10,6 +10,7 @@ Public Class MenuItems
         Me.MenuItemTableAdapter.Fill(Me.Group22DataSet.MenuItem)
 
 
+
     End Sub
 
     Private Sub AddBtn_Click(sender As Object, e As EventArgs) Handles AddBtn.Click
