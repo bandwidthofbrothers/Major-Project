@@ -56,6 +56,51 @@ Partial Class Customers
         CType(Me.CustomerDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'CustomerIDLabel
+        '
+        CustomerIDLabel.AutoSize = True
+        CustomerIDLabel.Location = New System.Drawing.Point(33, 46)
+        CustomerIDLabel.Name = "CustomerIDLabel"
+        CustomerIDLabel.Size = New System.Drawing.Size(89, 17)
+        CustomerIDLabel.TabIndex = 12
+        CustomerIDLabel.Text = "Customer ID:"
+        '
+        'FirstNameLabel
+        '
+        FirstNameLabel.AutoSize = True
+        FirstNameLabel.Location = New System.Drawing.Point(33, 86)
+        FirstNameLabel.Name = "FirstNameLabel"
+        FirstNameLabel.Size = New System.Drawing.Size(80, 17)
+        FirstNameLabel.TabIndex = 14
+        FirstNameLabel.Text = "First Name:"
+        '
+        'SurnameLabel
+        '
+        SurnameLabel.AutoSize = True
+        SurnameLabel.Location = New System.Drawing.Point(33, 125)
+        SurnameLabel.Name = "SurnameLabel"
+        SurnameLabel.Size = New System.Drawing.Size(69, 17)
+        SurnameLabel.TabIndex = 16
+        SurnameLabel.Text = "Surname:"
+        '
+        'PhoneNumberLabel
+        '
+        PhoneNumberLabel.AutoSize = True
+        PhoneNumberLabel.Location = New System.Drawing.Point(33, 165)
+        PhoneNumberLabel.Name = "PhoneNumberLabel"
+        PhoneNumberLabel.Size = New System.Drawing.Size(107, 17)
+        PhoneNumberLabel.TabIndex = 18
+        PhoneNumberLabel.Text = "Phone Number:"
+        '
+        'AmountDueLabel
+        '
+        AmountDueLabel.AutoSize = True
+        AmountDueLabel.Location = New System.Drawing.Point(33, 206)
+        AmountDueLabel.Name = "AmountDueLabel"
+        AmountDueLabel.Size = New System.Drawing.Size(90, 17)
+        AmountDueLabel.TabIndex = 20
+        AmountDueLabel.Text = "Amount Due:"
+        '
         'DataSet1
         '
         Me.DataSet1.DataSetName = "DataSet"
@@ -101,10 +146,11 @@ Partial Class Customers
         Me.CustomerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.CustomerDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.CustomerDataGridView.DataSource = Me.CustomerBindingSource
-        Me.CustomerDataGridView.Location = New System.Drawing.Point(1, 458)
+        Me.CustomerDataGridView.Location = New System.Drawing.Point(1, 366)
+        Me.CustomerDataGridView.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CustomerDataGridView.Name = "CustomerDataGridView"
         Me.CustomerDataGridView.RowTemplate.Height = 28
-        Me.CustomerDataGridView.Size = New System.Drawing.Size(543, 60)
+        Me.CustomerDataGridView.Size = New System.Drawing.Size(483, 48)
         Me.CustomerDataGridView.TabIndex = 10
         '
         'DataGridViewTextBoxColumn1
@@ -139,103 +185,64 @@ Partial Class Customers
         '
         'AddCustBtn
         '
-        Me.AddCustBtn.Location = New System.Drawing.Point(506, 57)
+        Me.AddCustBtn.Location = New System.Drawing.Point(450, 46)
+        Me.AddCustBtn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.AddCustBtn.Name = "AddCustBtn"
-        Me.AddCustBtn.Size = New System.Drawing.Size(134, 46)
+        Me.AddCustBtn.Size = New System.Drawing.Size(119, 37)
         Me.AddCustBtn.TabIndex = 11
         Me.AddCustBtn.Text = "Add Customer"
         Me.AddCustBtn.UseVisualStyleBackColor = True
         '
-        'CustomerIDLabel
-        '
-        CustomerIDLabel.AutoSize = True
-        CustomerIDLabel.Location = New System.Drawing.Point(37, 57)
-        CustomerIDLabel.Name = "CustomerIDLabel"
-        CustomerIDLabel.Size = New System.Drawing.Size(103, 20)
-        CustomerIDLabel.TabIndex = 12
-        CustomerIDLabel.Text = "Customer ID:"
-        '
         'CustomerIDTextBox
         '
         Me.CustomerIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "CustomerID", True))
-        Me.CustomerIDTextBox.Location = New System.Drawing.Point(216, 57)
+        Me.CustomerIDTextBox.Location = New System.Drawing.Point(192, 46)
+        Me.CustomerIDTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CustomerIDTextBox.Name = "CustomerIDTextBox"
-        Me.CustomerIDTextBox.Size = New System.Drawing.Size(209, 26)
+        Me.CustomerIDTextBox.Size = New System.Drawing.Size(186, 22)
         Me.CustomerIDTextBox.TabIndex = 13
-        '
-        'FirstNameLabel
-        '
-        FirstNameLabel.AutoSize = True
-        FirstNameLabel.Location = New System.Drawing.Point(37, 107)
-        FirstNameLabel.Name = "FirstNameLabel"
-        FirstNameLabel.Size = New System.Drawing.Size(90, 20)
-        FirstNameLabel.TabIndex = 14
-        FirstNameLabel.Text = "First Name:"
         '
         'FirstNameTextBox
         '
         Me.FirstNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "FirstName", True))
-        Me.FirstNameTextBox.Location = New System.Drawing.Point(216, 107)
+        Me.FirstNameTextBox.Location = New System.Drawing.Point(192, 86)
+        Me.FirstNameTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.FirstNameTextBox.Name = "FirstNameTextBox"
-        Me.FirstNameTextBox.Size = New System.Drawing.Size(209, 26)
+        Me.FirstNameTextBox.Size = New System.Drawing.Size(186, 22)
         Me.FirstNameTextBox.TabIndex = 15
-        '
-        'SurnameLabel
-        '
-        SurnameLabel.AutoSize = True
-        SurnameLabel.Location = New System.Drawing.Point(37, 156)
-        SurnameLabel.Name = "SurnameLabel"
-        SurnameLabel.Size = New System.Drawing.Size(78, 20)
-        SurnameLabel.TabIndex = 16
-        SurnameLabel.Text = "Surname:"
         '
         'SurnameTextBox
         '
         Me.SurnameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "Surname", True))
-        Me.SurnameTextBox.Location = New System.Drawing.Point(216, 156)
+        Me.SurnameTextBox.Location = New System.Drawing.Point(192, 125)
+        Me.SurnameTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.SurnameTextBox.Name = "SurnameTextBox"
-        Me.SurnameTextBox.Size = New System.Drawing.Size(209, 26)
+        Me.SurnameTextBox.Size = New System.Drawing.Size(186, 22)
         Me.SurnameTextBox.TabIndex = 17
-        '
-        'PhoneNumberLabel
-        '
-        PhoneNumberLabel.AutoSize = True
-        PhoneNumberLabel.Location = New System.Drawing.Point(37, 206)
-        PhoneNumberLabel.Name = "PhoneNumberLabel"
-        PhoneNumberLabel.Size = New System.Drawing.Size(119, 20)
-        PhoneNumberLabel.TabIndex = 18
-        PhoneNumberLabel.Text = "Phone Number:"
         '
         'PhoneNumberTextBox
         '
         Me.PhoneNumberTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "PhoneNumber", True))
-        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(216, 206)
+        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(192, 165)
+        Me.PhoneNumberTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PhoneNumberTextBox.Name = "PhoneNumberTextBox"
-        Me.PhoneNumberTextBox.Size = New System.Drawing.Size(209, 26)
+        Me.PhoneNumberTextBox.Size = New System.Drawing.Size(186, 22)
         Me.PhoneNumberTextBox.TabIndex = 19
-        '
-        'AmountDueLabel
-        '
-        AmountDueLabel.AutoSize = True
-        AmountDueLabel.Location = New System.Drawing.Point(37, 258)
-        AmountDueLabel.Name = "AmountDueLabel"
-        AmountDueLabel.Size = New System.Drawing.Size(103, 20)
-        AmountDueLabel.TabIndex = 20
-        AmountDueLabel.Text = "Amount Due:"
         '
         'AmountDueTextBox
         '
         Me.AmountDueTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "AmountDue", True))
-        Me.AmountDueTextBox.Location = New System.Drawing.Point(216, 258)
+        Me.AmountDueTextBox.Location = New System.Drawing.Point(192, 206)
+        Me.AmountDueTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.AmountDueTextBox.Name = "AmountDueTextBox"
-        Me.AmountDueTextBox.Size = New System.Drawing.Size(209, 26)
+        Me.AmountDueTextBox.Size = New System.Drawing.Size(186, 22)
         Me.AmountDueTextBox.TabIndex = 21
         '
         'Customers
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(747, 519)
+        Me.ClientSize = New System.Drawing.Size(664, 415)
         Me.Controls.Add(CustomerIDLabel)
         Me.Controls.Add(Me.CustomerIDTextBox)
         Me.Controls.Add(FirstNameLabel)
@@ -248,6 +255,7 @@ Partial Class Customers
         Me.Controls.Add(Me.AmountDueTextBox)
         Me.Controls.Add(Me.AddCustBtn)
         Me.Controls.Add(Me.CustomerDataGridView)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Customers"
         Me.Text = "Customers"
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()

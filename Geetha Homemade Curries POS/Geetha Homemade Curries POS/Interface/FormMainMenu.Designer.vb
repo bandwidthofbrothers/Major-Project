@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormMainMenu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FormMainMenu
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMainMenu))
@@ -50,9 +50,7 @@ Partial Class FormMainMenu
         Me.ToolTipReports = New System.Windows.Forms.ToolTip(Me.components)
         Me.ButtonStaff = New System.Windows.Forms.Button()
         Me.ToolTipStaff = New System.Windows.Forms.ToolTip(Me.components)
-        Me.DataSet1 = New Geetha_Homemade_Curries_POS.DataSet()
         Me.MenuStrip.SuspendLayout()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip
@@ -232,11 +230,6 @@ Partial Class FormMainMenu
         Me.ToolTipStaff.SetToolTip(Me.ButtonStaff, "Staff")
         Me.ButtonStaff.UseVisualStyleBackColor = True
         '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'FormMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -261,7 +254,6 @@ Partial Class FormMainMenu
         Me.Text = "Geetha's Homemade Curries Point of Sales System"
         Me.MenuStrip.ResumeLayout(False)
         Me.MenuStrip.PerformLayout()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -292,5 +284,4 @@ Partial Class FormMainMenu
     Friend WithEvents ToolTipStaff As ToolTip
     Friend WithEvents LoginToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents DataSet1 As DataSet
 End Class
