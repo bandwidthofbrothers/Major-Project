@@ -29,10 +29,10 @@ Partial Class FormLogin
         Me.TextBoxUserName = New System.Windows.Forms.TextBox()
         Me.TextBoxPassword = New System.Windows.Forms.TextBox()
         Me.ButtonLogin = New System.Windows.Forms.Button()
-        Me.DataSet = New Geetha_Homemade_Curries_POS.DataSet()
-        Me.EmployeeTableAdapter = New Geetha_Homemade_Curries_POS.DataSetTableAdapters.EmployeeTableAdapter()
+        Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
+        Me.EmployeeTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.EmployeeTableAdapter()
         CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBoxLogo
@@ -93,10 +93,10 @@ Partial Class FormLogin
         Me.ButtonLogin.Text = "Login"
         Me.ButtonLogin.UseVisualStyleBackColor = False
         '
-        'DataSet
+        'Group22DataSet
         '
-        Me.DataSet.DataSetName = "DataSet"
-        Me.DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Group22DataSet.DataSetName = "group22DataSet"
+        Me.Group22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'EmployeeTableAdapter
         '
@@ -121,7 +121,7 @@ Partial Class FormLogin
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
         CType(Me.PictureBoxLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -133,6 +133,6 @@ Partial Class FormLogin
     Friend WithEvents TextBoxUserName As TextBox
     Friend WithEvents TextBoxPassword As TextBox
     Friend WithEvents ButtonLogin As Button
-    Friend WithEvents DataSet As DataSet
-    Friend WithEvents EmployeeTableAdapter As DataSetTableAdapters.EmployeeTableAdapter
+    Friend WithEvents Group22DataSet As group22DataSet
+    Friend WithEvents EmployeeTableAdapter As group22DataSetTableAdapters.EmployeeTableAdapter
 End Class
