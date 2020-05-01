@@ -24,8 +24,6 @@ Partial Class MenuItems
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.MenuGridView = New System.Windows.Forms.DataGridView()
-        Me.MenuItemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataSet1 = New Geetha_Homemade_Curries_POS.DataSet()
         Me.ItemTxtbox = New System.Windows.Forms.TextBox()
         Me.AddBtn = New System.Windows.Forms.Button()
         Me.EditGroupBox = New System.Windows.Forms.GroupBox()
@@ -43,32 +41,30 @@ Partial Class MenuItems
         Me.SmallTxtbox = New System.Windows.Forms.TextBox()
         Me.CostTxtbox = New System.Windows.Forms.TextBox()
         Me.NameTxtbox = New System.Windows.Forms.TextBox()
-        Me.MenuItemTableAdapter1 = New Geetha_Homemade_Curries_POS.DataSetTableAdapters.MenuItemTableAdapter()
         Me.DeleteBtn = New System.Windows.Forms.Button()
+        Me.DataSet = New Geetha_Homemade_Curries_POS.DataSet()
+        Me.MenuItemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MenuItemTableAdapter = New Geetha_Homemade_Curries_POS.DataSetTableAdapters.MenuItemTableAdapter()
+        Me.MenuItemIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MenuItemNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MenuItemCostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.MenuGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MenuItemBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.EditGroupBox.SuspendLayout()
+        CType(Me.DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MenuItemBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuGridView
         '
         Me.MenuGridView.AllowUserToOrderColumns = True
+        Me.MenuGridView.AutoGenerateColumns = False
         Me.MenuGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.MenuGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MenuItemIDDataGridViewTextBoxColumn, Me.MenuItemNameDataGridViewTextBoxColumn, Me.MenuItemCostDataGridViewTextBoxColumn})
+        Me.MenuGridView.DataSource = Me.MenuItemBindingSource
         Me.MenuGridView.Location = New System.Drawing.Point(12, 26)
         Me.MenuGridView.Name = "MenuGridView"
-        Me.MenuGridView.Size = New System.Drawing.Size(542, 238)
+        Me.MenuGridView.Size = New System.Drawing.Size(548, 238)
         Me.MenuGridView.TabIndex = 0
-        '
-        'MenuItemBindingSource
-        '
-        Me.MenuItemBindingSource.DataMember = "MenuItem"
-        Me.MenuItemBindingSource.DataSource = Me.DataSet1
-        '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ItemTxtbox
         '
@@ -225,10 +221,6 @@ Partial Class MenuItems
         Me.NameTxtbox.Size = New System.Drawing.Size(191, 20)
         Me.NameTxtbox.TabIndex = 3
         '
-        'MenuItemTableAdapter1
-        '
-        Me.MenuItemTableAdapter1.ClearBeforeFill = True
-        '
         'DeleteBtn
         '
         Me.DeleteBtn.Location = New System.Drawing.Point(203, 322)
@@ -237,6 +229,38 @@ Partial Class MenuItems
         Me.DeleteBtn.TabIndex = 4
         Me.DeleteBtn.Text = "Delete"
         Me.DeleteBtn.UseVisualStyleBackColor = True
+        '
+        'DataSet
+        '
+        Me.DataSet.DataSetName = "DataSet"
+        Me.DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MenuItemBindingSource
+        '
+        Me.MenuItemBindingSource.DataMember = "MenuItem"
+        Me.MenuItemBindingSource.DataSource = Me.DataSet
+        '
+        'MenuItemTableAdapter
+        '
+        Me.MenuItemTableAdapter.ClearBeforeFill = True
+        '
+        'MenuItemIDDataGridViewTextBoxColumn
+        '
+        Me.MenuItemIDDataGridViewTextBoxColumn.DataPropertyName = "MenuItemID"
+        Me.MenuItemIDDataGridViewTextBoxColumn.HeaderText = "MenuItemID"
+        Me.MenuItemIDDataGridViewTextBoxColumn.Name = "MenuItemIDDataGridViewTextBoxColumn"
+        '
+        'MenuItemNameDataGridViewTextBoxColumn
+        '
+        Me.MenuItemNameDataGridViewTextBoxColumn.DataPropertyName = "MenuItemName"
+        Me.MenuItemNameDataGridViewTextBoxColumn.HeaderText = "MenuItemName"
+        Me.MenuItemNameDataGridViewTextBoxColumn.Name = "MenuItemNameDataGridViewTextBoxColumn"
+        '
+        'MenuItemCostDataGridViewTextBoxColumn
+        '
+        Me.MenuItemCostDataGridViewTextBoxColumn.DataPropertyName = "MenuItemCost"
+        Me.MenuItemCostDataGridViewTextBoxColumn.HeaderText = "MenuItemCost"
+        Me.MenuItemCostDataGridViewTextBoxColumn.Name = "MenuItemCostDataGridViewTextBoxColumn"
         '
         'MenuItems
         '
@@ -249,10 +273,10 @@ Partial Class MenuItems
         Me.Name = "MenuItems"
         Me.Text = "MenuItems"
         CType(Me.MenuGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MenuItemBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.EditGroupBox.ResumeLayout(False)
         Me.EditGroupBox.PerformLayout()
+        CType(Me.DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MenuItemBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -274,9 +298,12 @@ Partial Class MenuItems
     Friend WithEvents SmallTxtbox As TextBox
     Friend WithEvents CostTxtbox As TextBox
     Friend WithEvents NameTxtbox As TextBox
-    Friend WithEvents MenuItemBindingSource As BindingSource
-    Friend WithEvents DataSet1 As DataSet
-    Friend WithEvents MenuItemTableAdapter1 As DataSetTableAdapters.MenuItemTableAdapter
     Friend WithEvents UpdateBtn As Button
     Friend WithEvents DeleteBtn As Button
+    Friend WithEvents DataSet As DataSet
+    Friend WithEvents MenuItemBindingSource As BindingSource
+    Friend WithEvents MenuItemTableAdapter As DataSetTableAdapters.MenuItemTableAdapter
+    Friend WithEvents MenuItemIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MenuItemNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MenuItemCostDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
