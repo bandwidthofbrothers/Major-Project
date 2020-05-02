@@ -15,7 +15,7 @@ Public Class MenuItems
 
     Private Sub AddBtn_Click(sender As Object, e As EventArgs) Handles AddBtn.Click
 
-
+        Dim ID As Integer = 0
         ID = ItemTxtbox.Text
 
         MenuItemTableAdapter.Insert(ID, NameTxtbox.Text, CostTxtbox.Text, CategoryBox.Text, SmallTxtbox.Text, MedTxtbox.Text, LargeTxtbox.Text)
@@ -25,7 +25,15 @@ Public Class MenuItems
     End Sub
 
     Private Sub UpdateBtn_Click(sender As Object, e As EventArgs) Handles UpdateBtn.Click
-        ID = ItemTxtbox.Text
+        Try
+            Me.Validate()
+            Me.MenuItemBindingSource.EndEdit()
+            Me.MenuItemTableAdapter.Update(Me.Group22DataSet.MenuItem)
+            MsgBox("Update successful")
+
+        Catch ex As Exception
+            MsgBox("Update failed")
+        End Try
 
 
 
