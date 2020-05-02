@@ -46,6 +46,8 @@ Partial Class DeleteUserStoryForm
         'UserStoryDataGridView
         '
         Me.UserStoryDataGridView.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.UserStoryDataGridView.AllowUserToAddRows = False
+        Me.UserStoryDataGridView.AllowUserToDeleteRows = False
         Me.UserStoryDataGridView.AutoGenerateColumns = False
         Me.UserStoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.UserStoryDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.UserStoryNoDataGridViewTextBoxColumn, Me.UserStoryTitleDataGridViewTextBoxColumn, Me.UserRoleDataGridViewTextBoxColumn, Me.UserStoryDescriptionDataGridViewTextBoxColumn, Me.UserStoryStartDateDataGridViewTextBoxColumn, Me.UserStoryEndDateDataGridViewTextBoxColumn, Me.UserStoryStatusDataGridViewTextBoxColumn, Me.UserStoryPriorityDataGridViewTextBoxColumn})

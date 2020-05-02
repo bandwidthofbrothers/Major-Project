@@ -24,12 +24,6 @@ Partial Class SearchUserStoryForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.UserStoryDataGridView = New System.Windows.Forms.DataGridView()
-        Me.UserStoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataSet = New User_Story_Application.DataSet()
-        Me.TextBoxSearch = New System.Windows.Forms.TextBox()
-        Me.ButtonSearch = New System.Windows.Forms.Button()
-        Me.UserStoryTableAdapter = New User_Story_Application.DataSetTableAdapters.UserStoryTableAdapter()
-        Me.TableAdapterManager = New User_Story_Application.DataSetTableAdapters.TableAdapterManager()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -38,6 +32,12 @@ Partial Class SearchUserStoryForm
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UserStoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet = New User_Story_Application.DataSet()
+        Me.TextBoxSearch = New System.Windows.Forms.TextBox()
+        Me.ButtonSearch = New System.Windows.Forms.Button()
+        Me.UserStoryTableAdapter = New User_Story_Application.DataSetTableAdapters.UserStoryTableAdapter()
+        Me.TableAdapterManager = New User_Story_Application.DataSetTableAdapters.TableAdapterManager()
         CType(Me.UserStoryDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserStoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,6 +45,8 @@ Partial Class SearchUserStoryForm
         '
         'UserStoryDataGridView
         '
+        Me.UserStoryDataGridView.AllowUserToAddRows = False
+        Me.UserStoryDataGridView.AllowUserToDeleteRows = False
         Me.UserStoryDataGridView.AutoGenerateColumns = False
         Me.UserStoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.UserStoryDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
@@ -54,45 +56,6 @@ Partial Class SearchUserStoryForm
         Me.UserStoryDataGridView.RowTemplate.Height = 24
         Me.UserStoryDataGridView.Size = New System.Drawing.Size(1251, 377)
         Me.UserStoryDataGridView.TabIndex = 1
-        '
-        'UserStoryBindingSource
-        '
-        Me.UserStoryBindingSource.DataMember = "UserStory"
-        Me.UserStoryBindingSource.DataSource = Me.DataSet
-        '
-        'DataSet
-        '
-        Me.DataSet.DataSetName = "DataSet"
-        Me.DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TextBoxSearch
-        '
-        Me.TextBoxSearch.Location = New System.Drawing.Point(27, 22)
-        Me.TextBoxSearch.Name = "TextBoxSearch"
-        Me.TextBoxSearch.Size = New System.Drawing.Size(277, 22)
-        Me.TextBoxSearch.TabIndex = 2
-        '
-        'ButtonSearch
-        '
-        Me.ButtonSearch.Location = New System.Drawing.Point(337, 18)
-        Me.ButtonSearch.Name = "ButtonSearch"
-        Me.ButtonSearch.Size = New System.Drawing.Size(140, 31)
-        Me.ButtonSearch.TabIndex = 3
-        Me.ButtonSearch.Text = "Search"
-        Me.ButtonSearch.UseVisualStyleBackColor = True
-        '
-        'UserStoryTableAdapter
-        '
-        Me.UserStoryTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.MemberTableAdapter = Nothing
-        Me.TableAdapterManager.TestCasesTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = User_Story_Application.DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.UserStory_MemberTableAdapter = Nothing
-        Me.TableAdapterManager.UserStoryTableAdapter = Me.UserStoryTableAdapter
         '
         'DataGridViewTextBoxColumn1
         '
@@ -149,6 +112,45 @@ Partial Class SearchUserStoryForm
         Me.DataGridViewTextBoxColumn8.DataPropertyName = "UserStoryPriority"
         Me.DataGridViewTextBoxColumn8.HeaderText = "UserStoryPriority"
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        '
+        'UserStoryBindingSource
+        '
+        Me.UserStoryBindingSource.DataMember = "UserStory"
+        Me.UserStoryBindingSource.DataSource = Me.DataSet
+        '
+        'DataSet
+        '
+        Me.DataSet.DataSetName = "DataSet"
+        Me.DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TextBoxSearch
+        '
+        Me.TextBoxSearch.Location = New System.Drawing.Point(27, 22)
+        Me.TextBoxSearch.Name = "TextBoxSearch"
+        Me.TextBoxSearch.Size = New System.Drawing.Size(277, 22)
+        Me.TextBoxSearch.TabIndex = 2
+        '
+        'ButtonSearch
+        '
+        Me.ButtonSearch.Location = New System.Drawing.Point(337, 18)
+        Me.ButtonSearch.Name = "ButtonSearch"
+        Me.ButtonSearch.Size = New System.Drawing.Size(140, 31)
+        Me.ButtonSearch.TabIndex = 3
+        Me.ButtonSearch.Text = "Search"
+        Me.ButtonSearch.UseVisualStyleBackColor = True
+        '
+        'UserStoryTableAdapter
+        '
+        Me.UserStoryTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.MemberTableAdapter = Nothing
+        Me.TableAdapterManager.TestCasesTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = User_Story_Application.DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UserStory_MemberTableAdapter = Nothing
+        Me.TableAdapterManager.UserStoryTableAdapter = Me.UserStoryTableAdapter
         '
         'SearchUserStoryForm
         '
