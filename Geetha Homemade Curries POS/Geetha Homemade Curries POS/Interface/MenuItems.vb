@@ -39,4 +39,9 @@ Public Class MenuItems
 
 
     End Sub
+
+    Private Sub DeleteBtn_Click(sender As Object, e As EventArgs) Handles DeleteBtn.Click
+
+
+    End Sub
 End Class
