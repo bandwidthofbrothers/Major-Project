@@ -141,12 +141,6 @@
     <Compile Include="Interface\SearchUserStoryForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interface\ViewTestCases.Designer.vb">
-      <DependentUpon>ViewTestCases.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Interface\ViewTestCases.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Interface\UserStoryForm.Designer.vb">
       <DependentUpon>UserStoryForm.vb</DependentUpon>
     </Compile>
@@ -205,9 +199,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\SearchUserStoryForm.resx">
       <DependentUpon>SearchUserStoryForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface\ViewTestCases.resx">
-      <DependentUpon>ViewTestCases.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\UserStoryForm.resx">
       <DependentUpon>UserStoryForm.vb</DependentUpon>

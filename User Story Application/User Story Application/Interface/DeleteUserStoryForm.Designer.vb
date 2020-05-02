@@ -24,7 +24,12 @@ Partial Class DeleteUserStoryForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.UserStoryDataGridView = New System.Windows.Forms.DataGridView()
+        Me.BSUserStory = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet = New User_Story_Application.DataSet()
         Me.ButtonDelete = New System.Windows.Forms.Button()
+        Me.UserStoryTableAdapter = New User_Story_Application.DataSetTableAdapters.UserStoryTableAdapter()
+        Me.TestCasesTableAdapter = New User_Story_Application.DataSetTableAdapters.TestCasesTableAdapter()
+        Me.UserStory_MemberTableAdapter = New User_Story_Application.DataSetTableAdapters.UserStory_MemberTableAdapter()
         Me.UserStoryNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UserStoryTitleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UserRoleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -33,11 +38,6 @@ Partial Class DeleteUserStoryForm
         Me.UserStoryEndDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UserStoryStatusDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UserStoryPriorityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BSUserStory = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataSet = New User_Story_Application.DataSet()
-        Me.UserStoryTableAdapter = New User_Story_Application.DataSetTableAdapters.UserStoryTableAdapter()
-        Me.TestCasesTableAdapter = New User_Story_Application.DataSetTableAdapters.TestCasesTableAdapter()
-        Me.UserStory_MemberTableAdapter = New User_Story_Application.DataSetTableAdapters.UserStory_MemberTableAdapter()
         CType(Me.UserStoryDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BSUserStory, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -46,6 +46,8 @@ Partial Class DeleteUserStoryForm
         'UserStoryDataGridView
         '
         Me.UserStoryDataGridView.AccessibleRole = System.Windows.Forms.AccessibleRole.None
+        Me.UserStoryDataGridView.AllowUserToAddRows = False
+        Me.UserStoryDataGridView.AllowUserToDeleteRows = False
         Me.UserStoryDataGridView.AutoGenerateColumns = False
         Me.UserStoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.UserStoryDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.UserStoryNoDataGridViewTextBoxColumn, Me.UserStoryTitleDataGridViewTextBoxColumn, Me.UserRoleDataGridViewTextBoxColumn, Me.UserStoryDescriptionDataGridViewTextBoxColumn, Me.UserStoryStartDateDataGridViewTextBoxColumn, Me.UserStoryEndDateDataGridViewTextBoxColumn, Me.UserStoryStatusDataGridViewTextBoxColumn, Me.UserStoryPriorityDataGridViewTextBoxColumn})
@@ -56,63 +58,6 @@ Partial Class DeleteUserStoryForm
         Me.UserStoryDataGridView.Size = New System.Drawing.Size(1245, 264)
         Me.UserStoryDataGridView.TabIndex = 2
         '
-        'ButtonDelete
-        '
-        Me.ButtonDelete.Location = New System.Drawing.Point(546, 292)
-        Me.ButtonDelete.Name = "ButtonDelete"
-        Me.ButtonDelete.Size = New System.Drawing.Size(194, 60)
-        Me.ButtonDelete.TabIndex = 3
-        Me.ButtonDelete.Text = "Delete"
-        Me.ButtonDelete.UseVisualStyleBackColor = True
-        '
-        'UserStoryNoDataGridViewTextBoxColumn
-        '
-        Me.UserStoryNoDataGridViewTextBoxColumn.DataPropertyName = "UserStoryNo"
-        Me.UserStoryNoDataGridViewTextBoxColumn.HeaderText = "UserStoryNo"
-        Me.UserStoryNoDataGridViewTextBoxColumn.Name = "UserStoryNoDataGridViewTextBoxColumn"
-        '
-        'UserStoryTitleDataGridViewTextBoxColumn
-        '
-        Me.UserStoryTitleDataGridViewTextBoxColumn.DataPropertyName = "UserStoryTitle"
-        Me.UserStoryTitleDataGridViewTextBoxColumn.HeaderText = "UserStoryTitle"
-        Me.UserStoryTitleDataGridViewTextBoxColumn.Name = "UserStoryTitleDataGridViewTextBoxColumn"
-        '
-        'UserRoleDataGridViewTextBoxColumn
-        '
-        Me.UserRoleDataGridViewTextBoxColumn.DataPropertyName = "UserRole"
-        Me.UserRoleDataGridViewTextBoxColumn.HeaderText = "UserRole"
-        Me.UserRoleDataGridViewTextBoxColumn.Name = "UserRoleDataGridViewTextBoxColumn"
-        '
-        'UserStoryDescriptionDataGridViewTextBoxColumn
-        '
-        Me.UserStoryDescriptionDataGridViewTextBoxColumn.DataPropertyName = "UserStoryDescription"
-        Me.UserStoryDescriptionDataGridViewTextBoxColumn.HeaderText = "UserStoryDescription"
-        Me.UserStoryDescriptionDataGridViewTextBoxColumn.Name = "UserStoryDescriptionDataGridViewTextBoxColumn"
-        '
-        'UserStoryStartDateDataGridViewTextBoxColumn
-        '
-        Me.UserStoryStartDateDataGridViewTextBoxColumn.DataPropertyName = "UserStoryStartDate"
-        Me.UserStoryStartDateDataGridViewTextBoxColumn.HeaderText = "UserStoryStartDate"
-        Me.UserStoryStartDateDataGridViewTextBoxColumn.Name = "UserStoryStartDateDataGridViewTextBoxColumn"
-        '
-        'UserStoryEndDateDataGridViewTextBoxColumn
-        '
-        Me.UserStoryEndDateDataGridViewTextBoxColumn.DataPropertyName = "UserStoryEndDate"
-        Me.UserStoryEndDateDataGridViewTextBoxColumn.HeaderText = "UserStoryEndDate"
-        Me.UserStoryEndDateDataGridViewTextBoxColumn.Name = "UserStoryEndDateDataGridViewTextBoxColumn"
-        '
-        'UserStoryStatusDataGridViewTextBoxColumn
-        '
-        Me.UserStoryStatusDataGridViewTextBoxColumn.DataPropertyName = "UserStoryStatus"
-        Me.UserStoryStatusDataGridViewTextBoxColumn.HeaderText = "UserStoryStatus"
-        Me.UserStoryStatusDataGridViewTextBoxColumn.Name = "UserStoryStatusDataGridViewTextBoxColumn"
-        '
-        'UserStoryPriorityDataGridViewTextBoxColumn
-        '
-        Me.UserStoryPriorityDataGridViewTextBoxColumn.DataPropertyName = "UserStoryPriority"
-        Me.UserStoryPriorityDataGridViewTextBoxColumn.HeaderText = "UserStoryPriority"
-        Me.UserStoryPriorityDataGridViewTextBoxColumn.Name = "UserStoryPriorityDataGridViewTextBoxColumn"
-        '
         'BSUserStory
         '
         Me.BSUserStory.DataMember = "UserStory"
@@ -122,6 +67,15 @@ Partial Class DeleteUserStoryForm
         '
         Me.DataSet.DataSetName = "DataSet"
         Me.DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ButtonDelete
+        '
+        Me.ButtonDelete.Location = New System.Drawing.Point(546, 292)
+        Me.ButtonDelete.Name = "ButtonDelete"
+        Me.ButtonDelete.Size = New System.Drawing.Size(194, 60)
+        Me.ButtonDelete.TabIndex = 3
+        Me.ButtonDelete.Text = "Delete"
+        Me.ButtonDelete.UseVisualStyleBackColor = True
         '
         'UserStoryTableAdapter
         '
@@ -135,10 +89,67 @@ Partial Class DeleteUserStoryForm
         '
         Me.UserStory_MemberTableAdapter.ClearBeforeFill = True
         '
+        'UserStoryNoDataGridViewTextBoxColumn
+        '
+        Me.UserStoryNoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.UserStoryNoDataGridViewTextBoxColumn.DataPropertyName = "UserStoryNo"
+        Me.UserStoryNoDataGridViewTextBoxColumn.HeaderText = "UserStoryNo"
+        Me.UserStoryNoDataGridViewTextBoxColumn.Name = "UserStoryNoDataGridViewTextBoxColumn"
+        '
+        'UserStoryTitleDataGridViewTextBoxColumn
+        '
+        Me.UserStoryTitleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.UserStoryTitleDataGridViewTextBoxColumn.DataPropertyName = "UserStoryTitle"
+        Me.UserStoryTitleDataGridViewTextBoxColumn.HeaderText = "UserStoryTitle"
+        Me.UserStoryTitleDataGridViewTextBoxColumn.Name = "UserStoryTitleDataGridViewTextBoxColumn"
+        '
+        'UserRoleDataGridViewTextBoxColumn
+        '
+        Me.UserRoleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.UserRoleDataGridViewTextBoxColumn.DataPropertyName = "UserRole"
+        Me.UserRoleDataGridViewTextBoxColumn.HeaderText = "UserRole"
+        Me.UserRoleDataGridViewTextBoxColumn.Name = "UserRoleDataGridViewTextBoxColumn"
+        '
+        'UserStoryDescriptionDataGridViewTextBoxColumn
+        '
+        Me.UserStoryDescriptionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.UserStoryDescriptionDataGridViewTextBoxColumn.DataPropertyName = "UserStoryDescription"
+        Me.UserStoryDescriptionDataGridViewTextBoxColumn.HeaderText = "UserStoryDescription"
+        Me.UserStoryDescriptionDataGridViewTextBoxColumn.Name = "UserStoryDescriptionDataGridViewTextBoxColumn"
+        '
+        'UserStoryStartDateDataGridViewTextBoxColumn
+        '
+        Me.UserStoryStartDateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.UserStoryStartDateDataGridViewTextBoxColumn.DataPropertyName = "UserStoryStartDate"
+        Me.UserStoryStartDateDataGridViewTextBoxColumn.HeaderText = "UserStoryStartDate"
+        Me.UserStoryStartDateDataGridViewTextBoxColumn.Name = "UserStoryStartDateDataGridViewTextBoxColumn"
+        '
+        'UserStoryEndDateDataGridViewTextBoxColumn
+        '
+        Me.UserStoryEndDateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.UserStoryEndDateDataGridViewTextBoxColumn.DataPropertyName = "UserStoryEndDate"
+        Me.UserStoryEndDateDataGridViewTextBoxColumn.HeaderText = "UserStoryEndDate"
+        Me.UserStoryEndDateDataGridViewTextBoxColumn.Name = "UserStoryEndDateDataGridViewTextBoxColumn"
+        '
+        'UserStoryStatusDataGridViewTextBoxColumn
+        '
+        Me.UserStoryStatusDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.UserStoryStatusDataGridViewTextBoxColumn.DataPropertyName = "UserStoryStatus"
+        Me.UserStoryStatusDataGridViewTextBoxColumn.HeaderText = "UserStoryStatus"
+        Me.UserStoryStatusDataGridViewTextBoxColumn.Name = "UserStoryStatusDataGridViewTextBoxColumn"
+        '
+        'UserStoryPriorityDataGridViewTextBoxColumn
+        '
+        Me.UserStoryPriorityDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.UserStoryPriorityDataGridViewTextBoxColumn.DataPropertyName = "UserStoryPriority"
+        Me.UserStoryPriorityDataGridViewTextBoxColumn.HeaderText = "UserStoryPriority"
+        Me.UserStoryPriorityDataGridViewTextBoxColumn.Name = "UserStoryPriorityDataGridViewTextBoxColumn"
+        '
         'DeleteUserStoryForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.User_Story_Application.My.Resources.Resources.Background
         Me.ClientSize = New System.Drawing.Size(1270, 377)
         Me.ControlBox = False
         Me.Controls.Add(Me.ButtonDelete)
@@ -156,6 +167,9 @@ Partial Class DeleteUserStoryForm
     Friend WithEvents BSUserStory As BindingSource
     Friend WithEvents DataSet As DataSet
     Friend WithEvents UserStoryTableAdapter As DataSetTableAdapters.UserStoryTableAdapter
+    Friend WithEvents ButtonDelete As Button
+    Friend WithEvents TestCasesTableAdapter As DataSetTableAdapters.TestCasesTableAdapter
+    Friend WithEvents UserStory_MemberTableAdapter As DataSetTableAdapters.UserStory_MemberTableAdapter
     Friend WithEvents UserStoryNoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents UserStoryTitleDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents UserRoleDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -164,7 +178,4 @@ Partial Class DeleteUserStoryForm
     Friend WithEvents UserStoryEndDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents UserStoryStatusDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents UserStoryPriorityDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ButtonDelete As Button
-    Friend WithEvents TestCasesTableAdapter As DataSetTableAdapters.TestCasesTableAdapter
-    Friend WithEvents UserStory_MemberTableAdapter As DataSetTableAdapters.UserStory_MemberTableAdapter
 End Class

@@ -47,7 +47,7 @@ Partial Class MemberControlForm
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 16
         Me.ListBox1.Location = New System.Drawing.Point(16, 57)
-        Me.ListBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ListBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(240, 292)
         Me.ListBox1.TabIndex = 0
@@ -55,6 +55,8 @@ Partial Class MemberControlForm
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(16, 23)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
@@ -65,7 +67,7 @@ Partial Class MemberControlForm
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(489, 57)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(132, 22)
         Me.TextBox1.TabIndex = 2
@@ -73,6 +75,8 @@ Partial Class MemberControlForm
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(16, 60)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
@@ -84,6 +88,8 @@ Partial Class MemberControlForm
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(297, 60)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
@@ -94,6 +100,8 @@ Partial Class MemberControlForm
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(297, 130)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
@@ -104,6 +112,8 @@ Partial Class MemberControlForm
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(297, 197)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
@@ -114,17 +124,19 @@ Partial Class MemberControlForm
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(297, 263)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(75, 17)
+        Me.Label6.Size = New System.Drawing.Size(73, 17)
         Me.Label6.TabIndex = 11
-        Me.Label6.Text = "UserName"
+        Me.Label6.Text = "Username"
         '
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(489, 127)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(132, 22)
         Me.TextBox2.TabIndex = 12
@@ -132,7 +144,7 @@ Partial Class MemberControlForm
         'TextBox3
         '
         Me.TextBox3.Location = New System.Drawing.Point(489, 193)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(132, 22)
         Me.TextBox3.TabIndex = 13
@@ -140,7 +152,7 @@ Partial Class MemberControlForm
         'TextBox4
         '
         Me.TextBox4.Location = New System.Drawing.Point(489, 260)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(132, 22)
         Me.TextBox4.TabIndex = 14
@@ -148,7 +160,7 @@ Partial Class MemberControlForm
         'TextBox5
         '
         Me.TextBox5.Location = New System.Drawing.Point(489, 330)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(132, 22)
         Me.TextBox5.TabIndex = 15
@@ -156,7 +168,7 @@ Partial Class MemberControlForm
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(16, 398)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 28)
         Me.Button1.TabIndex = 16
@@ -166,7 +178,7 @@ Partial Class MemberControlForm
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(157, 398)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(100, 28)
         Me.Button2.TabIndex = 17
@@ -176,7 +188,7 @@ Partial Class MemberControlForm
         'TextBox6
         '
         Me.TextBox6.Location = New System.Drawing.Point(16, 106)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(132, 22)
         Me.TextBox6.TabIndex = 18
@@ -185,7 +197,7 @@ Partial Class MemberControlForm
         'Button3
         '
         Me.Button3.Location = New System.Drawing.Point(16, 164)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(100, 28)
         Me.Button3.TabIndex = 19
@@ -196,6 +208,8 @@ Partial Class MemberControlForm
         'Label7
         '
         Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(297, 334)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
@@ -206,7 +220,7 @@ Partial Class MemberControlForm
         'Button4
         '
         Me.Button4.Location = New System.Drawing.Point(16, 222)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(100, 28)
         Me.Button4.TabIndex = 21
@@ -218,6 +232,7 @@ Partial Class MemberControlForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.User_Story_Application.My.Resources.Resources.Background
         Me.ClientSize = New System.Drawing.Size(649, 485)
         Me.ControlBox = False
         Me.Controls.Add(Me.Button4)
@@ -238,7 +253,7 @@ Partial Class MemberControlForm
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ListBox1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "MemberControlForm"
         Me.Text = "Member Control"
         Me.ResumeLayout(False)
