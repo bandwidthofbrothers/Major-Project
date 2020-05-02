@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class MenuItems
-
+    Public ID As Integer = 0
 
     Dim connection As New SqlConnection("Server=STUDENT-250JE01; Database=group22; integrated security = false")
 
@@ -16,6 +16,16 @@ Public Class MenuItems
     Private Sub AddBtn_Click(sender As Object, e As EventArgs) Handles AddBtn.Click
 
 
+        ID = ItemTxtbox.Text
+
+        MenuItemTableAdapter.Insert(ID, NameTxtbox.Text, CostTxtbox.Text, CategoryBox.Text, SmallTxtbox.Text, MedTxtbox.Text, LargeTxtbox.Text)
+
+
+
+    End Sub
+
+    Private Sub UpdateBtn_Click(sender As Object, e As EventArgs) Handles UpdateBtn.Click
+        ID = ItemTxtbox.Text
 
 
 
