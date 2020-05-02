@@ -3351,8 +3351,8 @@ Namespace group22DataSetTableAdapters
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Customer] ([CustomerID], [FirstName], [Surname], [PhoneNumber]"& _ 
                 ", [AmountDue]) VALUES (@CustomerID, @FirstName, @Surname, @PhoneNumber, @AmountD"& _ 
-                "ue);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT CustomerID, FirstName, Surname, PhoneNumber, AmountDue FROM Customer"& _ 
-                " WHERE (CustomerID = @CustomerID)"
+                "ue);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT CustomerID, FirstName, Surname, PhoneNumber, AmountDue FROM Custome"& _ 
+                "r WHERE (CustomerID = @CustomerID)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CustomerID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CustomerID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FirstName", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FirstName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -3365,8 +3365,8 @@ Namespace group22DataSetTableAdapters
                 " [Surname] = @Surname, [PhoneNumber] = @PhoneNumber, [AmountDue] = @AmountDue WH"& _ 
                 "ERE (([CustomerID] = @Original_CustomerID) AND ([FirstName] = @Original_FirstNam"& _ 
                 "e) AND ([Surname] = @Original_Surname) AND ([PhoneNumber] = @Original_PhoneNumbe"& _ 
-                "r) AND ([AmountDue] = @Original_AmountDue));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT CustomerID, FirstName, Surna"& _ 
-                "me, PhoneNumber, AmountDue FROM Customer WHERE (CustomerID = @CustomerID)"
+                "r) AND ([AmountDue] = @Original_AmountDue));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT CustomerID, FirstName, Surn"& _ 
+                "ame, PhoneNumber, AmountDue FROM Customer WHERE (CustomerID = @CustomerID)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CustomerID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CustomerID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FirstName", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FirstName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -3721,9 +3721,9 @@ Namespace group22DataSetTableAdapters
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[CustomerOrder] ([CustomerOrderID], [MenuItemID], [Quantity], ["& _ 
                 "OrderDate], [OrderTime], [EmployeeNumber]) VALUES (@CustomerOrderID, @MenuItemID"& _ 
-                ", @Quantity, @OrderDate, @OrderTime, @EmployeeNumber);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT CustomerOrderID, M"& _ 
-                "enuItemID, Quantity, OrderDate, OrderTime, EmployeeNumber FROM CustomerOrder WHE"& _ 
-                "RE (CustomerOrderID = @CustomerOrderID) AND (MenuItemID = @MenuItemID)"
+                ", @Quantity, @OrderDate, @OrderTime, @EmployeeNumber);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT CustomerOrderID, "& _ 
+                "MenuItemID, Quantity, OrderDate, OrderTime, EmployeeNumber FROM CustomerOrder WH"& _ 
+                "ERE (CustomerOrderID = @CustomerOrderID) AND (MenuItemID = @MenuItemID)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CustomerOrderID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CustomerOrderID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MenuItemID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -3738,10 +3738,10 @@ Namespace group22DataSetTableAdapters
                 "= @OrderTime, [EmployeeNumber] = @EmployeeNumber WHERE (([CustomerOrderID] = @Or"& _ 
                 "iginal_CustomerOrderID) AND ([MenuItemID] = @Original_MenuItemID) AND ([Quantity"& _ 
                 "] = @Original_Quantity) AND ([OrderDate] = @Original_OrderDate) AND ([OrderTime]"& _ 
-                " = @Original_OrderTime) AND ([EmployeeNumber] = @Original_EmployeeNumber));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELE"& _ 
-                "CT CustomerOrderID, MenuItemID, Quantity, OrderDate, OrderTime, EmployeeNumber F"& _ 
-                "ROM CustomerOrder WHERE (CustomerOrderID = @CustomerOrderID) AND (MenuItemID = @"& _ 
-                "MenuItemID)"
+                " = @Original_OrderTime) AND ([EmployeeNumber] = @Original_EmployeeNumber));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SEL"& _ 
+                "ECT CustomerOrderID, MenuItemID, Quantity, OrderDate, OrderTime, EmployeeNumber "& _ 
+                "FROM CustomerOrder WHERE (CustomerOrderID = @CustomerOrderID) AND (MenuItemID = "& _ 
+                "@MenuItemID)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CustomerOrderID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CustomerOrderID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MenuItemID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -4074,9 +4074,9 @@ Namespace group22DataSetTableAdapters
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Employee] ([EmployeeFirstName], [EmployeeSurname], [EmployeePh"& _ 
                 "oneNumber], [JobTitle], [Username], [Password]) VALUES (@EmployeeFirstName, @Emp"& _ 
-                "loyeeSurname, @EmployeePhoneNumber, @JobTitle, @Username, @Password);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Emp"& _ 
-                "loyeeNumber, EmployeeFirstName, EmployeeSurname, EmployeePhoneNumber, JobTitle, "& _ 
-                "Username, Password FROM Employee WHERE (EmployeeNumber = SCOPE_IDENTITY())"
+                "loyeeSurname, @EmployeePhoneNumber, @JobTitle, @Username, @Password);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Em"& _ 
+                "ployeeNumber, EmployeeFirstName, EmployeeSurname, EmployeePhoneNumber, JobTitle,"& _ 
+                " Username, Password FROM Employee WHERE (EmployeeNumber = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EmployeeFirstName", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EmployeeFirstName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EmployeeSurname", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EmployeeSurname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -4093,9 +4093,9 @@ Namespace group22DataSetTableAdapters
                 "eeFirstName) AND ([EmployeeSurname] = @Original_EmployeeSurname) AND ([EmployeeP"& _ 
                 "honeNumber] = @Original_EmployeePhoneNumber) AND ([JobTitle] = @Original_JobTitl"& _ 
                 "e) AND ([Username] = @Original_Username) AND ([Password] = @Original_Password));"& _ 
-                ""&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT EmployeeNumber, EmployeeFirstName, EmployeeSurname, EmployeePhoneNumber,"& _ 
-                " JobTitle, Username, Password FROM Employee WHERE (EmployeeNumber = @EmployeeNum"& _ 
-                "ber)"
+                ""&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT EmployeeNumber, EmployeeFirstName, EmployeeSurname, EmployeePhoneNumber"& _ 
+                ", JobTitle, Username, Password FROM Employee WHERE (EmployeeNumber = @EmployeeNu"& _ 
+                "mber)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EmployeeFirstName", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EmployeeFirstName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EmployeeSurname", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EmployeeSurname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -4554,9 +4554,9 @@ Namespace group22DataSetTableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Ingredient] ([IngredientID], [IngredientCost], [DatePurchased]"& _ 
-                ") VALUES (@IngredientID, @IngredientCost, @DatePurchased);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IngredientID, "& _ 
-                "IngredientCost, DatePurchased FROM Ingredient WHERE (IngredientID = @IngredientI"& _ 
-                "D)"
+                ") VALUES (@IngredientID, @IngredientCost, @DatePurchased);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IngredientID,"& _ 
+                " IngredientCost, DatePurchased FROM Ingredient WHERE (IngredientID = @Ingredient"& _ 
+                "ID)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IngredientID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IngredientCost", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientCost", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -4566,8 +4566,8 @@ Namespace group22DataSetTableAdapters
             Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Ingredient] SET [IngredientID] = @IngredientID, [IngredientCost] = "& _ 
                 "@IngredientCost, [DatePurchased] = @DatePurchased WHERE (([IngredientID] = @Orig"& _ 
                 "inal_IngredientID) AND ([IngredientCost] = @Original_IngredientCost) AND ([DateP"& _ 
-                "urchased] = @Original_DatePurchased));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IngredientID, IngredientCost, Date"& _ 
-                "Purchased FROM Ingredient WHERE (IngredientID = @IngredientID)"
+                "urchased] = @Original_DatePurchased));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IngredientID, IngredientCost, Dat"& _ 
+                "ePurchased FROM Ingredient WHERE (IngredientID = @IngredientID)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IngredientID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IngredientCost", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientCost", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -4886,9 +4886,9 @@ Namespace group22DataSetTableAdapters
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[MenuItem] ([MenuItemID], [MenuItemName], [MenuItemCost], [Cate"& _ 
                 "gory], [SmallPrice], [MedPrice], [LargePrice]) VALUES (@MenuItemID, @MenuItemNam"& _ 
-                "e, @MenuItemCost, @Category, @SmallPrice, @MedPrice, @LargePrice);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT MenuIt"& _ 
-                "emID, MenuItemName, MenuItemCost, Category, SmallPrice, MedPrice, LargePrice FRO"& _ 
-                "M MenuItem WHERE (MenuItemID = @MenuItemID)"
+                "e, @MenuItemCost, @Category, @SmallPrice, @MedPrice, @LargePrice);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT MenuI"& _ 
+                "temID, MenuItemName, MenuItemCost, Category, SmallPrice, MedPrice, LargePrice FR"& _ 
+                "OM MenuItem WHERE (MenuItemID = @MenuItemID)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MenuItemID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MenuItemName", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -4907,9 +4907,9 @@ Namespace group22DataSetTableAdapters
                 "al_MenuItemCost)) AND ((@IsNull_SmallPrice = 1 AND [SmallPrice] IS NULL) OR ([Sm"& _ 
                 "allPrice] = @Original_SmallPrice)) AND ((@IsNull_MedPrice = 1 AND [MedPrice] IS "& _ 
                 "NULL) OR ([MedPrice] = @Original_MedPrice)) AND ((@IsNull_LargePrice = 1 AND [La"& _ 
-                "rgePrice] IS NULL) OR ([LargePrice] = @Original_LargePrice)));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT MenuItemID"& _ 
-                ", MenuItemName, MenuItemCost, Category, SmallPrice, MedPrice, LargePrice FROM Me"& _ 
-                "nuItem WHERE (MenuItemID = @MenuItemID)"
+                "rgePrice] IS NULL) OR ([LargePrice] = @Original_LargePrice)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT MenuItemI"& _ 
+                "D, MenuItemName, MenuItemCost, Category, SmallPrice, MedPrice, LargePrice FROM M"& _ 
+                "enuItem WHERE (MenuItemID = @MenuItemID)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MenuItemID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MenuItemName", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -5339,8 +5339,8 @@ Namespace group22DataSetTableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[MenuItemIngredient] ([MenuItemID], [IngredientID]) VALUES (@Me"& _ 
-                "nuItemID, @IngredientID);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT MenuItemID, IngredientID FROM MenuItemIngredien"& _ 
-                "t WHERE (IngredientID = @IngredientID) AND (MenuItemID = @MenuItemID)"
+                "nuItemID, @IngredientID);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT MenuItemID, IngredientID FROM MenuItemIngredie"& _ 
+                "nt WHERE (IngredientID = @IngredientID) AND (MenuItemID = @MenuItemID)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MenuItemID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IngredientID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -5348,8 +5348,8 @@ Namespace group22DataSetTableAdapters
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[MenuItemIngredient] SET [MenuItemID] = @MenuItemID, [IngredientID] "& _ 
                 "= @IngredientID WHERE (([MenuItemID] = @Original_MenuItemID) AND ([IngredientID]"& _ 
-                " = @Original_IngredientID));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT MenuItemID, IngredientID FROM MenuItemIngred"& _ 
-                "ient WHERE (IngredientID = @IngredientID) AND (MenuItemID = @MenuItemID)"
+                " = @Original_IngredientID));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT MenuItemID, IngredientID FROM MenuItemIngre"& _ 
+                "dient WHERE (IngredientID = @IngredientID) AND (MenuItemID = @MenuItemID)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MenuItemID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IngredientID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))

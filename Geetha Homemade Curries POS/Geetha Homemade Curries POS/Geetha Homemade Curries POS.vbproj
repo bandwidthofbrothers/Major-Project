@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D5108B21-B08C-413B-94AD-C348345F6A81}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Geetha_Homemade_Curries_POS.My.MyApplication</StartupObject>
+    <StartupObject>Geetha_Homemade_Curries_POS.MenuItems</StartupObject>
     <RootNamespace>Geetha_Homemade_Curries_POS</RootNamespace>
     <AssemblyName>Geetha Homemade Curries POS</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
