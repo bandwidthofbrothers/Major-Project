@@ -93,6 +93,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>group22DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="group22DataSet.vb">
+      <DependentUpon>group22DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Interface\Customers.Designer.vb">
       <DependentUpon>Customers.vb</DependentUpon>
     </Compile>

@@ -10,13 +10,21 @@
 
     Private Sub LoginToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoginToolStripMenuItem.Click
         If MenuAccessControl.DropDownItems(0).Text = "Sign Out" Then
-            MenuMemberControl.Enabled = False
-            MenuUserStoryControl.Enabled = False
-            MenuTestCaseControl.Enabled = False
 
-            closeActiveMdiChild()
+            Dim answer As Integer
 
-            MenuAccessControl.DropDownItems(0).Text = "Login"
+            answer = MsgBox("Are you sure you want to sign out?", vbQuestion + vbYesNo + vbDefaultButton2, "Sign Out")
+
+            If answer = vbYes Then
+                MenuMemberControl.Enabled = False
+                MenuUserStoryControl.Enabled = False
+                MenuTestCaseControl.Enabled = False
+
+                closeActiveMdiChild()
+
+                MenuAccessControl.DropDownItems(0).Text = "Login"
+            End If
+
         Else
             FormSetUp(LoginForm)
         End If
@@ -38,7 +46,13 @@
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
-        Me.Close()
+        Dim answer As Integer
+
+        answer = MsgBox("Are you sure you want to exit?", vbQuestion + vbYesNo + vbDefaultButton2, "Exit")
+
+        If answer = vbYes Then
+            Me.Close()
+        End If
     End Sub
 
     Private Sub ViewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem.Click
