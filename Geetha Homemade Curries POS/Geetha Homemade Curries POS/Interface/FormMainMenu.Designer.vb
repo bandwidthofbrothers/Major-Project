@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormMainMenu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FormMainMenu
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMainMenu))
@@ -50,9 +50,7 @@ Partial Class FormMainMenu
         Me.ToolTipReports = New System.Windows.Forms.ToolTip(Me.components)
         Me.ButtonStaff = New System.Windows.Forms.Button()
         Me.ToolTipStaff = New System.Windows.Forms.ToolTip(Me.components)
-        Me.DataSet1 = New Geetha_Homemade_Curries_POS.DataSet()
         Me.MenuStrip.SuspendLayout()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip
@@ -61,8 +59,7 @@ Partial Class FormMainMenu
         Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AccessControlToolStripMenuItem, Me.SaleToolStripMenuItem, Me.MenuToolStripMenuItem, Me.ReportsToolStripMenuItem, Me.AccountsToolStripMenuItem, Me.ExpensesToolStripMenuItem, Me.StaffToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
-        Me.MenuStrip.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
-        Me.MenuStrip.Size = New System.Drawing.Size(1257, 33)
+        Me.MenuStrip.Size = New System.Drawing.Size(1117, 28)
         Me.MenuStrip.TabIndex = 1
         Me.MenuStrip.Text = "MenuStrip"
         '
@@ -70,61 +67,61 @@ Partial Class FormMainMenu
         '
         Me.AccessControlToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoginToolStripMenuItem, Me.ExitToolStripMenuItem1})
         Me.AccessControlToolStripMenuItem.Name = "AccessControlToolStripMenuItem"
-        Me.AccessControlToolStripMenuItem.Size = New System.Drawing.Size(141, 29)
+        Me.AccessControlToolStripMenuItem.Size = New System.Drawing.Size(118, 24)
         Me.AccessControlToolStripMenuItem.Text = "Access Control"
         '
         'LoginToolStripMenuItem
         '
         Me.LoginToolStripMenuItem.Name = "LoginToolStripMenuItem"
-        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(210, 30)
+        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(121, 26)
         Me.LoginToolStripMenuItem.Text = "Login"
         '
         'ExitToolStripMenuItem1
         '
         Me.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
-        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(210, 30)
+        Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(121, 26)
         Me.ExitToolStripMenuItem1.Text = "Exit"
         '
         'SaleToolStripMenuItem
         '
         Me.SaleToolStripMenuItem.Enabled = False
         Me.SaleToolStripMenuItem.Name = "SaleToolStripMenuItem"
-        Me.SaleToolStripMenuItem.Size = New System.Drawing.Size(56, 29)
+        Me.SaleToolStripMenuItem.Size = New System.Drawing.Size(49, 24)
         Me.SaleToolStripMenuItem.Text = "Sale"
         '
         'MenuToolStripMenuItem
         '
         Me.MenuToolStripMenuItem.Enabled = False
         Me.MenuToolStripMenuItem.Name = "MenuToolStripMenuItem"
-        Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(69, 29)
+        Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(58, 24)
         Me.MenuToolStripMenuItem.Text = "Menu"
         '
         'ReportsToolStripMenuItem
         '
         Me.ReportsToolStripMenuItem.Enabled = False
         Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
-        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(85, 29)
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(72, 24)
         Me.ReportsToolStripMenuItem.Text = "Reports"
         '
         'AccountsToolStripMenuItem
         '
         Me.AccountsToolStripMenuItem.Enabled = False
         Me.AccountsToolStripMenuItem.Name = "AccountsToolStripMenuItem"
-        Me.AccountsToolStripMenuItem.Size = New System.Drawing.Size(97, 29)
+        Me.AccountsToolStripMenuItem.Size = New System.Drawing.Size(81, 24)
         Me.AccountsToolStripMenuItem.Text = "Accounts"
         '
         'ExpensesToolStripMenuItem
         '
         Me.ExpensesToolStripMenuItem.Enabled = False
         Me.ExpensesToolStripMenuItem.Name = "ExpensesToolStripMenuItem"
-        Me.ExpensesToolStripMenuItem.Size = New System.Drawing.Size(96, 29)
+        Me.ExpensesToolStripMenuItem.Size = New System.Drawing.Size(81, 24)
         Me.ExpensesToolStripMenuItem.Text = "Expenses"
         '
         'StaffToolStripMenuItem
         '
         Me.StaffToolStripMenuItem.Enabled = False
         Me.StaffToolStripMenuItem.Name = "StaffToolStripMenuItem"
-        Me.StaffToolStripMenuItem.Size = New System.Drawing.Size(60, 29)
+        Me.StaffToolStripMenuItem.Size = New System.Drawing.Size(52, 24)
         Me.StaffToolStripMenuItem.Text = "Staff"
         '
         'ButtonLogin
@@ -132,10 +129,9 @@ Partial Class FormMainMenu
         Me.ButtonLogin.BackgroundImage = CType(resources.GetObject("ButtonLogin.BackgroundImage"), System.Drawing.Image)
         Me.ButtonLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ButtonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonLogin.Location = New System.Drawing.Point(1029, 39)
-        Me.ButtonLogin.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.ButtonLogin.Location = New System.Drawing.Point(915, 31)
         Me.ButtonLogin.Name = "ButtonLogin"
-        Me.ButtonLogin.Size = New System.Drawing.Size(227, 114)
+        Me.ButtonLogin.Size = New System.Drawing.Size(202, 91)
         Me.ButtonLogin.TabIndex = 3
         Me.ToolTipLogin.SetToolTip(Me.ButtonLogin, "Login")
         Me.ButtonLogin.UseVisualStyleBackColor = True
@@ -146,10 +142,9 @@ Partial Class FormMainMenu
         Me.ButtonSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ButtonSale.Enabled = False
         Me.ButtonSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonSale.Location = New System.Drawing.Point(1029, 149)
-        Me.ButtonSale.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.ButtonSale.Location = New System.Drawing.Point(915, 119)
         Me.ButtonSale.Name = "ButtonSale"
-        Me.ButtonSale.Size = New System.Drawing.Size(227, 114)
+        Me.ButtonSale.Size = New System.Drawing.Size(202, 91)
         Me.ButtonSale.TabIndex = 4
         Me.ToolTipSales.SetToolTip(Me.ButtonSale, "Sales")
         Me.ButtonSale.UseVisualStyleBackColor = True
@@ -160,10 +155,9 @@ Partial Class FormMainMenu
         Me.ButtonReports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ButtonReports.Enabled = False
         Me.ButtonReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonReports.Location = New System.Drawing.Point(1029, 365)
-        Me.ButtonReports.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.ButtonReports.Location = New System.Drawing.Point(915, 292)
         Me.ButtonReports.Name = "ButtonReports"
-        Me.ButtonReports.Size = New System.Drawing.Size(227, 114)
+        Me.ButtonReports.Size = New System.Drawing.Size(202, 91)
         Me.ButtonReports.TabIndex = 5
         Me.ToolTipReports.SetToolTip(Me.ButtonReports, "Reports")
         Me.ButtonReports.UseVisualStyleBackColor = True
@@ -174,10 +168,9 @@ Partial Class FormMainMenu
         Me.ButtonMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ButtonMenu.Enabled = False
         Me.ButtonMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonMenu.Location = New System.Drawing.Point(1029, 256)
-        Me.ButtonMenu.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.ButtonMenu.Location = New System.Drawing.Point(915, 205)
         Me.ButtonMenu.Name = "ButtonMenu"
-        Me.ButtonMenu.Size = New System.Drawing.Size(227, 114)
+        Me.ButtonMenu.Size = New System.Drawing.Size(202, 91)
         Me.ButtonMenu.TabIndex = 6
         Me.ToolTipMenu.SetToolTip(Me.ButtonMenu, "Menu")
         Me.ButtonMenu.UseVisualStyleBackColor = True
@@ -188,10 +181,9 @@ Partial Class FormMainMenu
         Me.ButtonAccounts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ButtonAccounts.Enabled = False
         Me.ButtonAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonAccounts.Location = New System.Drawing.Point(1029, 475)
-        Me.ButtonAccounts.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.ButtonAccounts.Location = New System.Drawing.Point(915, 380)
         Me.ButtonAccounts.Name = "ButtonAccounts"
-        Me.ButtonAccounts.Size = New System.Drawing.Size(227, 114)
+        Me.ButtonAccounts.Size = New System.Drawing.Size(202, 91)
         Me.ButtonAccounts.TabIndex = 7
         Me.ToolTipAccounts.SetToolTip(Me.ButtonAccounts, "Accounts")
         Me.ButtonAccounts.UseVisualStyleBackColor = True
@@ -201,10 +193,9 @@ Partial Class FormMainMenu
         Me.ButtonExit.BackgroundImage = CType(resources.GetObject("ButtonExit.BackgroundImage"), System.Drawing.Image)
         Me.ButtonExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ButtonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonExit.Location = New System.Drawing.Point(1029, 805)
-        Me.ButtonExit.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.ButtonExit.Location = New System.Drawing.Point(915, 644)
         Me.ButtonExit.Name = "ButtonExit"
-        Me.ButtonExit.Size = New System.Drawing.Size(227, 114)
+        Me.ButtonExit.Size = New System.Drawing.Size(202, 91)
         Me.ButtonExit.TabIndex = 9
         Me.ToolTipExit.SetToolTip(Me.ButtonExit, "Exit")
         Me.ButtonExit.UseVisualStyleBackColor = True
@@ -215,10 +206,9 @@ Partial Class FormMainMenu
         Me.ButtonExpenses.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ButtonExpenses.Enabled = False
         Me.ButtonExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonExpenses.Location = New System.Drawing.Point(1029, 585)
-        Me.ButtonExpenses.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.ButtonExpenses.Location = New System.Drawing.Point(915, 468)
         Me.ButtonExpenses.Name = "ButtonExpenses"
-        Me.ButtonExpenses.Size = New System.Drawing.Size(227, 114)
+        Me.ButtonExpenses.Size = New System.Drawing.Size(202, 91)
         Me.ButtonExpenses.TabIndex = 11
         Me.ToolTipExpenses.SetToolTip(Me.ButtonExpenses, "Expenses")
         Me.ButtonExpenses.UseVisualStyleBackColor = True
@@ -233,24 +223,19 @@ Partial Class FormMainMenu
         Me.ButtonStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ButtonStaff.Enabled = False
         Me.ButtonStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonStaff.Location = New System.Drawing.Point(1029, 695)
-        Me.ButtonStaff.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.ButtonStaff.Location = New System.Drawing.Point(915, 556)
         Me.ButtonStaff.Name = "ButtonStaff"
-        Me.ButtonStaff.Size = New System.Drawing.Size(227, 114)
+        Me.ButtonStaff.Size = New System.Drawing.Size(202, 91)
         Me.ButtonStaff.TabIndex = 13
         Me.ToolTipStaff.SetToolTip(Me.ButtonStaff, "Staff")
         Me.ButtonStaff.UseVisualStyleBackColor = True
         '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'FormMainMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1257, 922)
+        Me.AutoSize = True
+        Me.ClientSize = New System.Drawing.Size(1117, 738)
         Me.Controls.Add(Me.ButtonStaff)
         Me.Controls.Add(Me.ButtonExpenses)
         Me.Controls.Add(Me.ButtonExit)
@@ -262,7 +247,6 @@ Partial Class FormMainMenu
         Me.Controls.Add(Me.MenuStrip)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FormMainMenu"
@@ -270,7 +254,6 @@ Partial Class FormMainMenu
         Me.Text = "Geetha's Homemade Curries Point of Sales System"
         Me.MenuStrip.ResumeLayout(False)
         Me.MenuStrip.PerformLayout()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -301,5 +284,4 @@ Partial Class FormMainMenu
     Friend WithEvents ToolTipStaff As ToolTip
     Friend WithEvents LoginToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents DataSet1 As DataSet
 End Class

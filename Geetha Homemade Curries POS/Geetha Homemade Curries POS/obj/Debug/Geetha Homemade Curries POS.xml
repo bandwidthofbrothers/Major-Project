@@ -267,5 +267,170 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSet.CustomerDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSet.CustomerOrderDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSet.EmployeeDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSet.IngredientDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSet.MenuItemDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSet.MenuItemIngredientDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSet.CustomerRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSet.CustomerOrderRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSet.EmployeeRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSet.IngredientRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSet.MenuItemRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSet.MenuItemIngredientRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSet.CustomerRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSet.CustomerOrderRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSet.EmployeeRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSet.IngredientRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSet.MenuItemRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSet.MenuItemIngredientRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.CustomerTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.CustomerOrderTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.EmployeeTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.IngredientTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.MenuItemTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.MenuItemIngredientTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Geetha_Homemade_Curries_POS.group22DataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Geetha_Homemade_Curries_POS.group22DataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Geetha_Homemade_Curries_POS.group22DataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.TableAdapterManager.UpdateAll(Geetha_Homemade_Curries_POS.group22DataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 </members>
 </doc>
