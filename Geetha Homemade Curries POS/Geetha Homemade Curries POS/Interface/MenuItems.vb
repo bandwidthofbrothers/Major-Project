@@ -35,13 +35,9 @@ Public Class MenuItems
             MsgBox("Update failed")
         End Try
 
-
-
-
     End Sub
 
-    Private Sub DeleteBtn_Click(sender As Object, e As EventArgs) Handles DeleteBtn.Click
-
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+        Accounts.Show()
     End Sub
 End Class
