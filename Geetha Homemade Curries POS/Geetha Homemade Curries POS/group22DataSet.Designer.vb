@@ -4949,24 +4949,15 @@ Namespace group22DataSetTableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "DELETE FROM MenuItem"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MenuItemID = @Original_MenuItemID) AND (MenuI"& _ 
-                "temName = @Original_MenuItemName) AND (@IsNull_MenuItemCost = 1 AND MenuItemCost"& _ 
-                " IS NULL OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         MenuItemCost = @Original_MenuItemCost) AND"& _ 
-                " (@IsNull_SmallPrice = 1 AND SmallPrice IS NULL OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Sma"& _ 
-                "llPrice = @Original_SmallPrice) AND (@IsNull_MedPrice = 1 AND MedPrice IS NULL O"& _ 
-                "R"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         MedPrice = @Original_MedPrice) AND (@IsNull_LargePri"& _ 
-                "ce = 1 AND LargePrice IS NULL OR"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         LargePrice = @Origina"& _ 
-                "l_LargePrice)"
+            Me._commandCollection(1).CommandText = "DELETE FROM MenuItem"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MenuItemID = @ID) AND (MenuItemName = @ItemNa"& _ 
+                "me) AND (MenuItemCost = @ItemCost) AND (SmallPrice = @SmallPrice) AND (MedPrice "& _ 
+                "= @MedPrice) AND (LargePrice = @Original_LargePrice)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MenuItemID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MenuItemName", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemName", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_MenuItemCost", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemCost", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MenuItemCost", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemCost", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_SmallPrice", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "SmallPrice", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_SmallPrice", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "SmallPrice", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_MedPrice", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MedPrice", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MedPrice", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "MedPrice", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_LargePrice", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "LargePrice", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ItemName", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemName", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ItemCost", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemCost", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@SmallPrice", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "SmallPrice", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MedPrice", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "MedPrice", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_LargePrice", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "LargePrice", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
@@ -5222,55 +5213,34 @@ Namespace group22DataSetTableAdapters
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, false)>  _
-        Public Overloads Overridable Function DeleteQuery(ByVal Original_MenuItemID As Integer, ByVal Original_MenuItemName As String, ByVal IsNull_MenuItemCost As Global.System.Nullable(Of Integer), ByVal Original_MenuItemCost As String, ByVal IsNull_SmallPrice As Global.System.Nullable(Of Integer), ByVal Original_SmallPrice As String, ByVal IsNull_MedPrice As Global.System.Nullable(Of Integer), ByVal Original_MedPrice As String, ByVal IsNull_LargePrice As Global.System.Nullable(Of Integer), ByVal Original_LargePrice As String) As Integer
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function DeleteQuery(ByVal ID As Integer, ByVal ItemName As String, ByVal ItemCost As String, ByVal SmallPrice As String, ByVal MedPrice As String, ByVal Original_LargePrice As String) As Integer
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
-            command.Parameters(0).Value = CType(Original_MenuItemID,Integer)
-            If (Original_MenuItemName Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_MenuItemName")
+            command.Parameters(0).Value = CType(ID,Integer)
+            If (ItemName Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("ItemName")
             Else
-                command.Parameters(1).Value = CType(Original_MenuItemName,String)
+                command.Parameters(1).Value = CType(ItemName,String)
             End If
-            If (IsNull_MenuItemCost.HasValue = true) Then
-                command.Parameters(2).Value = CType(IsNull_MenuItemCost.Value,Integer)
-            Else
+            If (ItemCost Is Nothing) Then
                 command.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(2).Value = CType(ItemCost,String)
             End If
-            If (Original_MenuItemCost Is Nothing) Then
+            If (SmallPrice Is Nothing) Then
                 command.Parameters(3).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(3).Value = CType(Original_MenuItemCost,String)
+                command.Parameters(3).Value = CType(SmallPrice,String)
             End If
-            If (IsNull_SmallPrice.HasValue = true) Then
-                command.Parameters(4).Value = CType(IsNull_SmallPrice.Value,Integer)
-            Else
+            If (MedPrice Is Nothing) Then
                 command.Parameters(4).Value = Global.System.DBNull.Value
-            End If
-            If (Original_SmallPrice Is Nothing) Then
-                command.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(5).Value = CType(Original_SmallPrice,String)
-            End If
-            If (IsNull_MedPrice.HasValue = true) Then
-                command.Parameters(6).Value = CType(IsNull_MedPrice.Value,Integer)
-            Else
-                command.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            If (Original_MedPrice Is Nothing) Then
-                command.Parameters(7).Value = Global.System.DBNull.Value
-            Else
-                command.Parameters(7).Value = CType(Original_MedPrice,String)
-            End If
-            If (IsNull_LargePrice.HasValue = true) Then
-                command.Parameters(8).Value = CType(IsNull_LargePrice.Value,Integer)
-            Else
-                command.Parameters(8).Value = Global.System.DBNull.Value
+                command.Parameters(4).Value = CType(MedPrice,String)
             End If
             If (Original_LargePrice Is Nothing) Then
-                command.Parameters(9).Value = Global.System.DBNull.Value
+                command.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(9).Value = CType(Original_LargePrice,String)
+                command.Parameters(5).Value = CType(Original_LargePrice,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
