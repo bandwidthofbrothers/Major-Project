@@ -25,19 +25,17 @@ Public Class MenuItems
     End Sub
 
     Private Sub UpdateBtn_Click(sender As Object, e As EventArgs) Handles UpdateBtn.Click
-        Try
-            Me.Validate()
-            Me.MenuItemBindingSource.EndEdit()
-            Me.MenuItemTableAdapter.Update(Me.Group22DataSet.MenuItem)
-            MsgBox("Update successful")
 
-        Catch ex As Exception
-            MsgBox("Update failed")
-        End Try
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        Accounts.Show()
+    Private Sub DeleteBtn_Click(sender As Object, e As EventArgs) Handles DeleteBtn.Click
+
+
+        MenuItemTableAdapter.DeleteQuery()
+
     End Sub
+
+
+
 End Class
