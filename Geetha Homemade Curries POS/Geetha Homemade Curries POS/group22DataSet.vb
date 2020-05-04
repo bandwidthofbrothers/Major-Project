@@ -2,6 +2,8 @@
 End Class
 
 Namespace group22DataSetTableAdapters
+    Partial Public Class EmployeeTableAdapter
+    End Class
 
     Partial Public Class MenuItemTableAdapter
         Friend Sub Delete()
