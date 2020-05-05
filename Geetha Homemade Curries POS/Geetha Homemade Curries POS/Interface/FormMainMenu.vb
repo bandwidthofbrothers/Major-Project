@@ -57,6 +57,9 @@
         answer = MsgBox("Are you sure you want to sign out?", vbQuestion + vbYesNo + vbDefaultButton2, "Sign out")
 
         If answer = vbYes Then
+
+            FormSetUp(FormMain)
+
             ButtonSale.Enabled = False
             ButtonMenu.Enabled = False
             ButtonReports.Enabled = False
@@ -86,5 +89,9 @@
         If answer = vbYes Then
             Me.Close()
         End If
+    End Sub
+
+    Private Sub ButtonExpenses_Click(sender As Object, e As EventArgs) Handles ButtonExpenses.Click
+        FormSetUp(FormViewExpenses)
     End Sub
 End Class
