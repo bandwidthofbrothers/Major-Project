@@ -1493,6 +1493,8 @@ Partial Public Class group22DataSet
         
         Private columnDatePurchased As Global.System.Data.DataColumn
         
+        Private columnIngredientDescription As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -1553,6 +1555,14 @@ Partial Public Class group22DataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property IngredientDescriptionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnIngredientDescription
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1589,9 +1599,9 @@ Partial Public Class group22DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddIngredientRow(ByVal IngredientID As Integer, ByVal IngredientCost As Integer, ByVal DatePurchased As Date) As IngredientRow
+        Public Overloads Function AddIngredientRow(ByVal IngredientID As Integer, ByVal IngredientCost As Integer, ByVal DatePurchased As Date, ByVal IngredientDescription As String) As IngredientRow
             Dim rowIngredientRow As IngredientRow = CType(Me.NewRow,IngredientRow)
-            Dim columnValuesArray() As Object = New Object() {IngredientID, IngredientCost, DatePurchased}
+            Dim columnValuesArray() As Object = New Object() {IngredientID, IngredientCost, DatePurchased, IngredientDescription}
             rowIngredientRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowIngredientRow)
             Return rowIngredientRow
@@ -1623,6 +1633,7 @@ Partial Public Class group22DataSet
             Me.columnIngredientID = MyBase.Columns("IngredientID")
             Me.columnIngredientCost = MyBase.Columns("IngredientCost")
             Me.columnDatePurchased = MyBase.Columns("DatePurchased")
+            Me.columnIngredientDescription = MyBase.Columns("IngredientDescription")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1634,11 +1645,15 @@ Partial Public Class group22DataSet
             MyBase.Columns.Add(Me.columnIngredientCost)
             Me.columnDatePurchased = New Global.System.Data.DataColumn("DatePurchased", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDatePurchased)
+            Me.columnIngredientDescription = New Global.System.Data.DataColumn("IngredientDescription", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnIngredientDescription)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnIngredientID}, true))
             Me.columnIngredientID.AllowDBNull = false
             Me.columnIngredientID.Unique = true
             Me.columnIngredientCost.AllowDBNull = false
             Me.columnDatePurchased.AllowDBNull = false
+            Me.columnIngredientDescription.AllowDBNull = false
+            Me.columnIngredientDescription.MaxLength = 50
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2717,6 +2732,17 @@ Partial Public Class group22DataSet
             End Get
             Set
                 Me(Me.tableIngredient.DatePurchasedColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property IngredientDescription() As String
+            Get
+                Return CType(Me(Me.tableIngredient.IngredientDescriptionColumn),String)
+            End Get
+            Set
+                Me(Me.tableIngredient.IngredientDescriptionColumn) = value
             End Set
         End Property
         
@@ -4541,38 +4567,46 @@ Namespace group22DataSetTableAdapters
             tableMapping.ColumnMappings.Add("IngredientID", "IngredientID")
             tableMapping.ColumnMappings.Add("IngredientCost", "IngredientCost")
             tableMapping.ColumnMappings.Add("DatePurchased", "DatePurchased")
+            tableMapping.ColumnMappings.Add("IngredientDescription", "IngredientDescription")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Ingredient] WHERE (([IngredientID] = @Original_IngredientID) A"& _ 
-                "ND ([IngredientCost] = @Original_IngredientCost) AND ([DatePurchased] = @Origina"& _ 
-                "l_DatePurchased))"
+                "ND ([IngredientDescription] = @Original_IngredientDescription) AND ([IngredientC"& _ 
+                "ost] = @Original_IngredientCost) AND ([DatePurchased] = @Original_DatePurchased)"& _ 
+                ")"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IngredientID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IngredientDescription", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientDescription", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IngredientCost", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientCost", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_DatePurchased", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DatePurchased", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Ingredient] ([IngredientID], [IngredientCost], [DatePurchased]"& _ 
-                ") VALUES (@IngredientID, @IngredientCost, @DatePurchased);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IngredientID,"& _ 
-                " IngredientCost, DatePurchased FROM Ingredient WHERE (IngredientID = @Ingredient"& _ 
-                "ID)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Ingredient] ([IngredientID], [IngredientDescription], [Ingredi"& _ 
+                "entCost], [DatePurchased]) VALUES (@IngredientID, @IngredientDescription, @Ingre"& _ 
+                "dientCost, @DatePurchased);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IngredientID, IngredientDescription, Ingredi"& _ 
+                "entCost, DatePurchased FROM Ingredient WHERE (IngredientID = @IngredientID)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IngredientID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IngredientDescription", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientDescription", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IngredientCost", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientCost", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DatePurchased", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DatePurchased", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Ingredient] SET [IngredientID] = @IngredientID, [IngredientCost] = "& _ 
-                "@IngredientCost, [DatePurchased] = @DatePurchased WHERE (([IngredientID] = @Orig"& _ 
-                "inal_IngredientID) AND ([IngredientCost] = @Original_IngredientCost) AND ([DateP"& _ 
-                "urchased] = @Original_DatePurchased));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IngredientID, IngredientCost, Dat"& _ 
-                "ePurchased FROM Ingredient WHERE (IngredientID = @IngredientID)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Ingredient] SET [IngredientID] = @IngredientID, [IngredientDescript"& _ 
+                "ion] = @IngredientDescription, [IngredientCost] = @IngredientCost, [DatePurchase"& _ 
+                "d] = @DatePurchased WHERE (([IngredientID] = @Original_IngredientID) AND ([Ingre"& _ 
+                "dientDescription] = @Original_IngredientDescription) AND ([IngredientCost] = @Or"& _ 
+                "iginal_IngredientCost) AND ([DatePurchased] = @Original_DatePurchased));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT"& _ 
+                " IngredientID, IngredientDescription, IngredientCost, DatePurchased FROM Ingredi"& _ 
+                "ent WHERE (IngredientID = @IngredientID)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IngredientID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IngredientDescription", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientDescription", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IngredientCost", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientCost", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DatePurchased", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DatePurchased", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IngredientID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IngredientDescription", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientDescription", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IngredientCost", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientCost", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_DatePurchased", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DatePurchased", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
@@ -4587,11 +4621,34 @@ Namespace group22DataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(3) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT IngredientID, IngredientCost, DatePurchased FROM dbo.Ingredient"
+            Me._commandCollection(0).CommandText = "SELECT * FROM dbo.Ingredient"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "DELETE FROM [dbo].[Ingredient] "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE (([IngredientID] = @IngredientID))"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IngredientID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "INSERT INTO [dbo].[Ingredient] ([IngredientDescription], [IngredientCost], [DateP"& _ 
+                "urchased]) VALUES (@IngredientDescription, @IngredientCost, @DatePurchased);"
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IngredientDescription", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientDescription", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IngredientCost", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientCost", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DatePurchased", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "DatePurchased", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(3).Connection = Me.Connection
+            Me._commandCollection(3).CommandText = "UPDATE [dbo].[Ingredient] "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET [IngredientDescription] = @IngredientDescription,"& _ 
+                " [IngredientCost] = @IngredientCost, [DatePurchased] = @DatePurchased "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE (["& _ 
+                "IngredientID] = @IngredientID) "
+            Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IngredientDescription", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientDescription", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IngredientCost", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 18, 2, "IngredientCost", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DatePurchased", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "DatePurchased", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IngredientID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "IngredientID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4650,10 +4707,15 @@ Namespace group22DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_IngredientID As Integer, ByVal Original_IngredientCost As Integer, ByVal Original_DatePurchased As Date) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_IngredientID As Integer, ByVal Original_IngredientDescription As String, ByVal Original_IngredientCost As Integer, ByVal Original_DatePurchased As Date) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_IngredientID,Integer)
-            Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_IngredientCost,Integer)
-            Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_DatePurchased,Date)
+            If (Original_IngredientDescription Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_IngredientDescription")
+            Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_IngredientDescription,String)
+            End If
+            Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_IngredientCost,Integer)
+            Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_DatePurchased,Date)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -4673,10 +4735,15 @@ Namespace group22DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal IngredientID As Integer, ByVal IngredientCost As Integer, ByVal DatePurchased As Date) As Integer
+        Public Overloads Overridable Function Insert(ByVal IngredientID As Integer, ByVal IngredientDescription As String, ByVal IngredientCost As Integer, ByVal DatePurchased As Date) As Integer
             Me.Adapter.InsertCommand.Parameters(0).Value = CType(IngredientID,Integer)
-            Me.Adapter.InsertCommand.Parameters(1).Value = CType(IngredientCost,Integer)
-            Me.Adapter.InsertCommand.Parameters(2).Value = CType(DatePurchased,Date)
+            If (IngredientDescription Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("IngredientDescription")
+            Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(IngredientDescription,String)
+            End If
+            Me.Adapter.InsertCommand.Parameters(2).Value = CType(IngredientCost,Integer)
+            Me.Adapter.InsertCommand.Parameters(3).Value = CType(DatePurchased,Date)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -4696,13 +4763,23 @@ Namespace group22DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal IngredientID As Integer, ByVal IngredientCost As Integer, ByVal DatePurchased As Date, ByVal Original_IngredientID As Integer, ByVal Original_IngredientCost As Integer, ByVal Original_DatePurchased As Date) As Integer
+        Public Overloads Overridable Function Update(ByVal IngredientID As Integer, ByVal IngredientDescription As String, ByVal IngredientCost As Integer, ByVal DatePurchased As Date, ByVal Original_IngredientID As Integer, ByVal Original_IngredientDescription As String, ByVal Original_IngredientCost As Integer, ByVal Original_DatePurchased As Date) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(IngredientID,Integer)
-            Me.Adapter.UpdateCommand.Parameters(1).Value = CType(IngredientCost,Integer)
-            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(DatePurchased,Date)
-            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Original_IngredientID,Integer)
-            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_IngredientCost,Integer)
-            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_DatePurchased,Date)
+            If (IngredientDescription Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("IngredientDescription")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(IngredientDescription,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(IngredientCost,Integer)
+            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(DatePurchased,Date)
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_IngredientID,Integer)
+            If (Original_IngredientDescription Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_IngredientDescription")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_IngredientDescription,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_IngredientCost,Integer)
+            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_DatePurchased,Date)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -4722,8 +4799,98 @@ Namespace group22DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal IngredientCost As Integer, ByVal DatePurchased As Date, ByVal Original_IngredientID As Integer, ByVal Original_IngredientCost As Integer, ByVal Original_DatePurchased As Date) As Integer
-            Return Me.Update(Original_IngredientID, IngredientCost, DatePurchased, Original_IngredientID, Original_IngredientCost, Original_DatePurchased)
+        Public Overloads Overridable Function Update(ByVal IngredientDescription As String, ByVal IngredientCost As Integer, ByVal DatePurchased As Date, ByVal Original_IngredientID As Integer, ByVal Original_IngredientDescription As String, ByVal Original_IngredientCost As Integer, ByVal Original_DatePurchased As Date) As Integer
+            Return Me.Update(Original_IngredientID, IngredientDescription, IngredientCost, DatePurchased, Original_IngredientID, Original_IngredientDescription, Original_IngredientCost, Original_DatePurchased)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, false)>  _
+        Public Overloads Overridable Function DeleteIngredient(ByVal IngredientID As Integer) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
+            command.Parameters(0).Value = CType(IngredientID,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
+        Public Overloads Overridable Function InsertIngredient(ByVal IngredientDescription As String, ByVal IngredientCost As Integer, ByVal DatePurchased As String) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(2)
+            If (IngredientDescription Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("IngredientDescription")
+            Else
+                command.Parameters(0).Value = CType(IngredientDescription,String)
+            End If
+            command.Parameters(1).Value = CType(IngredientCost,Integer)
+            If (DatePurchased Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("DatePurchased")
+            Else
+                command.Parameters(2).Value = CType(DatePurchased,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
+        Public Overloads Overridable Function UpdateIngredient(ByVal IngredientDescription As String, ByVal IngredientCost As Decimal, ByVal DatePurchased As String, ByVal IngredientID As Integer) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(3)
+            If (IngredientDescription Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("IngredientDescription")
+            Else
+                command.Parameters(0).Value = CType(IngredientDescription,String)
+            End If
+            command.Parameters(1).Value = CType(IngredientCost,Decimal)
+            If (DatePurchased Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("DatePurchased")
+            Else
+                command.Parameters(2).Value = CType(DatePurchased,String)
+            End If
+            command.Parameters(3).Value = CType(IngredientID,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
         End Function
     End Class
     

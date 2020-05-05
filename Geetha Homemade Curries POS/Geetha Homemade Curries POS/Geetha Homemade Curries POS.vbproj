@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D5108B21-B08C-413B-94AD-C348345F6A81}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Geetha_Homemade_Curries_POS.MenuItems</StartupObject>
+    <StartupObject>Geetha_Homemade_Curries_POS.My.MyApplication</StartupObject>
     <RootNamespace>Geetha_Homemade_Curries_POS</RootNamespace>
     <AssemblyName>Geetha Homemade Curries POS</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
@@ -77,10 +77,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Business\FormAddExpense.Designer.vb">
+      <DependentUpon>FormAddExpense.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\FormAddExpense.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Business\FormReports.Designer.vb">
       <DependentUpon>FormReports.vb</DependentUpon>
     </Compile>
     <Compile Include="Business\FormReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Business\FormStaff.Designer.vb">
+      <DependentUpon>FormStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\FormStaff.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DataSet.Designer.vb">
@@ -124,6 +136,12 @@
     <Compile Include="Interface\FormSplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Business\FormViewExpenses.Designer.vb">
+      <DependentUpon>FormViewExpenses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\FormViewExpenses.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Interface\MenuItems.Designer.vb">
       <DependentUpon>MenuItems.vb</DependentUpon>
     </Compile>
@@ -147,8 +165,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Business\FormAddExpense.resx">
+      <DependentUpon>FormAddExpense.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Business\FormReports.resx">
       <DependentUpon>FormReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\FormStaff.resx">
+      <DependentUpon>FormStaff.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\Customers.resx">
       <DependentUpon>Customers.vb</DependentUpon>
@@ -164,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\FormSplashScreen.resx">
       <DependentUpon>FormSplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\FormViewExpenses.resx">
+      <DependentUpon>FormViewExpenses.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\MenuItems.resx">
       <DependentUpon>MenuItems.vb</DependentUpon>
