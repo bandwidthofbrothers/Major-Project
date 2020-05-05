@@ -1,9 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class MenuItems
-    Public ID As Integer = 0
 
-    Dim connection As New SqlConnection("Server=STUDENT-250JE01; Database=group22; integrated security = false")
 
     Private Sub MenuItems_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'Group22DataSet.MenuItem' table. You can move, or remove it, as needed.
@@ -31,8 +29,9 @@ Public Class MenuItems
 
     Private Sub DeleteBtn_Click(sender As Object, e As EventArgs) Handles DeleteBtn.Click
 
-
-        MenuItemTableAdapter.DeleteQuery()
+        Dim index As Integer
+        index = DataGridView1.CurrentCell.RowIndex
+        DataGridView1.Rows.RemoveAt(index)
 
     End Sub
 

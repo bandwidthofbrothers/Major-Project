@@ -14,5 +14,7 @@ Public Class Accounts
 
     End Sub
 
+    Private Sub DltCustBtn_Click(sender As Object, e As EventArgs) Handles DltCustBtn.Click
 
+    End Sub
 End Class
