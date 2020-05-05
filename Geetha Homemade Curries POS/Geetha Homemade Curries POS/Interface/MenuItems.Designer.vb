@@ -92,9 +92,9 @@ Partial Class MenuItems
         Me.EditGroupBox.Controls.Add(Me.NameTxtbox)
         Me.EditGroupBox.Controls.Add(Me.AddBtn)
         Me.EditGroupBox.Controls.Add(Me.ItemTxtbox)
-        Me.EditGroupBox.Location = New System.Drawing.Point(822, 36)
+        Me.EditGroupBox.Location = New System.Drawing.Point(812, 60)
         Me.EditGroupBox.Name = "EditGroupBox"
-        Me.EditGroupBox.Size = New System.Drawing.Size(630, 250)
+        Me.EditGroupBox.Size = New System.Drawing.Size(516, 247)
         Me.EditGroupBox.TabIndex = 3
         Me.EditGroupBox.TabStop = False
         '
@@ -127,7 +127,7 @@ Partial Class MenuItems
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(375, 95)
+        Me.Label6.Location = New System.Drawing.Point(349, 95)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(77, 13)
         Me.Label6.TabIndex = 14
@@ -136,7 +136,7 @@ Partial Class MenuItems
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(199, 95)
+        Me.Label5.Location = New System.Drawing.Point(174, 95)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(65, 13)
         Me.Label5.TabIndex = 13
@@ -154,7 +154,7 @@ Partial Class MenuItems
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(375, 40)
+        Me.Label3.Location = New System.Drawing.Point(316, 40)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(51, 13)
         Me.Label3.TabIndex = 11
@@ -163,7 +163,7 @@ Partial Class MenuItems
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(124, 40)
+        Me.Label2.Location = New System.Drawing.Point(107, 40)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(58, 13)
         Me.Label2.TabIndex = 10
@@ -187,28 +187,28 @@ Partial Class MenuItems
         '
         'MedTxtbox
         '
-        Me.MedTxtbox.Location = New System.Drawing.Point(378, 111)
+        Me.MedTxtbox.Location = New System.Drawing.Point(352, 111)
         Me.MedTxtbox.Name = "MedTxtbox"
         Me.MedTxtbox.Size = New System.Drawing.Size(153, 20)
         Me.MedTxtbox.TabIndex = 7
         '
         'SmallTxtbox
         '
-        Me.SmallTxtbox.Location = New System.Drawing.Point(202, 111)
+        Me.SmallTxtbox.Location = New System.Drawing.Point(177, 111)
         Me.SmallTxtbox.Name = "SmallTxtbox"
         Me.SmallTxtbox.Size = New System.Drawing.Size(153, 20)
         Me.SmallTxtbox.TabIndex = 6
         '
         'CostTxtbox
         '
-        Me.CostTxtbox.Location = New System.Drawing.Point(378, 56)
+        Me.CostTxtbox.Location = New System.Drawing.Point(319, 56)
         Me.CostTxtbox.Name = "CostTxtbox"
         Me.CostTxtbox.Size = New System.Drawing.Size(153, 20)
         Me.CostTxtbox.TabIndex = 4
         '
         'NameTxtbox
         '
-        Me.NameTxtbox.Location = New System.Drawing.Point(127, 56)
+        Me.NameTxtbox.Location = New System.Drawing.Point(107, 56)
         Me.NameTxtbox.Name = "NameTxtbox"
         Me.NameTxtbox.Size = New System.Drawing.Size(191, 20)
         Me.NameTxtbox.TabIndex = 3
@@ -230,7 +230,7 @@ Partial Class MenuItems
         Me.DataGridView1.DataSource = Me.MenuItemBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(30, 36)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(786, 397)
+        Me.DataGridView1.Size = New System.Drawing.Size(755, 397)
         Me.DataGridView1.TabIndex = 5
         '
         'MenuItemIDDataGridViewTextBoxColumn
@@ -293,7 +293,7 @@ Partial Class MenuItems
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1370, 568)
+        Me.ClientSize = New System.Drawing.Size(1370, 575)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.DeleteBtn)
         Me.Controls.Add(Me.EditGroupBox)

@@ -35,6 +35,7 @@ Public Class MenuItems
 
     End Sub
 
+    Private Sub CostTxtbox_TextChanged(sender As Object, e As EventArgs) Handles CostTxtbox.TextChanged
 
-
+    End Sub
 End Class
