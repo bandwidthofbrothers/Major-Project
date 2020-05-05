@@ -18,7 +18,7 @@ Public Class MenuItems
         Dim ID As Integer = 0
         ID = ItemTxtbox.Text
 
-        MenuItemTableAdapter.Insert(ID, firstnametextbox.te, CostTxtbox.Text, CategoryBox.Text, SmallTxtbox.Text, MedTxtbox.Text, LargeTxtbox.Text)
+        'MenuItemTableAdapter.Insert(ID, firstnametextbox.te, CostTxtbox.Text, CategoryBox.Text, SmallTxtbox.Text, MedTxtbox.Text, LargeTxtbox.Text)
 
 
 
@@ -32,7 +32,7 @@ Public Class MenuItems
     Private Sub DeleteBtn_Click(sender As Object, e As EventArgs) Handles DeleteBtn.Click
 
 
-        MenuItemTableAdapter.DeleteQuery()
+        ' MenuItemTableAdapter.DeleteQuery()
 
     End Sub
 
