@@ -61,3 +61,7 @@ C:\Users\XPS\Source\Repos\bandwidthofbrothers\Major-Project\Geetha Homemade Curr
 C:\Users\XPS\Source\Repos\bandwidthofbrothers\Major-Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.MenuItems.resources
 C:\Users\XPS\Source\Repos\bandwidthofbrothers\Major-Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.Resources.resources
 C:\Users\XPS\Source\Repos\bandwidthofbrothers\Major-Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha Homemade Curries POS.vbproj.GenerateResource.Cache
+C:\Geetha's Homemade Curries POS\Geetha Homemade Curries POS\Geetha Homemade Curries POS\bin\Debug\Geetha Homemade Curries POS.exe.config
+C:\Geetha's Homemade Curries POS\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha Homemade Curries POS.exe
+C:\Geetha's Homemade Curries POS\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha Homemade Curries POS.xml
+C:\Geetha's Homemade Curries POS\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha Homemade Curries POS.pdb
