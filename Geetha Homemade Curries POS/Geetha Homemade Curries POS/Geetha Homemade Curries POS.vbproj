@@ -106,10 +106,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>group22DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Interface\Customers.Designer.vb">
-      <DependentUpon>Customers.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Interface\Customers.vb" />
     <Compile Include="Interface\FormLogin.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -172,9 +168,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Business\FormStaff.resx">
       <DependentUpon>FormStaff.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface\Customers.resx">
-      <DependentUpon>Customers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\FormLogin.resx">
       <DependentUpon>FormLogin.vb</DependentUpon>
