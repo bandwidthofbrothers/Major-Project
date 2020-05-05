@@ -12,26 +12,52 @@ Public Class MenuItems
     End Sub
 
     Private Sub AddBtn_Click(sender As Object, e As EventArgs) Handles AddBtn.Click
-
-        Dim ID As Integer = 0
+        Dim ID As Integer
         ID = ItemTxtbox.Text
 
-        MenuItemTableAdapter.Insert(ID, NameTxtbox.Text, CostTxtbox.Text, CategoryBox.Text, SmallTxtbox.Text, MedTxtbox.Text, LargeTxtbox.Text)
 
-
+        ' MenuItemTableAdapter.Insert(ID, NameTxtbox.Text, CostTxtbox.Text, CategoryBox.Text, SmallTxtbox.Text, MedTxtbox.Text, LargeTxtbox.Text)
 
     End Sub
 
     Private Sub UpdateBtn_Click(sender As Object, e As EventArgs) Handles UpdateBtn.Click
+        If Not ItemTxtbox.Text = "" Then
+            Try
+                Dim ID As Integer = Integer.Parse(ItemTxtbox.Text)
+                Dim name As String = NameTxtbox.Text
+                Dim cost As Double = Double.Parse(CostTxtbox.Text)
+                Dim category As String = CategoryBox.Text
+                Dim SPrice As Double = Double.Parse(SmallTxtbox.Text)
+                Dim MPrice As Double = Double.Parse(MedTxtbox.Text)
+                Dim LPrice As Double = Double.Parse(LargeTxtbox.Text)
+                MenuItemTableAdapter.UpdateQuery(ID, name, cost, category, SPrice, MPrice, LPrice)
+                MenuItemTableAdapter.Fill(Me.Group22DataSet.MenuItem)
 
+                MessageBox.Show("Record updated successfully", "Update Successful")
+
+            Catch ex As Exception
+                MessageBox.Show("Error: Incorrect Format", "Error")
+            End Try
+        Else
+            MessageBox.Show("Error: No record selected", "Error")
+        End If
 
     End Sub
 
     Private Sub DeleteBtn_Click(sender As Object, e As EventArgs) Handles DeleteBtn.Click
 
-        Dim index As Integer
-        index = DataGridView1.CurrentCell.RowIndex
-        DataGridView1.Rows.RemoveAt(index)
+        Try
+            Dim ItemID As Integer = DataGridView1.CurrentRow.Cells(0).Value
+
+            MenuItemTableAdapter.DeleteQuery(ItemID)
+
+            MenuItemTableAdapter.Fill(Me.Group22DataSet.MenuItem)
+
+            MessageBox.Show("Record deleted successfully")
+
+        Catch ex As Exception
+            MessageBox.Show("Error: Could not delete record")
+        End Try
 
 
 
