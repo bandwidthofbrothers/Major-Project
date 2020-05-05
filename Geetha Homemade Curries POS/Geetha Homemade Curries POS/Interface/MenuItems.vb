@@ -16,7 +16,7 @@ Public Class MenuItems
         Dim ID As Integer = 0
         ID = ItemTxtbox.Text
 
-        'MenuItemTableAdapter.Insert(ID, firstnametextbox.te, CostTxtbox.Text, CategoryBox.Text, SmallTxtbox.Text, MedTxtbox.Text, LargeTxtbox.Text)
+        'MenuItemTableAdapter.Insert(ID, NameTxtbox.Text, CostTxtbox.Text, CategoryBox.Text, SmallTxtbox.Text, MedTxtbox.Text, LargeTxtbox.Text)
 
 
 
@@ -33,7 +33,7 @@ Public Class MenuItems
         index = DataGridView1.CurrentCell.RowIndex
         DataGridView1.Rows.RemoveAt(index)
 
-        ' MenuItemTableAdapter.DeleteQuery()
+
 
     End Sub
 
