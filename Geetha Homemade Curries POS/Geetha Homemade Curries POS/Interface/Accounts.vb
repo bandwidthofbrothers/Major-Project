@@ -14,7 +14,11 @@ Public Class Accounts
 
     End Sub
 
-    Private Sub DltCustBtn_Click(sender As Object, e As EventArgs) Handles DltCustBtn.Click
+    Private Sub AddCustBtn_Click(sender As Object, e As EventArgs) Handles AddCustBtn.Click
 
+        Dim ID As Integer = 0
+        ID = CustomerIDTextBox.Text
+
+        CustomerTableAdapter.Insert(ID, FirstNameTextBox.Text, SurnameTextBox.Text, PhoneNumberTextBox.Text, AmountDueTextBox.Text)
     End Sub
 End Class
