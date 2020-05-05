@@ -18,25 +18,24 @@ Public Class MenuItems
         Dim ID As Integer = 0
         ID = ItemTxtbox.Text
 
-        MenuItemTableAdapter.Insert(ID, NameTxtbox.Text, CostTxtbox.Text, CategoryBox.Text, SmallTxtbox.Text, MedTxtbox.Text, LargeTxtbox.Text)
+        MenuItemTableAdapter.Insert(ID, firstnametextbox.te, CostTxtbox.Text, CategoryBox.Text, SmallTxtbox.Text, MedTxtbox.Text, LargeTxtbox.Text)
 
 
 
     End Sub
 
     Private Sub UpdateBtn_Click(sender As Object, e As EventArgs) Handles UpdateBtn.Click
-        Try
-            Me.Validate()
-            Me.MenuItemBindingSource.EndEdit()
-            Me.MenuItemTableAdapter.Update(Me.Group22DataSet.MenuItem)
-            MsgBox("Update successful")
-
-        Catch ex As Exception
-            MsgBox("Update failed")
-        End Try
-
-
 
 
     End Sub
+
+    Private Sub DeleteBtn_Click(sender As Object, e As EventArgs) Handles DeleteBtn.Click
+
+
+        MenuItemTableAdapter.DeleteQuery()
+
+    End Sub
+
+
+
 End Class

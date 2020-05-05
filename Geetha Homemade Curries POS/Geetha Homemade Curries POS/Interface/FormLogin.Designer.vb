@@ -40,9 +40,10 @@ Partial Class FormLogin
         Me.PictureBoxLogo.BackColor = System.Drawing.Color.Transparent
         Me.PictureBoxLogo.BackgroundImage = CType(resources.GetObject("PictureBoxLogo.BackgroundImage"), System.Drawing.Image)
         Me.PictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBoxLogo.Location = New System.Drawing.Point(71, 12)
+        Me.PictureBoxLogo.Location = New System.Drawing.Point(80, 15)
+        Me.PictureBoxLogo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PictureBoxLogo.Name = "PictureBoxLogo"
-        Me.PictureBoxLogo.Size = New System.Drawing.Size(205, 121)
+        Me.PictureBoxLogo.Size = New System.Drawing.Size(231, 151)
         Me.PictureBoxLogo.TabIndex = 0
         Me.PictureBoxLogo.TabStop = False
         '
@@ -51,9 +52,9 @@ Partial Class FormLogin
         Me.LabelUsername.AutoSize = True
         Me.LabelUsername.BackColor = System.Drawing.Color.Transparent
         Me.LabelUsername.ForeColor = System.Drawing.Color.White
-        Me.LabelUsername.Location = New System.Drawing.Point(13, 161)
+        Me.LabelUsername.Location = New System.Drawing.Point(15, 201)
         Me.LabelUsername.Name = "LabelUsername"
-        Me.LabelUsername.Size = New System.Drawing.Size(81, 17)
+        Me.LabelUsername.Size = New System.Drawing.Size(91, 20)
         Me.LabelUsername.TabIndex = 1
         Me.LabelUsername.Text = "Username: "
         '
@@ -62,33 +63,36 @@ Partial Class FormLogin
         Me.LabelPassword.AutoSize = True
         Me.LabelPassword.BackColor = System.Drawing.Color.Transparent
         Me.LabelPassword.ForeColor = System.Drawing.Color.White
-        Me.LabelPassword.Location = New System.Drawing.Point(13, 216)
+        Me.LabelPassword.Location = New System.Drawing.Point(15, 270)
         Me.LabelPassword.Name = "LabelPassword"
-        Me.LabelPassword.Size = New System.Drawing.Size(77, 17)
+        Me.LabelPassword.Size = New System.Drawing.Size(86, 20)
         Me.LabelPassword.TabIndex = 2
         Me.LabelPassword.Text = "Password: "
         '
         'TextBoxUserName
         '
-        Me.TextBoxUserName.Location = New System.Drawing.Point(100, 161)
+        Me.TextBoxUserName.Location = New System.Drawing.Point(112, 201)
+        Me.TextBoxUserName.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBoxUserName.Name = "TextBoxUserName"
-        Me.TextBoxUserName.Size = New System.Drawing.Size(222, 22)
+        Me.TextBoxUserName.Size = New System.Drawing.Size(249, 26)
         Me.TextBoxUserName.TabIndex = 3
         '
         'TextBoxPassword
         '
-        Me.TextBoxPassword.Location = New System.Drawing.Point(100, 216)
+        Me.TextBoxPassword.Location = New System.Drawing.Point(112, 270)
+        Me.TextBoxPassword.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBoxPassword.Name = "TextBoxPassword"
-        Me.TextBoxPassword.Size = New System.Drawing.Size(222, 22)
+        Me.TextBoxPassword.Size = New System.Drawing.Size(249, 26)
         Me.TextBoxPassword.TabIndex = 4
         Me.TextBoxPassword.UseSystemPasswordChar = True
         '
         'ButtonLogin
         '
         Me.ButtonLogin.BackColor = System.Drawing.SystemColors.Control
-        Me.ButtonLogin.Location = New System.Drawing.Point(71, 278)
+        Me.ButtonLogin.Location = New System.Drawing.Point(80, 348)
+        Me.ButtonLogin.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ButtonLogin.Name = "ButtonLogin"
-        Me.ButtonLogin.Size = New System.Drawing.Size(205, 44)
+        Me.ButtonLogin.Size = New System.Drawing.Size(231, 55)
         Me.ButtonLogin.TabIndex = 5
         Me.ButtonLogin.Text = "Login"
         Me.ButtonLogin.UseVisualStyleBackColor = False
@@ -104,10 +108,10 @@ Partial Class FormLogin
         '
         'FormLogin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(354, 365)
+        Me.ClientSize = New System.Drawing.Size(398, 456)
         Me.Controls.Add(Me.ButtonLogin)
         Me.Controls.Add(Me.TextBoxPassword)
         Me.Controls.Add(Me.TextBoxUserName)
@@ -115,6 +119,7 @@ Partial Class FormLogin
         Me.Controls.Add(Me.LabelUsername)
         Me.Controls.Add(Me.PictureBoxLogo)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FormLogin"
