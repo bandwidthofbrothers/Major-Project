@@ -2,6 +2,7 @@
 
 Public Class MenuItems
 
+    Dim index As Integer
 
     Private Sub MenuItems_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'Group22DataSet.MenuItem' table. You can move, or remove it, as needed.
@@ -12,8 +13,10 @@ Public Class MenuItems
     End Sub
 
     Private Sub AddBtn_Click(sender As Object, e As EventArgs) Handles AddBtn.Click
-        Dim ID As Integer
-        ID = ItemTxtbox.Text
+        'Dim ID As Integer
+        'ID = ItemTxtbox.Text 
+
+
 
 
 
@@ -22,26 +25,18 @@ Public Class MenuItems
     End Sub
 
     Private Sub UpdateBtn_Click(sender As Object, e As EventArgs) Handles UpdateBtn.Click
-        If Not ItemTxtbox.Text = "" Then
-            Try
-                Dim ID As Integer = Integer.Parse(ItemTxtbox.Text)
-                Dim name As String = NameTxtbox.Text
-                Dim cost As Double = Double.Parse(CostTxtbox.Text)
-                Dim category As String = CategoryBox.Text
-                Dim SPrice As Double = Double.Parse(SmallTxtbox.Text)
-                Dim MPrice As Double = Double.Parse(MedTxtbox.Text)
-                Dim LPrice As Double = Double.Parse(LargeTxtbox.Text)
-                MenuItemTableAdapter.UpdateQuery(ID, name, cost, category, SPrice, MPrice, LPrice)
-                MenuItemTableAdapter.Fill(Me.Group22DataSet.MenuItem)
 
-                MessageBox.Show("Record updated successfully", "Update Successful")
+        Dim newDataRow As DataGridViewRow
 
-            Catch ex As Exception
-                MessageBox.Show("Error: Incorrect Format", "Error")
-            End Try
-        Else
-            MessageBox.Show("Error: No record selected", "Error")
-        End If
+        newDataRow = DataGridView1.Rows(index)
+
+        newDataRow.Cells(0).Value = ItemTxtbox.Text
+        newDataRow.Cells(1).Value = NameTxtbox.Text
+        newDataRow.Cells(2).Value = CostTxtbox.Text
+        newDataRow.Cells(3).Value = CategoryBox.Text
+        newDataRow.Cells(4).Value = SmallTxtbox.Text
+        newDataRow.Cells(5).Value = MedTxtbox.Text
+        newDataRow.Cells(6).Value = LargeTxtbox.Text
 
     End Sub
 
@@ -67,6 +62,22 @@ Public Class MenuItems
     End Sub
 
     Private Sub CostTxtbox_TextChanged(sender As Object, e As EventArgs) Handles CostTxtbox.TextChanged
+
+    End Sub
+
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        Dim index As Integer
+        index = e.RowIndex
+        Dim selectedRow As DataGridViewRow
+        selectedRow = DataGridView1.Rows(index)
+        ItemTxtbox.Text = selectedRow.Cells(0).Value.ToString()
+        NameTxtbox.Text = selectedRow.Cells(1).Value.ToString()
+        CostTxtbox.Text = selectedRow.Cells(2).Value.ToString()
+        CategoryBox.Text = selectedRow.Cells(3).Value.ToString()
+        SmallTxtbox.Text = selectedRow.Cells(4).Value.ToString()
+        MedTxtbox.Text = selectedRow.Cells(5).Value.ToString()
+        LargeTxtbox.Text = selectedRow.Cells(6).Value.ToString()
+
 
     End Sub
 End Class
