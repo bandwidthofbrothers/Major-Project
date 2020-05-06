@@ -111,6 +111,7 @@ Partial Class MenuItems
         'CategoryBox
         '
         Me.CategoryBox.FormattingEnabled = True
+        Me.CategoryBox.Items.AddRange(New Object() {"Biryani", "Bunnies", "Chutney", "Curry", "Drinks", "Extras", "Regulars", "Roti Rolls", "Seafood", "Toasted Sandwich", "Vegetables", ""})
         Me.CategoryBox.Location = New System.Drawing.Point(24, 111)
         Me.CategoryBox.Name = "CategoryBox"
         Me.CategoryBox.Size = New System.Drawing.Size(141, 21)
