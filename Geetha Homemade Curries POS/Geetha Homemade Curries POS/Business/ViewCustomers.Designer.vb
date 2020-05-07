@@ -23,33 +23,38 @@ Partial Class ViewCustomers
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ViewCustomers))
         Dim CustomerIDLabel As System.Windows.Forms.Label
         Dim FirstNameLabel As System.Windows.Forms.Label
         Dim SurnameLabel As System.Windows.Forms.Label
         Dim PhoneNumberLabel As System.Windows.Forms.Label
         Dim AmountDueLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ViewCustomers))
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
         Me.CustomerOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CustomerOrderTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.CustomerOrderTableAdapter()
         Me.TableAdapterManager = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.TableAdapterManager()
+        Me.CustomerTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.CustomerTableAdapter()
         Me.CustomerOrderBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.CustomerOrderBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.CustomerOrderDataGridView = New System.Windows.Forms.DataGridView()
+        Me.CustomerIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SurnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PhoneNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AmountDueDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CustomerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CustomerTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.CustomerTableAdapter()
         Me.CustomerIDTextBox = New System.Windows.Forms.TextBox()
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
         Me.SurnameTextBox = New System.Windows.Forms.TextBox()
@@ -58,11 +63,6 @@ Partial Class ViewCustomers
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.CustomerIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FirstNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SurnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PhoneNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AmountDueDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CustomerIDLabel = New System.Windows.Forms.Label()
         FirstNameLabel = New System.Windows.Forms.Label()
         SurnameLabel = New System.Windows.Forms.Label()
@@ -75,6 +75,51 @@ Partial Class ViewCustomers
         CType(Me.CustomerOrderDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CustomerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'CustomerIDLabel
+        '
+        CustomerIDLabel.AutoSize = True
+        CustomerIDLabel.Location = New System.Drawing.Point(757, 132)
+        CustomerIDLabel.Name = "CustomerIDLabel"
+        CustomerIDLabel.Size = New System.Drawing.Size(103, 20)
+        CustomerIDLabel.TabIndex = 46
+        CustomerIDLabel.Text = "Customer ID:"
+        '
+        'FirstNameLabel
+        '
+        FirstNameLabel.AutoSize = True
+        FirstNameLabel.Location = New System.Drawing.Point(757, 176)
+        FirstNameLabel.Name = "FirstNameLabel"
+        FirstNameLabel.Size = New System.Drawing.Size(90, 20)
+        FirstNameLabel.TabIndex = 48
+        FirstNameLabel.Text = "First Name:"
+        '
+        'SurnameLabel
+        '
+        SurnameLabel.AutoSize = True
+        SurnameLabel.Location = New System.Drawing.Point(757, 220)
+        SurnameLabel.Name = "SurnameLabel"
+        SurnameLabel.Size = New System.Drawing.Size(78, 20)
+        SurnameLabel.TabIndex = 50
+        SurnameLabel.Text = "Surname:"
+        '
+        'PhoneNumberLabel
+        '
+        PhoneNumberLabel.AutoSize = True
+        PhoneNumberLabel.Location = New System.Drawing.Point(757, 263)
+        PhoneNumberLabel.Name = "PhoneNumberLabel"
+        PhoneNumberLabel.Size = New System.Drawing.Size(119, 20)
+        PhoneNumberLabel.TabIndex = 52
+        PhoneNumberLabel.Text = "Phone Number:"
+        '
+        'AmountDueLabel
+        '
+        AmountDueLabel.AutoSize = True
+        AmountDueLabel.Location = New System.Drawing.Point(757, 307)
+        AmountDueLabel.Name = "AmountDueLabel"
+        AmountDueLabel.Size = New System.Drawing.Size(103, 20)
+        AmountDueLabel.TabIndex = 54
+        AmountDueLabel.Text = "Amount Due:"
         '
         'Label10
         '
@@ -114,6 +159,10 @@ Partial Class ViewCustomers
         Me.TableAdapterManager.MenuItemTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'CustomerTableAdapter
+        '
+        Me.CustomerTableAdapter.ClearBeforeFill = True
+        '
         'CustomerOrderBindingNavigator
         '
         Me.CustomerOrderBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
@@ -133,13 +182,38 @@ Partial Class ViewCustomers
         Me.CustomerOrderBindingNavigator.TabIndex = 46
         Me.CustomerOrderBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(28, 28)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(54, 28)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(28, 28)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(28, 22)
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(28, 28)
         Me.BindingNavigatorMoveFirstItem.Text = "Move first"
         '
         'BindingNavigatorMovePreviousItem
@@ -148,13 +222,13 @@ Partial Class ViewCustomers
         Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
         Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(28, 22)
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(28, 28)
         Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
         '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 31)
         '
         'BindingNavigatorPositionItem
         '
@@ -165,17 +239,10 @@ Partial Class ViewCustomers
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(54, 25)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 31)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -197,33 +264,15 @@ Partial Class ViewCustomers
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(28, 28)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(28, 28)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 31)
         '
         'CustomerOrderBindingNavigatorSaveItem
         '
         Me.CustomerOrderBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.CustomerOrderBindingNavigatorSaveItem.Image = CType(resources.GetObject("CustomerOrderBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.CustomerOrderBindingNavigatorSaveItem.Name = "CustomerOrderBindingNavigatorSaveItem"
-        Me.CustomerOrderBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.CustomerOrderBindingNavigatorSaveItem.Size = New System.Drawing.Size(28, 28)
         Me.CustomerOrderBindingNavigatorSaveItem.Text = "Save Data"
         '
         'CustomerOrderDataGridView
@@ -238,23 +287,40 @@ Partial Class ViewCustomers
         Me.CustomerOrderDataGridView.Size = New System.Drawing.Size(665, 293)
         Me.CustomerOrderDataGridView.TabIndex = 46
         '
+        'CustomerIDDataGridViewTextBoxColumn
+        '
+        Me.CustomerIDDataGridViewTextBoxColumn.DataPropertyName = "CustomerID"
+        Me.CustomerIDDataGridViewTextBoxColumn.HeaderText = "CustomerID"
+        Me.CustomerIDDataGridViewTextBoxColumn.Name = "CustomerIDDataGridViewTextBoxColumn"
+        '
+        'FirstNameDataGridViewTextBoxColumn
+        '
+        Me.FirstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName"
+        Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "FirstName"
+        Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
+        '
+        'SurnameDataGridViewTextBoxColumn
+        '
+        Me.SurnameDataGridViewTextBoxColumn.DataPropertyName = "Surname"
+        Me.SurnameDataGridViewTextBoxColumn.HeaderText = "Surname"
+        Me.SurnameDataGridViewTextBoxColumn.Name = "SurnameDataGridViewTextBoxColumn"
+        '
+        'PhoneNumberDataGridViewTextBoxColumn
+        '
+        Me.PhoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber"
+        Me.PhoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber"
+        Me.PhoneNumberDataGridViewTextBoxColumn.Name = "PhoneNumberDataGridViewTextBoxColumn"
+        '
+        'AmountDueDataGridViewTextBoxColumn
+        '
+        Me.AmountDueDataGridViewTextBoxColumn.DataPropertyName = "AmountDue"
+        Me.AmountDueDataGridViewTextBoxColumn.HeaderText = "AmountDue"
+        Me.AmountDueDataGridViewTextBoxColumn.Name = "AmountDueDataGridViewTextBoxColumn"
+        '
         'CustomerBindingSource
         '
         Me.CustomerBindingSource.DataMember = "Customer"
         Me.CustomerBindingSource.DataSource = Me.Group22DataSet
-        '
-        'CustomerTableAdapter
-        '
-        Me.CustomerTableAdapter.ClearBeforeFill = True
-        '
-        'CustomerIDLabel
-        '
-        CustomerIDLabel.AutoSize = True
-        CustomerIDLabel.Location = New System.Drawing.Point(757, 132)
-        CustomerIDLabel.Name = "CustomerIDLabel"
-        CustomerIDLabel.Size = New System.Drawing.Size(103, 20)
-        CustomerIDLabel.TabIndex = 46
-        CustomerIDLabel.Text = "Customer ID:"
         '
         'CustomerIDTextBox
         '
@@ -264,15 +330,6 @@ Partial Class ViewCustomers
         Me.CustomerIDTextBox.Size = New System.Drawing.Size(198, 26)
         Me.CustomerIDTextBox.TabIndex = 47
         '
-        'FirstNameLabel
-        '
-        FirstNameLabel.AutoSize = True
-        FirstNameLabel.Location = New System.Drawing.Point(757, 176)
-        FirstNameLabel.Name = "FirstNameLabel"
-        FirstNameLabel.Size = New System.Drawing.Size(90, 20)
-        FirstNameLabel.TabIndex = 48
-        FirstNameLabel.Text = "First Name:"
-        '
         'FirstNameTextBox
         '
         Me.FirstNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "FirstName", True))
@@ -280,15 +337,6 @@ Partial Class ViewCustomers
         Me.FirstNameTextBox.Name = "FirstNameTextBox"
         Me.FirstNameTextBox.Size = New System.Drawing.Size(198, 26)
         Me.FirstNameTextBox.TabIndex = 49
-        '
-        'SurnameLabel
-        '
-        SurnameLabel.AutoSize = True
-        SurnameLabel.Location = New System.Drawing.Point(757, 220)
-        SurnameLabel.Name = "SurnameLabel"
-        SurnameLabel.Size = New System.Drawing.Size(78, 20)
-        SurnameLabel.TabIndex = 50
-        SurnameLabel.Text = "Surname:"
         '
         'SurnameTextBox
         '
@@ -298,15 +346,6 @@ Partial Class ViewCustomers
         Me.SurnameTextBox.Size = New System.Drawing.Size(198, 26)
         Me.SurnameTextBox.TabIndex = 51
         '
-        'PhoneNumberLabel
-        '
-        PhoneNumberLabel.AutoSize = True
-        PhoneNumberLabel.Location = New System.Drawing.Point(757, 263)
-        PhoneNumberLabel.Name = "PhoneNumberLabel"
-        PhoneNumberLabel.Size = New System.Drawing.Size(119, 20)
-        PhoneNumberLabel.TabIndex = 52
-        PhoneNumberLabel.Text = "Phone Number:"
-        '
         'PhoneNumberTextBox
         '
         Me.PhoneNumberTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "PhoneNumber", True))
@@ -314,15 +353,6 @@ Partial Class ViewCustomers
         Me.PhoneNumberTextBox.Name = "PhoneNumberTextBox"
         Me.PhoneNumberTextBox.Size = New System.Drawing.Size(198, 26)
         Me.PhoneNumberTextBox.TabIndex = 53
-        '
-        'AmountDueLabel
-        '
-        AmountDueLabel.AutoSize = True
-        AmountDueLabel.Location = New System.Drawing.Point(757, 307)
-        AmountDueLabel.Name = "AmountDueLabel"
-        AmountDueLabel.Size = New System.Drawing.Size(103, 20)
-        AmountDueLabel.TabIndex = 54
-        AmountDueLabel.Text = "Amount Due:"
         '
         'AmountDueTextBox
         '
@@ -358,36 +388,6 @@ Partial Class ViewCustomers
         Me.Button3.TabIndex = 58
         Me.Button3.Text = "Delete"
         Me.Button3.UseVisualStyleBackColor = True
-        '
-        'CustomerIDDataGridViewTextBoxColumn
-        '
-        Me.CustomerIDDataGridViewTextBoxColumn.DataPropertyName = "CustomerID"
-        Me.CustomerIDDataGridViewTextBoxColumn.HeaderText = "CustomerID"
-        Me.CustomerIDDataGridViewTextBoxColumn.Name = "CustomerIDDataGridViewTextBoxColumn"
-        '
-        'FirstNameDataGridViewTextBoxColumn
-        '
-        Me.FirstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName"
-        Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "FirstName"
-        Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
-        '
-        'SurnameDataGridViewTextBoxColumn
-        '
-        Me.SurnameDataGridViewTextBoxColumn.DataPropertyName = "Surname"
-        Me.SurnameDataGridViewTextBoxColumn.HeaderText = "Surname"
-        Me.SurnameDataGridViewTextBoxColumn.Name = "SurnameDataGridViewTextBoxColumn"
-        '
-        'PhoneNumberDataGridViewTextBoxColumn
-        '
-        Me.PhoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber"
-        Me.PhoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber"
-        Me.PhoneNumberDataGridViewTextBoxColumn.Name = "PhoneNumberDataGridViewTextBoxColumn"
-        '
-        'AmountDueDataGridViewTextBoxColumn
-        '
-        Me.AmountDueDataGridViewTextBoxColumn.DataPropertyName = "AmountDue"
-        Me.AmountDueDataGridViewTextBoxColumn.HeaderText = "AmountDue"
-        Me.AmountDueDataGridViewTextBoxColumn.Name = "AmountDueDataGridViewTextBoxColumn"
         '
         'ViewCustomers
         '

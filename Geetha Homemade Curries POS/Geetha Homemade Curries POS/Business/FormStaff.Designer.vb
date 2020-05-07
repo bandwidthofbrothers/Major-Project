@@ -37,6 +37,9 @@ Partial Class FormStaff
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.EmployeeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Group22DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -46,13 +49,10 @@ Partial Class FormStaff
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
-        Me.Group22DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EmployeeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.EmployeeTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.EmployeeTableAdapter()
-        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Group22DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Group22DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -60,9 +60,9 @@ Partial Class FormStaff
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.SystemColors.Window
         Me.Label1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(142, 96)
+        Me.Label1.Location = New System.Drawing.Point(160, 120)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(278, 22)
+        Me.Label1.Size = New System.Drawing.Size(332, 26)
         Me.Label1.TabIndex = 45
         Me.Label1.Text = "Enter Surname of Staff Member"
         '
@@ -72,10 +72,10 @@ Partial Class FormStaff
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Gabriola", 27.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(202, 9)
+        Me.Label10.Location = New System.Drawing.Point(227, 11)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(299, 87)
+        Me.Label10.Size = New System.Drawing.Size(352, 103)
         Me.Label10.TabIndex = 44
         Me.Label10.Text = "Staff Information"
         '
@@ -84,10 +84,10 @@ Partial Class FormStaff
         Me.Button4.BackColor = System.Drawing.Color.White
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button4.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(468, 92)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Button4.Location = New System.Drawing.Point(526, 115)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(85, 25)
+        Me.Button4.Size = New System.Drawing.Size(96, 31)
         Me.Button4.TabIndex = 43
         Me.Button4.Text = "Search"
         Me.Button4.UseVisualStyleBackColor = False
@@ -95,19 +95,20 @@ Partial Class FormStaff
         'TextBox8
         '
         Me.TextBox8.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(73, 92)
+        Me.TextBox8.Location = New System.Drawing.Point(82, 115)
+        Me.TextBox8.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(367, 29)
+        Me.TextBox8.Size = New System.Drawing.Size(412, 33)
         Me.TextBox8.TabIndex = 42
         '
         'TextBox7
         '
         Me.TextBox7.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(468, 529)
-        Me.TextBox7.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.TextBox7.Location = New System.Drawing.Point(526, 661)
+        Me.TextBox7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.ReadOnly = True
-        Me.TextBox7.Size = New System.Drawing.Size(152, 29)
+        Me.TextBox7.Size = New System.Drawing.Size(170, 33)
         Me.TextBox7.TabIndex = 41
         '
         'Label8
@@ -116,10 +117,10 @@ Partial Class FormStaff
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(297, 532)
+        Me.Label8.Location = New System.Drawing.Point(334, 665)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(103, 22)
+        Me.Label8.Size = New System.Drawing.Size(122, 27)
         Me.Label8.TabIndex = 40
         Me.Label8.Text = "Password"
         '
@@ -128,10 +129,10 @@ Partial Class FormStaff
         Me.Button3.BackColor = System.Drawing.Color.White
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button3.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(503, 608)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Button3.Location = New System.Drawing.Point(566, 760)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(96, 30)
+        Me.Button3.Size = New System.Drawing.Size(108, 38)
         Me.Button3.TabIndex = 39
         Me.Button3.Text = "Close"
         Me.Button3.UseVisualStyleBackColor = False
@@ -142,10 +143,10 @@ Partial Class FormStaff
         Me.Button2.Enabled = False
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(271, 608)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Button2.Location = New System.Drawing.Point(305, 760)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(96, 30)
+        Me.Button2.Size = New System.Drawing.Size(108, 38)
         Me.Button2.TabIndex = 38
         Me.Button2.Text = "Delete"
         Me.Button2.UseVisualStyleBackColor = False
@@ -156,10 +157,10 @@ Partial Class FormStaff
         Me.Button1.Enabled = False
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(24, 608)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Button1.Location = New System.Drawing.Point(27, 760)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(96, 30)
+        Me.Button1.Size = New System.Drawing.Size(108, 38)
         Me.Button1.TabIndex = 37
         Me.Button1.Text = "Update"
         Me.Button1.UseVisualStyleBackColor = False
@@ -167,64 +168,79 @@ Partial Class FormStaff
         'TextBox6
         '
         Me.TextBox6.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(468, 472)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.TextBox6.Location = New System.Drawing.Point(526, 590)
+        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.ReadOnly = True
-        Me.TextBox6.Size = New System.Drawing.Size(152, 29)
+        Me.TextBox6.Size = New System.Drawing.Size(170, 33)
         Me.TextBox6.TabIndex = 36
         '
         'TextBox5
         '
         Me.TextBox5.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(468, 409)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.TextBox5.Location = New System.Drawing.Point(526, 511)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.ReadOnly = True
-        Me.TextBox5.Size = New System.Drawing.Size(152, 29)
+        Me.TextBox5.Size = New System.Drawing.Size(170, 33)
         Me.TextBox5.TabIndex = 35
         '
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(468, 344)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.TextBox4.Location = New System.Drawing.Point(526, 430)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(152, 29)
+        Me.TextBox4.Size = New System.Drawing.Size(170, 33)
         Me.TextBox4.TabIndex = 34
         '
         'TextBox3
         '
         Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeBindingSource, "EmployeeSurname", True))
         Me.TextBox3.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(468, 281)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.TextBox3.Location = New System.Drawing.Point(526, 351)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(152, 29)
+        Me.TextBox3.Size = New System.Drawing.Size(170, 33)
         Me.TextBox3.TabIndex = 33
+        '
+        'EmployeeBindingSource
+        '
+        Me.EmployeeBindingSource.DataMember = "Employee"
+        Me.EmployeeBindingSource.DataSource = Me.Group22DataSetBindingSource
+        '
+        'Group22DataSetBindingSource
+        '
+        Me.Group22DataSetBindingSource.DataSource = Me.Group22DataSet
+        Me.Group22DataSetBindingSource.Position = 0
+        '
+        'Group22DataSet
+        '
+        Me.Group22DataSet.DataSetName = "group22DataSet"
+        Me.Group22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'TextBox2
         '
         Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeBindingSource, "EmployeeFirstName", True))
         Me.TextBox2.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(468, 220)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.TextBox2.Location = New System.Drawing.Point(526, 275)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(152, 29)
+        Me.TextBox2.Size = New System.Drawing.Size(170, 33)
         Me.TextBox2.TabIndex = 32
         '
         'TextBox1
         '
         Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeBindingSource, "EmployeeNumber", True))
         Me.TextBox1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(468, 164)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.TextBox1.Location = New System.Drawing.Point(526, 205)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(152, 29)
+        Me.TextBox1.Size = New System.Drawing.Size(170, 33)
         Me.TextBox1.TabIndex = 31
         '
         'Label7
@@ -233,10 +249,10 @@ Partial Class FormStaff
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(297, 475)
+        Me.Label7.Location = New System.Drawing.Point(334, 594)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(105, 22)
+        Me.Label7.Size = New System.Drawing.Size(126, 27)
         Me.Label7.TabIndex = 30
         Me.Label7.Text = "UserName"
         '
@@ -246,10 +262,10 @@ Partial Class FormStaff
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(297, 412)
+        Me.Label6.Location = New System.Drawing.Point(334, 515)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(90, 22)
+        Me.Label6.Size = New System.Drawing.Size(109, 27)
         Me.Label6.TabIndex = 29
         Me.Label6.Text = "Job Title"
         '
@@ -259,10 +275,10 @@ Partial Class FormStaff
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(297, 347)
+        Me.Label5.Location = New System.Drawing.Point(334, 434)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(148, 22)
+        Me.Label5.Size = New System.Drawing.Size(177, 27)
         Me.Label5.TabIndex = 28
         Me.Label5.Text = "Phone Number"
         '
@@ -272,10 +288,10 @@ Partial Class FormStaff
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(297, 284)
+        Me.Label4.Location = New System.Drawing.Point(334, 355)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(94, 22)
+        Me.Label4.Size = New System.Drawing.Size(111, 27)
         Me.Label4.TabIndex = 27
         Me.Label4.Text = "Surname"
         '
@@ -285,10 +301,10 @@ Partial Class FormStaff
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(297, 223)
+        Me.Label3.Location = New System.Drawing.Point(334, 279)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(109, 22)
+        Me.Label3.Size = New System.Drawing.Size(131, 27)
         Me.Label3.TabIndex = 26
         Me.Label3.Text = "First Name"
         '
@@ -298,10 +314,10 @@ Partial Class FormStaff
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(297, 167)
+        Me.Label2.Location = New System.Drawing.Point(334, 209)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(130, 22)
+        Me.Label2.Size = New System.Drawing.Size(157, 27)
         Me.Label2.TabIndex = 25
         Me.Label2.Text = "Staff Number"
         '
@@ -311,29 +327,14 @@ Partial Class FormStaff
         Me.ListBox1.DisplayMember = "EmployeeFirstName"
         Me.ListBox1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 22
-        Me.ListBox1.Location = New System.Drawing.Point(24, 147)
-        Me.ListBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.ListBox1.ItemHeight = 26
+        Me.ListBox1.Location = New System.Drawing.Point(27, 184)
+        Me.ListBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(232, 422)
+        Me.ListBox1.Size = New System.Drawing.Size(260, 524)
         Me.ListBox1.Sorted = True
         Me.ListBox1.TabIndex = 24
         Me.ListBox1.ValueMember = "EmployeeNumber"
-        '
-        'Group22DataSet
-        '
-        Me.Group22DataSet.DataSetName = "group22DataSet"
-        Me.Group22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Group22DataSetBindingSource
-        '
-        Me.Group22DataSetBindingSource.DataSource = Me.Group22DataSet
-        Me.Group22DataSetBindingSource.Position = 0
-        '
-        'EmployeeBindingSource
-        '
-        Me.EmployeeBindingSource.DataMember = "Employee"
-        Me.EmployeeBindingSource.DataSource = Me.Group22DataSetBindingSource
         '
         'EmployeeTableAdapter
         '
@@ -341,10 +342,10 @@ Partial Class FormStaff
         '
         'FormStaff
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(677, 725)
+        Me.ClientSize = New System.Drawing.Size(762, 906)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Button4)
@@ -367,11 +368,12 @@ Partial Class FormStaff
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.ListBox1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FormStaff"
         Me.Text = "FormStaff"
-        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Group22DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Group22DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
