@@ -60,9 +60,11 @@ Partial Class ViewCustomers
         Me.SurnameTextBox = New System.Windows.Forms.TextBox()
         Me.PhoneNumberTextBox = New System.Windows.Forms.TextBox()
         Me.AmountDueTextBox = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.AddCustBtn = New System.Windows.Forms.Button()
+        Me.UpdateCustBtn = New System.Windows.Forms.Button()
+        Me.DltCustBtn = New System.Windows.Forms.Button()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.CustomerBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         CustomerIDLabel = New System.Windows.Forms.Label()
         FirstNameLabel = New System.Windows.Forms.Label()
         SurnameLabel = New System.Windows.Forms.Label()
@@ -74,6 +76,7 @@ Partial Class ViewCustomers
         Me.CustomerOrderBindingNavigator.SuspendLayout()
         CType(Me.CustomerOrderDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CustomerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CustomerBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CustomerIDLabel
@@ -277,12 +280,15 @@ Partial Class ViewCustomers
         '
         'CustomerOrderDataGridView
         '
+        Me.CustomerOrderDataGridView.AllowUserToAddRows = False
+        Me.CustomerOrderDataGridView.AllowUserToDeleteRows = False
         Me.CustomerOrderDataGridView.AutoGenerateColumns = False
         Me.CustomerOrderDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.CustomerOrderDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CustomerIDDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.SurnameDataGridViewTextBoxColumn, Me.PhoneNumberDataGridViewTextBoxColumn, Me.AmountDueDataGridViewTextBoxColumn})
-        Me.CustomerOrderDataGridView.DataSource = Me.CustomerBindingSource
+        Me.CustomerOrderDataGridView.DataSource = Me.CustomerBindingSource1
         Me.CustomerOrderDataGridView.Location = New System.Drawing.Point(12, 109)
         Me.CustomerOrderDataGridView.Name = "CustomerOrderDataGridView"
+        Me.CustomerOrderDataGridView.ReadOnly = True
         Me.CustomerOrderDataGridView.RowTemplate.Height = 28
         Me.CustomerOrderDataGridView.Size = New System.Drawing.Size(665, 293)
         Me.CustomerOrderDataGridView.TabIndex = 46
@@ -292,30 +298,35 @@ Partial Class ViewCustomers
         Me.CustomerIDDataGridViewTextBoxColumn.DataPropertyName = "CustomerID"
         Me.CustomerIDDataGridViewTextBoxColumn.HeaderText = "CustomerID"
         Me.CustomerIDDataGridViewTextBoxColumn.Name = "CustomerIDDataGridViewTextBoxColumn"
+        Me.CustomerIDDataGridViewTextBoxColumn.ReadOnly = True
         '
         'FirstNameDataGridViewTextBoxColumn
         '
         Me.FirstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName"
         Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "FirstName"
         Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
+        Me.FirstNameDataGridViewTextBoxColumn.ReadOnly = True
         '
         'SurnameDataGridViewTextBoxColumn
         '
         Me.SurnameDataGridViewTextBoxColumn.DataPropertyName = "Surname"
         Me.SurnameDataGridViewTextBoxColumn.HeaderText = "Surname"
         Me.SurnameDataGridViewTextBoxColumn.Name = "SurnameDataGridViewTextBoxColumn"
+        Me.SurnameDataGridViewTextBoxColumn.ReadOnly = True
         '
         'PhoneNumberDataGridViewTextBoxColumn
         '
         Me.PhoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber"
         Me.PhoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber"
         Me.PhoneNumberDataGridViewTextBoxColumn.Name = "PhoneNumberDataGridViewTextBoxColumn"
+        Me.PhoneNumberDataGridViewTextBoxColumn.ReadOnly = True
         '
         'AmountDueDataGridViewTextBoxColumn
         '
         Me.AmountDueDataGridViewTextBoxColumn.DataPropertyName = "AmountDue"
         Me.AmountDueDataGridViewTextBoxColumn.HeaderText = "AmountDue"
         Me.AmountDueDataGridViewTextBoxColumn.Name = "AmountDueDataGridViewTextBoxColumn"
+        Me.AmountDueDataGridViewTextBoxColumn.ReadOnly = True
         '
         'CustomerBindingSource
         '
@@ -328,7 +339,7 @@ Partial Class ViewCustomers
         Me.CustomerIDTextBox.Location = New System.Drawing.Point(921, 129)
         Me.CustomerIDTextBox.Name = "CustomerIDTextBox"
         Me.CustomerIDTextBox.Size = New System.Drawing.Size(198, 26)
-        Me.CustomerIDTextBox.TabIndex = 47
+        Me.CustomerIDTextBox.TabIndex = 0
         '
         'FirstNameTextBox
         '
@@ -336,7 +347,7 @@ Partial Class ViewCustomers
         Me.FirstNameTextBox.Location = New System.Drawing.Point(921, 173)
         Me.FirstNameTextBox.Name = "FirstNameTextBox"
         Me.FirstNameTextBox.Size = New System.Drawing.Size(198, 26)
-        Me.FirstNameTextBox.TabIndex = 49
+        Me.FirstNameTextBox.TabIndex = 1
         '
         'SurnameTextBox
         '
@@ -344,7 +355,7 @@ Partial Class ViewCustomers
         Me.SurnameTextBox.Location = New System.Drawing.Point(921, 217)
         Me.SurnameTextBox.Name = "SurnameTextBox"
         Me.SurnameTextBox.Size = New System.Drawing.Size(198, 26)
-        Me.SurnameTextBox.TabIndex = 51
+        Me.SurnameTextBox.TabIndex = 2
         '
         'PhoneNumberTextBox
         '
@@ -352,7 +363,7 @@ Partial Class ViewCustomers
         Me.PhoneNumberTextBox.Location = New System.Drawing.Point(921, 260)
         Me.PhoneNumberTextBox.Name = "PhoneNumberTextBox"
         Me.PhoneNumberTextBox.Size = New System.Drawing.Size(198, 26)
-        Me.PhoneNumberTextBox.TabIndex = 53
+        Me.PhoneNumberTextBox.TabIndex = 3
         '
         'AmountDueTextBox
         '
@@ -360,34 +371,45 @@ Partial Class ViewCustomers
         Me.AmountDueTextBox.Location = New System.Drawing.Point(921, 304)
         Me.AmountDueTextBox.Name = "AmountDueTextBox"
         Me.AmountDueTextBox.Size = New System.Drawing.Size(198, 26)
-        Me.AmountDueTextBox.TabIndex = 55
+        Me.AmountDueTextBox.TabIndex = 4
         '
-        'Button1
+        'AddCustBtn
         '
-        Me.Button1.Location = New System.Drawing.Point(734, 448)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(113, 41)
-        Me.Button1.TabIndex = 56
-        Me.Button1.Text = "Add"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.AddCustBtn.Location = New System.Drawing.Point(734, 448)
+        Me.AddCustBtn.Name = "AddCustBtn"
+        Me.AddCustBtn.Size = New System.Drawing.Size(113, 41)
+        Me.AddCustBtn.TabIndex = 5
+        Me.AddCustBtn.Text = "Add"
+        Me.AddCustBtn.UseVisualStyleBackColor = True
         '
-        'Button2
+        'UpdateCustBtn
         '
-        Me.Button2.Location = New System.Drawing.Point(879, 448)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(113, 41)
-        Me.Button2.TabIndex = 57
-        Me.Button2.Text = "Update"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.UpdateCustBtn.Location = New System.Drawing.Point(879, 448)
+        Me.UpdateCustBtn.Name = "UpdateCustBtn"
+        Me.UpdateCustBtn.Size = New System.Drawing.Size(113, 41)
+        Me.UpdateCustBtn.TabIndex = 6
+        Me.UpdateCustBtn.Text = "Update"
+        Me.UpdateCustBtn.UseVisualStyleBackColor = True
         '
-        'Button3
+        'DltCustBtn
         '
-        Me.Button3.Location = New System.Drawing.Point(1025, 448)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(113, 41)
-        Me.Button3.TabIndex = 58
-        Me.Button3.Text = "Delete"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.DltCustBtn.Location = New System.Drawing.Point(1025, 448)
+        Me.DltCustBtn.Name = "DltCustBtn"
+        Me.DltCustBtn.Size = New System.Drawing.Size(113, 41)
+        Me.DltCustBtn.TabIndex = 7
+        Me.DltCustBtn.Text = "Delete"
+        Me.DltCustBtn.UseVisualStyleBackColor = True
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
+        '
+        'CustomerBindingSource1
+        '
+        Me.CustomerBindingSource1.DataMember = "Customer"
+        Me.CustomerBindingSource1.DataSource = Me.Group22DataSet
         '
         'ViewCustomers
         '
@@ -395,9 +417,9 @@ Partial Class ViewCustomers
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
         Me.ClientSize = New System.Drawing.Size(1213, 619)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.DltCustBtn)
+        Me.Controls.Add(Me.UpdateCustBtn)
+        Me.Controls.Add(Me.AddCustBtn)
         Me.Controls.Add(CustomerIDLabel)
         Me.Controls.Add(Me.CustomerIDTextBox)
         Me.Controls.Add(FirstNameLabel)
@@ -420,6 +442,7 @@ Partial Class ViewCustomers
         Me.CustomerOrderBindingNavigator.PerformLayout()
         CType(Me.CustomerOrderDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CustomerBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CustomerBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -451,12 +474,14 @@ Partial Class ViewCustomers
     Friend WithEvents SurnameTextBox As TextBox
     Friend WithEvents PhoneNumberTextBox As TextBox
     Friend WithEvents AmountDueTextBox As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents AddCustBtn As Button
+    Friend WithEvents UpdateCustBtn As Button
+    Friend WithEvents DltCustBtn As Button
     Friend WithEvents CustomerIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FirstNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SurnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PhoneNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AmountDueDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents CustomerBindingSource1 As BindingSource
 End Class
