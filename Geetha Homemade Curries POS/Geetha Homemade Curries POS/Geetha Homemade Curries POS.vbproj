@@ -96,6 +96,12 @@
     <Compile Include="Business\FormStaff.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Business\ViewCustomers.Designer.vb">
+      <DependentUpon>ViewCustomers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\ViewCustomers.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -169,6 +175,9 @@
     <EmbeddedResource Include="Business\FormStaff.resx">
       <DependentUpon>FormStaff.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Business\ViewCustomers.resx">
+      <DependentUpon>ViewCustomers.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interface\FormLogin.resx">
       <DependentUpon>FormLogin.vb</DependentUpon>
     </EmbeddedResource>
@@ -231,10 +240,10 @@
   <ItemGroup>
     <Folder Include="DataBase\" />
     <Folder Include="Reports\" />
-    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="main_logo_red.ico" />
+    <None Include="Resources\Background1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
