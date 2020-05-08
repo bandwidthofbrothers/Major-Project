@@ -58,7 +58,7 @@ Partial Class FormViewExpenses
         Me.IngredientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.IngredientDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn2})
         Me.IngredientDataGridView.DataSource = Me.IngredientBindingSource
-        Me.IngredientDataGridView.Location = New System.Drawing.Point(12, 58)
+        Me.IngredientDataGridView.Location = New System.Drawing.Point(12, 103)
         Me.IngredientDataGridView.Name = "IngredientDataGridView"
         Me.IngredientDataGridView.ReadOnly = True
         Me.IngredientDataGridView.RowTemplate.Height = 24
@@ -111,17 +111,17 @@ Partial Class FormViewExpenses
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Gabriola", 27.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(13, 13)
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(131, 29)
+        Me.Label1.Size = New System.Drawing.Size(196, 87)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Expenses: "
         '
         'ButtonAdd
         '
-        Me.ButtonAdd.Location = New System.Drawing.Point(367, 588)
+        Me.ButtonAdd.Location = New System.Drawing.Point(367, 633)
         Me.ButtonAdd.Name = "ButtonAdd"
         Me.ButtonAdd.Size = New System.Drawing.Size(197, 53)
         Me.ButtonAdd.TabIndex = 2
@@ -130,7 +130,7 @@ Partial Class FormViewExpenses
         '
         'ButtonUpdate
         '
-        Me.ButtonUpdate.Location = New System.Drawing.Point(584, 588)
+        Me.ButtonUpdate.Location = New System.Drawing.Point(584, 633)
         Me.ButtonUpdate.Name = "ButtonUpdate"
         Me.ButtonUpdate.Size = New System.Drawing.Size(197, 53)
         Me.ButtonUpdate.TabIndex = 3
@@ -139,7 +139,7 @@ Partial Class FormViewExpenses
         '
         'ButtonDelete
         '
-        Me.ButtonDelete.Location = New System.Drawing.Point(802, 588)
+        Me.ButtonDelete.Location = New System.Drawing.Point(802, 633)
         Me.ButtonDelete.Name = "ButtonDelete"
         Me.ButtonDelete.Size = New System.Drawing.Size(197, 53)
         Me.ButtonDelete.TabIndex = 4
@@ -164,7 +164,7 @@ Partial Class FormViewExpenses
         'TextBoxCost
         '
         Me.TextBoxCost.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.IngredientBindingSource, "IngredientCost", True))
-        Me.TextBoxCost.Location = New System.Drawing.Point(946, 319)
+        Me.TextBoxCost.Location = New System.Drawing.Point(946, 364)
         Me.TextBoxCost.Name = "TextBoxCost"
         Me.TextBoxCost.Size = New System.Drawing.Size(306, 22)
         Me.TextBoxCost.TabIndex = 11
@@ -172,7 +172,7 @@ Partial Class FormViewExpenses
         'TextBoxDescription
         '
         Me.TextBoxDescription.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.IngredientBindingSource, "IngredientDescription", True))
-        Me.TextBoxDescription.Location = New System.Drawing.Point(946, 171)
+        Me.TextBoxDescription.Location = New System.Drawing.Point(946, 216)
         Me.TextBoxDescription.Name = "TextBoxDescription"
         Me.TextBoxDescription.Size = New System.Drawing.Size(306, 22)
         Me.TextBoxDescription.TabIndex = 10
@@ -180,7 +180,7 @@ Partial Class FormViewExpenses
         'DateTimePicker
         '
         Me.DateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.IngredientBindingSource, "DatePurchased", True))
-        Me.DateTimePicker.Location = New System.Drawing.Point(946, 247)
+        Me.DateTimePicker.Location = New System.Drawing.Point(946, 292)
         Me.DateTimePicker.Name = "DateTimePicker"
         Me.DateTimePicker.Size = New System.Drawing.Size(306, 22)
         Me.DateTimePicker.TabIndex = 9
@@ -190,7 +190,7 @@ Partial Class FormViewExpenses
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.ForeColor = System.Drawing.Color.Transparent
-        Me.Label3.Location = New System.Drawing.Point(769, 322)
+        Me.Label3.Location = New System.Drawing.Point(769, 367)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(36, 17)
@@ -202,7 +202,7 @@ Partial Class FormViewExpenses
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(769, 246)
+        Me.Label2.Location = New System.Drawing.Point(769, 291)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(110, 17)
@@ -214,7 +214,7 @@ Partial Class FormViewExpenses
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(769, 170)
+        Me.Label4.Location = New System.Drawing.Point(769, 215)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(79, 17)
@@ -225,7 +225,7 @@ Partial Class FormViewExpenses
         '
         Me.TextBoxIngredientID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.IngredientBindingSource, "IngredientID", True))
         Me.TextBoxIngredientID.Enabled = False
-        Me.TextBoxIngredientID.Location = New System.Drawing.Point(946, 114)
+        Me.TextBoxIngredientID.Location = New System.Drawing.Point(946, 159)
         Me.TextBoxIngredientID.Name = "TextBoxIngredientID"
         Me.TextBoxIngredientID.Size = New System.Drawing.Size(306, 22)
         Me.TextBoxIngredientID.TabIndex = 13
@@ -235,7 +235,7 @@ Partial Class FormViewExpenses
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(769, 113)
+        Me.Label5.Location = New System.Drawing.Point(769, 158)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(88, 17)
@@ -247,7 +247,7 @@ Partial Class FormViewExpenses
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(1316, 664)
+        Me.ClientSize = New System.Drawing.Size(1316, 707)
         Me.ControlBox = False
         Me.Controls.Add(Me.TextBoxIngredientID)
         Me.Controls.Add(Me.Label5)
