@@ -21,17 +21,13 @@ Public Class ViewCustomers
     End Sub
 
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles DltCustBtn.Click
-        If MessageBox.Show("Are you sure?", "Delete Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-            CustomerBindingSource.RemoveCurrent()
-        End If
-    End Sub
-
     Private Sub AddCustBtn_Click(sender As Object, e As EventArgs) Handles AddCustBtn.Click
 
         Dim insertQuery As String = "INSERT INTO Customer(CustomerID, FirstName, Surname, PhoneNumber, AmountDue)VALUES('" & CustomerIDTextBox.Text & "','" & FirstNameTextBox.Text & "','" & SurnameTextBox.Text & "','" & PhoneNumberTextBox.Text & "','" & AmountDueTextBox.Text & "')"
 
         ExecuteQuery(insertQuery)
+
+        MessageBox.Show("Record added successfully")
 
     End Sub
 
@@ -48,6 +44,23 @@ Public Class ViewCustomers
     End Sub
 
     Private Sub CustomerOrderBindingNavigator_RefreshItems(sender As Object, e As EventArgs) Handles CustomerOrderBindingNavigator.RefreshItems
+
+    End Sub
+
+    Private Sub UpdateCustBtn_Click(sender As Object, e As EventArgs) Handles UpdateCustBtn.Click
+
+        Dim updateQuery As String = "Update Customer Set FirstName = '" & FirstNameTextBox.Text & "' , Surname = '" & SurnameTextBox.Text & "' , PhoneNumber = '" & PhoneNumberTextBox.Text & "' , AmountDue = '" & AmountDueTextBox.Text & "' WHERE CustomerID = '" & CustomerIDTextBox.Text & "'"
+        ExecuteQuery(updateQuery)
+        MessageBox.Show("Record has been updated")
+
+    End Sub
+
+    Private Sub DltCustBtn_Click(sender As Object, e As EventArgs) Handles DltCustBtn.Click
+
+        Dim deleteQuery As String = "Delete from Customer where customerID = " & CustomerIDTextBox.Text
+        ExecuteQuery(deleteQuery)
+        MessageBox.Show("Customer record deleted")
+
 
     End Sub
 End Class
