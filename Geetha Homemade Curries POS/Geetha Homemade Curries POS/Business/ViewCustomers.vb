@@ -2,7 +2,7 @@
 
 Public Class ViewCustomers
 
-    Dim connection As New SqlConnection = ("Data Source=146.230.177.46\ist3;Initial Catalog=group22;Persist Security Info=True;User ID=group22;Password=n24mc")
+    Dim connection As New SqlConnection("Data Source=146.230.177.46\ist3;Initial Catalog=group22;Persist Security Info=True;User ID=group22;Password=n24mc")
 
     Private Sub CustomerOrderBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles CustomerOrderBindingNavigatorSaveItem.Click
         Me.Validate()
@@ -47,4 +47,7 @@ Public Class ViewCustomers
 
     End Sub
 
+    Private Sub CustomerOrderBindingNavigator_RefreshItems(sender As Object, e As EventArgs) Handles CustomerOrderBindingNavigator.RefreshItems
+
+    End Sub
 End Class
