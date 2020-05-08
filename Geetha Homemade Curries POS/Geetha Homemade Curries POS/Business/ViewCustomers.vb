@@ -47,4 +47,7 @@ Public Class ViewCustomers
 
     End Sub
 
+    Private Sub CustomerOrderBindingNavigator_RefreshItems(sender As Object, e As EventArgs) Handles CustomerOrderBindingNavigator.RefreshItems
+
+    End Sub
 End Class
