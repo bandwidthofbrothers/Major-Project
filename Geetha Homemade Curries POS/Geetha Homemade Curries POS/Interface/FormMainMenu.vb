@@ -94,4 +94,8 @@
     Private Sub ButtonExpenses_Click(sender As Object, e As EventArgs) Handles ButtonExpenses.Click
         FormSetUp(FormViewExpenses)
     End Sub
+
+    Private Sub ButtonAccounts_Click(sender As Object, e As EventArgs) Handles ButtonAccounts.Click
+        FormSetUp(ViewCustomers)
+    End Sub
 End Class

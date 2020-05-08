@@ -52,6 +52,7 @@ Partial Class MenuItems
         Me.MenuItemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
         Me.MenuItemTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.MenuItemTableAdapter()
+        Me.TableAdapterManager1 = New Geetha_Homemade_Curries_POS.DataSetTableAdapters.TableAdapterManager()
         Me.EditGroupBox.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MenuItemBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,6 +111,7 @@ Partial Class MenuItems
         'CategoryBox
         '
         Me.CategoryBox.FormattingEnabled = True
+        Me.CategoryBox.Items.AddRange(New Object() {"Biryani", "Bunnies", "Chutney", "Curry", "Drinks", "Extras", "Regulars", "Roti Rolls", "Seafood", "Toasted Sandwich", "Vegetables", ""})
         Me.CategoryBox.Location = New System.Drawing.Point(24, 111)
         Me.CategoryBox.Name = "CategoryBox"
         Me.CategoryBox.Size = New System.Drawing.Size(141, 21)
@@ -289,6 +291,22 @@ Partial Class MenuItems
         '
         Me.MenuItemTableAdapter.ClearBeforeFill = True
         '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.Connection = Nothing
+        Me.TableAdapterManager1.CustomerOrderTableAdapter = Nothing
+        Me.TableAdapterManager1.CustomerTableAdapter = Nothing
+        Me.TableAdapterManager1.EmployeeTableAdapter = Nothing
+        Me.TableAdapterManager1.IngredientTableAdapter = Nothing
+        Me.TableAdapterManager1.MemberTableAdapter = Nothing
+        Me.TableAdapterManager1.MenuItemIngredientTableAdapter = Nothing
+        Me.TableAdapterManager1.MenuItemTableAdapter = Nothing
+        Me.TableAdapterManager1.TestCasesTableAdapter = Nothing
+        Me.TableAdapterManager1.UpdateOrder = Geetha_Homemade_Curries_POS.DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager1.UserStory_MemberTableAdapter = Nothing
+        Me.TableAdapterManager1.UserStoryTableAdapter = Nothing
+        '
         'MenuItems
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -336,4 +354,5 @@ Partial Class MenuItems
     Friend WithEvents SmallPriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MedPriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents LargePriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TableAdapterManager1 As DataSetTableAdapters.TableAdapterManager
 End Class
