@@ -51,7 +51,9 @@ Partial Class EditUserStoryForm
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(12, 19)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(131, 29)
@@ -87,7 +89,9 @@ Partial Class EditUserStoryForm
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(387, 52)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(185, 29)
@@ -97,7 +101,9 @@ Partial Class EditUserStoryForm
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(387, 130)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(259, 29)
@@ -107,7 +113,9 @@ Partial Class EditUserStoryForm
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(387, 205)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(127, 29)
@@ -117,7 +125,9 @@ Partial Class EditUserStoryForm
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(387, 273)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(124, 29)
@@ -127,7 +137,9 @@ Partial Class EditUserStoryForm
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(387, 347)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(118, 29)
@@ -137,7 +149,9 @@ Partial Class EditUserStoryForm
         'Label7
         '
         Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(387, 413)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(94, 29)
@@ -147,7 +161,9 @@ Partial Class EditUserStoryForm
         'Label8
         '
         Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.White
         Me.Label8.Location = New System.Drawing.Point(387, 482)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(85, 29)
@@ -243,6 +259,7 @@ Partial Class EditUserStoryForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.User_Story_Application.My.Resources.Resources.Background
         Me.ClientSize = New System.Drawing.Size(1140, 652)
         Me.ControlBox = False
         Me.Controls.Add(Me.ButtonUpdate)

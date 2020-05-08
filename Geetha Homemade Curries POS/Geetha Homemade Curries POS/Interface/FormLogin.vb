@@ -1,8 +1,8 @@
 ﻿Public Class FormLogin
     Private Sub ButtonLogin_Click(sender As Object, e As EventArgs) Handles ButtonLogin.Click
-        EmployeeTableAdapter.FillBy(DataSet.Employee, TextBoxUserName.Text, TextBoxPassword.Text)
+        EmployeeTableAdapter.FillBy(Group22DataSet.Employee, TextBoxUserName.Text, TextBoxPassword.Text)
 
-        If DataSet.Employee.Rows.Count() > 0 Then
+        If Group22DataSet.Employee.Rows.Count() > 0 Then
             MessageBox.Show("Welcome! You will now be directed to the system")
             Me.Close()
 
@@ -34,4 +34,7 @@
         End If
     End Sub
 
+    Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

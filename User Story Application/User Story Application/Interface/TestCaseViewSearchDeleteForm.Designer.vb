@@ -43,7 +43,7 @@ Partial Class TestCaseViewSearchDeleteForm
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 16
         Me.ListBox1.Location = New System.Drawing.Point(16, 65)
-        Me.ListBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ListBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(240, 292)
         Me.ListBox1.TabIndex = 1
@@ -51,6 +51,8 @@ Partial Class TestCaseViewSearchDeleteForm
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(288, 65)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
@@ -61,6 +63,8 @@ Partial Class TestCaseViewSearchDeleteForm
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(288, 145)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
@@ -71,6 +75,8 @@ Partial Class TestCaseViewSearchDeleteForm
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(288, 290)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
@@ -81,6 +87,8 @@ Partial Class TestCaseViewSearchDeleteForm
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(12, 28)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
@@ -91,7 +99,7 @@ Partial Class TestCaseViewSearchDeleteForm
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(439, 65)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(132, 22)
         Me.TextBox1.TabIndex = 6
@@ -99,7 +107,7 @@ Partial Class TestCaseViewSearchDeleteForm
         'RichTextBox1
         '
         Me.RichTextBox1.Location = New System.Drawing.Point(439, 145)
-        Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(280, 109)
         Me.RichTextBox1.TabIndex = 7
@@ -108,7 +116,7 @@ Partial Class TestCaseViewSearchDeleteForm
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(439, 290)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(132, 22)
         Me.TextBox2.TabIndex = 8
@@ -116,7 +124,7 @@ Partial Class TestCaseViewSearchDeleteForm
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(16, 384)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 28)
         Me.Button1.TabIndex = 17
@@ -126,7 +134,7 @@ Partial Class TestCaseViewSearchDeleteForm
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(157, 384)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(100, 28)
         Me.Button2.TabIndex = 18
@@ -136,6 +144,8 @@ Partial Class TestCaseViewSearchDeleteForm
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(12, 65)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
@@ -147,7 +157,7 @@ Partial Class TestCaseViewSearchDeleteForm
         'TextBox3
         '
         Me.TextBox3.Location = New System.Drawing.Point(16, 112)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(132, 22)
         Me.TextBox3.TabIndex = 20
@@ -156,7 +166,7 @@ Partial Class TestCaseViewSearchDeleteForm
         'Button3
         '
         Me.Button3.Location = New System.Drawing.Point(16, 162)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(100, 28)
         Me.Button3.TabIndex = 21
@@ -167,7 +177,7 @@ Partial Class TestCaseViewSearchDeleteForm
         'Button4
         '
         Me.Button4.Location = New System.Drawing.Point(16, 213)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(4)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(100, 28)
         Me.Button4.TabIndex = 22
@@ -179,6 +189,7 @@ Partial Class TestCaseViewSearchDeleteForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.User_Story_Application.My.Resources.Resources.Background
         Me.ClientSize = New System.Drawing.Size(744, 439)
         Me.ControlBox = False
         Me.Controls.Add(Me.Button4)
@@ -195,7 +206,7 @@ Partial Class TestCaseViewSearchDeleteForm
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ListBox1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "TestCaseViewSearchDeleteForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form3"

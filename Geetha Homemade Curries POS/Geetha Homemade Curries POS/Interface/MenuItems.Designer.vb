@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MenuItems
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MenuItems
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.ItemTxtbox = New System.Windows.Forms.TextBox()
@@ -42,9 +42,6 @@ Partial Class MenuItems
         Me.NameTxtbox = New System.Windows.Forms.TextBox()
         Me.DeleteBtn = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
-        Me.MenuItemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MenuItemTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.MenuItemTableAdapter()
         Me.MenuItemIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MenuItemNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MenuItemCostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -52,10 +49,14 @@ Partial Class MenuItems
         Me.SmallPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MedPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LargePriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MenuItemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
+        Me.MenuItemTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.MenuItemTableAdapter()
+        Me.TableAdapterManager1 = New Geetha_Homemade_Curries_POS.DataSetTableAdapters.TableAdapterManager()
         Me.EditGroupBox.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MenuItemBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ItemTxtbox
@@ -92,9 +93,9 @@ Partial Class MenuItems
         Me.EditGroupBox.Controls.Add(Me.NameTxtbox)
         Me.EditGroupBox.Controls.Add(Me.AddBtn)
         Me.EditGroupBox.Controls.Add(Me.ItemTxtbox)
-        Me.EditGroupBox.Location = New System.Drawing.Point(822, 36)
+        Me.EditGroupBox.Location = New System.Drawing.Point(812, 60)
         Me.EditGroupBox.Name = "EditGroupBox"
-        Me.EditGroupBox.Size = New System.Drawing.Size(536, 250)
+        Me.EditGroupBox.Size = New System.Drawing.Size(516, 247)
         Me.EditGroupBox.TabIndex = 3
         Me.EditGroupBox.TabStop = False
         '
@@ -110,6 +111,7 @@ Partial Class MenuItems
         'CategoryBox
         '
         Me.CategoryBox.FormattingEnabled = True
+        Me.CategoryBox.Items.AddRange(New Object() {"Biryani", "Bunnies", "Chutney", "Curry", "Drinks", "Extras", "Regulars", "Roti Rolls", "Seafood", "Toasted Sandwich", "Vegetables", ""})
         Me.CategoryBox.Location = New System.Drawing.Point(24, 111)
         Me.CategoryBox.Name = "CategoryBox"
         Me.CategoryBox.Size = New System.Drawing.Size(141, 21)
@@ -127,7 +129,7 @@ Partial Class MenuItems
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(375, 95)
+        Me.Label6.Location = New System.Drawing.Point(349, 95)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(77, 13)
         Me.Label6.TabIndex = 14
@@ -136,7 +138,7 @@ Partial Class MenuItems
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(199, 95)
+        Me.Label5.Location = New System.Drawing.Point(174, 95)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(65, 13)
         Me.Label5.TabIndex = 13
@@ -154,7 +156,7 @@ Partial Class MenuItems
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(375, 40)
+        Me.Label3.Location = New System.Drawing.Point(316, 40)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(51, 13)
         Me.Label3.TabIndex = 11
@@ -163,7 +165,7 @@ Partial Class MenuItems
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(124, 40)
+        Me.Label2.Location = New System.Drawing.Point(107, 40)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(58, 13)
         Me.Label2.TabIndex = 10
@@ -187,28 +189,28 @@ Partial Class MenuItems
         '
         'MedTxtbox
         '
-        Me.MedTxtbox.Location = New System.Drawing.Point(378, 111)
+        Me.MedTxtbox.Location = New System.Drawing.Point(352, 111)
         Me.MedTxtbox.Name = "MedTxtbox"
         Me.MedTxtbox.Size = New System.Drawing.Size(153, 20)
         Me.MedTxtbox.TabIndex = 7
         '
         'SmallTxtbox
         '
-        Me.SmallTxtbox.Location = New System.Drawing.Point(202, 111)
+        Me.SmallTxtbox.Location = New System.Drawing.Point(177, 111)
         Me.SmallTxtbox.Name = "SmallTxtbox"
         Me.SmallTxtbox.Size = New System.Drawing.Size(153, 20)
         Me.SmallTxtbox.TabIndex = 6
         '
         'CostTxtbox
         '
-        Me.CostTxtbox.Location = New System.Drawing.Point(378, 56)
+        Me.CostTxtbox.Location = New System.Drawing.Point(319, 56)
         Me.CostTxtbox.Name = "CostTxtbox"
         Me.CostTxtbox.Size = New System.Drawing.Size(153, 20)
         Me.CostTxtbox.TabIndex = 4
         '
         'NameTxtbox
         '
-        Me.NameTxtbox.Location = New System.Drawing.Point(127, 56)
+        Me.NameTxtbox.Location = New System.Drawing.Point(107, 56)
         Me.NameTxtbox.Name = "NameTxtbox"
         Me.NameTxtbox.Size = New System.Drawing.Size(191, 20)
         Me.NameTxtbox.TabIndex = 3
@@ -230,22 +232,8 @@ Partial Class MenuItems
         Me.DataGridView1.DataSource = Me.MenuItemBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(30, 36)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(786, 397)
+        Me.DataGridView1.Size = New System.Drawing.Size(755, 397)
         Me.DataGridView1.TabIndex = 5
-        '
-        'Group22DataSet
-        '
-        Me.Group22DataSet.DataSetName = "group22DataSet"
-        Me.Group22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'MenuItemBindingSource
-        '
-        Me.MenuItemBindingSource.DataMember = "MenuItem"
-        Me.MenuItemBindingSource.DataSource = Me.Group22DataSet
-        '
-        'MenuItemTableAdapter
-        '
-        Me.MenuItemTableAdapter.ClearBeforeFill = True
         '
         'MenuItemIDDataGridViewTextBoxColumn
         '
@@ -289,11 +277,41 @@ Partial Class MenuItems
         Me.LargePriceDataGridViewTextBoxColumn.HeaderText = "LargePrice"
         Me.LargePriceDataGridViewTextBoxColumn.Name = "LargePriceDataGridViewTextBoxColumn"
         '
+        'MenuItemBindingSource
+        '
+        Me.MenuItemBindingSource.DataMember = "MenuItem"
+        Me.MenuItemBindingSource.DataSource = Me.Group22DataSet
+        '
+        'Group22DataSet
+        '
+        Me.Group22DataSet.DataSetName = "group22DataSet"
+        Me.Group22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MenuItemTableAdapter
+        '
+        Me.MenuItemTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.Connection = Nothing
+        Me.TableAdapterManager1.CustomerOrderTableAdapter = Nothing
+        Me.TableAdapterManager1.CustomerTableAdapter = Nothing
+        Me.TableAdapterManager1.EmployeeTableAdapter = Nothing
+        Me.TableAdapterManager1.IngredientTableAdapter = Nothing
+        Me.TableAdapterManager1.MemberTableAdapter = Nothing
+        Me.TableAdapterManager1.MenuItemIngredientTableAdapter = Nothing
+        Me.TableAdapterManager1.MenuItemTableAdapter = Nothing
+        Me.TableAdapterManager1.TestCasesTableAdapter = Nothing
+        Me.TableAdapterManager1.UpdateOrder = Geetha_Homemade_Curries_POS.DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager1.UserStory_MemberTableAdapter = Nothing
+        Me.TableAdapterManager1.UserStoryTableAdapter = Nothing
+        '
         'MenuItems
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1370, 539)
+        Me.ClientSize = New System.Drawing.Size(1370, 575)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.DeleteBtn)
         Me.Controls.Add(Me.EditGroupBox)
@@ -302,8 +320,8 @@ Partial Class MenuItems
         Me.EditGroupBox.ResumeLayout(False)
         Me.EditGroupBox.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MenuItemBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -336,4 +354,5 @@ Partial Class MenuItems
     Friend WithEvents SmallPriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MedPriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents LargePriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TableAdapterManager1 As DataSetTableAdapters.TableAdapterManager
 End Class

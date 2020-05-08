@@ -63,6 +63,7 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
+    <Import Include="Accessibility" />
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
     <Import Include="System.Collections" />
@@ -77,10 +78,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Business\FormAddExpense.Designer.vb">
+      <DependentUpon>FormAddExpense.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\FormAddExpense.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Business\FormReports.Designer.vb">
       <DependentUpon>FormReports.vb</DependentUpon>
     </Compile>
     <Compile Include="Business\FormReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Business\FormStaff.Designer.vb">
+      <DependentUpon>FormStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\FormStaff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Business\ViewCustomers.Designer.vb">
+      <DependentUpon>ViewCustomers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\ViewCustomers.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DataSet.Designer.vb">
@@ -88,16 +107,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DB.vb" />
     <Compile Include="group22DataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>group22DataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Interface\Customers.Designer.vb">
-      <DependentUpon>Customers.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Interface\Customers.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interface\FormLogin.vb">
       <SubType>Form</SubType>
@@ -124,6 +138,12 @@
     <Compile Include="Interface\FormSplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Business\FormViewExpenses.Designer.vb">
+      <DependentUpon>FormViewExpenses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\FormViewExpenses.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Interface\MenuItems.Designer.vb">
       <DependentUpon>MenuItems.vb</DependentUpon>
     </Compile>
@@ -147,11 +167,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Business\FormAddExpense.resx">
+      <DependentUpon>FormAddExpense.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Business\FormReports.resx">
       <DependentUpon>FormReports.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interface\Customers.resx">
-      <DependentUpon>Customers.vb</DependentUpon>
+    <EmbeddedResource Include="Business\FormStaff.resx">
+      <DependentUpon>FormStaff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\ViewCustomers.resx">
+      <DependentUpon>ViewCustomers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\FormLogin.resx">
       <DependentUpon>FormLogin.vb</DependentUpon>
@@ -164,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\FormSplashScreen.resx">
       <DependentUpon>FormSplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\FormViewExpenses.resx">
+      <DependentUpon>FormViewExpenses.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\MenuItems.resx">
       <DependentUpon>MenuItems.vb</DependentUpon>
@@ -212,10 +241,25 @@
   <ItemGroup>
     <Folder Include="DataBase\" />
     <Folder Include="Reports\" />
-    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="main_logo_red.ico" />
+    <None Include="Resources\Background1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="CustomMarshalers" />
+    <Reference Include="ISymWrapper" />
+    <Reference Include="Microsoft.Activities.Build" />
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.Build.Conversion.v4.0" />
+    <Reference Include="Microsoft.Build.Engine" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.Build.Tasks.v4.0" />
+    <Reference Include="Microsoft.Build.Utilities.v4.0" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
