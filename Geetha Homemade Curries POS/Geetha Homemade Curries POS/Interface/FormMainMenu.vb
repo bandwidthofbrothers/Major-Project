@@ -98,4 +98,8 @@
     Private Sub ButtonAccounts_Click(sender As Object, e As EventArgs) Handles ButtonAccounts.Click
         FormSetUp(ViewCustomers)
     End Sub
+
+    Private Sub ButtonMenu_Click(sender As Object, e As EventArgs) Handles ButtonMenu.Click
+        FormSetUp(MenuItems)
+    End Sub
 End Class
