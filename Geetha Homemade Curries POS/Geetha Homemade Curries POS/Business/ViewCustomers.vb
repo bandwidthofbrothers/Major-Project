@@ -23,11 +23,7 @@ Public Class ViewCustomers
 
     Private Sub AddCustBtn_Click(sender As Object, e As EventArgs) Handles AddCustBtn.Click
 
-        Dim insertQuery As String = "INSERT INTO Customer(CustomerID, FirstName, Surname, PhoneNumber, AmountDue)VALUES('" & CustomerIDTextBox.Text & "','" & FirstNameTextBox.Text & "','" & SurnameTextBox.Text & "','" & PhoneNumberTextBox.Text & "','" & AmountDueTextBox.Text & "')"
-
-        ExecuteQuery(insertQuery)
-
-        MessageBox.Show("Record added successfully")
+        AddCustomer.Show()
 
     End Sub
 
@@ -51,7 +47,7 @@ Public Class ViewCustomers
 
         Dim updateQuery As String = "Update Customer Set FirstName = '" & FirstNameTextBox.Text & "' , Surname = '" & SurnameTextBox.Text & "' , PhoneNumber = '" & PhoneNumberTextBox.Text & "' , AmountDue = '" & AmountDueTextBox.Text & "' WHERE CustomerID = '" & CustomerIDTextBox.Text & "'"
         ExecuteQuery(updateQuery)
-        MessageBox.Show("Record has been updated")
+            MessageBox.Show("Record has been updated")
 
     End Sub
 
@@ -63,4 +59,19 @@ Public Class ViewCustomers
 
 
     End Sub
+
+    Private Sub CustomerOrderDataGridView_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles CustomerOrderDataGridView.CellClick
+
+        If e.RowIndex >= 0 Then
+            Dim row As DataGridViewRow
+            row = Me.CustomerOrderDataGridView.Rows(e.RowIndex)
+            CustomerIDTextBox.Text = row.Cells(0).Value.ToString
+            FirstNameTextBox.Text = row.Cells(1).Value.ToString
+            SurnameTextBox.Text = row.Cells(2).Value.ToString
+            PhoneNumberTextBox.Text = row.Cells(3).Value.ToString
+            AmountDueTextBox.Text = row.Cells(4).Value.ToString
+        End If
+
+    End Sub
+
 End Class
