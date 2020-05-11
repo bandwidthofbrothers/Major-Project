@@ -102,4 +102,8 @@
     Private Sub ButtonMenu_Click(sender As Object, e As EventArgs) Handles ButtonMenu.Click
         FormSetUp(MenuItems)
     End Sub
+
+    Private Sub ButtonStaff_Click(sender As Object, e As EventArgs) Handles ButtonStaff.Click
+        FormSetUp(FormStaff)
+    End Sub
 End Class
