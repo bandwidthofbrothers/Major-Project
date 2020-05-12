@@ -38,6 +38,21 @@ Public Class MenuItems
         newDataRow.Cells(5).Value = MedTxtbox.Text
         newDataRow.Cells(6).Value = LargeTxtbox.Text
 
+
+        Try
+            Dim ItemID As Integer = DataGridView1.CurrentRow.Cells(0).Value
+
+            MenuItemTableAdapter.UpdateQuery(ItemID)
+
+            MenuItemTableAdapter.Fill(Me.Group22DataSet.MenuItem)
+
+            MessageBox.Show("Record updated successfully")
+
+        Catch ex As Exception
+            MessageBox.Show("Error: Could not update record")
+        End Try
+
+
     End Sub
 
     Private Sub DeleteBtn_Click(sender As Object, e As EventArgs) Handles DeleteBtn.Click
