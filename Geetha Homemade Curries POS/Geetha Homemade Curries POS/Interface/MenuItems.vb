@@ -25,18 +25,21 @@ Public Class MenuItems
     End Sub
 
     Private Sub UpdateBtn_Click(sender As Object, e As EventArgs) Handles UpdateBtn.Click
+        Try
+            Dim ID As Integer = Integer.Parse(ItemTxtbox.Text)
+            Dim name As String = NameTxtbox.Text
+            Dim cost As Double = Double.Parse(CostTxtbox.Text)
+            Dim category As String = CategoryBox.Text
+            Dim small As Double = Double.Parse(SmallTxtbox.Text)
+            Dim medium As Double = Double.Parse(MedTxtbox.Text)
+            Dim large As Double = Double.Parse(LargeTxtbox.Text)
 
-        Dim newDataRow As DataGridViewRow
+            'MenuItemTableAdapter.UpdateQuery(name, cost, category, small, medium, large, ID)
 
-        newDataRow = DataGridView1.Rows(index)
-
-        newDataRow.Cells(0).Value = ItemTxtbox.Text
-        newDataRow.Cells(1).Value = NameTxtbox.Text
-        newDataRow.Cells(2).Value = CostTxtbox.Text
-        newDataRow.Cells(3).Value = CategoryBox.Text
-        newDataRow.Cells(4).Value = SmallTxtbox.Text
-        newDataRow.Cells(5).Value = MedTxtbox.Text
-        newDataRow.Cells(6).Value = LargeTxtbox.Text
+            MessageBox.Show("Record updated successfully")
+        Catch ex As Exception
+            MessageBox.Show("Error: Could not update record")
+        End Try
 
     End Sub
 
@@ -45,7 +48,7 @@ Public Class MenuItems
         Try
             Dim ItemID As Integer = DataGridView1.CurrentRow.Cells(0).Value
 
-            MenuItemTableAdapter.DeleteQuery(ItemID)
+            'MenuItemTableAdapter.DeleteQuery(ItemID)
 
             MenuItemTableAdapter.Fill(Me.Group22DataSet.MenuItem)
 
@@ -80,4 +83,5 @@ Public Class MenuItems
 
 
     End Sub
+
 End Class

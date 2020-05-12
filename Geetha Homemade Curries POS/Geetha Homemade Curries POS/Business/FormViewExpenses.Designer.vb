@@ -23,20 +23,13 @@ Partial Class FormViewExpenses
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormViewExpenses))
         Me.IngredientDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IngredientBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ButtonAdd = New System.Windows.Forms.Button()
         Me.ButtonUpdate = New System.Windows.Forms.Button()
         Me.ButtonDelete = New System.Windows.Forms.Button()
-        Me.IngredientTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.IngredientTableAdapter()
-        Me.TableAdapterManager = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.TableAdapterManager()
         Me.TextBoxCost = New System.Windows.Forms.TextBox()
         Me.TextBoxDescription = New System.Windows.Forms.TextBox()
         Me.DateTimePicker = New System.Windows.Forms.DateTimePicker()
@@ -45,6 +38,14 @@ Partial Class FormViewExpenses
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBoxIngredientID = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.IngredientBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
+        Me.IngredientTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.IngredientTableAdapter()
+        Me.TableAdapterManager = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.TableAdapterManager()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.IngredientDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.IngredientBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,48 +65,6 @@ Partial Class FormViewExpenses
         Me.IngredientDataGridView.RowTemplate.Height = 24
         Me.IngredientDataGridView.Size = New System.Drawing.Size(707, 499)
         Me.IngredientDataGridView.TabIndex = 0
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "IngredientID"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Ingredient ID"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "IngredientDescription"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Ingredient Description"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "DatePurchased"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Date Purchased"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "IngredientCost"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Ingredient Cost"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'IngredientBindingSource
-        '
-        Me.IngredientBindingSource.DataMember = "Ingredient"
-        Me.IngredientBindingSource.DataSource = Me.Group22DataSet
-        '
-        'Group22DataSet
-        '
-        Me.Group22DataSet.DataSetName = "group22DataSet"
-        Me.Group22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label1
         '
@@ -145,21 +104,6 @@ Partial Class FormViewExpenses
         Me.ButtonDelete.TabIndex = 4
         Me.ButtonDelete.Text = "Delete"
         Me.ButtonDelete.UseVisualStyleBackColor = True
-        '
-        'IngredientTableAdapter
-        '
-        Me.IngredientTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.CustomerOrderTableAdapter = Nothing
-        Me.TableAdapterManager.CustomerTableAdapter = Nothing
-        Me.TableAdapterManager.EmployeeTableAdapter = Nothing
-        Me.TableAdapterManager.IngredientTableAdapter = Me.IngredientTableAdapter
-        Me.TableAdapterManager.MenuItemIngredientTableAdapter = Nothing
-        Me.TableAdapterManager.MenuItemTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'TextBoxCost
         '
@@ -242,6 +186,66 @@ Partial Class FormViewExpenses
         Me.Label5.TabIndex = 12
         Me.Label5.Text = "Ingredient ID"
         '
+        'IngredientBindingSource
+        '
+        Me.IngredientBindingSource.DataMember = "Ingredient"
+        Me.IngredientBindingSource.DataSource = Me.Group22DataSet
+        '
+        'Group22DataSet
+        '
+        Me.Group22DataSet.DataSetName = "group22DataSet"
+        Me.Group22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'IngredientTableAdapter
+        '
+        Me.IngredientTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CustomerOrderTableAdapter = Nothing
+        Me.TableAdapterManager.CustomerTableAdapter = Nothing
+        Me.TableAdapterManager.EmployeeTableAdapter = Nothing
+        Me.TableAdapterManager.IngredientTableAdapter = Me.IngredientTableAdapter
+        Me.TableAdapterManager.MenuItemIngredientTableAdapter = Nothing
+        Me.TableAdapterManager.MenuItemTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "IngredientID"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Ingredient ID"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "IngredientDescription"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Ingredient Description"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "DatePurchased"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Date Purchased"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "IngredientCost"
+        DataGridViewCellStyle1.Format = "C2"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Ingredient Cost"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
         'FormViewExpenses
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -281,10 +285,6 @@ Partial Class FormViewExpenses
     Friend WithEvents ButtonAdd As Button
     Friend WithEvents ButtonUpdate As Button
     Friend WithEvents ButtonDelete As Button
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents TextBoxCost As TextBox
     Friend WithEvents TextBoxDescription As TextBox
     Friend WithEvents DateTimePicker As DateTimePicker
@@ -293,4 +293,8 @@ Partial Class FormViewExpenses
     Friend WithEvents Label4 As Label
     Friend WithEvents TextBoxIngredientID As TextBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
 End Class
