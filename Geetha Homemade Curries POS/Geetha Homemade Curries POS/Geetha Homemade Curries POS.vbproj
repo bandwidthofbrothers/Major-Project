@@ -84,6 +84,18 @@
     <Compile Include="Business\AddCustomer.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Business\FormStaff.designer.vb">
+      <DependentUpon>FormStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\FormStaff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Business\FormAddStaff.designer.vb">
+      <DependentUpon>FormAddStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\FormAddStaff.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Business\FormAddExpense.Designer.vb">
       <DependentUpon>FormAddExpense.vb</DependentUpon>
     </Compile>
@@ -94,18 +106,6 @@
       <DependentUpon>FormReports.vb</DependentUpon>
     </Compile>
     <Compile Include="Business\FormReports.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Business\FormStaff.Designer.vb">
-      <DependentUpon>FormStaff.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Business\FormStaff.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Business\Menu.Designer.vb">
-      <DependentUpon>Menu.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Business\Menu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Business\ViewCustomers.Designer.vb">
@@ -182,17 +182,17 @@
     <EmbeddedResource Include="Business\AddCustomer.resx">
       <DependentUpon>AddCustomer.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Business\FormStaff.resx">
+      <DependentUpon>FormStaff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\FormAddStaff.resx">
+      <DependentUpon>FormAddStaff.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Business\FormAddExpense.resx">
       <DependentUpon>FormAddExpense.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Business\FormReports.resx">
       <DependentUpon>FormReports.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Business\FormStaff.resx">
-      <DependentUpon>FormStaff.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Business\Menu.resx">
-      <DependentUpon>Menu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Business\ViewCustomers.resx">
       <DependentUpon>ViewCustomers.vb</DependentUpon>
