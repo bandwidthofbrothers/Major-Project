@@ -1,7 +1,9 @@
-﻿Public Class Menu
+﻿Imports System.Data.SqlClient
+Public Class Menu
+
+    Dim connection As New SqlConnection("Data Source=146.230.177.46\IST3;Initial Catalog=group22;Persist Security Info=True;User ID=group22;Password=***********")
     Private Sub Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'Group22DataSet.MenuItem' table. You can move, or remove it, as needed.
-        Me.MenuItemTableAdapter.Fill(Me.Group22DataSet.MenuItem)
+
 
     End Sub
 
