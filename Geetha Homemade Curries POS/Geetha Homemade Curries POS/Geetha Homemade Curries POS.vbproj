@@ -84,6 +84,18 @@
     <Compile Include="Business\AddCustomer.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Business\FormStaff.designer.vb">
+      <DependentUpon>FormStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\FormStaff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Business\FormAddStaff.designer.vb">
+      <DependentUpon>FormAddStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\FormAddStaff.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Business\FormAddExpense.Designer.vb">
       <DependentUpon>FormAddExpense.vb</DependentUpon>
     </Compile>
@@ -96,10 +108,10 @@
     <Compile Include="Business\FormReports.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Business\FormStaff.Designer.vb">
-      <DependentUpon>FormStaff.vb</DependentUpon>
+    <Compile Include="Business\Menu.Designer.vb">
+      <DependentUpon>Menu.vb</DependentUpon>
     </Compile>
-    <Compile Include="Business\FormStaff.vb">
+    <Compile Include="Business\Menu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Business\ViewCustomers.Designer.vb">
@@ -150,12 +162,6 @@
     <Compile Include="Business\FormViewExpenses.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interface\MenuItems.Designer.vb">
-      <DependentUpon>MenuItems.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Interface\MenuItems.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -176,14 +182,20 @@
     <EmbeddedResource Include="Business\AddCustomer.resx">
       <DependentUpon>AddCustomer.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Business\FormStaff.resx">
+      <DependentUpon>FormStaff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\FormAddStaff.resx">
+      <DependentUpon>FormAddStaff.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Business\FormAddExpense.resx">
       <DependentUpon>FormAddExpense.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Business\FormReports.resx">
       <DependentUpon>FormReports.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Business\FormStaff.resx">
-      <DependentUpon>FormStaff.vb</DependentUpon>
+    <EmbeddedResource Include="Business\Menu.resx">
+      <DependentUpon>Menu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Business\ViewCustomers.resx">
       <DependentUpon>ViewCustomers.vb</DependentUpon>
@@ -202,9 +214,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Business\FormViewExpenses.resx">
       <DependentUpon>FormViewExpenses.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface\MenuItems.resx">
-      <DependentUpon>MenuItems.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

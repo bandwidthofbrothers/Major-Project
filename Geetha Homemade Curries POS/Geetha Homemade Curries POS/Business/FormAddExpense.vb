@@ -13,13 +13,14 @@
         If conversionSuccessful Then
             Try
                 cost = Decimal.Parse(TextBoxCost.Text, System.Globalization.NumberFormatInfo.CurrentInfo)
-                MessageBox.Show(cost)
+
                 IngredientTableAdapter.InsertIngredient(description, cost, datePurchased)
 
                 MessageBox.Show("Record added successfully")
 
                 With FormViewExpenses
                     .IngredientTableAdapter.Fill(Me.Group22DataSet.Ingredient)
+                    .Refresh()
                 End With
             Catch ex As Exception
                 MessageBox.Show("Error: Record added unsuccessfully")
