@@ -251,7 +251,6 @@ Partial Class AddCustomer
         Me.CustomerIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "CustomerID", True))
         Me.CustomerIDTextBox.Location = New System.Drawing.Point(277, 92)
         Me.CustomerIDTextBox.Name = "CustomerIDTextBox"
-        Me.CustomerIDTextBox.ReadOnly = True
         Me.CustomerIDTextBox.Size = New System.Drawing.Size(100, 26)
         Me.CustomerIDTextBox.TabIndex = 2
         '

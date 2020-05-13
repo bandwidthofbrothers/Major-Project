@@ -15,10 +15,8 @@ Public Class AddCustomer
         'TODO: This line of code loads data into the 'Group22DataSet.Customer' table. You can move, or remove it, as needed.
         Me.CustomerTableAdapter.Fill(Me.Group22DataSet.Customer)
 
-        Dim newIDnumber As Integer = ViewCustomers.CustomerOrderDataGridView.RowCount + 1
-        newIDnumber = newIDnumber + 1
 
-        CustomerIDTextBox.Text = newIDnumber
+        CustomerIDTextBox.Clear()
         FirstNameTextBox.Clear()
         SurnameTextBox.Clear()
         PhoneNumberTextBox.Clear()
@@ -44,6 +42,8 @@ Public Class AddCustomer
         Dim insertQuery As String = "INSERT INTO Customer(CustomerID, FirstName, Surname, PhoneNumber, AmountDue)VALUES('" & CustomerIDTextBox.Text & "','" & FirstNameTextBox.Text & "','" & SurnameTextBox.Text & "','" & PhoneNumberTextBox.Text & "','" & AmountDueTextBox.Text & "')"
 
         ExecuteQuery(insertQuery)
+
+        ViewCustomers.CustomerTableAdapter.Fill(Me.Group22DataSet.Customer)
 
         MessageBox.Show("Record added successfully")
 

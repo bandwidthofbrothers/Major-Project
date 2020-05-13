@@ -13,7 +13,7 @@ Public Class ViewCustomers
 
     Private Sub ViewCustomers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        'TODO: This line of code loads data into the 'Group22DataSet.Customer' table. You can move, or remove it, as needed.
+        'TODO: This line of code loads data into the 'Group22D ataSet.Customer' table. You can move, or remove it, as needed.
         Me.CustomerTableAdapter.Fill(Me.Group22DataSet.Customer)
         'TODO: This line of code loads data into the 'Group22DataSet.CustomerOrder' table. You can move, or remove it, as needed.
         Me.CustomerOrderTableAdapter.Fill(Me.Group22DataSet.CustomerOrder)
@@ -45,9 +45,10 @@ Public Class ViewCustomers
 
     Private Sub UpdateCustBtn_Click(sender As Object, e As EventArgs) Handles UpdateCustBtn.Click
 
-        Dim updateQuery As String = "Update Customer Set FirstName = '" & FirstNameTextBox.Text & "' , Surname = '" & SurnameTextBox.Text & "' , PhoneNumber = '" & PhoneNumberTextBox.Text & "' , AmountDue = '" & AmountDueTextBox.Text & "' WHERE CustomerID = '" & CustomerIDTextBox.Text & "'"
+        Dim updateQuery As String = "Update Customer Set FirstName = '" + FirstNameTextBox.Text + "' , Surname = '" + SurnameTextBox.Text + "' , PhoneNumber = '" + PhoneNumberTextBox.Text + "' , AmountDue = '" + AmountDueTextBox.Text + "' WHERE CustomerID = '" + CustomerIDTextBox.Text + "' "
         ExecuteQuery(updateQuery)
-            MessageBox.Show("Record has been updated")
+
+        MessageBox.Show("Record has been updated")
 
     End Sub
 
@@ -55,6 +56,8 @@ Public Class ViewCustomers
 
         Dim deleteQuery As String = "Delete from Customer where customerID = " & CustomerIDTextBox.Text
         ExecuteQuery(deleteQuery)
+        CustomerTableAdapter.Fill(Me.Group22DataSet.Customer)
+
         MessageBox.Show("Customer record deleted")
 
 
