@@ -46,6 +46,7 @@ Public Class ViewCustomers
     Private Sub UpdateCustBtn_Click(sender As Object, e As EventArgs) Handles UpdateCustBtn.Click
 
         Dim updateQuery As String = "Update Customer Set FirstName = '" + FirstNameTextBox.Text + "' , Surname = '" + SurnameTextBox.Text + "' , PhoneNumber = '" + PhoneNumberTextBox.Text + "' , AmountDue = '" + AmountDueTextBox.Text + "' WHERE CustomerID = '" + CustomerIDTextBox.Text + "' "
+
         ExecuteQuery(updateQuery)
 
         MessageBox.Show("Record has been updated")
