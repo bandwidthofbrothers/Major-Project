@@ -23,7 +23,6 @@ Partial Class Menu
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.UpdateBtn = New System.Windows.Forms.Button()
-        Me.CategoryBox = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -36,6 +35,7 @@ Partial Class Menu
         Me.ItemTxtbox = New System.Windows.Forms.TextBox()
         Me.DeleteBtn = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.CategoryTxtbox = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -47,15 +47,6 @@ Partial Class Menu
         Me.UpdateBtn.TabIndex = 34
         Me.UpdateBtn.Text = "Update Item"
         Me.UpdateBtn.UseVisualStyleBackColor = True
-        '
-        'CategoryBox
-        '
-        Me.CategoryBox.FormattingEnabled = True
-        Me.CategoryBox.Items.AddRange(New Object() {"Biryani", "Bunnies", "Chutney", "Curry", "Drinks", "Extras", "Regulars", "Roti Rolls", "Seafood", "Toasted Sandwich", "Vegetables", ""})
-        Me.CategoryBox.Location = New System.Drawing.Point(515, 183)
-        Me.CategoryBox.Name = "CategoryBox"
-        Me.CategoryBox.Size = New System.Drawing.Size(141, 21)
-        Me.CategoryBox.TabIndex = 33
         '
         'Label7
         '
@@ -157,15 +148,22 @@ Partial Class Menu
         Me.DataGridView1.Size = New System.Drawing.Size(455, 207)
         Me.DataGridView1.TabIndex = 36
         '
+        'CategoryTxtbox
+        '
+        Me.CategoryTxtbox.Location = New System.Drawing.Point(515, 183)
+        Me.CategoryTxtbox.Name = "CategoryTxtbox"
+        Me.CategoryTxtbox.Size = New System.Drawing.Size(153, 20)
+        Me.CategoryTxtbox.TabIndex = 37
+        '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(750, 360)
+        Me.Controls.Add(Me.CategoryTxtbox)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.DeleteBtn)
         Me.Controls.Add(Me.UpdateBtn)
-        Me.Controls.Add(Me.CategoryBox)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -185,7 +183,6 @@ Partial Class Menu
     End Sub
 
     Friend WithEvents UpdateBtn As Button
-    Friend WithEvents CategoryBox As ComboBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
@@ -198,4 +195,5 @@ Partial Class Menu
     Friend WithEvents ItemTxtbox As TextBox
     Friend WithEvents DeleteBtn As Button
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents CategoryTxtbox As TextBox
 End Class
