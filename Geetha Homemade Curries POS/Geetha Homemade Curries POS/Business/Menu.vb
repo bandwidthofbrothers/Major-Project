@@ -4,6 +4,15 @@ Public Class Menu
     Dim connection As New SqlConnection("Data Source=146.230.177.46\IST3;Initial Catalog=group22;Persist Security Info=True;User ID=group22;Password=***********")
     Private Sub Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        connection.Open()
+
+        Dim adapter As New SqlDataAdapter("SELECT * FROM MenuItems", connection)
+
+        Dim table As New DataTable()
+
+        adapter.Fill(table)
+
+        DataGridView1.DataSource = table
 
     End Sub
 

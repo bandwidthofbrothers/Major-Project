@@ -41,7 +41,6 @@ C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\
 C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormMain.resources
 C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormMainMenu.resources
 C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSplashScreen.resources
-C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.MenuItems.resources
 C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.Resources.resources
 C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha Homemade Curries POS.vbproj.GenerateResource.Cache
 C:\Users\XPS\Source\Repos\bandwidthofbrothers\Major-Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\bin\Debug\Geetha Homemade Curries POS.exe.config
