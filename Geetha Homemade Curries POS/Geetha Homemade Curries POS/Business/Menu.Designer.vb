@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Menu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,9 @@ Partial Class Menu
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.UpdateBtn = New System.Windows.Forms.Button()
-        Me.CategoryBox = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -37,16 +35,8 @@ Partial Class Menu
         Me.ItemTxtbox = New System.Windows.Forms.TextBox()
         Me.DeleteBtn = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.MenuItemIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MenuItemNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CategoryDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MenuItemPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MenuItemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
-        Me.MenuItemTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.MenuItemTableAdapter()
+        Me.CategoryTxtbox = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MenuItemBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'UpdateBtn
@@ -57,15 +47,6 @@ Partial Class Menu
         Me.UpdateBtn.TabIndex = 34
         Me.UpdateBtn.Text = "Update Item"
         Me.UpdateBtn.UseVisualStyleBackColor = True
-        '
-        'CategoryBox
-        '
-        Me.CategoryBox.FormattingEnabled = True
-        Me.CategoryBox.Items.AddRange(New Object() {"Biryani", "Bunnies", "Chutney", "Curry", "Drinks", "Extras", "Regulars", "Roti Rolls", "Seafood", "Toasted Sandwich", "Vegetables", ""})
-        Me.CategoryBox.Location = New System.Drawing.Point(515, 183)
-        Me.CategoryBox.Name = "CategoryBox"
-        Me.CategoryBox.Size = New System.Drawing.Size(141, 21)
-        Me.CategoryBox.TabIndex = 33
         '
         'Label7
         '
@@ -161,62 +142,28 @@ Partial Class Menu
         '
         'DataGridView1
         '
-        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MenuItemIDDataGridViewTextBoxColumn, Me.MenuItemNameDataGridViewTextBoxColumn, Me.CategoryDataGridViewTextBoxColumn, Me.MenuItemPriceDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.MenuItemBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(12, 46)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(455, 207)
         Me.DataGridView1.TabIndex = 36
         '
-        'MenuItemIDDataGridViewTextBoxColumn
+        'CategoryTxtbox
         '
-        Me.MenuItemIDDataGridViewTextBoxColumn.DataPropertyName = "MenuItemID"
-        Me.MenuItemIDDataGridViewTextBoxColumn.HeaderText = "MenuItemID"
-        Me.MenuItemIDDataGridViewTextBoxColumn.Name = "MenuItemIDDataGridViewTextBoxColumn"
-        '
-        'MenuItemNameDataGridViewTextBoxColumn
-        '
-        Me.MenuItemNameDataGridViewTextBoxColumn.DataPropertyName = "MenuItemName"
-        Me.MenuItemNameDataGridViewTextBoxColumn.HeaderText = "MenuItemName"
-        Me.MenuItemNameDataGridViewTextBoxColumn.Name = "MenuItemNameDataGridViewTextBoxColumn"
-        '
-        'CategoryDataGridViewTextBoxColumn
-        '
-        Me.CategoryDataGridViewTextBoxColumn.DataPropertyName = "Category"
-        Me.CategoryDataGridViewTextBoxColumn.HeaderText = "Category"
-        Me.CategoryDataGridViewTextBoxColumn.Name = "CategoryDataGridViewTextBoxColumn"
-        '
-        'MenuItemPriceDataGridViewTextBoxColumn
-        '
-        Me.MenuItemPriceDataGridViewTextBoxColumn.DataPropertyName = "MenuItemPrice"
-        Me.MenuItemPriceDataGridViewTextBoxColumn.HeaderText = "MenuItemPrice"
-        Me.MenuItemPriceDataGridViewTextBoxColumn.Name = "MenuItemPriceDataGridViewTextBoxColumn"
-        '
-        'MenuItemBindingSource
-        '
-        Me.MenuItemBindingSource.DataMember = "MenuItem"
-        Me.MenuItemBindingSource.DataSource = Me.Group22DataSet
-        '
-        'Group22DataSet
-        '
-        Me.Group22DataSet.DataSetName = "group22DataSet"
-        Me.Group22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'MenuItemTableAdapter
-        '
-        Me.MenuItemTableAdapter.ClearBeforeFill = True
+        Me.CategoryTxtbox.Location = New System.Drawing.Point(515, 183)
+        Me.CategoryTxtbox.Name = "CategoryTxtbox"
+        Me.CategoryTxtbox.Size = New System.Drawing.Size(153, 20)
+        Me.CategoryTxtbox.TabIndex = 37
         '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(750, 360)
+        Me.Controls.Add(Me.CategoryTxtbox)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.DeleteBtn)
         Me.Controls.Add(Me.UpdateBtn)
-        Me.Controls.Add(Me.CategoryBox)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -230,15 +177,12 @@ Partial Class Menu
         Me.Name = "Menu"
         Me.Text = "Menu"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MenuItemBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents UpdateBtn As Button
-    Friend WithEvents CategoryBox As ComboBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
@@ -251,11 +195,5 @@ Partial Class Menu
     Friend WithEvents ItemTxtbox As TextBox
     Friend WithEvents DeleteBtn As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Group22DataSet As group22DataSet
-    Friend WithEvents MenuItemBindingSource As BindingSource
-    Friend WithEvents MenuItemTableAdapter As group22DataSetTableAdapters.MenuItemTableAdapter
-    Friend WithEvents MenuItemIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents MenuItemNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CategoryDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents MenuItemPriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CategoryTxtbox As TextBox
 End Class
