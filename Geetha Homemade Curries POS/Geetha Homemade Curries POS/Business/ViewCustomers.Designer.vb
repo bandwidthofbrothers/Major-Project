@@ -61,8 +61,8 @@ Partial Class ViewCustomers
         Me.PhoneNumberTextBox = New System.Windows.Forms.TextBox()
         Me.AmountDueTextBox = New System.Windows.Forms.TextBox()
         Me.AddCustBtn = New System.Windows.Forms.Button()
-        Me.UpdateCustBtn = New System.Windows.Forms.Button()
         Me.DltCustBtn = New System.Windows.Forms.Button()
+        Me.UpdateCustBtn = New System.Windows.Forms.Button()
         CustomerIDLabel = New System.Windows.Forms.Label()
         FirstNameLabel = New System.Windows.Forms.Label()
         SurnameLabel = New System.Windows.Forms.Label()
@@ -381,23 +381,23 @@ Partial Class ViewCustomers
         Me.AddCustBtn.Text = "Add"
         Me.AddCustBtn.UseVisualStyleBackColor = True
         '
-        'UpdateCustBtn
-        '
-        Me.UpdateCustBtn.Location = New System.Drawing.Point(879, 448)
-        Me.UpdateCustBtn.Name = "UpdateCustBtn"
-        Me.UpdateCustBtn.Size = New System.Drawing.Size(112, 42)
-        Me.UpdateCustBtn.TabIndex = 6
-        Me.UpdateCustBtn.Text = "Update"
-        Me.UpdateCustBtn.UseVisualStyleBackColor = True
-        '
         'DltCustBtn
         '
-        Me.DltCustBtn.Location = New System.Drawing.Point(1024, 448)
+        Me.DltCustBtn.Location = New System.Drawing.Point(1007, 448)
         Me.DltCustBtn.Name = "DltCustBtn"
         Me.DltCustBtn.Size = New System.Drawing.Size(112, 42)
-        Me.DltCustBtn.TabIndex = 7
+        Me.DltCustBtn.TabIndex = 56
         Me.DltCustBtn.Text = "Delete"
         Me.DltCustBtn.UseVisualStyleBackColor = True
+        '
+        'UpdateCustBtn
+        '
+        Me.UpdateCustBtn.Location = New System.Drawing.Point(869, 448)
+        Me.UpdateCustBtn.Name = "UpdateCustBtn"
+        Me.UpdateCustBtn.Size = New System.Drawing.Size(112, 42)
+        Me.UpdateCustBtn.TabIndex = 57
+        Me.UpdateCustBtn.Text = "Update"
+        Me.UpdateCustBtn.UseVisualStyleBackColor = True
         '
         'ViewCustomers
         '
@@ -405,8 +405,8 @@ Partial Class ViewCustomers
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
         Me.ClientSize = New System.Drawing.Size(1206, 562)
-        Me.Controls.Add(Me.DltCustBtn)
         Me.Controls.Add(Me.UpdateCustBtn)
+        Me.Controls.Add(Me.DltCustBtn)
         Me.Controls.Add(Me.AddCustBtn)
         Me.Controls.Add(CustomerIDLabel)
         Me.Controls.Add(Me.CustomerIDTextBox)
@@ -462,11 +462,11 @@ Partial Class ViewCustomers
     Friend WithEvents PhoneNumberTextBox As TextBox
     Friend WithEvents AmountDueTextBox As TextBox
     Friend WithEvents AddCustBtn As Button
-    Friend WithEvents UpdateCustBtn As Button
-    Friend WithEvents DltCustBtn As Button
     Friend WithEvents CustomerIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FirstNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SurnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PhoneNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AmountDueDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DltCustBtn As Button
+    Friend WithEvents UpdateCustBtn As Button
 End Class

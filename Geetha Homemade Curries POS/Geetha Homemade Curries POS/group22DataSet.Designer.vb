@@ -3210,15 +3210,9 @@ Namespace group22DataSetTableAdapters
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Customer] WHERE (([CustomerID] = @Original_CustomerID) AND ([F"& _ 
-                "irstName] = @Original_FirstName) AND ([Surname] = @Original_Surname) AND ([Phone"& _ 
-                "Number] = @Original_PhoneNumber) AND ([AmountDue] = @Original_AmountDue))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM Customer"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE (CustomerID = @CustomerID)"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CustomerID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CustomerID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_FirstName", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FirstName", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Surname", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Surname", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PhoneNumber", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_AmountDue", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AmountDue", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CustomerID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "CustomerID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Customer] ([CustomerID], [FirstName], [Surname], [PhoneNumber]"& _ 
@@ -3233,23 +3227,16 @@ Namespace group22DataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AmountDue", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AmountDue", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Customer] SET [CustomerID] = @CustomerID, [FirstName] = @FirstName,"& _ 
-                " [Surname] = @Surname, [PhoneNumber] = @PhoneNumber, [AmountDue] = @AmountDue WH"& _ 
-                "ERE (([CustomerID] = @Original_CustomerID) AND ([FirstName] = @Original_FirstNam"& _ 
-                "e) AND ([Surname] = @Original_Surname) AND ([PhoneNumber] = @Original_PhoneNumbe"& _ 
-                "r) AND ([AmountDue] = @Original_AmountDue));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT CustomerID, FirstName, Surn"& _ 
-                "ame, PhoneNumber, AmountDue FROM Customer WHERE (CustomerID = @CustomerID)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE Customer"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET       FirstName = @FirstName, Surname = @Surname, PhoneNumbe"& _ 
+                "r = @PhoneNumber, AmountDue = @AmountDue"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE (CustomerID = @CustomerID); "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SE"& _ 
+                "LECT CustomerID, FirstName, Surname, PhoneNumber, AmountDue FROM Customer WHERE "& _ 
+                "(CustomerID = @CustomerID)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CustomerID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CustomerID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FirstName", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FirstName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Surname", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Surname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PhoneNumber", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AmountDue", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AmountDue", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CustomerID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CustomerID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_FirstName", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "FirstName", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Surname", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Surname", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PhoneNumber", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_AmountDue", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "AmountDue", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@FirstName", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "FirstName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Surname", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "Surname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PhoneNumber", Global.System.Data.SqlDbType.[Char], 10, Global.System.Data.ParameterDirection.Input, 0, 0, "PhoneNumber", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@AmountDue", Global.System.Data.SqlDbType.Money, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "AmountDue", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CustomerID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "CustomerID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3325,20 +3312,8 @@ Namespace group22DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_CustomerID As Integer, ByVal Original_FirstName As String, ByVal Original_Surname As String, ByVal Original_PhoneNumber As Integer, ByVal Original_AmountDue As Decimal) As Integer
-            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_CustomerID,Integer)
-            If (Original_FirstName Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_FirstName")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_FirstName,String)
-            End If
-            If (Original_Surname Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_Surname")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Surname,String)
-            End If
-            Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_PhoneNumber,Integer)
-            Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_AmountDue,Decimal)
+        Public Overloads Overridable Function Delete(ByVal CustomerID As Integer) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(CustomerID,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -3391,33 +3366,24 @@ Namespace group22DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal CustomerID As Integer, ByVal FirstName As String, ByVal Surname As String, ByVal PhoneNumber As Integer, ByVal AmountDue As Decimal, ByVal Original_CustomerID As Integer, ByVal Original_FirstName As String, ByVal Original_Surname As String, ByVal Original_PhoneNumber As Integer, ByVal Original_AmountDue As Decimal) As Integer
-            Me.Adapter.UpdateCommand.Parameters(0).Value = CType(CustomerID,Integer)
+        Public Overloads Overridable Function Update(ByVal FirstName As String, ByVal Surname As String, ByVal PhoneNumber As String, ByVal AmountDue As Decimal, ByVal CustomerID As Integer) As Integer
             If (FirstName Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("FirstName")
             Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(FirstName,String)
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(FirstName,String)
             End If
             If (Surname Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Surname")
             Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Surname,String)
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Surname,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(PhoneNumber,Integer)
-            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(AmountDue,Decimal)
-            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_CustomerID,Integer)
-            If (Original_FirstName Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_FirstName")
+            If (PhoneNumber Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("PhoneNumber")
             Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_FirstName,String)
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(PhoneNumber,String)
             End If
-            If (Original_Surname Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_Surname")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_Surname,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_PhoneNumber,Integer)
-            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_AmountDue,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(AmountDue,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(CustomerID,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -3431,14 +3397,6 @@ Namespace group22DataSetTableAdapters
                     Me.Adapter.UpdateCommand.Connection.Close
                 End If
             End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal FirstName As String, ByVal Surname As String, ByVal PhoneNumber As Integer, ByVal AmountDue As Decimal, ByVal Original_CustomerID As Integer, ByVal Original_FirstName As String, ByVal Original_Surname As String, ByVal Original_PhoneNumber As Integer, ByVal Original_AmountDue As Decimal) As Integer
-            Return Me.Update(Original_CustomerID, FirstName, Surname, PhoneNumber, AmountDue, Original_CustomerID, Original_FirstName, Original_Surname, Original_PhoneNumber, Original_AmountDue)
         End Function
     End Class
     
