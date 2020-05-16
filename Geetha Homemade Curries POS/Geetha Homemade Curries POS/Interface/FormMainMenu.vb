@@ -100,7 +100,7 @@
     End Sub
 
     Private Sub ButtonMenu_Click(sender As Object, e As EventArgs) Handles ButtonMenu.Click
-
+        FormSetUp(FormMenu)
     End Sub
 
     Private Sub ButtonStaff_Click(sender As Object, e As EventArgs) Handles ButtonStaff.Click

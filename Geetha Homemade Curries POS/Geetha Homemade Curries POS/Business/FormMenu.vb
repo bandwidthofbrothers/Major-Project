@@ -1,13 +1,13 @@
 ﻿Imports System.Data.SqlClient
-Public Class Menu
+Public Class FormMenu
 
-    Dim connection As New SqlConnection("Data Source=146.230.177.46\IST3;Initial Catalog=group22;Persist Security Info=True;User ID=group22;Password=***********")
+    Dim connection As New SqlConnection("Data Source=146.230.177.46\IST3;Initial Catalog=group22;Persist Security Info=True;User ID=group22;Password=n24mc")
 
     Public Sub ExecuteQuery(query As String)
 
         Dim command As New SqlCommand(query, connection)
 
-        connection.Open()
+        'connection.Open()
 
         command.ExecuteNonQuery()
 
@@ -18,7 +18,7 @@ Public Class Menu
 
         connection.Open()
 
-        Dim adapter As New SqlDataAdapter("SELECT * FROM MenuItems", connection)
+        Dim adapter As New SqlDataAdapter("SELECT * FROM MenuItem", connection)
 
         Dim table As New DataTable()
 
