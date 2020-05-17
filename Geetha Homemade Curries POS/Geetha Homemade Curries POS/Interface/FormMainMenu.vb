@@ -106,4 +106,8 @@
     Private Sub ButtonStaff_Click(sender As Object, e As EventArgs) Handles ButtonStaff.Click
         FormSetUp(FormStaff)
     End Sub
+
+    Private Sub ButtonSale_Click(sender As Object, e As EventArgs) Handles ButtonSale.Click
+        FormSetUp(FormSales)
+    End Sub
 End Class
