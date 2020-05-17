@@ -4,7 +4,7 @@ Public Class ViewCustomers
 
     Dim connection As New SqlConnection("Data Source=146.230.177.46\ist3;Initial Catalog=group22;Persist Security Info=True;User ID=group22;Password=n24mc")
 
-    Private Sub CustomerOrderBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles CustomerOrderBindingNavigatorSaveItem.Click
+    Private Sub CustomerOrderBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.CustomerOrderBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.Group22DataSet)
@@ -27,7 +27,7 @@ Public Class ViewCustomers
 
     End Sub
 
-    Private Sub CustomerOrderBindingNavigator_RefreshItems(sender As Object, e As EventArgs) Handles CustomerOrderBindingNavigator.RefreshItems
+    Private Sub CustomerOrderBindingNavigator_RefreshItems(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -77,21 +77,17 @@ Public Class ViewCustomers
     Private Sub UpdateCustBtn_Click(sender As Object, e As EventArgs) Handles UpdateCustBtn.Click
 
         If Not CustomerIDTextBox.Text = "" Then
-            Try
-                Dim ID As Integer = Integer.Parse(CustomerIDTextBox.Text)
-                Dim FirstName As String = FirstNameTextBox.Text
-                Dim Surname As String = SurnameTextBox.Text
-                Dim PhoneNumber As String = PhoneNumberTextBox.Text
-                Dim AmountDue As Double = Double.Parse(AmountDueTextBox.Text)
+            'Add try catch statement
+            Dim ID As Integer = Integer.Parse(CustomerIDTextBox.Text)
+            Dim FirstName As String = FirstNameTextBox.Text
+            Dim Surname As String = SurnameTextBox.Text
+            Dim PhoneNumber As String = PhoneNumberTextBox.Text
+            Dim AmountDue As Double = Double.Parse(AmountDueTextBox.Text)
 
-                CustomerTableAdapter.Update(ID, FirstName, Surname, PhoneNumber, AmountDue)
-                CustomerTableAdapter.Fill(Me.Group22DataSet.Customer)
+            CustomerTableAdapter.Update1(FirstName, Surname, PhoneNumber, AmountDue, ID)
+            CustomerTableAdapter.Fill(Me.Group22DataSet.Customer)
 
-                MessageBox.Show("Record updated successfully", "Update Successful")
-
-            Catch ex As Exception
-                MessageBox.Show("Error: Incorrect Format", "Error")
-            End Try
+            MessageBox.Show("Record updated successfully", "Update Successful")
         Else
             MessageBox.Show("Error: No record selected", "Error")
         End If
