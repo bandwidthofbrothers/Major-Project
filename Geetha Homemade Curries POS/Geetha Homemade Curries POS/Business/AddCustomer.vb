@@ -49,7 +49,6 @@ Public Class AddCustomer
 
     End Sub
 
-
     Private Sub CloseBtn_Click(sender As Object, e As EventArgs) Handles CloseBtn.Click
         Me.Close()
     End Sub
