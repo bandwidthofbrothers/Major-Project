@@ -96,6 +96,30 @@
     <Compile Include="Business\FormSalesCategories.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Business\FormSalesCurries.Designer.vb">
+      <DependentUpon>FormSalesCurries.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\FormSalesCurries.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Business\FormSalesDishes.Designer.vb">
+      <DependentUpon>FormSalesDishes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\FormSalesDishes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Business\FormSalesDrinks.Designer.vb">
+      <DependentUpon>FormSalesDrinks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\FormSalesDrinks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Business\FormSalesItems.Designer.vb">
+      <DependentUpon>FormSalesItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\FormSalesItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Business\FormStaff.designer.vb">
       <DependentUpon>FormStaff.vb</DependentUpon>
     </Compile>
@@ -202,6 +226,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Business\FormSalesCategories.resx">
       <DependentUpon>FormSalesCategories.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\FormSalesCurries.resx">
+      <DependentUpon>FormSalesCurries.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\FormSalesDishes.resx">
+      <DependentUpon>FormSalesDishes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\FormSalesDrinks.resx">
+      <DependentUpon>FormSalesDrinks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\FormSalesItems.resx">
+      <DependentUpon>FormSalesItems.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Business\FormStaff.resx">
       <DependentUpon>FormStaff.vb</DependentUpon>
