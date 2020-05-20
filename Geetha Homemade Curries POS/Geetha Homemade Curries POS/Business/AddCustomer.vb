@@ -4,7 +4,7 @@ Public Class AddCustomer
 
     Dim connection As New SqlConnection("Data Source=146.230.177.46\ist3;Initial Catalog=group22;Persist Security Info=True;User ID=group22;Password=n24mc")
 
-    Private Sub CustomerBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles CustomerBindingNavigatorSaveItem.Click
+    Private Sub CustomerBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.CustomerBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.Group22DataSet)
@@ -48,7 +48,6 @@ Public Class AddCustomer
         MessageBox.Show("Record added successfully")
 
     End Sub
-
 
     Private Sub CloseBtn_Click(sender As Object, e As EventArgs) Handles CloseBtn.Click
         Me.Close()

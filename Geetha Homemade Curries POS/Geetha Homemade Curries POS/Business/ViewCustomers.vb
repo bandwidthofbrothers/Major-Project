@@ -4,7 +4,7 @@ Public Class ViewCustomers
 
     Dim connection As New SqlConnection("Data Source=146.230.177.46\ist3;Initial Catalog=group22;Persist Security Info=True;User ID=group22;Password=n24mc")
 
-    Private Sub CustomerOrderBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles CustomerOrderBindingNavigatorSaveItem.Click
+    Private Sub CustomerOrderBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.CustomerOrderBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.Group22DataSet)
@@ -27,39 +27,7 @@ Public Class ViewCustomers
 
     End Sub
 
-    Public Sub ExecuteQuery(query As String)
-
-        Dim command As New SqlCommand(query, connection)
-
-        connection.Open()
-
-        command.ExecuteNonQuery()
-
-        connection.Close()
-
-    End Sub
-
-    Private Sub CustomerOrderBindingNavigator_RefreshItems(sender As Object, e As EventArgs) Handles CustomerOrderBindingNavigator.RefreshItems
-
-    End Sub
-
-    Private Sub UpdateCustBtn_Click(sender As Object, e As EventArgs) Handles UpdateCustBtn.Click
-
-        Dim updateQuery As String = "Update Customer Set FirstName = '" + FirstNameTextBox.Text + "' , Surname = '" + SurnameTextBox.Text + "' , PhoneNumber = '" + PhoneNumberTextBox.Text + "' , AmountDue = '" + AmountDueTextBox.Text + "' WHERE CustomerID = '" + CustomerIDTextBox.Text + "' "
-        ExecuteQuery(updateQuery)
-
-        MessageBox.Show("Record has been updated")
-
-    End Sub
-
-    Private Sub DltCustBtn_Click(sender As Object, e As EventArgs) Handles DltCustBtn.Click
-
-        Dim deleteQuery As String = "Delete from Customer where customerID = " & CustomerIDTextBox.Text
-        ExecuteQuery(deleteQuery)
-        CustomerTableAdapter.Fill(Me.Group22DataSet.Customer)
-
-        MessageBox.Show("Customer record deleted")
-
+    Private Sub CustomerOrderBindingNavigator_RefreshItems(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -73,6 +41,55 @@ Public Class ViewCustomers
             SurnameTextBox.Text = row.Cells(2).Value.ToString
             PhoneNumberTextBox.Text = row.Cells(3).Value.ToString
             AmountDueTextBox.Text = row.Cells(4).Value.ToString
+        End If
+
+    End Sub
+
+    Public Sub ExecuteQuery(query As String)
+
+        Dim command As New SqlCommand(query, connection)
+
+        connection.Open()
+
+        command.ExecuteNonQuery()
+
+        connection.Close()
+
+    End Sub
+
+    Private Sub DltCustBtn_Click(sender As Object, e As EventArgs) Handles DltCustBtn.Click
+
+        Try
+            Dim CustomerID As Integer = CustomerOrderDataGridView.CurrentRow.Cells(0).Value
+
+            CustomerTableAdapter.Delete(CustomerID)
+
+            CustomerTableAdapter.Fill(Me.Group22DataSet.Customer)
+
+            MessageBox.Show("Record deleted successfully")
+
+        Catch ex As Exception
+            MessageBox.Show("Error: Could not delete record")
+        End Try
+
+    End Sub
+
+    Private Sub UpdateCustBtn_Click(sender As Object, e As EventArgs) Handles UpdateCustBtn.Click
+
+        If Not CustomerIDTextBox.Text = "" Then
+            'Add try catch statement
+            Dim ID As Integer = Integer.Parse(CustomerIDTextBox.Text)
+            Dim FirstName As String = FirstNameTextBox.Text
+            Dim Surname As String = SurnameTextBox.Text
+            Dim PhoneNumber As String = PhoneNumberTextBox.Text
+            Dim AmountDue As Double = Double.Parse(AmountDueTextBox.Text)
+
+            CustomerTableAdapter.Update1(FirstName, Surname, PhoneNumber, AmountDue, ID)
+            CustomerTableAdapter.Fill(Me.Group22DataSet.Customer)
+
+            MessageBox.Show("Record updated successfully", "Update Successful")
+        Else
+            MessageBox.Show("Error: No record selected", "Error")
         End If
 
     End Sub
