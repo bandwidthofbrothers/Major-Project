@@ -72,4 +72,8 @@ Public Class FormMenu
 
 
     End Sub
+
+    Private Sub ItemTxtbox_TextChanged(sender As Object, e As EventArgs) Handles ItemTxtbox.TextChanged
+
+    End Sub
 End Class
