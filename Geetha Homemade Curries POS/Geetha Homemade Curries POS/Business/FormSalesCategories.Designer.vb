@@ -64,108 +64,119 @@ Partial Class FormSalesCategories
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(59, 160)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(45, 160)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(51, 17)
+        Me.Label1.Size = New System.Drawing.Size(73, 24)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Briyani"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(269, 160)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(260, 160)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(59, 17)
+        Me.Label2.Size = New System.Drawing.Size(86, 24)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Bunnies"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(468, 160)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(457, 160)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(60, 17)
+        Me.Label3.Size = New System.Drawing.Size(87, 24)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Chutney"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(684, 160)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(675, 160)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(53, 17)
+        Me.Label4.Size = New System.Drawing.Size(77, 24)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Curries"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(684, 339)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(675, 339)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(44, 17)
+        Me.Label5.Size = New System.Drawing.Size(60, 24)
         Me.Label5.TabIndex = 15
         Me.Label5.Text = "Pasta"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(468, 339)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(450, 339)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(79, 17)
+        Me.Label6.Size = New System.Drawing.Size(116, 24)
         Me.Label6.TabIndex = 14
         Me.Label6.Text = "Extra/Sides"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(278, 339)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(269, 339)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(48, 17)
+        Me.Label7.Size = New System.Drawing.Size(68, 24)
         Me.Label7.TabIndex = 13
         Me.Label7.Text = "Drinks"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(59, 339)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(45, 339)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(51, 17)
+        Me.Label8.Size = New System.Drawing.Size(73, 24)
         Me.Label8.TabIndex = 12
         Me.Label8.Text = "Dishes"
         '
         'Label9
         '
-        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(639, 526)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(139, 17)
+        Me.Label9.Size = New System.Drawing.Size(150, 54)
         Me.Label9.TabIndex = 23
         Me.Label9.Text = "Toasted Sandwiches"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(477, 526)
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(457, 526)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(61, 17)
+        Me.Label10.Size = New System.Drawing.Size(89, 24)
         Me.Label10.TabIndex = 22
         Me.Label10.Text = "Specials"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(269, 526)
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(248, 526)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(68, 17)
+        Me.Label11.Size = New System.Drawing.Size(98, 24)
         Me.Label11.TabIndex = 21
         Me.Label11.Text = "Roti Rolls"
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(45, 526)
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(36, 526)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(65, 17)
+        Me.Label12.Size = New System.Drawing.Size(93, 24)
         Me.Label12.TabIndex = 20
         Me.Label12.Text = "Regulars"
         '

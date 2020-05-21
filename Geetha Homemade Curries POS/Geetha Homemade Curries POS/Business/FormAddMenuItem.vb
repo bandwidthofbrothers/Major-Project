@@ -18,8 +18,9 @@
 
                 MessageBox.Show("Record added successfully")
 
-                With FormViewExpenses
-                    .IngredientTableAdapter.Fill(Me.Group22DataSet.Ingredient)
+                With FormViewMenu
+                    .MenuItemTableAdapter.Fill(Me.Group22DataSet.MenuItem)
+                    .MenuItemDataGridView.Refresh()
                     .Refresh()
                 End With
             Catch ex As Exception
@@ -31,6 +32,7 @@
 
         TextBoxName.Text = ""
         TextBoxPrice.Text = ""
+        ComboBoxCategory.Text = ""
 
     End Sub
 End Class

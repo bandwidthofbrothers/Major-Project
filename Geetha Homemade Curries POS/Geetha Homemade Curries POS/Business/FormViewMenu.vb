@@ -7,7 +7,7 @@
 
     Private Sub ButtonDelete_Click(sender As Object, e As EventArgs) Handles ButtonDelete.Click
         Try
-            Dim MenuItemID As Integer = IngredientDataGridView.CurrentRow.Cells(0).Value
+            Dim MenuItemID As Integer = MenuItemDataGridView.CurrentRow.Cells(0).Value
 
             Me.MenuItemTableAdapter.DeleteQuery(MenuItemID)
 

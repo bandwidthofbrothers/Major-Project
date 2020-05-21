@@ -23,6 +23,7 @@ Partial Class FormViewMenu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TextBoxMenuItemID = New System.Windows.Forms.TextBox()
         Me.MenuItemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
@@ -36,16 +37,16 @@ Partial Class FormViewMenu
         Me.ButtonUpdate = New System.Windows.Forms.Button()
         Me.ButtonAdd = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.IngredientDataGridView = New System.Windows.Forms.DataGridView()
+        Me.MenuItemDataGridView = New System.Windows.Forms.DataGridView()
+        Me.ComboBoxCategory = New System.Windows.Forms.ComboBox()
+        Me.MenuItemTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.MenuItemTableAdapter()
         Me.MenuItemIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MenuItemNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CategoryDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MenuItemPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ComboBoxCategory = New System.Windows.Forms.ComboBox()
-        Me.MenuItemTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.MenuItemTableAdapter()
         CType(Me.MenuItemBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IngredientDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MenuItemDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBoxMenuItemID
@@ -170,20 +171,35 @@ Partial Class FormViewMenu
         Me.Label1.TabIndex = 15
         Me.Label1.Text = "Menu:"
         '
-        'IngredientDataGridView
+        'MenuItemDataGridView
         '
-        Me.IngredientDataGridView.AllowUserToAddRows = False
-        Me.IngredientDataGridView.AllowUserToDeleteRows = False
-        Me.IngredientDataGridView.AutoGenerateColumns = False
-        Me.IngredientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.IngredientDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MenuItemIDDataGridViewTextBoxColumn, Me.MenuItemNameDataGridViewTextBoxColumn, Me.CategoryDataGridViewTextBoxColumn, Me.MenuItemPriceDataGridViewTextBoxColumn})
-        Me.IngredientDataGridView.DataSource = Me.MenuItemBindingSource
-        Me.IngredientDataGridView.Location = New System.Drawing.Point(12, 85)
-        Me.IngredientDataGridView.Name = "IngredientDataGridView"
-        Me.IngredientDataGridView.ReadOnly = True
-        Me.IngredientDataGridView.RowTemplate.Height = 24
-        Me.IngredientDataGridView.Size = New System.Drawing.Size(707, 499)
-        Me.IngredientDataGridView.TabIndex = 14
+        Me.MenuItemDataGridView.AllowUserToAddRows = False
+        Me.MenuItemDataGridView.AllowUserToDeleteRows = False
+        Me.MenuItemDataGridView.AutoGenerateColumns = False
+        Me.MenuItemDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.MenuItemDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MenuItemIDDataGridViewTextBoxColumn, Me.MenuItemNameDataGridViewTextBoxColumn, Me.CategoryDataGridViewTextBoxColumn, Me.MenuItemPriceDataGridViewTextBoxColumn})
+        Me.MenuItemDataGridView.DataSource = Me.MenuItemBindingSource
+        Me.MenuItemDataGridView.Location = New System.Drawing.Point(12, 85)
+        Me.MenuItemDataGridView.Name = "MenuItemDataGridView"
+        Me.MenuItemDataGridView.ReadOnly = True
+        Me.MenuItemDataGridView.RowTemplate.Height = 24
+        Me.MenuItemDataGridView.Size = New System.Drawing.Size(707, 499)
+        Me.MenuItemDataGridView.TabIndex = 14
+        '
+        'ComboBoxCategory
+        '
+        Me.ComboBoxCategory.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MenuItemBindingSource, "Category", True))
+        Me.ComboBoxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBoxCategory.FormattingEnabled = True
+        Me.ComboBoxCategory.Items.AddRange(New Object() {"Briyani" & Global.Microsoft.VisualBasic.ChrW(9), "Bunnies", "Chutney", "Veg Curries", "Non-Veg Curries", "Veg Dishes", "Non-Veg Dishes", "Hot Drinks", "Cold Drinks", "Extras/Sides", "Pasta", "Regulars", "Roti Rolls", "Specials", "Toasted Sandwiches"})
+        Me.ComboBoxCategory.Location = New System.Drawing.Point(946, 273)
+        Me.ComboBoxCategory.Name = "ComboBoxCategory"
+        Me.ComboBoxCategory.Size = New System.Drawing.Size(306, 24)
+        Me.ComboBoxCategory.TabIndex = 27
+        '
+        'MenuItemTableAdapter
+        '
+        Me.MenuItemTableAdapter.ClearBeforeFill = True
         '
         'MenuItemIDDataGridViewTextBoxColumn
         '
@@ -213,24 +229,12 @@ Partial Class FormViewMenu
         '
         Me.MenuItemPriceDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.MenuItemPriceDataGridViewTextBoxColumn.DataPropertyName = "MenuItemPrice"
+        DataGridViewCellStyle1.Format = "C2"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.MenuItemPriceDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
         Me.MenuItemPriceDataGridViewTextBoxColumn.HeaderText = "MenuItemPrice"
         Me.MenuItemPriceDataGridViewTextBoxColumn.Name = "MenuItemPriceDataGridViewTextBoxColumn"
         Me.MenuItemPriceDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ComboBoxCategory
-        '
-        Me.ComboBoxCategory.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MenuItemBindingSource, "Category", True))
-        Me.ComboBoxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBoxCategory.FormattingEnabled = True
-        Me.ComboBoxCategory.Items.AddRange(New Object() {"Briyani" & Global.Microsoft.VisualBasic.ChrW(9), "Bunnies", "Chutney", "Veg Curries", "Non-Veg Curries", "Veg Dishes", "Non-Veg Dishes", "Hot Drinks", "Cold Drinks", "Extras/Sides", "Pasta", "Regulars", "Roti Rolls", "Specials", "Toasted Sandwiches"})
-        Me.ComboBoxCategory.Location = New System.Drawing.Point(946, 273)
-        Me.ComboBoxCategory.Name = "ComboBoxCategory"
-        Me.ComboBoxCategory.Size = New System.Drawing.Size(306, 24)
-        Me.ComboBoxCategory.TabIndex = 27
-        '
-        'MenuItemTableAdapter
-        '
-        Me.MenuItemTableAdapter.ClearBeforeFill = True
         '
         'FormViewMenu
         '
@@ -251,12 +255,12 @@ Partial Class FormViewMenu
         Me.Controls.Add(Me.ButtonUpdate)
         Me.Controls.Add(Me.ButtonAdd)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.IngredientDataGridView)
+        Me.Controls.Add(Me.MenuItemDataGridView)
         Me.Name = "FormViewMenu"
         Me.Text = "FormViewMenu"
         CType(Me.MenuItemBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IngredientDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MenuItemDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -273,13 +277,13 @@ Partial Class FormViewMenu
     Friend WithEvents ButtonUpdate As Button
     Friend WithEvents ButtonAdd As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents IngredientDataGridView As DataGridView
+    Friend WithEvents MenuItemDataGridView As DataGridView
     Friend WithEvents Group22DataSet As group22DataSet
     Friend WithEvents MenuItemBindingSource As BindingSource
     Friend WithEvents MenuItemTableAdapter As group22DataSetTableAdapters.MenuItemTableAdapter
+    Friend WithEvents ComboBoxCategory As ComboBox
     Friend WithEvents MenuItemIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MenuItemNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CategoryDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MenuItemPriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ComboBoxCategory As ComboBox
 End Class
