@@ -107,7 +107,6 @@ Partial Class FormMenu
         '
         'ItemTxtbox
         '
-        Me.ItemTxtbox.Enabled = False
         Me.ItemTxtbox.Location = New System.Drawing.Point(515, 46)
         Me.ItemTxtbox.Name = "ItemTxtbox"
         Me.ItemTxtbox.Size = New System.Drawing.Size(67, 20)

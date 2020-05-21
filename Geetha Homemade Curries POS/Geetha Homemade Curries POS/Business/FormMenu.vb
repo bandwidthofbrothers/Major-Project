@@ -7,11 +7,12 @@ Public Class FormMenu
 
         Dim command As New SqlCommand(query, connection)
 
-        'connection.Open()
+        connection.Open()
 
         command.ExecuteNonQuery()
 
         connection.Close()
+
     End Sub
 
     Private Sub Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
