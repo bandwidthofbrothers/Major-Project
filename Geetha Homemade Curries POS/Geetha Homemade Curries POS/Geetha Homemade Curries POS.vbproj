@@ -84,6 +84,12 @@
     <Compile Include="Business\AddCustomer.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Business\FormAddMenuItem.Designer.vb">
+      <DependentUpon>FormAddMenuItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\FormAddMenuItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Business\FormSales.Designer.vb">
       <DependentUpon>FormSales.vb</DependentUpon>
     </Compile>
@@ -148,6 +154,12 @@
       <DependentUpon>FormMenu.vb</DependentUpon>
     </Compile>
     <Compile Include="Business\FormMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Business\FormViewMenu.Designer.vb">
+      <DependentUpon>FormViewMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\FormViewMenu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Business\ViewCustomers.Designer.vb">
@@ -221,6 +233,9 @@
     <EmbeddedResource Include="Business\AddCustomer.resx">
       <DependentUpon>AddCustomer.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Business\FormAddMenuItem.resx">
+      <DependentUpon>FormAddMenuItem.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Business\FormSales.resx">
       <DependentUpon>FormSales.vb</DependentUpon>
     </EmbeddedResource>
@@ -253,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Business\FormMenu.resx">
       <DependentUpon>FormMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\FormViewMenu.resx">
+      <DependentUpon>FormViewMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Business\ViewCustomers.resx">
       <DependentUpon>ViewCustomers.vb</DependentUpon>

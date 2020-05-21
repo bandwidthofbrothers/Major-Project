@@ -9,3 +9,8 @@ Namespace group22DataSetTableAdapters
 
     End Class
 End Namespace
+
+Namespace group22DataSetTableAdapters
+    Partial Public Class MenuItemTableAdapter
+    End Class
+End Namespace
