@@ -39,10 +39,9 @@ Partial Class FormMenu
         '
         'UpdateBtn
         '
-        Me.UpdateBtn.Location = New System.Drawing.Point(864, 379)
-        Me.UpdateBtn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.UpdateBtn.Location = New System.Drawing.Point(648, 308)
         Me.UpdateBtn.Name = "UpdateBtn"
-        Me.UpdateBtn.Size = New System.Drawing.Size(116, 30)
+        Me.UpdateBtn.Size = New System.Drawing.Size(87, 24)
         Me.UpdateBtn.TabIndex = 34
         Me.UpdateBtn.Text = "Update Item"
         Me.UpdateBtn.UseVisualStyleBackColor = True
@@ -50,65 +49,58 @@ Partial Class FormMenu
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(684, 205)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(513, 167)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(44, 17)
+        Me.Label7.Size = New System.Drawing.Size(34, 13)
         Me.Label7.TabIndex = 32
         Me.Label7.Text = "Price "
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(684, 144)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(513, 117)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(65, 17)
+        Me.Label4.Size = New System.Drawing.Size(49, 13)
         Me.Label4.TabIndex = 29
         Me.Label4.Text = "Category"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(685, 85)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(514, 69)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(75, 17)
+        Me.Label2.Size = New System.Drawing.Size(58, 13)
         Me.Label2.TabIndex = 27
         Me.Label2.Text = "Item Name"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(683, 37)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(512, 30)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 17)
+        Me.Label1.Size = New System.Drawing.Size(44, 13)
         Me.Label1.TabIndex = 26
         Me.Label1.Text = " Item ID"
         '
         'PriceTxtbox
         '
-        Me.PriceTxtbox.Location = New System.Drawing.Point(688, 225)
-        Me.PriceTxtbox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PriceTxtbox.Location = New System.Drawing.Point(516, 183)
         Me.PriceTxtbox.Name = "PriceTxtbox"
-        Me.PriceTxtbox.Size = New System.Drawing.Size(203, 22)
+        Me.PriceTxtbox.Size = New System.Drawing.Size(153, 20)
         Me.PriceTxtbox.TabIndex = 25
         '
         'NameTxtbox
         '
-        Me.NameTxtbox.Location = New System.Drawing.Point(687, 105)
-        Me.NameTxtbox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.NameTxtbox.Location = New System.Drawing.Point(515, 85)
         Me.NameTxtbox.Name = "NameTxtbox"
-        Me.NameTxtbox.Size = New System.Drawing.Size(253, 22)
+        Me.NameTxtbox.Size = New System.Drawing.Size(191, 20)
         Me.NameTxtbox.TabIndex = 21
         '
         'AddBtn
         '
-        Me.AddBtn.Location = New System.Drawing.Point(689, 379)
-        Me.AddBtn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.AddBtn.Location = New System.Drawing.Point(517, 308)
         Me.AddBtn.Name = "AddBtn"
-        Me.AddBtn.Size = New System.Drawing.Size(116, 30)
+        Me.AddBtn.Size = New System.Drawing.Size(87, 24)
         Me.AddBtn.TabIndex = 20
         Me.AddBtn.Text = "Add Item"
         Me.AddBtn.UseVisualStyleBackColor = True
@@ -116,18 +108,16 @@ Partial Class FormMenu
         'ItemTxtbox
         '
         Me.ItemTxtbox.Enabled = False
-        Me.ItemTxtbox.Location = New System.Drawing.Point(687, 57)
-        Me.ItemTxtbox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ItemTxtbox.Location = New System.Drawing.Point(515, 46)
         Me.ItemTxtbox.Name = "ItemTxtbox"
-        Me.ItemTxtbox.Size = New System.Drawing.Size(88, 22)
+        Me.ItemTxtbox.Size = New System.Drawing.Size(67, 20)
         Me.ItemTxtbox.TabIndex = 19
         '
         'DeleteBtn
         '
-        Me.DeleteBtn.Location = New System.Drawing.Point(212, 379)
-        Me.DeleteBtn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DeleteBtn.Location = New System.Drawing.Point(159, 308)
         Me.DeleteBtn.Name = "DeleteBtn"
-        Me.DeleteBtn.Size = New System.Drawing.Size(119, 32)
+        Me.DeleteBtn.Size = New System.Drawing.Size(89, 26)
         Me.DeleteBtn.TabIndex = 35
         Me.DeleteBtn.Text = "Delete"
         Me.DeleteBtn.UseVisualStyleBackColor = True
@@ -137,25 +127,23 @@ Partial Class FormMenu
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(16, 57)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 46)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(607, 255)
+        Me.DataGridView1.Size = New System.Drawing.Size(455, 207)
         Me.DataGridView1.TabIndex = 36
         '
         'CategoryTxtbox
         '
-        Me.CategoryTxtbox.Location = New System.Drawing.Point(686, 163)
-        Me.CategoryTxtbox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CategoryTxtbox.Location = New System.Drawing.Point(514, 132)
         Me.CategoryTxtbox.Name = "CategoryTxtbox"
-        Me.CategoryTxtbox.Size = New System.Drawing.Size(203, 22)
+        Me.CategoryTxtbox.Size = New System.Drawing.Size(153, 20)
         Me.CategoryTxtbox.TabIndex = 37
         '
         'FormMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1000, 443)
+        Me.ClientSize = New System.Drawing.Size(750, 360)
         Me.Controls.Add(Me.CategoryTxtbox)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.DeleteBtn)
@@ -168,7 +156,6 @@ Partial Class FormMenu
         Me.Controls.Add(Me.NameTxtbox)
         Me.Controls.Add(Me.AddBtn)
         Me.Controls.Add(Me.ItemTxtbox)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FormMenu"
         Me.Text = "Menu"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

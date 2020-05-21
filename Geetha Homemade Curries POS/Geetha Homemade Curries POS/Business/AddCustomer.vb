@@ -15,8 +15,6 @@ Public Class AddCustomer
         'TODO: This line of code loads data into the 'Group22DataSet.Customer' table. You can move, or remove it, as needed.
         Me.CustomerTableAdapter.Fill(Me.Group22DataSet.Customer)
 
-
-        CustomerIDTextBox.Clear()
         FirstNameTextBox.Clear()
         SurnameTextBox.Clear()
         PhoneNumberTextBox.Clear()
@@ -34,12 +32,11 @@ Public Class AddCustomer
         command.ExecuteNonQuery()
 
         connection.Close()
-
     End Sub
 
     Private Sub AddCustBtn_Click(sender As Object, e As EventArgs) Handles AddCustBtn.Click
 
-        Dim insertQuery As String = "INSERT INTO Customer(CustomerID, FirstName, Surname, PhoneNumber, AmountDue)VALUES('" & CustomerIDTextBox.Text & "','" & FirstNameTextBox.Text & "','" & SurnameTextBox.Text & "','" & PhoneNumberTextBox.Text & "','" & AmountDueTextBox.Text & "')"
+        Dim insertQuery As String = "INSERT INTO Customer(FirstName, Surname, PhoneNumber, AmountDue)VALUES('" & FirstNameTextBox.Text & "','" & SurnameTextBox.Text & "','" & PhoneNumberTextBox.Text & "','" & AmountDueTextBox.Text & "')"
 
         ExecuteQuery(insertQuery)
 

@@ -23,7 +23,6 @@ Partial Class AddCustomer
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim CustomerIDLabel As System.Windows.Forms.Label
         Dim FirstNameLabel As System.Windows.Forms.Label
         Dim SurnameLabel As System.Windows.Forms.Label
         Dim PhoneNumberLabel As System.Windows.Forms.Label
@@ -32,14 +31,12 @@ Partial Class AddCustomer
         Me.CustomerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CustomerTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.CustomerTableAdapter()
         Me.TableAdapterManager = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.TableAdapterManager()
-        Me.CustomerIDTextBox = New System.Windows.Forms.TextBox()
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
         Me.SurnameTextBox = New System.Windows.Forms.TextBox()
         Me.PhoneNumberTextBox = New System.Windows.Forms.TextBox()
         Me.AmountDueTextBox = New System.Windows.Forms.TextBox()
         Me.AddCustBtn = New System.Windows.Forms.Button()
         Me.CloseBtn = New System.Windows.Forms.Button()
-        CustomerIDLabel = New System.Windows.Forms.Label()
         FirstNameLabel = New System.Windows.Forms.Label()
         SurnameLabel = New System.Windows.Forms.Label()
         PhoneNumberLabel = New System.Windows.Forms.Label()
@@ -48,23 +45,12 @@ Partial Class AddCustomer
         CType(Me.CustomerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'CustomerIDLabel
-        '
-        CustomerIDLabel.AutoSize = True
-        CustomerIDLabel.BackColor = System.Drawing.Color.Transparent
-        CustomerIDLabel.ForeColor = System.Drawing.Color.White
-        CustomerIDLabel.Location = New System.Drawing.Point(75, 66)
-        CustomerIDLabel.Name = "CustomerIDLabel"
-        CustomerIDLabel.Size = New System.Drawing.Size(103, 20)
-        CustomerIDLabel.TabIndex = 1
-        CustomerIDLabel.Text = "Customer ID:"
-        '
         'FirstNameLabel
         '
         FirstNameLabel.AutoSize = True
         FirstNameLabel.BackColor = System.Drawing.Color.Transparent
         FirstNameLabel.ForeColor = System.Drawing.Color.White
-        FirstNameLabel.Location = New System.Drawing.Point(75, 108)
+        FirstNameLabel.Location = New System.Drawing.Point(76, 66)
         FirstNameLabel.Name = "FirstNameLabel"
         FirstNameLabel.Size = New System.Drawing.Size(90, 20)
         FirstNameLabel.TabIndex = 3
@@ -75,7 +61,7 @@ Partial Class AddCustomer
         SurnameLabel.AutoSize = True
         SurnameLabel.BackColor = System.Drawing.Color.Transparent
         SurnameLabel.ForeColor = System.Drawing.Color.White
-        SurnameLabel.Location = New System.Drawing.Point(75, 150)
+        SurnameLabel.Location = New System.Drawing.Point(76, 108)
         SurnameLabel.Name = "SurnameLabel"
         SurnameLabel.Size = New System.Drawing.Size(78, 20)
         SurnameLabel.TabIndex = 5
@@ -86,7 +72,7 @@ Partial Class AddCustomer
         PhoneNumberLabel.AutoSize = True
         PhoneNumberLabel.BackColor = System.Drawing.Color.Transparent
         PhoneNumberLabel.ForeColor = System.Drawing.Color.White
-        PhoneNumberLabel.Location = New System.Drawing.Point(75, 191)
+        PhoneNumberLabel.Location = New System.Drawing.Point(76, 149)
         PhoneNumberLabel.Name = "PhoneNumberLabel"
         PhoneNumberLabel.Size = New System.Drawing.Size(119, 20)
         PhoneNumberLabel.TabIndex = 7
@@ -97,7 +83,7 @@ Partial Class AddCustomer
         AmountDueLabel.AutoSize = True
         AmountDueLabel.BackColor = System.Drawing.Color.Transparent
         AmountDueLabel.ForeColor = System.Drawing.Color.White
-        AmountDueLabel.Location = New System.Drawing.Point(75, 232)
+        AmountDueLabel.Location = New System.Drawing.Point(76, 190)
         AmountDueLabel.Name = "AmountDueLabel"
         AmountDueLabel.Size = New System.Drawing.Size(103, 20)
         AmountDueLabel.TabIndex = 9
@@ -128,19 +114,10 @@ Partial Class AddCustomer
         Me.TableAdapterManager.MenuItemTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'CustomerIDTextBox
-        '
-        Me.CustomerIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "CustomerID", True))
-        Me.CustomerIDTextBox.Location = New System.Drawing.Point(284, 66)
-        Me.CustomerIDTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.CustomerIDTextBox.Name = "CustomerIDTextBox"
-        Me.CustomerIDTextBox.Size = New System.Drawing.Size(100, 26)
-        Me.CustomerIDTextBox.TabIndex = 2
-        '
         'FirstNameTextBox
         '
         Me.FirstNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "FirstName", True))
-        Me.FirstNameTextBox.Location = New System.Drawing.Point(284, 108)
+        Me.FirstNameTextBox.Location = New System.Drawing.Point(285, 66)
         Me.FirstNameTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.FirstNameTextBox.Name = "FirstNameTextBox"
         Me.FirstNameTextBox.Size = New System.Drawing.Size(100, 26)
@@ -149,7 +126,7 @@ Partial Class AddCustomer
         'SurnameTextBox
         '
         Me.SurnameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "Surname", True))
-        Me.SurnameTextBox.Location = New System.Drawing.Point(284, 150)
+        Me.SurnameTextBox.Location = New System.Drawing.Point(285, 108)
         Me.SurnameTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.SurnameTextBox.Name = "SurnameTextBox"
         Me.SurnameTextBox.Size = New System.Drawing.Size(100, 26)
@@ -158,7 +135,7 @@ Partial Class AddCustomer
         'PhoneNumberTextBox
         '
         Me.PhoneNumberTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "PhoneNumber", True))
-        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(284, 191)
+        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(285, 149)
         Me.PhoneNumberTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PhoneNumberTextBox.Name = "PhoneNumberTextBox"
         Me.PhoneNumberTextBox.Size = New System.Drawing.Size(100, 26)
@@ -167,7 +144,7 @@ Partial Class AddCustomer
         'AmountDueTextBox
         '
         Me.AmountDueTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "AmountDue", True))
-        Me.AmountDueTextBox.Location = New System.Drawing.Point(284, 232)
+        Me.AmountDueTextBox.Location = New System.Drawing.Point(285, 190)
         Me.AmountDueTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.AmountDueTextBox.Name = "AmountDueTextBox"
         Me.AmountDueTextBox.Size = New System.Drawing.Size(100, 26)
@@ -175,7 +152,7 @@ Partial Class AddCustomer
         '
         'AddCustBtn
         '
-        Me.AddCustBtn.Location = New System.Drawing.Point(284, 311)
+        Me.AddCustBtn.Location = New System.Drawing.Point(285, 269)
         Me.AddCustBtn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.AddCustBtn.Name = "AddCustBtn"
         Me.AddCustBtn.Size = New System.Drawing.Size(100, 38)
@@ -185,7 +162,7 @@ Partial Class AddCustomer
         '
         'CloseBtn
         '
-        Me.CloseBtn.Location = New System.Drawing.Point(79, 311)
+        Me.CloseBtn.Location = New System.Drawing.Point(80, 269)
         Me.CloseBtn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CloseBtn.Name = "CloseBtn"
         Me.CloseBtn.Size = New System.Drawing.Size(100, 38)
@@ -198,11 +175,9 @@ Partial Class AddCustomer
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
-        Me.ClientSize = New System.Drawing.Size(477, 428)
+        Me.ClientSize = New System.Drawing.Size(500, 379)
         Me.Controls.Add(Me.CloseBtn)
         Me.Controls.Add(Me.AddCustBtn)
-        Me.Controls.Add(CustomerIDLabel)
-        Me.Controls.Add(Me.CustomerIDTextBox)
         Me.Controls.Add(FirstNameLabel)
         Me.Controls.Add(Me.FirstNameTextBox)
         Me.Controls.Add(SurnameLabel)
@@ -225,7 +200,6 @@ Partial Class AddCustomer
     Friend WithEvents CustomerBindingSource As BindingSource
     Friend WithEvents CustomerTableAdapter As group22DataSetTableAdapters.CustomerTableAdapter
     Friend WithEvents TableAdapterManager As group22DataSetTableAdapters.TableAdapterManager
-    Friend WithEvents CustomerIDTextBox As TextBox
     Friend WithEvents FirstNameTextBox As TextBox
     Friend WithEvents SurnameTextBox As TextBox
     Friend WithEvents PhoneNumberTextBox As TextBox
