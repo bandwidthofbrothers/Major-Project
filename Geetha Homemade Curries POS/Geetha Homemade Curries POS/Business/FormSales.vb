@@ -14,4 +14,7 @@
         End Try
     End Sub
 
+    Private Sub ButtonBack_Click(sender As Object, e As EventArgs) Handles ButtonBack.Click
+        setUpPanelForm(FormSalesCategories)
+    End Sub
 End Class
