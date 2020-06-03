@@ -34,12 +34,14 @@ Partial Class FormMenu
         Me.DeleteBtn = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.CategoryTxtbox = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.SearchBtn = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'UpdateBtn
         '
-        Me.UpdateBtn.Location = New System.Drawing.Point(648, 308)
+        Me.UpdateBtn.Location = New System.Drawing.Point(651, 282)
         Me.UpdateBtn.Name = "UpdateBtn"
         Me.UpdateBtn.Size = New System.Drawing.Size(87, 24)
         Me.UpdateBtn.TabIndex = 34
@@ -98,7 +100,7 @@ Partial Class FormMenu
         '
         'AddBtn
         '
-        Me.AddBtn.Location = New System.Drawing.Point(517, 308)
+        Me.AddBtn.Location = New System.Drawing.Point(599, 327)
         Me.AddBtn.Name = "AddBtn"
         Me.AddBtn.Size = New System.Drawing.Size(87, 24)
         Me.AddBtn.TabIndex = 20
@@ -114,7 +116,7 @@ Partial Class FormMenu
         '
         'DeleteBtn
         '
-        Me.DeleteBtn.Location = New System.Drawing.Point(159, 308)
+        Me.DeleteBtn.Location = New System.Drawing.Point(531, 280)
         Me.DeleteBtn.Name = "DeleteBtn"
         Me.DeleteBtn.Size = New System.Drawing.Size(89, 26)
         Me.DeleteBtn.TabIndex = 35
@@ -126,9 +128,9 @@ Partial Class FormMenu
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 46)
+        Me.DataGridView1.Location = New System.Drawing.Point(30, 85)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(455, 207)
+        Me.DataGridView1.Size = New System.Drawing.Size(455, 291)
         Me.DataGridView1.TabIndex = 36
         '
         'CategoryTxtbox
@@ -138,11 +140,30 @@ Partial Class FormMenu
         Me.CategoryTxtbox.Size = New System.Drawing.Size(153, 20)
         Me.CategoryTxtbox.TabIndex = 37
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(30, 27)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(224, 20)
+        Me.TextBox1.TabIndex = 38
+        '
+        'SearchBtn
+        '
+        Me.SearchBtn.Location = New System.Drawing.Point(294, 22)
+        Me.SearchBtn.Name = "SearchBtn"
+        Me.SearchBtn.Size = New System.Drawing.Size(100, 28)
+        Me.SearchBtn.TabIndex = 39
+        Me.SearchBtn.Text = "Search"
+        Me.SearchBtn.UseVisualStyleBackColor = True
+        '
         'FormMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(750, 360)
+        Me.BackgroundImage = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
+        Me.ClientSize = New System.Drawing.Size(750, 436)
+        Me.Controls.Add(Me.SearchBtn)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.CategoryTxtbox)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.DeleteBtn)
@@ -175,4 +196,6 @@ Partial Class FormMenu
     Friend WithEvents DeleteBtn As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents CategoryTxtbox As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents SearchBtn As Button
 End Class
