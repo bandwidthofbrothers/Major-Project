@@ -13,6 +13,7 @@ Public Class ViewCustomers
 
     Private Sub ViewCustomers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+
         'TODO: This line of code loads data into the 'Group22D ataSet.Customer' table. You can move, or remove it, as needed.
         Me.CustomerTableAdapter.Fill(Me.Group22DataSet.Customer)
         'TODO: This line of code loads data into the 'Group22DataSet.CustomerOrder' table. You can move, or remove it, as needed.
