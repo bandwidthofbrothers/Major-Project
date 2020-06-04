@@ -162,12 +162,6 @@
     <Compile Include="Business\FormAddExpense.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Business\FormMenu.Designer.vb">
-      <DependentUpon>FormMenu.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Business\FormMenu.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Business\FormViewMenu.Designer.vb">
       <DependentUpon>FormViewMenu.vb</DependentUpon>
     </Compile>
@@ -283,9 +277,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Business\FormAddExpense.resx">
       <DependentUpon>FormAddExpense.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Business\FormMenu.resx">
-      <DependentUpon>FormMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Business\FormViewMenu.resx">
       <DependentUpon>FormViewMenu.vb</DependentUpon>
