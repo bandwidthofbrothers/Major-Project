@@ -27,8 +27,8 @@ Partial Class ViewCustomers
         Dim SurnameLabel As System.Windows.Forms.Label
         Dim PhoneNumberLabel As System.Windows.Forms.Label
         Dim AmountDueLabel As System.Windows.Forms.Label
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim CustomerIDLabel As System.Windows.Forms.Label
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
         Me.CustomerOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -107,6 +107,17 @@ Partial Class ViewCustomers
         AmountDueLabel.TabIndex = 54
         AmountDueLabel.Text = "Amount Due:"
         '
+        'CustomerIDLabel
+        '
+        CustomerIDLabel.AutoSize = True
+        CustomerIDLabel.ForeColor = System.Drawing.Color.White
+        CustomerIDLabel.Image = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
+        CustomerIDLabel.Location = New System.Drawing.Point(1025, 173)
+        CustomerIDLabel.Name = "CustomerIDLabel"
+        CustomerIDLabel.Size = New System.Drawing.Size(103, 20)
+        CustomerIDLabel.TabIndex = 59
+        CustomerIDLabel.Text = "Customer ID:"
+        '
         'Label10
         '
         Me.Label10.AutoSize = True
@@ -178,7 +189,7 @@ Partial Class ViewCustomers
         '
         Me.FirstNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.FirstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName"
-        Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "First Name"
+        Me.FirstNameDataGridViewTextBoxColumn.HeaderText = "Name"
         Me.FirstNameDataGridViewTextBoxColumn.Name = "FirstNameDataGridViewTextBoxColumn"
         Me.FirstNameDataGridViewTextBoxColumn.ReadOnly = True
         '
@@ -202,9 +213,9 @@ Partial Class ViewCustomers
         '
         Me.AmountDueDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.AmountDueDataGridViewTextBoxColumn.DataPropertyName = "AmountDue"
-        DataGridViewCellStyle2.Format = "C2"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.AmountDueDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Format = "C2"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.AmountDueDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
         Me.AmountDueDataGridViewTextBoxColumn.HeaderText = "Amount Due"
         Me.AmountDueDataGridViewTextBoxColumn.Name = "AmountDueDataGridViewTextBoxColumn"
         Me.AmountDueDataGridViewTextBoxColumn.ReadOnly = True
@@ -282,30 +293,20 @@ Partial Class ViewCustomers
         '
         'SearchTextBox
         '
+        Me.SearchTextBox.ForeColor = System.Drawing.Color.Gray
         Me.SearchTextBox.Location = New System.Drawing.Point(43, 122)
         Me.SearchTextBox.Name = "SearchTextBox"
-        Me.SearchTextBox.Size = New System.Drawing.Size(327, 26)
+        Me.SearchTextBox.Size = New System.Drawing.Size(333, 26)
         Me.SearchTextBox.TabIndex = 58
         '
         'SearchBtn
         '
-        Me.SearchBtn.Location = New System.Drawing.Point(410, 122)
+        Me.SearchBtn.Location = New System.Drawing.Point(403, 114)
         Me.SearchBtn.Name = "SearchBtn"
-        Me.SearchBtn.Size = New System.Drawing.Size(103, 28)
+        Me.SearchBtn.Size = New System.Drawing.Size(98, 43)
         Me.SearchBtn.TabIndex = 59
         Me.SearchBtn.Text = "Search"
         Me.SearchBtn.UseVisualStyleBackColor = True
-        '
-        'CustomerIDLabel
-        '
-        CustomerIDLabel.AutoSize = True
-        CustomerIDLabel.ForeColor = System.Drawing.Color.White
-        CustomerIDLabel.Image = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
-        CustomerIDLabel.Location = New System.Drawing.Point(1025, 173)
-        CustomerIDLabel.Name = "CustomerIDLabel"
-        CustomerIDLabel.Size = New System.Drawing.Size(103, 20)
-        CustomerIDLabel.TabIndex = 59
-        CustomerIDLabel.Text = "Customer ID:"
         '
         'CustomerIDTextBox
         '
@@ -367,12 +368,12 @@ Partial Class ViewCustomers
     Friend WithEvents AddCustBtn As Button
     Friend WithEvents DltCustBtn As Button
     Friend WithEvents UpdateCustBtn As Button
+    Friend WithEvents SearchTextBox As TextBox
+    Friend WithEvents SearchBtn As Button
+    Friend WithEvents CustomerIDTextBox As TextBox
     Friend WithEvents CustomerIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents FirstNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SurnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PhoneNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AmountDueDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SearchTextBox As TextBox
-    Friend WithEvents SearchBtn As Button
-    Friend WithEvents CustomerIDTextBox As TextBox
 End Class

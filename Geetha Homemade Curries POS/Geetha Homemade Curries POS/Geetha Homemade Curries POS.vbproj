@@ -167,6 +167,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet.vb">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DB.vb" />
     <Compile Include="group22DataSet.Designer.vb">
       <AutoGen>True</AutoGen>
