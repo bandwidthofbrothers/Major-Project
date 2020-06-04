@@ -37,34 +37,38 @@ Partial Class FormAddMenuItem
         '
         'ButtonClose
         '
-        Me.ButtonClose.Location = New System.Drawing.Point(47, 251)
+        Me.ButtonClose.Location = New System.Drawing.Point(35, 204)
+        Me.ButtonClose.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ButtonClose.Name = "ButtonClose"
-        Me.ButtonClose.Size = New System.Drawing.Size(100, 37)
+        Me.ButtonClose.Size = New System.Drawing.Size(75, 30)
         Me.ButtonClose.TabIndex = 14
         Me.ButtonClose.Text = "Close"
         Me.ButtonClose.UseVisualStyleBackColor = True
         '
         'ButtonAdd
         '
-        Me.ButtonAdd.Location = New System.Drawing.Point(220, 251)
+        Me.ButtonAdd.Location = New System.Drawing.Point(165, 204)
+        Me.ButtonAdd.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ButtonAdd.Name = "ButtonAdd"
-        Me.ButtonAdd.Size = New System.Drawing.Size(306, 36)
+        Me.ButtonAdd.Size = New System.Drawing.Size(230, 29)
         Me.ButtonAdd.TabIndex = 13
         Me.ButtonAdd.Text = "Add"
         Me.ButtonAdd.UseVisualStyleBackColor = True
         '
         'TextBoxPrice
         '
-        Me.TextBoxPrice.Location = New System.Drawing.Point(220, 183)
+        Me.TextBoxPrice.Location = New System.Drawing.Point(165, 149)
+        Me.TextBoxPrice.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBoxPrice.Name = "TextBoxPrice"
-        Me.TextBoxPrice.Size = New System.Drawing.Size(306, 22)
+        Me.TextBoxPrice.Size = New System.Drawing.Size(230, 20)
         Me.TextBoxPrice.TabIndex = 12
         '
         'TextBoxName
         '
-        Me.TextBoxName.Location = New System.Drawing.Point(220, 35)
+        Me.TextBoxName.Location = New System.Drawing.Point(165, 28)
+        Me.TextBoxName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBoxName.Name = "TextBoxName"
-        Me.TextBoxName.Size = New System.Drawing.Size(306, 22)
+        Me.TextBoxName.Size = New System.Drawing.Size(230, 20)
         Me.TextBoxName.TabIndex = 11
         '
         'Label2
@@ -72,10 +76,9 @@ Partial Class FormAddMenuItem
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(43, 110)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(32, 89)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(65, 17)
+        Me.Label2.Size = New System.Drawing.Size(49, 13)
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "Category"
         '
@@ -84,10 +87,9 @@ Partial Class FormAddMenuItem
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(43, 34)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(32, 28)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(45, 17)
+        Me.Label1.Size = New System.Drawing.Size(35, 13)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Name"
         '
@@ -96,9 +98,10 @@ Partial Class FormAddMenuItem
         Me.ComboBoxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBoxCategory.FormattingEnabled = True
         Me.ComboBoxCategory.Items.AddRange(New Object() {"Briyani" & Global.Microsoft.VisualBasic.ChrW(9), "Bunnies", "Chutney", "Veg Curries", "Non-Veg Curries", "Veg Dishes", "Non-Veg Dishes", "Hot Drinks", "Cold Drinks", "Extras/Sides", "Pasta", "Regulars", "Roti Rolls", "Specials", "Toasted Sandwiches"})
-        Me.ComboBoxCategory.Location = New System.Drawing.Point(220, 110)
+        Me.ComboBoxCategory.Location = New System.Drawing.Point(165, 89)
+        Me.ComboBoxCategory.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ComboBoxCategory.Name = "ComboBoxCategory"
-        Me.ComboBoxCategory.Size = New System.Drawing.Size(306, 24)
+        Me.ComboBoxCategory.Size = New System.Drawing.Size(230, 21)
         Me.ComboBoxCategory.TabIndex = 15
         '
         'Label3
@@ -106,10 +109,9 @@ Partial Class FormAddMenuItem
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(43, 186)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(32, 151)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(40, 17)
+        Me.Label3.Size = New System.Drawing.Size(31, 13)
         Me.Label3.TabIndex = 16
         Me.Label3.Text = "Price"
         '
@@ -124,10 +126,10 @@ Partial Class FormAddMenuItem
         '
         'FormAddMenuItem
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
-        Me.ClientSize = New System.Drawing.Size(590, 332)
+        Me.ClientSize = New System.Drawing.Size(442, 270)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.ComboBoxCategory)
         Me.Controls.Add(Me.ButtonClose)
@@ -136,6 +138,7 @@ Partial Class FormAddMenuItem
         Me.Controls.Add(Me.TextBoxName)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "FormAddMenuItem"
         Me.Text = "FormAddMenuItem"
         CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).EndInit()
