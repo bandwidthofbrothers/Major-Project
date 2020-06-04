@@ -84,6 +84,12 @@
     <Compile Include="Business\AddCustomer.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Business\FormReports.designer.vb">
+      <DependentUpon>FormReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\FormReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Business\FormAddMenuItem.Designer.vb">
       <DependentUpon>FormAddMenuItem.vb</DependentUpon>
     </Compile>
@@ -96,10 +102,22 @@
     <Compile Include="Business\FormSales.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Business\FormSalesAccount.Designer.vb">
+      <DependentUpon>FormSalesAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\FormSalesAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Business\FormSalesCategories.Designer.vb">
       <DependentUpon>FormSalesCategories.vb</DependentUpon>
     </Compile>
     <Compile Include="Business\FormSalesCategories.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Business\FormSalesCheckout.Designer.vb">
+      <DependentUpon>FormSalesCheckout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\FormSalesCheckout.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Business\FormSalesCurries.Designer.vb">
@@ -142,12 +160,6 @@
       <DependentUpon>FormAddExpense.vb</DependentUpon>
     </Compile>
     <Compile Include="Business\FormAddExpense.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Business\FormReports.Designer.vb">
-      <DependentUpon>FormReports.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Business\FormReports.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Business\FormMenu.Designer.vb">
@@ -233,14 +245,23 @@
     <EmbeddedResource Include="Business\AddCustomer.resx">
       <DependentUpon>AddCustomer.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Business\FormReports.resx">
+      <DependentUpon>FormReports.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Business\FormAddMenuItem.resx">
       <DependentUpon>FormAddMenuItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Business\FormSales.resx">
       <DependentUpon>FormSales.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Business\FormSalesAccount.resx">
+      <DependentUpon>FormSalesAccount.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Business\FormSalesCategories.resx">
       <DependentUpon>FormSalesCategories.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business\FormSalesCheckout.resx">
+      <DependentUpon>FormSalesCheckout.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Business\FormSalesCurries.resx">
       <DependentUpon>FormSalesCurries.vb</DependentUpon>
@@ -262,9 +283,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Business\FormAddExpense.resx">
       <DependentUpon>FormAddExpense.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Business\FormReports.resx">
-      <DependentUpon>FormReports.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Business\FormMenu.resx">
       <DependentUpon>FormMenu.vb</DependentUpon>

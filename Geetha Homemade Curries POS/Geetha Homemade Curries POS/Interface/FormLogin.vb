@@ -9,6 +9,9 @@
             Me.Close()
 
             Dim jobTitle As String = EmployeeTableAdapter.getJobTitle(userName)
+            Dim employeeNumber As Integer = EmployeeTableAdapter.getEmployeeNumber(userName)
+
+            FormMainMenu.employeeNumber = employeeNumber
 
             If jobTitle = "Manager" Or jobTitle = "Administrator" Then
                 With FormMainMenu
@@ -53,7 +56,4 @@
         End If
     End Sub
 
-    Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

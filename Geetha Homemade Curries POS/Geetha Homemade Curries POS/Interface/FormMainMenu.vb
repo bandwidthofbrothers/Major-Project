@@ -1,5 +1,7 @@
 ﻿Public Class FormMainMenu
 
+    Friend employeeNumber As Integer
+
     Private Sub FormMainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FormSetUp(FormMain)
     End Sub
