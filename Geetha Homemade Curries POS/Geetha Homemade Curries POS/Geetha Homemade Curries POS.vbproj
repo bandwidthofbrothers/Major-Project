@@ -78,10 +78,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="Business\AddCustomer.Designer.vb">
-      <DependentUpon>AddCustomer.vb</DependentUpon>
+    <Compile Include="Business\FormAddCustomer.Designer.vb">
+      <DependentUpon>FormAddCustomer.vb</DependentUpon>
     </Compile>
-    <Compile Include="Business\AddCustomer.vb">
+    <Compile Include="Business\FormAddCustomer.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Business\FormReports.designer.vb">
@@ -236,8 +236,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Business\AddCustomer.resx">
-      <DependentUpon>AddCustomer.vb</DependentUpon>
+    <EmbeddedResource Include="Business\FormAddCustomer.resx">
+      <DependentUpon>FormAddCustomer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Business\FormReports.resx">
       <DependentUpon>FormReports.vb</DependentUpon>

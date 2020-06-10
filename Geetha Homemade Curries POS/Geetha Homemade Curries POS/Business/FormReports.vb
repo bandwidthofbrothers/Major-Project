@@ -8,7 +8,7 @@ Public Class FormReports
 
         Dim conOne As SqlConnection
         Dim cndOne As SqlCommand
-        conOne = New SqlConnection("Server = 146.230.177.46\ist3; Database = ist3af; User Id = ist3af; Password = fwa6ku")
+        conOne = New SqlConnection("Server = 146.230.177.46\ist3; Database = group22; User Id = group22; Password = n24mc")
 
         Dim Expenses As Decimal
 
@@ -36,7 +36,7 @@ Public Class FormReports
 
         Dim conTwo As SqlConnection
         Dim cndTwo As SqlCommand
-        conTwo = New SqlConnection("Server = 146.230.177.46\ist3; Database = ist3af; User Id = ist3af; Password = fwa6ku")
+        conTwo = New SqlConnection("Server = 146.230.177.46\ist3; Database = group22; User Id = group22; Password = n24mc")
 
         Dim Income As Decimal
         Dim MenuItemCost As Decimal
@@ -147,7 +147,7 @@ Public Class FormReports
 
             Dim conOne As SqlConnection
             Dim cndOne As SqlCommand
-            conOne = New SqlConnection("Server = 146.230.177.46\ist3; Database = ist3af; User Id = ist3af; Password = fwa6ku")
+            conOne = New SqlConnection("Server = 146.230.177.46\ist3; Database = group22; User Id = group22; Password = n24mc")
 
             Dim Expenses As Decimal
 
@@ -176,7 +176,7 @@ Public Class FormReports
 
             Dim conTwo As SqlConnection
             Dim cndTwo As SqlCommand
-            conTwo = New SqlConnection("Server = 146.230.177.46\ist3; Database = ist3af; User Id = ist3af; Password = fwa6ku")
+            conTwo = New SqlConnection("Server = 146.230.177.46\ist3; Database = group22; User Id = group22; Password = n24mc")
 
             Dim Income As Decimal
             Dim MenuItemCost As Decimal
@@ -236,7 +236,7 @@ Public Class FormReports
 
             Dim conOne As SqlConnection
             Dim cndOne As SqlCommand
-            conOne = New SqlConnection("Server = 146.230.177.46\ist3; Database = ist3af; User Id = ist3af; Password = fwa6ku")
+            conOne = New SqlConnection("Server = 146.230.177.46\ist3; Database = group22; User Id = group22; Password = n24mc")
 
             Try
                 conOne.Open()
@@ -283,7 +283,7 @@ Public Class FormReports
 
             Dim conOne As SqlConnection
             Dim cndOne As SqlCommand
-            conOne = New SqlConnection("Server = 146.230.177.46\ist3; Database = ist3af; User Id = ist3af; Password = fwa6ku")
+            conOne = New SqlConnection("Server = 146.230.177.46\ist3; Database = group22; User Id = group22; Password = n24mc")
             Try
                 conOne.Open()
                 cndOne = New SqlCommand("SELECT COUNT(CustomerOrderID) FROM CustomerOrder WHERE OrderDate = @d", conOne)
@@ -311,7 +311,7 @@ Public Class FormReports
 
         Dim conOne As SqlConnection
         Dim cndOne As SqlCommand
-        conOne = New SqlConnection("Server = 146.230.177.46\ist3; Database = ist3af; User Id = ist3af; Password = fwa6ku")
+        conOne = New SqlConnection("Server = 146.230.177.46\ist3; Database = group22; User Id = group22; Password = n24mc")
 
         Dim Max_MenuItemID As Integer
         Dim Max_TotalOrders As Integer
@@ -336,7 +336,7 @@ Public Class FormReports
 
         Dim conTwo As SqlConnection
         Dim cndTwo As SqlCommand
-        conTwo = New SqlConnection("Server = 146.230.177.46\ist3; Database = ist3af; User Id = ist3af; Password = fwa6ku")
+        conTwo = New SqlConnection("Server = 146.230.177.46\ist3; Database = group22; User Id = group22; Password = n24mc")
 
         Dim Max_MenuItemName As String
 
@@ -362,7 +362,7 @@ Public Class FormReports
 
         Dim conThree As SqlConnection
         Dim cndThree As SqlCommand
-        conThree = New SqlConnection("Server = 146.230.177.46\ist3; Database = ist3af; User Id = ist3af; Password = fwa6ku")
+        conThree = New SqlConnection("Server = 146.230.177.46\ist3; Database = group22; User Id = group22; Password = n24mc")
 
         Dim Min_MenuItemID As Integer
         Dim Min_TotalOrders As Integer
@@ -387,7 +387,7 @@ Public Class FormReports
 
         Dim conFour As SqlConnection
         Dim cndFour As SqlCommand
-        conFour = New SqlConnection("Server = 146.230.177.46\ist3; Database = ist3af; User Id = ist3af; Password = fwa6ku")
+        conFour = New SqlConnection("Server = 146.230.177.46\ist3; Database = group22; User Id = group22; Password = n24mc")
 
         Dim Min_MenuItemName As String
 

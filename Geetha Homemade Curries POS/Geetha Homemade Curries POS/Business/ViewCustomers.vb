@@ -25,7 +25,7 @@ Public Class ViewCustomers
 
     Private Sub AddCustBtn_Click(sender As Object, e As EventArgs) Handles AddCustBtn.Click
 
-        AddCustomer.Show()
+        FormAddCustomer.Show()
 
     End Sub
 
@@ -86,9 +86,9 @@ Public Class ViewCustomers
 
     End Sub
 
-    Private Sub SearchBtn_Click(sender As Object, e As EventArgs) Handles SearchBtn.Click
+    Private Sub SearchBtn_Click(sender As Object, e As EventArgs) Handles buttonRefresh.Click
 
-        Me.CustomerBindingSource.Filter = "FirstName LIKE '" & SearchTextBox.Text & "%'"
+        CustomerTableAdapter.Fill(Group22DataSet.Customer)
 
     End Sub
 
