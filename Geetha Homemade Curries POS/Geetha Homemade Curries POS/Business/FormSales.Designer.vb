@@ -22,10 +22,10 @@ Partial Class FormSales
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBoxOrder = New System.Windows.Forms.GroupBox()
         Me.DataGridViewOrder = New System.Windows.Forms.DataGridView()
         Me.LabelTotal = New System.Windows.Forms.Label()
@@ -65,6 +65,7 @@ Partial Class FormSales
         '
         Me.DataGridViewOrder.AllowUserToAddRows = False
         Me.DataGridViewOrder.AllowUserToDeleteRows = False
+        Me.DataGridViewOrder.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridViewOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewOrder.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MenuItemID, Me.MenuItemName, Me.Price, Me.Quantity, Me.SubTotal})
         Me.DataGridViewOrder.Location = New System.Drawing.Point(18, 31)
@@ -156,23 +157,27 @@ Partial Class FormSales
         Me.MenuItemID.Name = "MenuItemID"
         Me.MenuItemID.ReadOnly = True
         Me.MenuItemID.Visible = False
+        Me.MenuItemID.Width = 50
         '
         'MenuItemName
         '
-        Me.MenuItemName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        Me.MenuItemName.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.MenuItemName.DefaultCellStyle = DataGridViewCellStyle5
+        Me.MenuItemName.FillWeight = 75.0!
         Me.MenuItemName.HeaderText = "Name"
         Me.MenuItemName.Name = "MenuItemName"
         Me.MenuItemName.ReadOnly = True
+        Me.MenuItemName.Width = 74
         '
         'Price
         '
         Me.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle2.Format = "C2"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.Price.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.Format = "C2"
+        DataGridViewCellStyle6.NullValue = Nothing
+        Me.Price.DefaultCellStyle = DataGridViewCellStyle6
+        Me.Price.FillWeight = 6.748859!
         Me.Price.HeaderText = "Price"
         Me.Price.Name = "Price"
         Me.Price.ReadOnly = True
@@ -180,18 +185,19 @@ Partial Class FormSales
         'Quantity
         '
         Me.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        Me.Quantity.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black
+        Me.Quantity.DefaultCellStyle = DataGridViewCellStyle7
+        Me.Quantity.FillWeight = 6.748859!
         Me.Quantity.HeaderText = "Quantity"
         Me.Quantity.Name = "Quantity"
         Me.Quantity.ReadOnly = True
         '
         'SubTotal
         '
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle4.Format = "C2"
-        DataGridViewCellStyle4.NullValue = Nothing
-        Me.SubTotal.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle8.Format = "C2"
+        DataGridViewCellStyle8.NullValue = Nothing
+        Me.SubTotal.DefaultCellStyle = DataGridViewCellStyle8
         Me.SubTotal.HeaderText = "Sub Total"
         Me.SubTotal.Name = "SubTotal"
         Me.SubTotal.ReadOnly = True
