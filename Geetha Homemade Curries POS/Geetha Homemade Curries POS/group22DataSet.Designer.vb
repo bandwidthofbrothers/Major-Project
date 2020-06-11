@@ -600,7 +600,7 @@ Partial Public Class group22DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddCustomerRow(ByVal CustomerID As Integer, ByVal FirstName As String, ByVal Surname As String, ByVal PhoneNumber As Integer, ByVal AmountDue As Decimal) As CustomerRow
+        Public Overloads Function AddCustomerRow(ByVal CustomerID As Integer, ByVal FirstName As String, ByVal Surname As String, ByVal PhoneNumber As String, ByVal AmountDue As Decimal) As CustomerRow
             Dim rowCustomerRow As CustomerRow = CType(Me.NewRow,CustomerRow)
             Dim columnValuesArray() As Object = New Object() {CustomerID, FirstName, Surname, PhoneNumber, AmountDue}
             rowCustomerRow.ItemArray = columnValuesArray
@@ -647,7 +647,7 @@ Partial Public Class group22DataSet
             MyBase.Columns.Add(Me.columnFirstName)
             Me.columnSurname = New Global.System.Data.DataColumn("Surname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnSurname)
-            Me.columnPhoneNumber = New Global.System.Data.DataColumn("PhoneNumber", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnPhoneNumber = New Global.System.Data.DataColumn("PhoneNumber", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPhoneNumber)
             Me.columnAmountDue = New Global.System.Data.DataColumn("AmountDue", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnAmountDue)
@@ -2433,9 +2433,9 @@ Partial Public Class group22DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property PhoneNumber() As Integer
+        Public Property PhoneNumber() As String
             Get
-                Return CType(Me(Me.tableCustomer.PhoneNumberColumn),Integer)
+                Return CType(Me(Me.tableCustomer.PhoneNumberColumn),String)
             End Get
             Set
                 Me(Me.tableCustomer.PhoneNumberColumn) = value
