@@ -25,49 +25,51 @@ Partial Class FormSalesDrinks
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormSalesDrinks))
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBoxNonVegCurries = New System.Windows.Forms.PictureBox()
-        Me.PictureBoxVegCurries = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBoxNonVegCurries, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBoxVegCurries, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBoxColdDrinks = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxHotDrinks = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBoxColdDrinks, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxHotDrinks, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(487, 341)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(480, 341)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 17)
+        Me.Label2.Size = New System.Drawing.Size(117, 24)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Cold Drinks"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(240, 341)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(230, 341)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(74, 17)
+        Me.Label1.Size = New System.Drawing.Size(106, 24)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Hot Drinks"
         '
-        'PictureBoxNonVegCurries
+        'PictureBoxColdDrinks
         '
-        Me.PictureBoxNonVegCurries.BackgroundImage = CType(resources.GetObject("PictureBoxNonVegCurries.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBoxNonVegCurries.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBoxNonVegCurries.Location = New System.Drawing.Point(450, 172)
-        Me.PictureBoxNonVegCurries.Name = "PictureBoxNonVegCurries"
-        Me.PictureBoxNonVegCurries.Size = New System.Drawing.Size(176, 166)
-        Me.PictureBoxNonVegCurries.TabIndex = 5
-        Me.PictureBoxNonVegCurries.TabStop = False
+        Me.PictureBoxColdDrinks.BackgroundImage = CType(resources.GetObject("PictureBoxColdDrinks.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBoxColdDrinks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBoxColdDrinks.Location = New System.Drawing.Point(450, 172)
+        Me.PictureBoxColdDrinks.Name = "PictureBoxColdDrinks"
+        Me.PictureBoxColdDrinks.Size = New System.Drawing.Size(176, 166)
+        Me.PictureBoxColdDrinks.TabIndex = 5
+        Me.PictureBoxColdDrinks.TabStop = False
         '
-        'PictureBoxVegCurries
+        'PictureBoxHotDrinks
         '
-        Me.PictureBoxVegCurries.BackgroundImage = CType(resources.GetObject("PictureBoxVegCurries.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBoxVegCurries.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBoxVegCurries.Location = New System.Drawing.Point(193, 172)
-        Me.PictureBoxVegCurries.Name = "PictureBoxVegCurries"
-        Me.PictureBoxVegCurries.Size = New System.Drawing.Size(176, 166)
-        Me.PictureBoxVegCurries.TabIndex = 4
-        Me.PictureBoxVegCurries.TabStop = False
+        Me.PictureBoxHotDrinks.BackgroundImage = CType(resources.GetObject("PictureBoxHotDrinks.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBoxHotDrinks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBoxHotDrinks.Location = New System.Drawing.Point(193, 172)
+        Me.PictureBoxHotDrinks.Name = "PictureBoxHotDrinks"
+        Me.PictureBoxHotDrinks.Size = New System.Drawing.Size(176, 166)
+        Me.PictureBoxHotDrinks.TabIndex = 4
+        Me.PictureBoxHotDrinks.TabStop = False
         '
         'FormSalesDrinks
         '
@@ -78,13 +80,13 @@ Partial Class FormSalesDrinks
         Me.ControlBox = False
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PictureBoxNonVegCurries)
-        Me.Controls.Add(Me.PictureBoxVegCurries)
+        Me.Controls.Add(Me.PictureBoxColdDrinks)
+        Me.Controls.Add(Me.PictureBoxHotDrinks)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FormSalesDrinks"
         Me.Text = "FormSalesDrinks"
-        CType(Me.PictureBoxNonVegCurries, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBoxVegCurries, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxColdDrinks, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxHotDrinks, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -92,6 +94,6 @@ Partial Class FormSalesDrinks
 
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBoxNonVegCurries As PictureBox
-    Friend WithEvents PictureBoxVegCurries As PictureBox
+    Friend WithEvents PictureBoxColdDrinks As PictureBox
+    Friend WithEvents PictureBoxHotDrinks As PictureBox
 End Class

@@ -18,9 +18,9 @@
 
                 MessageBox.Show("Record added successfully")
 
-                With FormViewExpenses
-                    .IngredientTableAdapter.Fill(Me.Group22DataSet.Ingredient)
-                    .Refresh()
+                With FormMainMenu
+                    .FormSetUp(FormMain)
+                    .FormSetUp(FormViewExpenses)
                 End With
             Catch ex As Exception
                 MessageBox.Show("Error: Record added unsuccessfully")

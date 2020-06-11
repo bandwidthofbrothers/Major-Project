@@ -67,4 +67,14 @@
         End If
     End Sub
 
+    Private Sub TextBoxSearch_TextChanged(sender As Object, e As EventArgs) Handles TextBoxSearch.TextChanged
+        If TextBoxSearch.Text <> "" Then
+            IngredientTableAdapter.search(Group22DataSet.Ingredient, TextBoxSearch.Text)
+        End If
+    End Sub
+
+    Private Sub ButtonRefresh_Click(sender As Object, e As EventArgs) Handles ButtonRefresh.Click
+        IngredientTableAdapter.Fill(Group22DataSet.Ingredient)
+        TextBoxSearch.Text = ""
+    End Sub
 End Class

@@ -18,10 +18,9 @@
 
                 MessageBox.Show("Record added successfully")
 
-                With FormViewMenu
-                    .MenuItemTableAdapter.Fill(Me.Group22DataSet.MenuItem)
-                    .MenuItemDataGridView.Refresh()
-                    .Refresh()
+                With FormMainMenu
+                    .FormSetUp(FormMain)
+                    .FormSetUp(FormViewMenu)
                 End With
             Catch ex As Exception
                 MessageBox.Show("Error: Record added unsuccessfully")

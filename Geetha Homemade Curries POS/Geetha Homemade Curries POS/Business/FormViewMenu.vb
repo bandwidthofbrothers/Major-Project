@@ -44,4 +44,14 @@
     Private Sub ButtonAdd_Click(sender As Object, e As EventArgs) Handles ButtonAdd.Click
         FormAddMenuItem.Show()
     End Sub
+
+    Private Sub TextBoxSearch_TextChanged(sender As Object, e As EventArgs) Handles TextBoxSearch.TextChanged
+        If TextBoxSearch.Text <> "" Then
+            MenuItemTableAdapter.search(Group22DataSet.MenuItem, TextBoxSearch.Text)
+        End If
+    End Sub
+
+    Private Sub ButtonRefresh_Click(sender As Object, e As EventArgs) Handles ButtonRefresh.Click
+        MenuItemTableAdapter.Fill(Group22DataSet.MenuItem)
+    End Sub
 End Class
