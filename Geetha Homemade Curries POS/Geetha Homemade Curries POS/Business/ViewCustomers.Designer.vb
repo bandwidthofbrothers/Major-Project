@@ -52,6 +52,7 @@ Partial Class ViewCustomers
         Me.SearchTextBox = New System.Windows.Forms.TextBox()
         Me.SearchBtn = New System.Windows.Forms.Button()
         Me.CustomerIDTextBox = New System.Windows.Forms.TextBox()
+        Me.SearchLabel = New System.Windows.Forms.Label()
         FirstNameLabel = New System.Windows.Forms.Label()
         SurnameLabel = New System.Windows.Forms.Label()
         PhoneNumberLabel = New System.Windows.Forms.Label()
@@ -231,7 +232,7 @@ Partial Class ViewCustomers
         Me.FirstNameTextBox.Location = New System.Drawing.Point(1187, 223)
         Me.FirstNameTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.FirstNameTextBox.Name = "FirstNameTextBox"
-        Me.FirstNameTextBox.Size = New System.Drawing.Size(198, 26)
+        Me.FirstNameTextBox.Size = New System.Drawing.Size(197, 26)
         Me.FirstNameTextBox.TabIndex = 1
         '
         'SurnameTextBox
@@ -240,14 +241,15 @@ Partial Class ViewCustomers
         Me.SurnameTextBox.Location = New System.Drawing.Point(1187, 267)
         Me.SurnameTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.SurnameTextBox.Name = "SurnameTextBox"
-        Me.SurnameTextBox.Size = New System.Drawing.Size(198, 26)
+        Me.SurnameTextBox.Size = New System.Drawing.Size(197, 26)
         Me.SurnameTextBox.TabIndex = 2
         '
         'PhoneNumberTextBox
         '
         Me.PhoneNumberTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "PhoneNumber", True))
-        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(1187, 310)
+        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(1187, 313)
         Me.PhoneNumberTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PhoneNumberTextBox.MaxLength = 13
         Me.PhoneNumberTextBox.Name = "PhoneNumberTextBox"
         Me.PhoneNumberTextBox.Size = New System.Drawing.Size(198, 26)
         Me.PhoneNumberTextBox.TabIndex = 3
@@ -293,17 +295,19 @@ Partial Class ViewCustomers
         '
         'SearchTextBox
         '
-        Me.SearchTextBox.ForeColor = System.Drawing.Color.Gray
+        Me.SearchTextBox.ForeColor = System.Drawing.Color.Black
         Me.SearchTextBox.Location = New System.Drawing.Point(43, 122)
+        Me.SearchTextBox.Multiline = True
         Me.SearchTextBox.Name = "SearchTextBox"
-        Me.SearchTextBox.Size = New System.Drawing.Size(333, 26)
+        Me.SearchTextBox.Size = New System.Drawing.Size(337, 26)
         Me.SearchTextBox.TabIndex = 58
         '
         'SearchBtn
         '
-        Me.SearchBtn.Location = New System.Drawing.Point(403, 114)
+        Me.SearchBtn.Font = New System.Drawing.Font("Adobe Fan Heiti Std B", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SearchBtn.Location = New System.Drawing.Point(398, 118)
         Me.SearchBtn.Name = "SearchBtn"
-        Me.SearchBtn.Size = New System.Drawing.Size(98, 43)
+        Me.SearchBtn.Size = New System.Drawing.Size(123, 35)
         Me.SearchBtn.TabIndex = 59
         Me.SearchBtn.Text = "Search"
         Me.SearchBtn.UseVisualStyleBackColor = True
@@ -317,6 +321,17 @@ Partial Class ViewCustomers
         Me.CustomerIDTextBox.Size = New System.Drawing.Size(64, 26)
         Me.CustomerIDTextBox.TabIndex = 60
         '
+        'SearchLabel
+        '
+        Me.SearchLabel.AutoSize = True
+        Me.SearchLabel.BackColor = System.Drawing.Color.White
+        Me.SearchLabel.ForeColor = System.Drawing.Color.Gray
+        Me.SearchLabel.Location = New System.Drawing.Point(46, 126)
+        Me.SearchLabel.Name = "SearchLabel"
+        Me.SearchLabel.Size = New System.Drawing.Size(72, 20)
+        Me.SearchLabel.TabIndex = 61
+        Me.SearchLabel.Text = "Search..."
+        '
         'ViewCustomers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -324,6 +339,7 @@ Partial Class ViewCustomers
         Me.BackgroundImage = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
         Me.ClientSize = New System.Drawing.Size(1462, 750)
         Me.ControlBox = False
+        Me.Controls.Add(Me.SearchLabel)
         Me.Controls.Add(CustomerIDLabel)
         Me.Controls.Add(Me.CustomerIDTextBox)
         Me.Controls.Add(Me.SearchBtn)
@@ -376,4 +392,5 @@ Partial Class ViewCustomers
     Friend WithEvents SurnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PhoneNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AmountDueDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SearchLabel As Label
 End Class

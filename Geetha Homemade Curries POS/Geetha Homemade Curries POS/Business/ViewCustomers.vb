@@ -4,7 +4,6 @@ Public Class ViewCustomers
 
     Dim connection As New SqlConnection("Data Source=146.230.177.46\ist3;Initial Catalog=group22;Persist Security Info=True;User ID=group22;Password=n24mc")
 
-    Dim drag As Boolean
 
     Private Sub CustomerOrderBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
@@ -12,6 +11,7 @@ Public Class ViewCustomers
         Me.TableAdapterManager.UpdateAll(Me.Group22DataSet)
 
     End Sub
+
 
     Private Sub ViewCustomers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -82,15 +82,39 @@ Public Class ViewCustomers
 
     Private Sub SearchTextBox_TextChanged(sender As Object, e As EventArgs) Handles SearchTextBox.TextChanged
 
-        Me.CustomerBindingSource.Filter = "FirstName LIKE '" & SearchTextBox.Text & "%'"
+        Me.CustomerBindingSource.Filter = "FirstName LIKE '" & SearchTextBox.Text & "%'" & "Or Surname LIKE '" & SearchTextBox.Text & "%'"
+
+        SearchLabel.Visible = False
 
     End Sub
 
     Private Sub SearchBtn_Click(sender As Object, e As EventArgs) Handles SearchBtn.Click
 
-        Me.CustomerBindingSource.Filter = "FirstName LIKE '" & SearchTextBox.Text & "%'"
+        Me.CustomerBindingSource.Filter = "FirstName LIKE '" & SearchTextBox.Text & "%'" & "Or Surname LIKE '" & SearchTextBox.Text & "%'"
 
     End Sub
 
+    Private Sub SearchTextBox_MouseClick(sender As Object, e As MouseEventArgs) Handles SearchTextBox.MouseClick
+        SearchLabel.Hide()
+    End Sub
 
+    Private Sub SearchTextBox_MouseEnter(sender As Object, e As EventArgs) Handles SearchTextBox.MouseEnter
+        SearchLabel.Hide()
+    End Sub
+
+    Private Sub SearchTextBox_MouseLeave(sender As Object, e As EventArgs) Handles SearchTextBox.MouseLeave
+        If SearchTextBox.Text = "" Then
+            SearchLabel.Show()
+        Else
+            SearchLabel.Hide()
+        End If
+    End Sub
+
+    Private Sub SearchLabel_Click(sender As Object, e As EventArgs) Handles SearchLabel.Click
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

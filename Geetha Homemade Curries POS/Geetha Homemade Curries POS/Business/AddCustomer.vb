@@ -43,7 +43,10 @@ Public Class AddCustomer
         ViewCustomers.CustomerTableAdapter.Fill(Me.Group22DataSet.Customer)
 
         MessageBox.Show("Record added successfully")
-
+        FirstNameTextBox.Clear()
+        SurnameTextBox.Clear()
+        PhoneNumberTextBox.Clear()
+        AmountDueTextBox.Clear()
     End Sub
 
     Private Sub CloseBtn_Click(sender As Object, e As EventArgs) Handles CloseBtn.Click
