@@ -175,7 +175,7 @@ Partial Class AddCustomer
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
-        Me.ClientSize = New System.Drawing.Size(510, 384)
+        Me.ClientSize = New System.Drawing.Size(538, 377)
         Me.Controls.Add(Me.CloseBtn)
         Me.Controls.Add(Me.AddCustBtn)
         Me.Controls.Add(FirstNameLabel)
