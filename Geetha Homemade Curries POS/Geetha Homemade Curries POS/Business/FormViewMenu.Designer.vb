@@ -23,7 +23,7 @@ Partial Class FormViewMenu
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TextBoxMenuItemID = New System.Windows.Forms.TextBox()
         Me.MenuItemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
@@ -76,7 +76,7 @@ Partial Class FormViewMenu
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(769, 189)
+        Me.Label5.Location = New System.Drawing.Point(819, 193)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(71, 13)
@@ -104,7 +104,7 @@ Partial Class FormViewMenu
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.ForeColor = System.Drawing.Color.Transparent
-        Me.Label3.Location = New System.Drawing.Point(769, 398)
+        Me.Label3.Location = New System.Drawing.Point(819, 402)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(31, 13)
@@ -116,7 +116,7 @@ Partial Class FormViewMenu
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(769, 322)
+        Me.Label2.Location = New System.Drawing.Point(819, 322)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(49, 13)
@@ -128,7 +128,7 @@ Partial Class FormViewMenu
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(769, 246)
+        Me.Label4.Location = New System.Drawing.Point(819, 250)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(35, 13)
@@ -137,30 +137,30 @@ Partial Class FormViewMenu
         '
         'ButtonDelete
         '
-        Me.ButtonDelete.Location = New System.Drawing.Point(602, 500)
-        Me.ButtonDelete.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ButtonDelete.Location = New System.Drawing.Point(1128, 489)
+        Me.ButtonDelete.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonDelete.Name = "ButtonDelete"
-        Me.ButtonDelete.Size = New System.Drawing.Size(148, 43)
+        Me.ButtonDelete.Size = New System.Drawing.Size(107, 32)
         Me.ButtonDelete.TabIndex = 18
         Me.ButtonDelete.Text = "Delete"
         Me.ButtonDelete.UseVisualStyleBackColor = True
         '
         'ButtonUpdate
         '
-        Me.ButtonUpdate.Location = New System.Drawing.Point(438, 500)
-        Me.ButtonUpdate.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ButtonUpdate.Location = New System.Drawing.Point(998, 489)
+        Me.ButtonUpdate.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonUpdate.Name = "ButtonUpdate"
-        Me.ButtonUpdate.Size = New System.Drawing.Size(148, 43)
+        Me.ButtonUpdate.Size = New System.Drawing.Size(114, 32)
         Me.ButtonUpdate.TabIndex = 17
         Me.ButtonUpdate.Text = "Update"
         Me.ButtonUpdate.UseVisualStyleBackColor = True
         '
         'ButtonAdd
         '
-        Me.ButtonAdd.Location = New System.Drawing.Point(275, 500)
-        Me.ButtonAdd.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ButtonAdd.Location = New System.Drawing.Point(867, 489)
+        Me.ButtonAdd.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonAdd.Name = "ButtonAdd"
-        Me.ButtonAdd.Size = New System.Drawing.Size(148, 43)
+        Me.ButtonAdd.Size = New System.Drawing.Size(114, 32)
         Me.ButtonAdd.TabIndex = 16
         Me.ButtonAdd.Text = "Add"
         Me.ButtonAdd.UseVisualStyleBackColor = True
@@ -190,7 +190,7 @@ Partial Class FormViewMenu
         Me.MenuItemDataGridView.Name = "MenuItemDataGridView"
         Me.MenuItemDataGridView.ReadOnly = True
         Me.MenuItemDataGridView.RowTemplate.Height = 24
-        Me.MenuItemDataGridView.Size = New System.Drawing.Size(707, 452)
+        Me.MenuItemDataGridView.Size = New System.Drawing.Size(744, 387)
         Me.MenuItemDataGridView.TabIndex = 14
         '
         'MenuItemIDDataGridViewTextBoxColumn
@@ -221,9 +221,9 @@ Partial Class FormViewMenu
         '
         Me.MenuItemPriceDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.MenuItemPriceDataGridViewTextBoxColumn.DataPropertyName = "MenuItemPrice"
-        DataGridViewCellStyle2.Format = "C2"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.MenuItemPriceDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Format = "C2"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.MenuItemPriceDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
         Me.MenuItemPriceDataGridViewTextBoxColumn.HeaderText = "MenuItemPrice"
         Me.MenuItemPriceDataGridViewTextBoxColumn.Name = "MenuItemPriceDataGridViewTextBoxColumn"
         Me.MenuItemPriceDataGridViewTextBoxColumn.ReadOnly = True
@@ -236,7 +236,7 @@ Partial Class FormViewMenu
         Me.ComboBoxCategory.Items.AddRange(New Object() {"Briyani" & Global.Microsoft.VisualBasic.ChrW(9), "Bunnies", "Chutney", "Veg Curries", "Non-Veg Curries", "Veg Dishes", "Non-Veg Dishes", "Hot Drinks", "Cold Drinks", "Extras/Sides", "Pasta", "Regulars", "Roti Rolls", "Specials", "Toasted Sandwiches"})
         Me.ComboBoxCategory.Location = New System.Drawing.Point(946, 322)
         Me.ComboBoxCategory.Name = "ComboBoxCategory"
-        Me.ComboBoxCategory.Size = New System.Drawing.Size(306, 24)
+        Me.ComboBoxCategory.Size = New System.Drawing.Size(230, 21)
         Me.ComboBoxCategory.TabIndex = 27
         '
         'MenuItemTableAdapter
@@ -256,7 +256,7 @@ Partial Class FormViewMenu
         '
         Me.TextBoxSearch.Location = New System.Drawing.Point(90, 95)
         Me.TextBoxSearch.Name = "TextBoxSearch"
-        Me.TextBoxSearch.Size = New System.Drawing.Size(306, 22)
+        Me.TextBoxSearch.Size = New System.Drawing.Size(306, 20)
         Me.TextBoxSearch.TabIndex = 29
         '
         'Label6
@@ -267,7 +267,7 @@ Partial Class FormViewMenu
         Me.Label6.Location = New System.Drawing.Point(22, 98)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(61, 17)
+        Me.Label6.Size = New System.Drawing.Size(47, 13)
         Me.Label6.TabIndex = 28
         Me.Label6.Text = "Search: "
         '
@@ -276,7 +276,7 @@ Partial Class FormViewMenu
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
-        Me.ClientSize = New System.Drawing.Size(989, 582)
+        Me.ClientSize = New System.Drawing.Size(1263, 621)
         Me.ControlBox = False
         Me.Controls.Add(Me.ButtonRefresh)
         Me.Controls.Add(Me.TextBoxSearch)
@@ -294,7 +294,7 @@ Partial Class FormViewMenu
         Me.Controls.Add(Me.ButtonAdd)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuItemDataGridView)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FormViewMenu"
         Me.Text = "FormViewMenu"
         CType(Me.MenuItemBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
