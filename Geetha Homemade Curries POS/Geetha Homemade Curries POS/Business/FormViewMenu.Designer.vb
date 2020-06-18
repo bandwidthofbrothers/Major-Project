@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormViewMenu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FormViewMenu
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -44,8 +44,9 @@ Partial Class FormViewMenu
         Me.MenuItemPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ComboBoxCategory = New System.Windows.Forms.ComboBox()
         Me.MenuItemTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.MenuItemTableAdapter()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.SearchBtn = New System.Windows.Forms.Button()
+        Me.ButtonRefresh = New System.Windows.Forms.Button()
+        Me.TextBoxSearch = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.MenuItemBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MenuItemDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -55,8 +56,7 @@ Partial Class FormViewMenu
         '
         Me.TextBoxMenuItemID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MenuItemBindingSource, "MenuItemID", True))
         Me.TextBoxMenuItemID.Enabled = False
-        Me.TextBoxMenuItemID.Location = New System.Drawing.Point(710, 115)
-        Me.TextBoxMenuItemID.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBoxMenuItemID.Location = New System.Drawing.Point(946, 190)
         Me.TextBoxMenuItemID.Name = "TextBoxMenuItemID"
         Me.TextBoxMenuItemID.Size = New System.Drawing.Size(230, 20)
         Me.TextBoxMenuItemID.TabIndex = 26
@@ -76,7 +76,8 @@ Partial Class FormViewMenu
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(577, 114)
+        Me.Label5.Location = New System.Drawing.Point(769, 189)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(71, 13)
         Me.Label5.TabIndex = 25
@@ -85,8 +86,7 @@ Partial Class FormViewMenu
         'TextBoxPrice
         '
         Me.TextBoxPrice.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MenuItemBindingSource, "MenuItemPrice", True))
-        Me.TextBoxPrice.Location = New System.Drawing.Point(710, 281)
-        Me.TextBoxPrice.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBoxPrice.Location = New System.Drawing.Point(946, 395)
         Me.TextBoxPrice.Name = "TextBoxPrice"
         Me.TextBoxPrice.Size = New System.Drawing.Size(230, 20)
         Me.TextBoxPrice.TabIndex = 24
@@ -94,8 +94,7 @@ Partial Class FormViewMenu
         'TextBoxName
         '
         Me.TextBoxName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MenuItemBindingSource, "MenuItemName", True))
-        Me.TextBoxName.Location = New System.Drawing.Point(710, 161)
-        Me.TextBoxName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBoxName.Location = New System.Drawing.Point(946, 247)
         Me.TextBoxName.Name = "TextBoxName"
         Me.TextBoxName.Size = New System.Drawing.Size(230, 20)
         Me.TextBoxName.TabIndex = 23
@@ -105,7 +104,8 @@ Partial Class FormViewMenu
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.ForeColor = System.Drawing.Color.Transparent
-        Me.Label3.Location = New System.Drawing.Point(577, 284)
+        Me.Label3.Location = New System.Drawing.Point(769, 398)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(31, 13)
         Me.Label3.TabIndex = 21
@@ -116,7 +116,8 @@ Partial Class FormViewMenu
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(577, 222)
+        Me.Label2.Location = New System.Drawing.Point(769, 322)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(49, 13)
         Me.Label2.TabIndex = 20
@@ -127,7 +128,8 @@ Partial Class FormViewMenu
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(577, 160)
+        Me.Label4.Location = New System.Drawing.Point(769, 246)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(35, 13)
         Me.Label4.TabIndex = 19
@@ -184,12 +186,11 @@ Partial Class FormViewMenu
         Me.MenuItemDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.MenuItemDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MenuItemIDDataGridViewTextBoxColumn, Me.MenuItemNameDataGridViewTextBoxColumn, Me.CategoryDataGridViewTextBoxColumn, Me.MenuItemPriceDataGridViewTextBoxColumn})
         Me.MenuItemDataGridView.DataSource = Me.MenuItemBindingSource
-        Me.MenuItemDataGridView.Location = New System.Drawing.Point(9, 69)
-        Me.MenuItemDataGridView.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MenuItemDataGridView.Location = New System.Drawing.Point(12, 134)
         Me.MenuItemDataGridView.Name = "MenuItemDataGridView"
         Me.MenuItemDataGridView.ReadOnly = True
         Me.MenuItemDataGridView.RowTemplate.Height = 24
-        Me.MenuItemDataGridView.Size = New System.Drawing.Size(530, 405)
+        Me.MenuItemDataGridView.Size = New System.Drawing.Size(707, 452)
         Me.MenuItemDataGridView.TabIndex = 14
         '
         'MenuItemIDDataGridViewTextBoxColumn
@@ -233,31 +234,42 @@ Partial Class FormViewMenu
         Me.ComboBoxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBoxCategory.FormattingEnabled = True
         Me.ComboBoxCategory.Items.AddRange(New Object() {"Briyani" & Global.Microsoft.VisualBasic.ChrW(9), "Bunnies", "Chutney", "Veg Curries", "Non-Veg Curries", "Veg Dishes", "Non-Veg Dishes", "Hot Drinks", "Cold Drinks", "Extras/Sides", "Pasta", "Regulars", "Roti Rolls", "Specials", "Toasted Sandwiches"})
-        Me.ComboBoxCategory.Location = New System.Drawing.Point(710, 222)
-        Me.ComboBoxCategory.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ComboBoxCategory.Location = New System.Drawing.Point(946, 322)
         Me.ComboBoxCategory.Name = "ComboBoxCategory"
-        Me.ComboBoxCategory.Size = New System.Drawing.Size(230, 21)
+        Me.ComboBoxCategory.Size = New System.Drawing.Size(306, 24)
         Me.ComboBoxCategory.TabIndex = 27
         '
         'MenuItemTableAdapter
         '
         Me.MenuItemTableAdapter.ClearBeforeFill = True
         '
-        'TextBox1
+        'ButtonRefresh
         '
-        Me.TextBox1.Location = New System.Drawing.Point(190, 26)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(176, 20)
-        Me.TextBox1.TabIndex = 28
+        Me.ButtonRefresh.Location = New System.Drawing.Point(422, 89)
+        Me.ButtonRefresh.Name = "ButtonRefresh"
+        Me.ButtonRefresh.Size = New System.Drawing.Size(176, 35)
+        Me.ButtonRefresh.TabIndex = 30
+        Me.ButtonRefresh.Text = "Refresh"
+        Me.ButtonRefresh.UseVisualStyleBackColor = True
         '
-        'SearchBtn
+        'TextBoxSearch
         '
-        Me.SearchBtn.Location = New System.Drawing.Point(420, 26)
-        Me.SearchBtn.Name = "SearchBtn"
-        Me.SearchBtn.Size = New System.Drawing.Size(89, 20)
-        Me.SearchBtn.TabIndex = 29
-        Me.SearchBtn.Text = "Search"
-        Me.SearchBtn.UseVisualStyleBackColor = True
+        Me.TextBoxSearch.Location = New System.Drawing.Point(90, 95)
+        Me.TextBoxSearch.Name = "TextBoxSearch"
+        Me.TextBoxSearch.Size = New System.Drawing.Size(306, 22)
+        Me.TextBoxSearch.TabIndex = 29
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(22, 98)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(61, 17)
+        Me.Label6.TabIndex = 28
+        Me.Label6.Text = "Search: "
         '
         'FormViewMenu
         '
@@ -266,8 +278,9 @@ Partial Class FormViewMenu
         Me.BackgroundImage = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
         Me.ClientSize = New System.Drawing.Size(989, 582)
         Me.ControlBox = False
-        Me.Controls.Add(Me.SearchBtn)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.ButtonRefresh)
+        Me.Controls.Add(Me.TextBoxSearch)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.ComboBoxCategory)
         Me.Controls.Add(Me.TextBoxMenuItemID)
         Me.Controls.Add(Me.Label5)
@@ -312,6 +325,7 @@ Partial Class FormViewMenu
     Friend WithEvents MenuItemNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CategoryDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MenuItemPriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents SearchBtn As Button
+    Friend WithEvents ButtonRefresh As Button
+    Friend WithEvents TextBoxSearch As TextBox
+    Friend WithEvents Label6 As Label
 End Class

@@ -1,5 +1,7 @@
 ﻿Public Class FormMainMenu
 
+    Friend employeeNumber As Integer
+
     Private Sub FormMainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FormSetUp(FormMain)
     End Sub
@@ -109,5 +111,29 @@
 
     Private Sub ButtonSale_Click(sender As Object, e As EventArgs) Handles ButtonSale.Click
         FormSetUp(FormSales)
+    End Sub
+
+    Private Sub SaleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaleToolStripMenuItem.Click
+        FormSetUp(FormSales)
+    End Sub
+
+    Private Sub MenuToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MenuToolStripMenuItem.Click
+        FormSetUp(FormViewMenu)
+    End Sub
+
+    Private Sub ReportsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportsToolStripMenuItem.Click
+        FormSetUp(FormReports)
+    End Sub
+
+    Private Sub AccountsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AccountsToolStripMenuItem.Click
+        FormSetUp(ViewCustomers)
+    End Sub
+
+    Private Sub ExpensesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExpensesToolStripMenuItem.Click
+        FormSetUp(FormViewExpenses)
+    End Sub
+
+    Private Sub StaffToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StaffToolStripMenuItem.Click
+        FormSetUp(FormStaff)
     End Sub
 End Class

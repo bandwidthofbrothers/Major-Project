@@ -45,12 +45,13 @@
         FormAddMenuItem.Show()
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-        If TextBox1.Text <> "" Then
-            MenuItemTableAdapter.FillBy(Group22DataSet.MenuItem, TextBox1.Text)
-
+    Private Sub TextBoxSearch_TextChanged(sender As Object, e As EventArgs) Handles TextBoxSearch.TextChanged
+        If TextBoxSearch.Text <> "" Then
+            MenuItemTableAdapter.search(Group22DataSet.MenuItem, TextBoxSearch.Text)
         End If
-        MenuItemTableAdapter.Fill(Group22DataSet.MenuItem)
+    End Sub
 
+    Private Sub ButtonRefresh_Click(sender As Object, e As EventArgs) Handles ButtonRefresh.Click
+        MenuItemTableAdapter.Fill(Group22DataSet.MenuItem)
     End Sub
 End Class

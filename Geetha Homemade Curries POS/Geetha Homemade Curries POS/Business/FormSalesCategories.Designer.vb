@@ -35,29 +35,29 @@ Partial Class FormSalesCategories
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxToastedSandwiches = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxSpecials = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxRotiRolls = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxRegulars = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxPasta = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxExtraSides = New System.Windows.Forms.PictureBox()
         Me.PictureBoxDrinks = New System.Windows.Forms.PictureBox()
         Me.PictureBoxDishes = New System.Windows.Forms.PictureBox()
         Me.PictureBoxCurries = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxChutney = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxBunnies = New System.Windows.Forms.PictureBox()
         Me.PictureBoxBriyani = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxToastedSandwiches, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxSpecials, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxRotiRolls, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxRegulars, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxPasta, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxExtraSides, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxDrinks, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxDishes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxCurries, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxChutney, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxBunnies, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxBriyani, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -180,65 +180,65 @@ Partial Class FormSalesCategories
         Me.Label12.TabIndex = 20
         Me.Label12.Text = "Regulars"
         '
-        'PictureBox9
+        'PictureBoxToastedSandwiches
         '
-        Me.PictureBox9.BackgroundImage = CType(resources.GetObject("PictureBox9.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox9.Location = New System.Drawing.Point(632, 378)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(157, 145)
-        Me.PictureBox9.TabIndex = 19
-        Me.PictureBox9.TabStop = False
+        Me.PictureBoxToastedSandwiches.BackgroundImage = CType(resources.GetObject("PictureBoxToastedSandwiches.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBoxToastedSandwiches.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBoxToastedSandwiches.Location = New System.Drawing.Point(632, 378)
+        Me.PictureBoxToastedSandwiches.Name = "PictureBoxToastedSandwiches"
+        Me.PictureBoxToastedSandwiches.Size = New System.Drawing.Size(157, 145)
+        Me.PictureBoxToastedSandwiches.TabIndex = 19
+        Me.PictureBoxToastedSandwiches.TabStop = False
         '
-        'PictureBox10
+        'PictureBoxSpecials
         '
-        Me.PictureBox10.BackgroundImage = CType(resources.GetObject("PictureBox10.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox10.Location = New System.Drawing.Point(427, 378)
-        Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(157, 145)
-        Me.PictureBox10.TabIndex = 18
-        Me.PictureBox10.TabStop = False
+        Me.PictureBoxSpecials.BackgroundImage = CType(resources.GetObject("PictureBoxSpecials.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBoxSpecials.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBoxSpecials.Location = New System.Drawing.Point(427, 378)
+        Me.PictureBoxSpecials.Name = "PictureBoxSpecials"
+        Me.PictureBoxSpecials.Size = New System.Drawing.Size(157, 145)
+        Me.PictureBoxSpecials.TabIndex = 18
+        Me.PictureBoxSpecials.TabStop = False
         '
-        'PictureBox11
+        'PictureBoxRotiRolls
         '
-        Me.PictureBox11.BackgroundImage = CType(resources.GetObject("PictureBox11.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox11.Location = New System.Drawing.Point(224, 378)
-        Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(157, 145)
-        Me.PictureBox11.TabIndex = 17
-        Me.PictureBox11.TabStop = False
+        Me.PictureBoxRotiRolls.BackgroundImage = CType(resources.GetObject("PictureBoxRotiRolls.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBoxRotiRolls.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBoxRotiRolls.Location = New System.Drawing.Point(224, 378)
+        Me.PictureBoxRotiRolls.Name = "PictureBoxRotiRolls"
+        Me.PictureBoxRotiRolls.Size = New System.Drawing.Size(157, 145)
+        Me.PictureBoxRotiRolls.TabIndex = 17
+        Me.PictureBoxRotiRolls.TabStop = False
         '
-        'PictureBox12
+        'PictureBoxRegulars
         '
-        Me.PictureBox12.BackgroundImage = CType(resources.GetObject("PictureBox12.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox12.Location = New System.Drawing.Point(12, 378)
-        Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(157, 145)
-        Me.PictureBox12.TabIndex = 16
-        Me.PictureBox12.TabStop = False
+        Me.PictureBoxRegulars.BackgroundImage = CType(resources.GetObject("PictureBoxRegulars.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBoxRegulars.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBoxRegulars.Location = New System.Drawing.Point(12, 378)
+        Me.PictureBoxRegulars.Name = "PictureBoxRegulars"
+        Me.PictureBoxRegulars.Size = New System.Drawing.Size(157, 145)
+        Me.PictureBoxRegulars.TabIndex = 16
+        Me.PictureBoxRegulars.TabStop = False
         '
-        'PictureBox5
+        'PictureBoxPasta
         '
-        Me.PictureBox5.BackgroundImage = CType(resources.GetObject("PictureBox5.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox5.Location = New System.Drawing.Point(632, 191)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(157, 145)
-        Me.PictureBox5.TabIndex = 11
-        Me.PictureBox5.TabStop = False
+        Me.PictureBoxPasta.BackgroundImage = CType(resources.GetObject("PictureBoxPasta.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBoxPasta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBoxPasta.Location = New System.Drawing.Point(632, 191)
+        Me.PictureBoxPasta.Name = "PictureBoxPasta"
+        Me.PictureBoxPasta.Size = New System.Drawing.Size(157, 145)
+        Me.PictureBoxPasta.TabIndex = 11
+        Me.PictureBoxPasta.TabStop = False
         '
-        'PictureBox6
+        'PictureBoxExtraSides
         '
-        Me.PictureBox6.BackgroundImage = CType(resources.GetObject("PictureBox6.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox6.Location = New System.Drawing.Point(427, 191)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(157, 145)
-        Me.PictureBox6.TabIndex = 10
-        Me.PictureBox6.TabStop = False
+        Me.PictureBoxExtraSides.BackgroundImage = CType(resources.GetObject("PictureBoxExtraSides.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBoxExtraSides.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBoxExtraSides.Location = New System.Drawing.Point(427, 191)
+        Me.PictureBoxExtraSides.Name = "PictureBoxExtraSides"
+        Me.PictureBoxExtraSides.Size = New System.Drawing.Size(157, 145)
+        Me.PictureBoxExtraSides.TabIndex = 10
+        Me.PictureBoxExtraSides.TabStop = False
         '
         'PictureBoxDrinks
         '
@@ -270,25 +270,25 @@ Partial Class FormSalesCategories
         Me.PictureBoxCurries.TabIndex = 3
         Me.PictureBoxCurries.TabStop = False
         '
-        'PictureBox3
+        'PictureBoxChutney
         '
-        Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox3.Location = New System.Drawing.Point(427, 12)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(157, 145)
-        Me.PictureBox3.TabIndex = 2
-        Me.PictureBox3.TabStop = False
+        Me.PictureBoxChutney.BackgroundImage = CType(resources.GetObject("PictureBoxChutney.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBoxChutney.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBoxChutney.Location = New System.Drawing.Point(427, 12)
+        Me.PictureBoxChutney.Name = "PictureBoxChutney"
+        Me.PictureBoxChutney.Size = New System.Drawing.Size(157, 145)
+        Me.PictureBoxChutney.TabIndex = 2
+        Me.PictureBoxChutney.TabStop = False
         '
-        'PictureBox2
+        'PictureBoxBunnies
         '
-        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox2.Location = New System.Drawing.Point(224, 12)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(157, 145)
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
+        Me.PictureBoxBunnies.BackgroundImage = CType(resources.GetObject("PictureBoxBunnies.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBoxBunnies.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBoxBunnies.Location = New System.Drawing.Point(224, 12)
+        Me.PictureBoxBunnies.Name = "PictureBoxBunnies"
+        Me.PictureBoxBunnies.Size = New System.Drawing.Size(157, 145)
+        Me.PictureBoxBunnies.TabIndex = 1
+        Me.PictureBoxBunnies.TabStop = False
         '
         'PictureBoxBriyani
         '
@@ -311,16 +311,16 @@ Partial Class FormSalesCategories
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.PictureBox9)
-        Me.Controls.Add(Me.PictureBox10)
-        Me.Controls.Add(Me.PictureBox11)
-        Me.Controls.Add(Me.PictureBox12)
+        Me.Controls.Add(Me.PictureBoxToastedSandwiches)
+        Me.Controls.Add(Me.PictureBoxSpecials)
+        Me.Controls.Add(Me.PictureBoxRotiRolls)
+        Me.Controls.Add(Me.PictureBoxRegulars)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.PictureBox5)
-        Me.Controls.Add(Me.PictureBox6)
+        Me.Controls.Add(Me.PictureBoxPasta)
+        Me.Controls.Add(Me.PictureBoxExtraSides)
         Me.Controls.Add(Me.PictureBoxDrinks)
         Me.Controls.Add(Me.PictureBoxDishes)
         Me.Controls.Add(Me.Label4)
@@ -328,23 +328,23 @@ Partial Class FormSalesCategories
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBoxCurries)
-        Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PictureBoxChutney)
+        Me.Controls.Add(Me.PictureBoxBunnies)
         Me.Controls.Add(Me.PictureBoxBriyani)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FormSalesCategories"
         Me.Text = "FormSalesCategories"
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxToastedSandwiches, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxSpecials, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxRotiRolls, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxRegulars, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxPasta, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxExtraSides, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxDrinks, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxDishes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxCurries, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxChutney, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxBunnies, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxBriyani, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -352,8 +352,8 @@ Partial Class FormSalesCategories
     End Sub
 
     Friend WithEvents PictureBoxBriyani As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBoxBunnies As PictureBox
+    Friend WithEvents PictureBoxChutney As PictureBox
     Friend WithEvents PictureBoxCurries As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
@@ -363,16 +363,16 @@ Partial Class FormSalesCategories
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents PictureBoxPasta As PictureBox
+    Friend WithEvents PictureBoxExtraSides As PictureBox
     Friend WithEvents PictureBoxDrinks As PictureBox
     Friend WithEvents PictureBoxDishes As PictureBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents PictureBox9 As PictureBox
-    Friend WithEvents PictureBox10 As PictureBox
-    Friend WithEvents PictureBox11 As PictureBox
-    Friend WithEvents PictureBox12 As PictureBox
+    Friend WithEvents PictureBoxToastedSandwiches As PictureBox
+    Friend WithEvents PictureBoxSpecials As PictureBox
+    Friend WithEvents PictureBoxRotiRolls As PictureBox
+    Friend WithEvents PictureBoxRegulars As PictureBox
 End Class
