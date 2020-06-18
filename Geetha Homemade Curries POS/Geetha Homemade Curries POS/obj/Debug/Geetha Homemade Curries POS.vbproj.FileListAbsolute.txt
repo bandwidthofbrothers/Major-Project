@@ -87,3 +87,4 @@ C:\Users\micha\OneDrive\Development\Major Project\Geetha Homemade Curries POS\Ge
 C:\Users\micha\OneDrive\Development\Major Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSalesCheckout.resources
 C:\Users\micha\OneDrive\Development\Major Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSalesAccount.resources
 C:\Users\micha\OneDrive\Development\Major Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormAddCustomer.resources
+C:\Users\micha\OneDrive\Development\Major Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormReport.resources

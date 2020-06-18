@@ -75,12 +75,16 @@ Public Class FormStaff
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
-        Dim EmployeeFullName As String = (ListBox1.SelectedItem).ToString
-        Dim FirstName = EmployeeFullName.Substring(EmployeeFullName.IndexOf(" ") + 1)
-        Dim Surname = EmployeeFullName.Substring(0, EmployeeFullName.IndexOf(" "))
+        Dim EmployeeNumber As Integer = Integer.Parse(TextBox1.Text)
+        Dim FName As String = TextBox2.Text
+        Dim SName As String = TextBox3.Text
+        Dim PhoneNumber As String = TextBox4.Text
+        Dim JobTitle As String = "Former Employee"
+        Dim Username As String = "error"
+        Dim Password As String = "error"
 
         Dim Result As Integer
-        Result = MsgBox("Do you want to delete the profile of " + FirstName + " " + Surname, vbQuestion + vbYesNo + vbDefaultButton2, "Delete")
+        Result = MsgBox("Do you want to delete the profile of " + FName + " " + SName, vbQuestion + vbYesNo + vbDefaultButton2, "Delete")
 
         Dim conThree As SqlConnection
         Dim cndThree As SqlCommand
@@ -88,14 +92,19 @@ Public Class FormStaff
 
         conThree.Open()
         If Result = 6 Then
-            cndThree = New SqlCommand("DELETE FROM Employee WHERE EmployeeFirstName = @FirstName AND EmployeeSurname = @Surname", conThree)
-            cndThree.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = FirstName
-            cndThree.Parameters.Add("@Surname", SqlDbType.VarChar).Value = Surname
+            cndThree = New SqlCommand("UPDATE Employee SET EmployeeFirstName = @FirstName, EmployeeSurname = @Surname, EmployeePhoneNumber = @PhoneNumber, JobTitle = @JobTitle, Username = @Username, Password = @Password WHERE EmployeeNumber = @EmployeeNumber", conThree)
+            cndThree.Parameters.Add("@EmployeeNumber", SqlDbType.Int).Value = EmployeeNumber
+            cndThree.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = FName
+            cndThree.Parameters.Add("@Surname", SqlDbType.VarChar).Value = SName
+            cndThree.Parameters.Add("@PhoneNumber", SqlDbType.VarChar).Value = PhoneNumber
+            cndThree.Parameters.Add("@JobTitle", SqlDbType.VarChar).Value = JobTitle
+            cndThree.Parameters.Add("@UserName", SqlDbType.VarChar).Value = Username
+            cndThree.Parameters.Add("@Password", SqlDbType.VarChar).Value = Password
             Try
                 If cndThree.ExecuteNonQuery() = 1 Then
-                    MessageBox.Show("Staff Profile Deleted")
+                    MessageBox.Show("Staff Access Deleted")
                 Else
-                    MessageBox.Show("Staff Profile Not Deleted")
+                    MessageBox.Show("Staff Access Not Deleted")
                 End If
             Catch ex As Exception
                 MsgBox(ex.Message)
@@ -169,8 +178,8 @@ Public Class FormStaff
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
 
         Dim EmployeeFullName As String = TextBox8.Text
-        Dim FirstName = EmployeeFullName.Substring(EmployeeFullName.IndexOf(" ") + 1)
-        Dim Surname = EmployeeFullName.Substring(0, EmployeeFullName.IndexOf(" "))
+        Dim FirstName As String = EmployeeFullName.Substring(EmployeeFullName.IndexOf(" ") + 1)
+        Dim Surname As String = EmployeeFullName.Substring(0, EmployeeFullName.IndexOf(" "))
 
         Dim conTwo As SqlConnection
         Dim cndTwo As SqlCommand

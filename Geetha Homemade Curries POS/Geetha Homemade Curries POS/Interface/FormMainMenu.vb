@@ -31,7 +31,7 @@
     End Sub
 
     Private Sub ButtonReports_Click(sender As Object, e As EventArgs) Handles ButtonReports.Click
-        FormSetUp(FormReports)
+        FormSetUp(FormReport)
     End Sub
 
     Private Sub ButtonExit_Click(sender As Object, e As EventArgs) Handles ButtonExit.Click
@@ -122,7 +122,7 @@
     End Sub
 
     Private Sub ReportsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportsToolStripMenuItem.Click
-        FormSetUp(FormReports)
+        FormSetUp(FormReport)
     End Sub
 
     Private Sub AccountsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AccountsToolStripMenuItem.Click
