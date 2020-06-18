@@ -44,4 +44,13 @@
     Private Sub ButtonAdd_Click(sender As Object, e As EventArgs) Handles ButtonAdd.Click
         FormAddMenuItem.Show()
     End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        If TextBox1.Text <> "" Then
+            MenuItemTableAdapter.FillBy(Group22DataSet.MenuItem, TextBox1.Text)
+
+        End If
+        MenuItemTableAdapter.Fill(Group22DataSet.MenuItem)
+
+    End Sub
 End Class
