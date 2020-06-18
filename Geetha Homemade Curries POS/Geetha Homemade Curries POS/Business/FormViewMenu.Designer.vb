@@ -137,7 +137,7 @@ Partial Class FormViewMenu
         '
         'ButtonDelete
         '
-        Me.ButtonDelete.Location = New System.Drawing.Point(1128, 489)
+        Me.ButtonDelete.Location = New System.Drawing.Point(467, 526)
         Me.ButtonDelete.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonDelete.Name = "ButtonDelete"
         Me.ButtonDelete.Size = New System.Drawing.Size(107, 32)
@@ -147,7 +147,7 @@ Partial Class FormViewMenu
         '
         'ButtonUpdate
         '
-        Me.ButtonUpdate.Location = New System.Drawing.Point(998, 489)
+        Me.ButtonUpdate.Location = New System.Drawing.Point(328, 526)
         Me.ButtonUpdate.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonUpdate.Name = "ButtonUpdate"
         Me.ButtonUpdate.Size = New System.Drawing.Size(114, 32)
@@ -157,7 +157,7 @@ Partial Class FormViewMenu
         '
         'ButtonAdd
         '
-        Me.ButtonAdd.Location = New System.Drawing.Point(867, 489)
+        Me.ButtonAdd.Location = New System.Drawing.Point(178, 526)
         Me.ButtonAdd.Margin = New System.Windows.Forms.Padding(2)
         Me.ButtonAdd.Name = "ButtonAdd"
         Me.ButtonAdd.Size = New System.Drawing.Size(114, 32)
