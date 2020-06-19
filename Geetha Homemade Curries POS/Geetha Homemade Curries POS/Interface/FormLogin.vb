@@ -3,12 +3,18 @@
         EmployeeTableAdapter.FillBy(Group22DataSet.Employee, TextBoxUserName.Text, TextBoxPassword.Text)
 
         Dim userName As String = TextBoxUserName.Text
+        Dim jobTitle As String = EmployeeTableAdapter.getJobTitle(userName)
+
+        If jobTitle = "Former Employee" Then
+            MessageBox.Show("You are no longer permitted to access the system!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        End If
 
         If Group22DataSet.Employee.Rows.Count() > 0 Then
             MessageBox.Show("Welcome! You will now be directed to the system")
             Me.Close()
 
-            Dim jobTitle As String = EmployeeTableAdapter.getJobTitle(userName)
+
             Dim employeeNumber As Integer = EmployeeTableAdapter.getEmployeeNumber(userName)
 
             FormMainMenu.employeeNumber = employeeNumber

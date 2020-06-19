@@ -37,6 +37,10 @@ Public Class FormStaff
 
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
 
+        If ListBox1.SelectedItem Is Nothing Then
+            Exit Sub
+        End If
+
         Dim EmployeeFullName As String = (ListBox1.SelectedItem).ToString
         Dim FirstName = EmployeeFullName.Substring(EmployeeFullName.IndexOf(" ") + 1)
         Dim Surname = EmployeeFullName.Substring(0, EmployeeFullName.IndexOf(" "))
@@ -80,8 +84,8 @@ Public Class FormStaff
         Dim SName As String = TextBox3.Text
         Dim PhoneNumber As String = TextBox4.Text
         Dim JobTitle As String = "Former Employee"
-        Dim Username As String = "error"
-        Dim Password As String = "error"
+        Dim Username As String = TextBox6.Text
+        Dim Password As String = TextBox7.Text
 
         Dim Result As Integer
         Result = MsgBox("Do you want to delete the profile of " + FName + " " + SName, vbQuestion + vbYesNo + vbDefaultButton2, "Delete")
