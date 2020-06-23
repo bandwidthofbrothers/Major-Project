@@ -23,6 +23,8 @@
                     .FormSetUp(FormMain)
                     .FormSetUp(ViewCustomers)
                 End With
+
+                Me.TopMost = True
             Catch ex As Exception
                 MessageBox.Show("Error: Record added unsuccessfully")
             End Try

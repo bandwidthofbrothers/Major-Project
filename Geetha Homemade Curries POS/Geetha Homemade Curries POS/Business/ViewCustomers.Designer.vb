@@ -28,8 +28,8 @@ Partial Class ViewCustomers
         Dim PhoneNumberLabel As System.Windows.Forms.Label
         Dim AmountDueLabel As System.Windows.Forms.Label
         Dim CustomerIDLabel As System.Windows.Forms.Label
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim Label1 As System.Windows.Forms.Label
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
         Me.CustomerOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -119,6 +119,17 @@ Partial Class ViewCustomers
         CustomerIDLabel.Size = New System.Drawing.Size(89, 17)
         CustomerIDLabel.TabIndex = 59
         CustomerIDLabel.Text = "Customer ID:"
+        '
+        'Label1
+        '
+        Label1.AutoSize = True
+        Label1.ForeColor = System.Drawing.Color.White
+        Label1.Image = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
+        Label1.Location = New System.Drawing.Point(17, 102)
+        Label1.Name = "Label1"
+        Label1.Size = New System.Drawing.Size(57, 17)
+        Label1.TabIndex = 61
+        Label1.Text = "Search:"
         '
         'Label10
         '
@@ -215,9 +226,9 @@ Partial Class ViewCustomers
         '
         Me.AmountDueDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.AmountDueDataGridViewTextBoxColumn.DataPropertyName = "AmountDue"
-        DataGridViewCellStyle5.Format = "C2"
-        DataGridViewCellStyle5.NullValue = Nothing
-        Me.AmountDueDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Format = "C2"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.AmountDueDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
         Me.AmountDueDataGridViewTextBoxColumn.HeaderText = "Amount Due"
         Me.AmountDueDataGridViewTextBoxColumn.Name = "AmountDueDataGridViewTextBoxColumn"
         Me.AmountDueDataGridViewTextBoxColumn.ReadOnly = True
@@ -321,17 +332,6 @@ Partial Class ViewCustomers
         Me.CustomerIDTextBox.ReadOnly = True
         Me.CustomerIDTextBox.Size = New System.Drawing.Size(297, 22)
         Me.CustomerIDTextBox.TabIndex = 60
-        '
-        'Label1
-        '
-        Label1.AutoSize = True
-        Label1.ForeColor = System.Drawing.Color.White
-        Label1.Image = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
-        Label1.Location = New System.Drawing.Point(17, 102)
-        Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(57, 17)
-        Label1.TabIndex = 61
-        Label1.Text = "Search:"
         '
         'ViewCustomers
         '

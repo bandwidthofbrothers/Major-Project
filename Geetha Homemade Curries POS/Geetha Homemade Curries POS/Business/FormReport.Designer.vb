@@ -23,17 +23,23 @@ Partial Class FormReport
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim DataPoint1 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
-        Dim DataPoint2 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim ChartArea6 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend6 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea7 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend7 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series7 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea8 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend8 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series8 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataPoint3 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint4 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim ChartArea9 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend9 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series9 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.MonthCalendar = New System.Windows.Forms.MonthCalendar()
         Me.TabPageAllTime = New System.Windows.Forms.TabPage()
         Me.Label29 = New System.Windows.Forms.Label()
@@ -66,8 +72,6 @@ Partial Class FormReport
         Me.TabPageDaily = New System.Windows.Forms.TabPage()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ChartDailyProductivity = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.CustomerOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.LabelLeastSoldProductName = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -80,9 +84,13 @@ Partial Class FormReport
         Me.LabelIncome = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabAllTime = New System.Windows.Forms.TabControl()
+        Me.CustomerOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
         Me.CustomerOrderTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.CustomerOrderTableAdapter()
         Me.MenuItemTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.MenuItemTableAdapter()
         Me.IngredientTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.IngredientTableAdapter()
+        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.Chart4 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.TabPageAllTime.SuspendLayout()
         CType(Me.Chart3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
@@ -91,10 +99,12 @@ Partial Class FormReport
         Me.GroupBox3.SuspendLayout()
         Me.TabPageDaily.SuspendLayout()
         CType(Me.ChartDailyProductivity, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CustomerOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.TabAllTime.SuspendLayout()
+        CType(Me.CustomerOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Chart4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MonthCalendar
@@ -105,6 +115,7 @@ Partial Class FormReport
         '
         'TabPageAllTime
         '
+        Me.TabPageAllTime.Controls.Add(Me.Chart4)
         Me.TabPageAllTime.Controls.Add(Me.Label29)
         Me.TabPageAllTime.Controls.Add(Me.Chart3)
         Me.TabPageAllTime.Controls.Add(Me.GroupBox4)
@@ -127,16 +138,16 @@ Partial Class FormReport
         '
         'Chart3
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart3.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Chart3.Legends.Add(Legend1)
+        ChartArea6.Name = "ChartArea1"
+        Me.Chart3.ChartAreas.Add(ChartArea6)
+        Legend6.Name = "Legend1"
+        Me.Chart3.Legends.Add(Legend6)
         Me.Chart3.Location = New System.Drawing.Point(449, 115)
         Me.Chart3.Name = "Chart3"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.Chart3.Series.Add(Series1)
+        Series6.ChartArea = "ChartArea1"
+        Series6.Legend = "Legend1"
+        Series6.Name = "Series1"
+        Me.Chart3.Series.Add(Series6)
         Me.Chart3.Size = New System.Drawing.Size(475, 454)
         Me.Chart3.TabIndex = 1
         Me.Chart3.Text = "Chart1"
@@ -156,7 +167,7 @@ Partial Class FormReport
         Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.Location = New System.Drawing.Point(18, 17)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(407, 584)
+        Me.GroupBox4.Size = New System.Drawing.Size(407, 330)
         Me.GroupBox4.TabIndex = 0
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Statistics"
@@ -263,6 +274,7 @@ Partial Class FormReport
         '
         'TabPageMonthly
         '
+        Me.TabPageMonthly.Controls.Add(Me.Chart1)
         Me.TabPageMonthly.Controls.Add(Me.Label18)
         Me.TabPageMonthly.Controls.Add(Me.Chart2)
         Me.TabPageMonthly.Controls.Add(Me.GroupBox3)
@@ -285,16 +297,16 @@ Partial Class FormReport
         '
         'Chart2
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.Chart2.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend2)
+        ChartArea7.Name = "ChartArea1"
+        Me.Chart2.ChartAreas.Add(ChartArea7)
+        Legend7.Name = "Legend1"
+        Me.Chart2.Legends.Add(Legend7)
         Me.Chart2.Location = New System.Drawing.Point(449, 115)
         Me.Chart2.Name = "Chart2"
-        Series2.ChartArea = "ChartArea1"
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        Me.Chart2.Series.Add(Series2)
+        Series7.ChartArea = "ChartArea1"
+        Series7.Legend = "Legend1"
+        Series7.Name = "Series1"
+        Me.Chart2.Series.Add(Series7)
         Me.Chart2.Size = New System.Drawing.Size(475, 454)
         Me.Chart2.TabIndex = 1
         Me.Chart2.Text = "ChartMonthyProductivity"
@@ -443,34 +455,24 @@ Partial Class FormReport
         '
         'ChartDailyProductivity
         '
-        ChartArea3.Name = "ChartArea1"
-        Me.ChartDailyProductivity.ChartAreas.Add(ChartArea3)
+        ChartArea8.Name = "ChartArea1"
+        Me.ChartDailyProductivity.ChartAreas.Add(ChartArea8)
         Me.ChartDailyProductivity.DataSource = Me.CustomerOrderBindingSource
-        Legend3.Name = "Legend1"
-        Me.ChartDailyProductivity.Legends.Add(Legend3)
+        Legend8.Name = "Legend1"
+        Me.ChartDailyProductivity.Legends.Add(Legend8)
         Me.ChartDailyProductivity.Location = New System.Drawing.Point(449, 115)
         Me.ChartDailyProductivity.Name = "ChartDailyProductivity"
-        Series3.ChartArea = "ChartArea1"
-        Series3.Legend = "Legend1"
-        Series3.Name = "Productivity"
-        Series3.Points.Add(DataPoint1)
-        Series3.Points.Add(DataPoint2)
-        Series3.XValueMember = "OrderTime"
-        Series3.YValueMembers = "SaleID"
-        Me.ChartDailyProductivity.Series.Add(Series3)
+        Series8.ChartArea = "ChartArea1"
+        Series8.Legend = "Legend1"
+        Series8.Name = "Productivity"
+        Series8.Points.Add(DataPoint3)
+        Series8.Points.Add(DataPoint4)
+        Series8.XValueMember = "OrderTime"
+        Series8.YValueMembers = "SaleID"
+        Me.ChartDailyProductivity.Series.Add(Series8)
         Me.ChartDailyProductivity.Size = New System.Drawing.Size(475, 454)
         Me.ChartDailyProductivity.TabIndex = 1
         Me.ChartDailyProductivity.Text = "ChartProductivity"
-        '
-        'CustomerOrderBindingSource
-        '
-        Me.CustomerOrderBindingSource.DataMember = "CustomerOrder"
-        Me.CustomerOrderBindingSource.DataSource = Me.Group22DataSet
-        '
-        'Group22DataSet
-        '
-        Me.Group22DataSet.DataSetName = "group22DataSet"
-        Me.Group22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'GroupBox1
         '
@@ -604,6 +606,16 @@ Partial Class FormReport
         Me.TabAllTime.Size = New System.Drawing.Size(938, 660)
         Me.TabAllTime.TabIndex = 1
         '
+        'CustomerOrderBindingSource
+        '
+        Me.CustomerOrderBindingSource.DataMember = "CustomerOrder"
+        Me.CustomerOrderBindingSource.DataSource = Me.Group22DataSet
+        '
+        'Group22DataSet
+        '
+        Me.Group22DataSet.DataSetName = "group22DataSet"
+        Me.Group22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'CustomerOrderTableAdapter
         '
         Me.CustomerOrderTableAdapter.ClearBeforeFill = True
@@ -615,6 +627,38 @@ Partial Class FormReport
         'IngredientTableAdapter
         '
         Me.IngredientTableAdapter.ClearBeforeFill = True
+        '
+        'Chart1
+        '
+        ChartArea9.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea9)
+        Legend9.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend9)
+        Me.Chart1.Location = New System.Drawing.Point(18, 356)
+        Me.Chart1.Name = "Chart1"
+        Series9.ChartArea = "ChartArea1"
+        Series9.Legend = "Legend1"
+        Series9.Name = "Series1"
+        Me.Chart1.Series.Add(Series9)
+        Me.Chart1.Size = New System.Drawing.Size(407, 239)
+        Me.Chart1.TabIndex = 3
+        Me.Chart1.Text = "Chart1"
+        '
+        'Chart4
+        '
+        ChartArea5.Name = "ChartArea1"
+        Me.Chart4.ChartAreas.Add(ChartArea5)
+        Legend5.Name = "Legend1"
+        Me.Chart4.Legends.Add(Legend5)
+        Me.Chart4.Location = New System.Drawing.Point(18, 364)
+        Me.Chart4.Name = "Chart4"
+        Series5.ChartArea = "ChartArea1"
+        Series5.Legend = "Legend1"
+        Series5.Name = "Series1"
+        Me.Chart4.Series.Add(Series5)
+        Me.Chart4.Size = New System.Drawing.Size(407, 239)
+        Me.Chart4.TabIndex = 4
+        Me.Chart4.Text = "Chart4"
         '
         'FormReport
         '
@@ -640,11 +684,13 @@ Partial Class FormReport
         Me.TabPageDaily.ResumeLayout(False)
         Me.TabPageDaily.PerformLayout()
         CType(Me.ChartDailyProductivity, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CustomerOrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.TabAllTime.ResumeLayout(False)
+        CType(Me.CustomerOrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Chart4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -698,4 +744,6 @@ Partial Class FormReport
     Friend WithEvents LabelIncome As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents TabAllTime As TabControl
+    Friend WithEvents Chart1 As DataVisualization.Charting.Chart
+    Friend WithEvents Chart4 As DataVisualization.Charting.Chart
 End Class

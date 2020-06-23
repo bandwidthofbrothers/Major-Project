@@ -54,4 +54,8 @@
     Private Sub ButtonRefresh_Click(sender As Object, e As EventArgs) Handles ButtonRefresh.Click
         MenuItemTableAdapter.Fill(Group22DataSet.MenuItem)
     End Sub
+
+    Private Sub MenuItemDataGridView_Click(sender As Object, e As EventArgs) Handles MenuItemDataGridView.Click
+
+    End Sub
 End Class
