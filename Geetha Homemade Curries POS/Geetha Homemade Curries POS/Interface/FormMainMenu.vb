@@ -31,7 +31,7 @@
     End Sub
 
     Private Sub ButtonReports_Click(sender As Object, e As EventArgs) Handles ButtonReports.Click
-        FormSetUp(FormReports)
+        FormSetUp(FormReport)
     End Sub
 
     Private Sub ButtonExit_Click(sender As Object, e As EventArgs) Handles ButtonExit.Click
@@ -111,5 +111,29 @@
 
     Private Sub ButtonSale_Click(sender As Object, e As EventArgs) Handles ButtonSale.Click
         FormSetUp(FormSales)
+    End Sub
+
+    Private Sub SaleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaleToolStripMenuItem.Click
+        FormSetUp(FormSales)
+    End Sub
+
+    Private Sub MenuToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MenuToolStripMenuItem.Click
+        FormSetUp(FormViewMenu)
+    End Sub
+
+    Private Sub ReportsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportsToolStripMenuItem.Click
+        FormSetUp(FormReport)
+    End Sub
+
+    Private Sub AccountsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AccountsToolStripMenuItem.Click
+        FormSetUp(ViewCustomers)
+    End Sub
+
+    Private Sub ExpensesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExpensesToolStripMenuItem.Click
+        FormSetUp(FormViewExpenses)
+    End Sub
+
+    Private Sub StaffToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StaffToolStripMenuItem.Click
+        FormSetUp(FormStaff)
     End Sub
 End Class

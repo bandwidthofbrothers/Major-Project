@@ -21,7 +21,10 @@ Public Class FormAddStaff
             MessageBox.Show("Enter all missing values", "ERROR")
         End If
 
+        check3 = False
+        Dim attempts As Integer = 0
         If check1 Then
+
             If Len(PhoneNumber) = 10 Then
                 check2 = True
             Else
@@ -29,20 +32,19 @@ Public Class FormAddStaff
                 MessageBox.Show("Phone Number is incorrect", "ERROR")
             End If
 
-            ID = InputBox("Enter ID number", "ID Number", 0)
-            checkID = parseIdNo(ID)
-            If Len(ID) = 13 And ID <> "" And checkID Then
-                check3 = True
-            Else
-                check3 = False
-                MessageBox.Show("ID Number is incorrect", "ERROR")
-            End If
+            Do While check3 = False And attempts <> 3
 
-            If check3 = False Then
-                ID = InputBox("Enter ID number", "ID Number", 0)
+                ID = InputBox("Enter ID Number" + " (Attempts Available = 3)", "ID Number", 0)
                 checkID = parseIdNo(ID)
-                check3 = True
-            End If
+                If Len(ID) = 13 And ID <> "" And checkID Then
+                    check3 = True
+                Else
+                    MessageBox.Show("ID Number is incorrect", "ERROR")
+                End If
+                attempts += 1
+
+            Loop
+
         End If
 
         Dim conFour As SqlConnection
@@ -104,6 +106,11 @@ Public Class FormAddStaff
 
         TextBox5.Text = Username
         TextBox6.Text = Password
+
+        With FormMainMenu
+            .FormSetUp(FormMain)
+            .FormSetUp(FormStaff)
+        End With
 
     End Sub
 

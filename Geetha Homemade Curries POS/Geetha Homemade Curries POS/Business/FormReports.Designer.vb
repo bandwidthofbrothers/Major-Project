@@ -71,28 +71,28 @@ Partial Class FormReports
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.MonthCalendar1)
-        Me.Panel1.Location = New System.Drawing.Point(5, 9)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Panel1.Location = New System.Drawing.Point(7, 11)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(461, 191)
+        Me.Panel1.Size = New System.Drawing.Size(614, 235)
         Me.Panel1.TabIndex = 1
         '
         'TextBox3
         '
         Me.TextBox3.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(9, 138)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox3.Location = New System.Drawing.Point(12, 170)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(202, 22)
+        Me.TextBox3.Size = New System.Drawing.Size(268, 26)
         Me.TextBox3.TabIndex = 5
         '
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(115, 91)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox2.Location = New System.Drawing.Point(153, 112)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(96, 22)
+        Me.TextBox2.Size = New System.Drawing.Size(127, 26)
         Me.TextBox2.TabIndex = 4
         '
         'Label3
@@ -101,19 +101,20 @@ Partial Class FormReports
         Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Label3.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(6, 94)
+        Me.Label3.Location = New System.Drawing.Point(8, 116)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(68, 16)
+        Me.Label3.Size = New System.Drawing.Size(85, 19)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Expenses"
         '
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(115, 53)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox1.Location = New System.Drawing.Point(153, 65)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(96, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(127, 26)
         Me.TextBox1.TabIndex = 2
         '
         'Label2
@@ -122,9 +123,10 @@ Partial Class FormReports
         Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Label2.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(6, 54)
+        Me.Label2.Location = New System.Drawing.Point(8, 66)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(55, 16)
+        Me.Label2.Size = New System.Drawing.Size(65, 19)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Income"
         '
@@ -134,9 +136,10 @@ Partial Class FormReports
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("Arial Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(4, 7)
+        Me.Label1.Location = New System.Drawing.Point(5, 9)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(64, 27)
+        Me.Label1.Size = New System.Drawing.Size(81, 33)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Daily"
         '
@@ -144,8 +147,8 @@ Partial Class FormReports
         '
         Me.MonthCalendar1.BackColor = System.Drawing.Color.White
         Me.MonthCalendar1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MonthCalendar1.Location = New System.Drawing.Point(224, 16)
-        Me.MonthCalendar1.Margin = New System.Windows.Forms.Padding(10, 11, 10, 11)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(299, 20)
+        Me.MonthCalendar1.Margin = New System.Windows.Forms.Padding(13, 14, 13, 14)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 0
         '
@@ -154,9 +157,10 @@ Partial Class FormReports
         Me.Button3.BackColor = System.Drawing.Color.White
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button3.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(256, 227)
+        Me.Button3.Location = New System.Drawing.Point(341, 279)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(152, 24)
+        Me.Button3.Size = New System.Drawing.Size(203, 30)
         Me.Button3.TabIndex = 9
         Me.Button3.Text = "Weekly Productivity"
         Me.Button3.UseVisualStyleBackColor = False
@@ -166,9 +170,10 @@ Partial Class FormReports
         Me.Button2.BackColor = System.Drawing.Color.White
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(59, 227)
+        Me.Button2.Location = New System.Drawing.Point(79, 279)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(152, 24)
+        Me.Button2.Size = New System.Drawing.Size(203, 30)
         Me.Button2.TabIndex = 8
         Me.Button2.Text = "Daily Productivity"
         Me.Button2.UseVisualStyleBackColor = False
@@ -185,27 +190,28 @@ Partial Class FormReports
         Me.Panel2.Controls.Add(Me.ComboBox1)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.Label8)
-        Me.Panel2.Location = New System.Drawing.Point(472, 9)
+        Me.Panel2.Location = New System.Drawing.Point(629, 11)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(239, 265)
+        Me.Panel2.Size = New System.Drawing.Size(318, 326)
         Me.Panel2.TabIndex = 2
         '
         'TextBox6
         '
         Me.TextBox6.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(14, 190)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox6.Location = New System.Drawing.Point(19, 234)
+        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(205, 22)
+        Me.TextBox6.Size = New System.Drawing.Size(272, 26)
         Me.TextBox6.TabIndex = 6
         '
         'TextBox5
         '
         Me.TextBox5.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(95, 141)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox5.Location = New System.Drawing.Point(127, 174)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(124, 22)
+        Me.TextBox5.Size = New System.Drawing.Size(164, 26)
         Me.TextBox5.TabIndex = 7
         '
         'Button1
@@ -213,9 +219,10 @@ Partial Class FormReports
         Me.Button1.BackColor = System.Drawing.Color.White
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(32, 231)
+        Me.Button1.Location = New System.Drawing.Point(43, 284)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(168, 24)
+        Me.Button1.Size = New System.Drawing.Size(224, 30)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Generate Monthly Reports"
         Me.Button1.UseVisualStyleBackColor = False
@@ -223,10 +230,10 @@ Partial Class FormReports
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(95, 94)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox4.Location = New System.Drawing.Point(127, 116)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(124, 22)
+        Me.TextBox4.Size = New System.Drawing.Size(164, 26)
         Me.TextBox4.TabIndex = 6
         '
         'Label7
@@ -235,9 +242,10 @@ Partial Class FormReports
         Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Label7.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(11, 144)
+        Me.Label7.Location = New System.Drawing.Point(15, 177)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(68, 16)
+        Me.Label7.Size = New System.Drawing.Size(85, 19)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Expenses"
         '
@@ -247,9 +255,10 @@ Partial Class FormReports
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Label6.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(11, 97)
+        Me.Label6.Location = New System.Drawing.Point(15, 119)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(55, 16)
+        Me.Label6.Size = New System.Drawing.Size(65, 19)
         Me.Label6.TabIndex = 6
         Me.Label6.Text = "Income"
         '
@@ -261,9 +270,10 @@ Partial Class FormReports
         Me.ComboBox1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"})
-        Me.ComboBox1.Location = New System.Drawing.Point(95, 51)
+        Me.ComboBox1.Location = New System.Drawing.Point(127, 63)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(124, 24)
+        Me.ComboBox1.Size = New System.Drawing.Size(164, 26)
         Me.ComboBox1.TabIndex = 5
         '
         'Label5
@@ -272,9 +282,10 @@ Partial Class FormReports
         Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Label5.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(11, 54)
+        Me.Label5.Location = New System.Drawing.Point(15, 66)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(47, 16)
+        Me.Label5.Size = New System.Drawing.Size(58, 19)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Month"
         '
@@ -284,9 +295,10 @@ Partial Class FormReports
         Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Label8.Font = New System.Drawing.Font("Arial Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(75, 7)
+        Me.Label8.Location = New System.Drawing.Point(100, 9)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(95, 27)
+        Me.Label8.Size = New System.Drawing.Size(120, 33)
         Me.Label8.TabIndex = 1
         Me.Label8.Text = "Monthly"
         '
@@ -298,27 +310,28 @@ Partial Class FormReports
         Me.Panel4.Controls.Add(Me.Label11)
         Me.Panel4.Controls.Add(Me.Label10)
         Me.Panel4.Controls.Add(Me.Label9)
-        Me.Panel4.Location = New System.Drawing.Point(472, 280)
+        Me.Panel4.Location = New System.Drawing.Point(629, 345)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(239, 191)
+        Me.Panel4.Size = New System.Drawing.Size(318, 235)
         Me.Panel4.TabIndex = 5
         '
         'TextBox8
         '
         Me.TextBox8.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(14, 155)
-        Me.TextBox8.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox8.Location = New System.Drawing.Point(19, 191)
+        Me.TextBox8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(205, 22)
+        Me.TextBox8.Size = New System.Drawing.Size(272, 26)
         Me.TextBox8.TabIndex = 10
         '
         'TextBox7
         '
         Me.TextBox7.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(14, 84)
-        Me.TextBox7.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TextBox7.Location = New System.Drawing.Point(19, 103)
+        Me.TextBox7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(205, 22)
+        Me.TextBox7.Size = New System.Drawing.Size(272, 26)
         Me.TextBox7.TabIndex = 8
         '
         'Label11
@@ -327,9 +340,10 @@ Partial Class FormReports
         Me.Label11.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Label11.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(11, 121)
+        Me.Label11.Location = New System.Drawing.Point(15, 149)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(107, 16)
+        Me.Label11.Size = New System.Drawing.Size(130, 19)
         Me.Label11.TabIndex = 9
         Me.Label11.Text = "Least Sold Item"
         '
@@ -339,9 +353,10 @@ Partial Class FormReports
         Me.Label10.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Label10.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(11, 52)
+        Me.Label10.Location = New System.Drawing.Point(15, 64)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(102, 16)
+        Me.Label10.Size = New System.Drawing.Size(125, 19)
         Me.Label10.TabIndex = 8
         Me.Label10.Text = "Most Sold Item"
         '
@@ -351,9 +366,10 @@ Partial Class FormReports
         Me.Label9.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Label9.Font = New System.Drawing.Font("Arial Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(92, 6)
+        Me.Label9.Location = New System.Drawing.Point(123, 7)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(70, 27)
+        Me.Label9.Size = New System.Drawing.Size(87, 33)
         Me.Label9.TabIndex = 8
         Me.Label9.Text = "Sales"
         '
@@ -364,9 +380,10 @@ Partial Class FormReports
         Me.Panel3.Controls.Add(Me.Button3)
         Me.Panel3.Controls.Add(Me.Button2)
         Me.Panel3.Controls.Add(Me.Chart1)
-        Me.Panel3.Location = New System.Drawing.Point(5, 206)
+        Me.Panel3.Location = New System.Drawing.Point(7, 254)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(461, 265)
+        Me.Panel3.Size = New System.Drawing.Size(614, 326)
         Me.Panel3.TabIndex = 10
         '
         'Label4
@@ -375,9 +392,10 @@ Partial Class FormReports
         Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(196, Byte), Integer), CType(CType(46, Byte), Integer), CType(CType(62, Byte), Integer))
         Me.Label4.Font = New System.Drawing.Font("Arial Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(145, 7)
+        Me.Label4.Location = New System.Drawing.Point(193, 9)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(138, 27)
+        Me.Label4.Size = New System.Drawing.Size(175, 33)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Productivity"
         '
@@ -387,26 +405,28 @@ Partial Class FormReports
         Me.Chart1.ChartAreas.Add(ChartArea1)
         Legend1.Name = "Legend1"
         Me.Chart1.Legends.Add(Legend1)
-        Me.Chart1.Location = New System.Drawing.Point(9, 50)
+        Me.Chart1.Location = New System.Drawing.Point(12, 62)
+        Me.Chart1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Chart1.Name = "Chart1"
         Series1.ChartArea = "ChartArea1"
         Series1.Legend = "Legend1"
         Series1.Name = "Orders"
         Me.Chart1.Series.Add(Series1)
-        Me.Chart1.Size = New System.Drawing.Size(442, 162)
+        Me.Chart1.Size = New System.Drawing.Size(589, 199)
         Me.Chart1.TabIndex = 6
         Me.Chart1.Text = "Chart1"
         '
-        'Form2
+        'FormReports
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(714, 476)
+        Me.ClientSize = New System.Drawing.Size(952, 586)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "Form2"
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Name = "FormReports"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Reports"
         Me.Panel1.ResumeLayout(False)
