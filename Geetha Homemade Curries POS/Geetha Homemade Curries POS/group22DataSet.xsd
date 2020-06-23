@@ -241,7 +241,7 @@ FROM     CustomerOrder</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="group22ConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getMonthlyIncome" Modifier="Public" Name="getMonthlyIncome" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="getMonthlyIncome">
+              <DbSource ConnectionRef="group22ConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getMonthlyIncome" Modifier="Public" Name="getMonthlyIncome" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="getMonthlyIncome">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT SUM(MenuItem.MenuItemPrice) AS Expr1
@@ -255,7 +255,7 @@ WHERE  (MONTH(CustomerOrder.OrderDate) = @Month) AND (YEAR(CustomerOrder.OrderDa
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="group22ConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getYesterdaysMaxSaleID" Modifier="Public" Name="getYesterdaysMaxSaleID" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="getYesterdaysMaxSaleID">
+              <DbSource ConnectionRef="group22ConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getYesterdaysMaxSaleID" Modifier="Public" Name="getYesterdaysMaxSaleID" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="getYesterdaysMaxSaleID">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT MAX(SaleID)
@@ -267,7 +267,7 @@ WHERE OrderDate = @OrderDate</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="group22ConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="insert1" Modifier="Public" Name="insert1" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="insert1">
+              <DbSource ConnectionRef="group22ConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="insert1" Modifier="Public" Name="insert1" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="insert1">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[CustomerOrder] ([SaleID], [MenuItemID], [Quantity], [OrderDate], [OrderTime], [EmployeeNumber])
@@ -475,7 +475,7 @@ WHERE DatePurchased = @DatePurchased</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="group22ConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getMonthlyExpenses" Modifier="Public" Name="getMonthlyExpenses" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="getMonthlyExpenses">
+              <DbSource ConnectionRef="group22ConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="getMonthlyExpenses" Modifier="Public" Name="getMonthlyExpenses" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="getMonthlyExpenses">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT SUM(IngredientCost) AS Expr1
@@ -488,7 +488,7 @@ WHERE  (MONTH(DatePurchased) = @Month) AND (YEAR(DatePurchased) = @Year)</Comman
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="group22ConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertIngredient" Modifier="Public" Name="InsertIngredient" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertIngredient">
+              <DbSource ConnectionRef="group22ConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertIngredient" Modifier="Public" Name="InsertIngredient" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="InsertIngredient">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[Ingredient] ([IngredientDescription], [IngredientCost], [DatePurchased]) VALUES (@IngredientDescription, @IngredientCost, @DatePurchased);</CommandText>
@@ -500,7 +500,7 @@ WHERE  (MONTH(DatePurchased) = @Month) AND (YEAR(DatePurchased) = @Year)</Comman
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="group22ConnectionString (MySettings)" DbObjectName="group22.dbo.Ingredient" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="search" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="search" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="search">
+              <DbSource ConnectionRef="group22ConnectionString (MySettings)" DbObjectName="group22.dbo.Ingredient" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="search" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="search" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="search">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT * FROM dbo.Ingredient
@@ -511,7 +511,7 @@ WHERE (IngredientDescription LIKE '%' + @IngredientDescription + '%')</CommandTe
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="group22ConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateIngredient" Modifier="Public" Name="UpdateIngredient" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="UpdateIngredient">
+              <DbSource ConnectionRef="group22ConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateIngredient" Modifier="Public" Name="UpdateIngredient" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="UpdateIngredient">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [dbo].[Ingredient] 
@@ -533,23 +533,24 @@ WHERE ([IngredientID] = @IngredientID) </CommandText>
               <DbSource ConnectionRef="group22ConnectionString (MySettings)" DbObjectName="group22.dbo.MenuItem" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [dbo].[MenuItem] WHERE (([MenuItemID] = @Original_MenuItemID) AND ([MenuItemName] = @Original_MenuItemName) AND ([MenuItemPrice] = @Original_MenuItemPrice))</CommandText>
+                    <CommandText>DELETE FROM [dbo].[MenuItem] WHERE (([MenuItemID] = @Original_MenuItemID) AND ([MenuItemName] = @Original_MenuItemName) AND ([MenuItemPrice] = @Original_MenuItemPrice) AND ([CurrentMenuItem] = @Original_CurrentMenuItem))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MenuItemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemID" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_MenuItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="MenuItemName" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_MenuItemPrice" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="MenuItemPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@Original_CurrentMenuItem" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="CurrentMenuItem" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[MenuItem] ([MenuItemID], [MenuItemName], [Category], [MenuItemPrice]) VALUES (@MenuItemID, @MenuItemName, @Category, @MenuItemPrice);
-SELECT MenuItemID, MenuItemName, Category, MenuItemPrice FROM MenuItem WHERE (MenuItemID = @MenuItemID)</CommandText>
+                    <CommandText>INSERT INTO [dbo].[MenuItem] ([MenuItemName], [Category], [MenuItemPrice], [CurrentMenuItem]) VALUES (@MenuItemName, @Category, @MenuItemPrice, @CurrentMenuItem);
+SELECT MenuItemID, MenuItemName, Category, MenuItemPrice, CurrentMenuItem FROM MenuItem WHERE (MenuItemID = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MenuItemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemID" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@MenuItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="MenuItemName" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Category" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@MenuItemPrice" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="MenuItemPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@CurrentMenuItem" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="CurrentMenuItem" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
@@ -561,16 +562,18 @@ SELECT MenuItemID, MenuItemName, Category, MenuItemPrice FROM MenuItem WHERE (Me
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[MenuItem] SET [MenuItemID] = @MenuItemID, [MenuItemName] = @MenuItemName, [Category] = @Category, [MenuItemPrice] = @MenuItemPrice WHERE (([MenuItemID] = @Original_MenuItemID) AND ([MenuItemName] = @Original_MenuItemName) AND ([MenuItemPrice] = @Original_MenuItemPrice));
-SELECT MenuItemID, MenuItemName, Category, MenuItemPrice FROM MenuItem WHERE (MenuItemID = @MenuItemID)</CommandText>
+                    <CommandText>UPDATE [dbo].[MenuItem] SET [MenuItemName] = @MenuItemName, [Category] = @Category, [MenuItemPrice] = @MenuItemPrice, [CurrentMenuItem] = @CurrentMenuItem WHERE (([MenuItemID] = @Original_MenuItemID) AND ([MenuItemName] = @Original_MenuItemName) AND ([MenuItemPrice] = @Original_MenuItemPrice) AND ([CurrentMenuItem] = @Original_CurrentMenuItem));
+SELECT MenuItemID, MenuItemName, Category, MenuItemPrice, CurrentMenuItem FROM MenuItem WHERE (MenuItemID = @MenuItemID)</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@MenuItemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemID" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@MenuItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="MenuItemName" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Category" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="Category" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@MenuItemPrice" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="MenuItemPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@CurrentMenuItem" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="CurrentMenuItem" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_MenuItemID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MenuItemID" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_MenuItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="MenuItemName" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_MenuItemPrice" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="MenuItemPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@Original_CurrentMenuItem" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="CurrentMenuItem" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="MenuItemID" ColumnName="MenuItemID" DataSourceName="group22.dbo.MenuItem" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@MenuItemID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="MenuItemID" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -581,25 +584,17 @@ SELECT MenuItemID, MenuItemName, Category, MenuItemPrice FROM MenuItem WHERE (Me
               <Mapping SourceColumn="MenuItemName" DataSetColumn="MenuItemName" />
               <Mapping SourceColumn="Category" DataSetColumn="Category" />
               <Mapping SourceColumn="MenuItemPrice" DataSetColumn="MenuItemPrice" />
+              <Mapping SourceColumn="CurrentMenuItem" DataSetColumn="CurrentMenuItem" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="group22ConnectionString (MySettings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
-                <DeleteCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>DELETE FROM [dbo].[MenuItem]
- WHERE (MenuItemID= @MenuItemID) 
-</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="MenuItemID" ColumnName="MenuItemID" DataSourceName="group22.dbo.MenuItem" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@MenuItemID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="MenuItemID" SourceColumnNullMapping="false" SourceVersion="Original" />
-                    </Parameters>
-                  </DbCommand>
-                </DeleteCommand>
+              <DbSource ConnectionRef="group22ConnectionString (MySettings)" DbObjectName="group22.dbo.MenuItem" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="DeleteQuery" Modifier="Public" Name="DeleteQuery" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteQuery">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>DELETE FROM MenuItem
+                    <CommandText>UPDATE MenuItem
+SET CurrentMenuItem = 0
 WHERE        (MenuItemID = @MenuItemID)</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="MenuItemID" ColumnName="MenuItemID" DataSourceName="group22.dbo.MenuItem" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@MenuItemID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="MenuItemID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="MenuItemID" ColumnName="MenuItemID" DataSourceName="group22.dbo.MenuItem" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@MenuItemID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="MenuItemID" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </SelectCommand>
@@ -607,8 +602,7 @@ WHERE        (MenuItemID = @MenuItemID)</CommandText>
               <DbSource ConnectionRef="group22ConnectionString (MySettings)" DbObjectName="group22.dbo.MenuItem" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByCategory" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCategory" GeneratorSourceName="FillByCategory" GetMethodModifier="Public" GetMethodName="GetDataByCategory" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByCategory" UserSourceName="FillByCategory">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT * FROM dbo.MenuItem
-WHERE CONVERT(VARCHAR, Category) = @Category</CommandText>
+                    <CommandText>SELECT Category, CurrentMenuItem, MenuItemID, MenuItemName, MenuItemPrice FROM MenuItem WHERE (CONVERT (VARCHAR, Category) = @Category) AND CurrentMenuItem = 1</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="Category" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="AnsiString" Direction="Input" ParameterName="@Category" Precision="0" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
@@ -618,8 +612,8 @@ WHERE CONVERT(VARCHAR, Category) = @Category</CommandText>
               <DbSource ConnectionRef="group22ConnectionString (MySettings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertMenuItem" Modifier="Public" Name="InsertMenuItem" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertMenuItem">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>INSERT INTO [dbo].[MenuItem] ([MenuItemName], [Category], [MenuItemPrice]) 
-VALUES ( @MenuItemName, @Category, @MenuItemPrice);</CommandText>
+                    <CommandText>INSERT INTO [dbo].[MenuItem] ([MenuItemName], [Category], [MenuItemPrice],CurrentMenuItem) 
+VALUES ( @MenuItemName, @Category, @MenuItemPrice,1);</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="MenuItemName" ColumnName="MenuItemName" DataSourceName="group22.dbo.MenuItem" DataTypeServer="varchar(20)" DbType="AnsiString" Direction="Input" ParameterName="@MenuItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumn="MenuItemName" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="Category" ColumnName="Category" DataSourceName="group22.dbo.MenuItem" DataTypeServer="text" DbType="AnsiString" Direction="Input" ParameterName="@Category" Precision="0" ProviderType="Text" Scale="0" Size="2147483647" SourceColumn="Category" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -631,8 +625,7 @@ VALUES ( @MenuItemName, @Category, @MenuItemPrice);</CommandText>
               <DbSource ConnectionRef="group22ConnectionString (MySettings)" DbObjectName="group22.dbo.MenuItem" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="search" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="search" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="search">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT * FROM dbo.MenuItem
-WHERE (MenuItemName LIKE '%' + @MenuItemName + '%')</CommandText>
+                    <CommandText>SELECT Category, CurrentMenuItem, MenuItemID, MenuItemName, MenuItemPrice FROM MenuItem WHERE (MenuItemName LIKE '%' + @MenuItemName + '%')</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="MenuItemName" ColumnName="MenuItemName" DataSourceName="group22.dbo.MenuItem" DataTypeServer="varchar(20)" DbType="AnsiString" Direction="Input" ParameterName="@MenuItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumn="MenuItemName" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
@@ -827,6 +820,7 @@ SELECT MenuItemID, IngredientID FROM MenuItemIngredient WHERE (IngredientID = @I
                 </xs:simpleType>
               </xs:element>
               <xs:element name="MenuItemPrice" msprop:Generator_ColumnVarNameInTable="columnMenuItemPrice" msprop:Generator_ColumnPropNameInRow="MenuItemPrice" msprop:Generator_ColumnPropNameInTable="MenuItemPriceColumn" msprop:Generator_UserColumnName="MenuItemPrice" type="xs:decimal" />
+              <xs:element name="CurrentMenuItem" msprop:Generator_ColumnVarNameInTable="columnCurrentMenuItem" msprop:Generator_ColumnPropNameInRow="CurrentMenuItem" msprop:Generator_ColumnPropNameInTable="CurrentMenuItemColumn" msprop:Generator_UserColumnName="CurrentMenuItem" type="xs:unsignedByte" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -23,83 +23,78 @@ Partial Class FormReport
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea7 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend7 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series7 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea8 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend8 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series8 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim DataPoint3 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
-        Dim DataPoint4 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
-        Dim ChartArea6 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend6 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataPoint1 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint2 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
         Me.MonthCalendar = New System.Windows.Forms.MonthCalendar()
         Me.TabPageAllTime = New System.Windows.Forms.TabPage()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.Chart3 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Label29 = New System.Windows.Forms.Label()
+        Me.Chart3 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
         Me.TabPageMonthly = New System.Windows.Forms.TabPage()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.LabelMonthlyIncome = New System.Windows.Forms.Label()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.LabelMonthlyExpenses = New System.Windows.Forms.Label()
-        Me.LabelTextMonthlyProfitLoss = New System.Windows.Forms.Label()
-        Me.LabelMonthlyProfitLoss = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Label18 = New System.Windows.Forms.Label()
+        Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.LabelMonthlyProfitLoss = New System.Windows.Forms.Label()
+        Me.LabelTextMonthlyProfitLoss = New System.Windows.Forms.Label()
+        Me.LabelMonthlyExpenses = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.LabelMonthlyIncome = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
         Me.TabPageDaily = New System.Windows.Forms.TabPage()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.LabelIncome = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.LabelExpenses = New System.Windows.Forms.Label()
-        Me.LabelTextProfitLoss = New System.Windows.Forms.Label()
-        Me.LabelProfitLoss = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.LabelMostSoldProductName = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.LabelLeastSoldProductName = New System.Windows.Forms.Label()
-        Me.ChartDailyProductivity = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TabAllTime = New System.Windows.Forms.TabControl()
-        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.ChartDailyProductivity = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.CustomerOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.LabelLeastSoldProductName = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.LabelMostSoldProductName = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.LabelProfitLoss = New System.Windows.Forms.Label()
+        Me.LabelTextProfitLoss = New System.Windows.Forms.Label()
+        Me.LabelExpenses = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.LabelIncome = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TabAllTime = New System.Windows.Forms.TabControl()
         Me.CustomerOrderTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.CustomerOrderTableAdapter()
         Me.MenuItemTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.MenuItemTableAdapter()
         Me.IngredientTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.IngredientTableAdapter()
         Me.TabPageAllTime.SuspendLayout()
-        Me.GroupBox4.SuspendLayout()
         CType(Me.Chart3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox4.SuspendLayout()
         Me.TabPageMonthly.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
         CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox3.SuspendLayout()
         Me.TabPageDaily.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         CType(Me.ChartDailyProductivity, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabAllTime.SuspendLayout()
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CustomerOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        Me.TabAllTime.SuspendLayout()
         Me.SuspendLayout()
         '
         'MonthCalendar
@@ -121,6 +116,31 @@ Partial Class FormReport
         Me.TabPageAllTime.Text = "All Time"
         Me.TabPageAllTime.UseVisualStyleBackColor = True
         '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Location = New System.Drawing.Point(586, 54)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(136, 29)
+        Me.Label29.TabIndex = 2
+        Me.Label29.Text = "Productivity"
+        '
+        'Chart3
+        '
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart3.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.Chart3.Legends.Add(Legend1)
+        Me.Chart3.Location = New System.Drawing.Point(449, 115)
+        Me.Chart3.Name = "Chart3"
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Me.Chart3.Series.Add(Series1)
+        Me.Chart3.Size = New System.Drawing.Size(475, 454)
+        Me.Chart3.TabIndex = 1
+        Me.Chart3.Text = "Chart1"
+        '
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.Label30)
@@ -141,85 +161,15 @@ Partial Class FormReport
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Statistics"
         '
-        'Label39
+        'Label30
         '
-        Me.Label39.AutoSize = True
-        Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label39.Location = New System.Drawing.Point(17, 49)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(87, 25)
-        Me.Label39.TabIndex = 0
-        Me.Label39.Text = "Income: "
-        '
-        'Label38
-        '
-        Me.Label38.AutoSize = True
-        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.Location = New System.Drawing.Point(138, 49)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(61, 25)
-        Me.Label38.TabIndex = 1
-        Me.Label38.Text = "00,00"
-        '
-        'Label37
-        '
-        Me.Label37.AutoSize = True
-        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.Location = New System.Drawing.Point(17, 98)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(110, 25)
-        Me.Label37.TabIndex = 2
-        Me.Label37.Text = "Expenses: "
-        '
-        'Label36
-        '
-        Me.Label36.AutoSize = True
-        Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.Location = New System.Drawing.Point(138, 98)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(61, 25)
-        Me.Label36.TabIndex = 3
-        Me.Label36.Text = "00,00"
-        '
-        'Label35
-        '
-        Me.Label35.AutoSize = True
-        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(17, 150)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(115, 25)
-        Me.Label35.TabIndex = 4
-        Me.Label35.Text = "Profit/Loss: "
-        '
-        'Label34
-        '
-        Me.Label34.AutoSize = True
-        Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(138, 150)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(61, 25)
-        Me.Label34.TabIndex = 5
-        Me.Label34.Text = "00,00"
-        '
-        'Label33
-        '
-        Me.Label33.AutoSize = True
-        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(16, 231)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(183, 25)
-        Me.Label33.TabIndex = 6
-        Me.Label33.Text = "Most Sold Product: "
-        '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(214, 231)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(136, 25)
-        Me.Label32.TabIndex = 7
-        Me.Label32.Text = "Product Name"
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(214, 276)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(136, 25)
+        Me.Label30.TabIndex = 9
+        Me.Label30.Text = "Product Name"
         '
         'Label31
         '
@@ -231,44 +181,88 @@ Partial Class FormReport
         Me.Label31.TabIndex = 8
         Me.Label31.Text = "Least Sold Product: "
         '
-        'Label30
+        'Label32
         '
-        Me.Label30.AutoSize = True
-        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(214, 276)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(136, 25)
-        Me.Label30.TabIndex = 9
-        Me.Label30.Text = "Product Name"
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(214, 231)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(136, 25)
+        Me.Label32.TabIndex = 7
+        Me.Label32.Text = "Product Name"
         '
-        'Chart3
+        'Label33
         '
-        ChartArea5.Name = "ChartArea1"
-        Me.Chart3.ChartAreas.Add(ChartArea5)
-        Legend5.Name = "Legend1"
-        Me.Chart3.Legends.Add(Legend5)
-        Me.Chart3.Location = New System.Drawing.Point(449, 115)
-        Me.Chart3.Name = "Chart3"
-        Series5.ChartArea = "ChartArea1"
-        Series5.Legend = "Legend1"
-        Series5.Name = "Series1"
-        Me.Chart3.Series.Add(Series5)
-        Me.Chart3.Size = New System.Drawing.Size(475, 454)
-        Me.Chart3.TabIndex = 1
-        Me.Chart3.Text = "Chart1"
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Location = New System.Drawing.Point(16, 231)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(183, 25)
+        Me.Label33.TabIndex = 6
+        Me.Label33.Text = "Most Sold Product: "
         '
-        'Label29
+        'Label34
         '
-        Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(586, 54)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(136, 29)
-        Me.Label29.TabIndex = 2
-        Me.Label29.Text = "Productivity"
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(138, 150)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(61, 25)
+        Me.Label34.TabIndex = 5
+        Me.Label34.Text = "00,00"
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.Location = New System.Drawing.Point(17, 150)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(115, 25)
+        Me.Label35.TabIndex = 4
+        Me.Label35.Text = "Profit/Loss: "
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label36.Location = New System.Drawing.Point(138, 98)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(61, 25)
+        Me.Label36.TabIndex = 3
+        Me.Label36.Text = "00,00"
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.Location = New System.Drawing.Point(17, 98)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(110, 25)
+        Me.Label37.TabIndex = 2
+        Me.Label37.Text = "Expenses: "
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.Location = New System.Drawing.Point(138, 49)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(61, 25)
+        Me.Label38.TabIndex = 1
+        Me.Label38.Text = "00,00"
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.Location = New System.Drawing.Point(17, 49)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(87, 25)
+        Me.Label39.TabIndex = 0
+        Me.Label39.Text = "Income: "
         '
         'TabPageMonthly
         '
-        Me.TabPageMonthly.Controls.Add(Me.Chart1)
         Me.TabPageMonthly.Controls.Add(Me.Label18)
         Me.TabPageMonthly.Controls.Add(Me.Chart2)
         Me.TabPageMonthly.Controls.Add(Me.GroupBox3)
@@ -279,6 +273,31 @@ Partial Class FormReport
         Me.TabPageMonthly.TabIndex = 5
         Me.TabPageMonthly.Text = "Monthly"
         Me.TabPageMonthly.UseVisualStyleBackColor = True
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(586, 54)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(136, 29)
+        Me.Label18.TabIndex = 2
+        Me.Label18.Text = "Productivity"
+        '
+        'Chart2
+        '
+        ChartArea2.Name = "ChartArea1"
+        Me.Chart2.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.Chart2.Legends.Add(Legend2)
+        Me.Chart2.Location = New System.Drawing.Point(449, 115)
+        Me.Chart2.Name = "Chart2"
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        Me.Chart2.Series.Add(Series2)
+        Me.Chart2.Size = New System.Drawing.Size(475, 454)
+        Me.Chart2.TabIndex = 1
+        Me.Chart2.Text = "ChartMonthyProductivity"
         '
         'GroupBox3
         '
@@ -300,85 +319,15 @@ Partial Class FormReport
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Statistics"
         '
-        'Label28
+        'Label19
         '
-        Me.Label28.AutoSize = True
-        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(17, 49)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(87, 25)
-        Me.Label28.TabIndex = 0
-        Me.Label28.Text = "Income: "
-        '
-        'LabelMonthlyIncome
-        '
-        Me.LabelMonthlyIncome.AutoSize = True
-        Me.LabelMonthlyIncome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelMonthlyIncome.Location = New System.Drawing.Point(138, 49)
-        Me.LabelMonthlyIncome.Name = "LabelMonthlyIncome"
-        Me.LabelMonthlyIncome.Size = New System.Drawing.Size(61, 25)
-        Me.LabelMonthlyIncome.TabIndex = 1
-        Me.LabelMonthlyIncome.Text = "00,00"
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(17, 98)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(110, 25)
-        Me.Label26.TabIndex = 2
-        Me.Label26.Text = "Expenses: "
-        '
-        'LabelMonthlyExpenses
-        '
-        Me.LabelMonthlyExpenses.AutoSize = True
-        Me.LabelMonthlyExpenses.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelMonthlyExpenses.Location = New System.Drawing.Point(138, 98)
-        Me.LabelMonthlyExpenses.Name = "LabelMonthlyExpenses"
-        Me.LabelMonthlyExpenses.Size = New System.Drawing.Size(61, 25)
-        Me.LabelMonthlyExpenses.TabIndex = 3
-        Me.LabelMonthlyExpenses.Text = "00,00"
-        '
-        'LabelTextMonthlyProfitLoss
-        '
-        Me.LabelTextMonthlyProfitLoss.AutoSize = True
-        Me.LabelTextMonthlyProfitLoss.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelTextMonthlyProfitLoss.Location = New System.Drawing.Point(17, 150)
-        Me.LabelTextMonthlyProfitLoss.Name = "LabelTextMonthlyProfitLoss"
-        Me.LabelTextMonthlyProfitLoss.Size = New System.Drawing.Size(115, 25)
-        Me.LabelTextMonthlyProfitLoss.TabIndex = 4
-        Me.LabelTextMonthlyProfitLoss.Text = "Profit/Loss: "
-        '
-        'LabelMonthlyProfitLoss
-        '
-        Me.LabelMonthlyProfitLoss.AutoSize = True
-        Me.LabelMonthlyProfitLoss.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelMonthlyProfitLoss.Location = New System.Drawing.Point(138, 150)
-        Me.LabelMonthlyProfitLoss.Name = "LabelMonthlyProfitLoss"
-        Me.LabelMonthlyProfitLoss.Size = New System.Drawing.Size(61, 25)
-        Me.LabelMonthlyProfitLoss.TabIndex = 5
-        Me.LabelMonthlyProfitLoss.Text = "00,00"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(16, 212)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(183, 25)
-        Me.Label22.TabIndex = 6
-        Me.Label22.Text = "Most Sold Product: "
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(214, 212)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(136, 25)
-        Me.Label21.TabIndex = 7
-        Me.Label21.Text = "Product Name"
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(214, 257)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(136, 25)
+        Me.Label19.TabIndex = 9
+        Me.Label19.Text = "Product Name"
         '
         'Label20
         '
@@ -390,40 +339,85 @@ Partial Class FormReport
         Me.Label20.TabIndex = 8
         Me.Label20.Text = "Least Sold Product: "
         '
-        'Label19
+        'Label21
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(214, 257)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(136, 25)
-        Me.Label19.TabIndex = 9
-        Me.Label19.Text = "Product Name"
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(214, 212)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(136, 25)
+        Me.Label21.TabIndex = 7
+        Me.Label21.Text = "Product Name"
         '
-        'Chart2
+        'Label22
         '
-        ChartArea7.Name = "ChartArea1"
-        Me.Chart2.ChartAreas.Add(ChartArea7)
-        Legend7.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend7)
-        Me.Chart2.Location = New System.Drawing.Point(449, 115)
-        Me.Chart2.Name = "Chart2"
-        Series7.ChartArea = "ChartArea1"
-        Series7.Legend = "Legend1"
-        Series7.Name = "Series1"
-        Me.Chart2.Series.Add(Series7)
-        Me.Chart2.Size = New System.Drawing.Size(475, 454)
-        Me.Chart2.TabIndex = 1
-        Me.Chart2.Text = "ChartMonthyProductivity"
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(16, 212)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(183, 25)
+        Me.Label22.TabIndex = 6
+        Me.Label22.Text = "Most Sold Product: "
         '
-        'Label18
+        'LabelMonthlyProfitLoss
         '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(586, 54)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(136, 29)
-        Me.Label18.TabIndex = 2
-        Me.Label18.Text = "Productivity"
+        Me.LabelMonthlyProfitLoss.AutoSize = True
+        Me.LabelMonthlyProfitLoss.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelMonthlyProfitLoss.Location = New System.Drawing.Point(138, 150)
+        Me.LabelMonthlyProfitLoss.Name = "LabelMonthlyProfitLoss"
+        Me.LabelMonthlyProfitLoss.Size = New System.Drawing.Size(61, 25)
+        Me.LabelMonthlyProfitLoss.TabIndex = 5
+        Me.LabelMonthlyProfitLoss.Text = "00,00"
+        '
+        'LabelTextMonthlyProfitLoss
+        '
+        Me.LabelTextMonthlyProfitLoss.AutoSize = True
+        Me.LabelTextMonthlyProfitLoss.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTextMonthlyProfitLoss.Location = New System.Drawing.Point(17, 150)
+        Me.LabelTextMonthlyProfitLoss.Name = "LabelTextMonthlyProfitLoss"
+        Me.LabelTextMonthlyProfitLoss.Size = New System.Drawing.Size(115, 25)
+        Me.LabelTextMonthlyProfitLoss.TabIndex = 4
+        Me.LabelTextMonthlyProfitLoss.Text = "Profit/Loss: "
+        '
+        'LabelMonthlyExpenses
+        '
+        Me.LabelMonthlyExpenses.AutoSize = True
+        Me.LabelMonthlyExpenses.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelMonthlyExpenses.Location = New System.Drawing.Point(138, 98)
+        Me.LabelMonthlyExpenses.Name = "LabelMonthlyExpenses"
+        Me.LabelMonthlyExpenses.Size = New System.Drawing.Size(61, 25)
+        Me.LabelMonthlyExpenses.TabIndex = 3
+        Me.LabelMonthlyExpenses.Text = "00,00"
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(17, 98)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(110, 25)
+        Me.Label26.TabIndex = 2
+        Me.Label26.Text = "Expenses: "
+        '
+        'LabelMonthlyIncome
+        '
+        Me.LabelMonthlyIncome.AutoSize = True
+        Me.LabelMonthlyIncome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelMonthlyIncome.Location = New System.Drawing.Point(138, 49)
+        Me.LabelMonthlyIncome.Name = "LabelMonthlyIncome"
+        Me.LabelMonthlyIncome.Size = New System.Drawing.Size(61, 25)
+        Me.LabelMonthlyIncome.TabIndex = 1
+        Me.LabelMonthlyIncome.Text = "00,00"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(17, 49)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(87, 25)
+        Me.Label28.TabIndex = 0
+        Me.Label28.Text = "Income: "
         '
         'TabPageDaily
         '
@@ -437,6 +431,46 @@ Partial Class FormReport
         Me.TabPageDaily.TabIndex = 0
         Me.TabPageDaily.Text = "Daily"
         Me.TabPageDaily.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(586, 54)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(136, 29)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "Productivity"
+        '
+        'ChartDailyProductivity
+        '
+        ChartArea3.Name = "ChartArea1"
+        Me.ChartDailyProductivity.ChartAreas.Add(ChartArea3)
+        Me.ChartDailyProductivity.DataSource = Me.CustomerOrderBindingSource
+        Legend3.Name = "Legend1"
+        Me.ChartDailyProductivity.Legends.Add(Legend3)
+        Me.ChartDailyProductivity.Location = New System.Drawing.Point(449, 115)
+        Me.ChartDailyProductivity.Name = "ChartDailyProductivity"
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Productivity"
+        Series3.Points.Add(DataPoint1)
+        Series3.Points.Add(DataPoint2)
+        Series3.XValueMember = "OrderTime"
+        Series3.YValueMembers = "SaleID"
+        Me.ChartDailyProductivity.Series.Add(Series3)
+        Me.ChartDailyProductivity.Size = New System.Drawing.Size(475, 454)
+        Me.ChartDailyProductivity.TabIndex = 1
+        Me.ChartDailyProductivity.Text = "ChartProductivity"
+        '
+        'CustomerOrderBindingSource
+        '
+        Me.CustomerOrderBindingSource.DataMember = "CustomerOrder"
+        Me.CustomerOrderBindingSource.DataSource = Me.Group22DataSet
+        '
+        'Group22DataSet
+        '
+        Me.Group22DataSet.DataSetName = "group22DataSet"
+        Me.Group22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'GroupBox1
         '
@@ -458,85 +492,15 @@ Partial Class FormReport
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Statistics"
         '
-        'Label1
+        'LabelLeastSoldProductName
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(17, 49)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(87, 25)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Income: "
-        '
-        'LabelIncome
-        '
-        Me.LabelIncome.AutoSize = True
-        Me.LabelIncome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelIncome.Location = New System.Drawing.Point(138, 49)
-        Me.LabelIncome.Name = "LabelIncome"
-        Me.LabelIncome.Size = New System.Drawing.Size(61, 25)
-        Me.LabelIncome.TabIndex = 1
-        Me.LabelIncome.Text = "00,00"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(17, 98)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(110, 25)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Expenses: "
-        '
-        'LabelExpenses
-        '
-        Me.LabelExpenses.AutoSize = True
-        Me.LabelExpenses.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelExpenses.Location = New System.Drawing.Point(138, 98)
-        Me.LabelExpenses.Name = "LabelExpenses"
-        Me.LabelExpenses.Size = New System.Drawing.Size(61, 25)
-        Me.LabelExpenses.TabIndex = 3
-        Me.LabelExpenses.Text = "00,00"
-        '
-        'LabelTextProfitLoss
-        '
-        Me.LabelTextProfitLoss.AutoSize = True
-        Me.LabelTextProfitLoss.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelTextProfitLoss.Location = New System.Drawing.Point(17, 150)
-        Me.LabelTextProfitLoss.Name = "LabelTextProfitLoss"
-        Me.LabelTextProfitLoss.Size = New System.Drawing.Size(115, 25)
-        Me.LabelTextProfitLoss.TabIndex = 4
-        Me.LabelTextProfitLoss.Text = "Profit/Loss: "
-        '
-        'LabelProfitLoss
-        '
-        Me.LabelProfitLoss.AutoSize = True
-        Me.LabelProfitLoss.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelProfitLoss.Location = New System.Drawing.Point(138, 150)
-        Me.LabelProfitLoss.Name = "LabelProfitLoss"
-        Me.LabelProfitLoss.Size = New System.Drawing.Size(61, 25)
-        Me.LabelProfitLoss.TabIndex = 5
-        Me.LabelProfitLoss.Text = "00,00"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(16, 231)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(183, 25)
-        Me.Label5.TabIndex = 6
-        Me.Label5.Text = "Most Sold Product: "
-        '
-        'LabelMostSoldProductName
-        '
-        Me.LabelMostSoldProductName.AutoSize = True
-        Me.LabelMostSoldProductName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelMostSoldProductName.Location = New System.Drawing.Point(214, 231)
-        Me.LabelMostSoldProductName.Name = "LabelMostSoldProductName"
-        Me.LabelMostSoldProductName.Size = New System.Drawing.Size(136, 25)
-        Me.LabelMostSoldProductName.TabIndex = 7
-        Me.LabelMostSoldProductName.Text = "Product Name"
+        Me.LabelLeastSoldProductName.AutoSize = True
+        Me.LabelLeastSoldProductName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelLeastSoldProductName.Location = New System.Drawing.Point(214, 276)
+        Me.LabelLeastSoldProductName.Name = "LabelLeastSoldProductName"
+        Me.LabelLeastSoldProductName.Size = New System.Drawing.Size(136, 25)
+        Me.LabelLeastSoldProductName.TabIndex = 9
+        Me.LabelLeastSoldProductName.Text = "Product Name"
         '
         'Label6
         '
@@ -548,45 +512,85 @@ Partial Class FormReport
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Least Sold Product: "
         '
-        'LabelLeastSoldProductName
+        'LabelMostSoldProductName
         '
-        Me.LabelLeastSoldProductName.AutoSize = True
-        Me.LabelLeastSoldProductName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelLeastSoldProductName.Location = New System.Drawing.Point(214, 276)
-        Me.LabelLeastSoldProductName.Name = "LabelLeastSoldProductName"
-        Me.LabelLeastSoldProductName.Size = New System.Drawing.Size(136, 25)
-        Me.LabelLeastSoldProductName.TabIndex = 9
-        Me.LabelLeastSoldProductName.Text = "Product Name"
+        Me.LabelMostSoldProductName.AutoSize = True
+        Me.LabelMostSoldProductName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelMostSoldProductName.Location = New System.Drawing.Point(214, 231)
+        Me.LabelMostSoldProductName.Name = "LabelMostSoldProductName"
+        Me.LabelMostSoldProductName.Size = New System.Drawing.Size(136, 25)
+        Me.LabelMostSoldProductName.TabIndex = 7
+        Me.LabelMostSoldProductName.Text = "Product Name"
         '
-        'ChartDailyProductivity
+        'Label5
         '
-        ChartArea8.Name = "ChartArea1"
-        Me.ChartDailyProductivity.ChartAreas.Add(ChartArea8)
-        Me.ChartDailyProductivity.DataSource = Me.CustomerOrderBindingSource
-        Legend8.Name = "Legend1"
-        Me.ChartDailyProductivity.Legends.Add(Legend8)
-        Me.ChartDailyProductivity.Location = New System.Drawing.Point(449, 115)
-        Me.ChartDailyProductivity.Name = "ChartDailyProductivity"
-        Series8.ChartArea = "ChartArea1"
-        Series8.Legend = "Legend1"
-        Series8.Name = "Productivity"
-        Series8.Points.Add(DataPoint3)
-        Series8.Points.Add(DataPoint4)
-        Series8.XValueMember = "OrderTime"
-        Series8.YValueMembers = "SaleID"
-        Me.ChartDailyProductivity.Series.Add(Series8)
-        Me.ChartDailyProductivity.Size = New System.Drawing.Size(475, 454)
-        Me.ChartDailyProductivity.TabIndex = 1
-        Me.ChartDailyProductivity.Text = "ChartProductivity"
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(16, 231)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(183, 25)
+        Me.Label5.TabIndex = 6
+        Me.Label5.Text = "Most Sold Product: "
         '
-        'Label2
+        'LabelProfitLoss
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(586, 54)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(136, 29)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Productivity"
+        Me.LabelProfitLoss.AutoSize = True
+        Me.LabelProfitLoss.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelProfitLoss.Location = New System.Drawing.Point(138, 150)
+        Me.LabelProfitLoss.Name = "LabelProfitLoss"
+        Me.LabelProfitLoss.Size = New System.Drawing.Size(61, 25)
+        Me.LabelProfitLoss.TabIndex = 5
+        Me.LabelProfitLoss.Text = "00,00"
+        '
+        'LabelTextProfitLoss
+        '
+        Me.LabelTextProfitLoss.AutoSize = True
+        Me.LabelTextProfitLoss.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTextProfitLoss.Location = New System.Drawing.Point(17, 150)
+        Me.LabelTextProfitLoss.Name = "LabelTextProfitLoss"
+        Me.LabelTextProfitLoss.Size = New System.Drawing.Size(115, 25)
+        Me.LabelTextProfitLoss.TabIndex = 4
+        Me.LabelTextProfitLoss.Text = "Profit/Loss: "
+        '
+        'LabelExpenses
+        '
+        Me.LabelExpenses.AutoSize = True
+        Me.LabelExpenses.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelExpenses.Location = New System.Drawing.Point(138, 98)
+        Me.LabelExpenses.Name = "LabelExpenses"
+        Me.LabelExpenses.Size = New System.Drawing.Size(61, 25)
+        Me.LabelExpenses.TabIndex = 3
+        Me.LabelExpenses.Text = "00,00"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(17, 98)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(110, 25)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Expenses: "
+        '
+        'LabelIncome
+        '
+        Me.LabelIncome.AutoSize = True
+        Me.LabelIncome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelIncome.Location = New System.Drawing.Point(138, 49)
+        Me.LabelIncome.Name = "LabelIncome"
+        Me.LabelIncome.Size = New System.Drawing.Size(61, 25)
+        Me.LabelIncome.TabIndex = 1
+        Me.LabelIncome.Text = "00,00"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(17, 49)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(87, 25)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Income: "
         '
         'TabAllTime
         '
@@ -599,32 +603,6 @@ Partial Class FormReport
         Me.TabAllTime.SelectedIndex = 0
         Me.TabAllTime.Size = New System.Drawing.Size(938, 660)
         Me.TabAllTime.TabIndex = 1
-        '
-        'Chart1
-        '
-        ChartArea6.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea6)
-        Legend6.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend6)
-        Me.Chart1.Location = New System.Drawing.Point(18, 355)
-        Me.Chart1.Name = "Chart1"
-        Series6.ChartArea = "ChartArea1"
-        Series6.Legend = "Legend1"
-        Series6.Name = "Series1"
-        Me.Chart1.Series.Add(Series6)
-        Me.Chart1.Size = New System.Drawing.Size(407, 232)
-        Me.Chart1.TabIndex = 3
-        Me.Chart1.Text = "Chart1"
-        '
-        'CustomerOrderBindingSource
-        '
-        Me.CustomerOrderBindingSource.DataMember = "CustomerOrder"
-        Me.CustomerOrderBindingSource.DataSource = Me.Group22DataSet
-        '
-        'Group22DataSet
-        '
-        Me.Group22DataSet.DataSetName = "group22DataSet"
-        Me.Group22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'CustomerOrderTableAdapter
         '
@@ -651,23 +629,22 @@ Partial Class FormReport
         Me.Text = "Reports"
         Me.TabPageAllTime.ResumeLayout(False)
         Me.TabPageAllTime.PerformLayout()
+        CType(Me.Chart3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        CType(Me.Chart3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPageMonthly.ResumeLayout(False)
         Me.TabPageMonthly.PerformLayout()
+        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPageDaily.ResumeLayout(False)
         Me.TabPageDaily.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         CType(Me.ChartDailyProductivity, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabAllTime.ResumeLayout(False)
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CustomerOrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.TabAllTime.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -693,7 +670,6 @@ Partial Class FormReport
     Friend WithEvents Label38 As Label
     Friend WithEvents Label39 As Label
     Friend WithEvents TabPageMonthly As TabPage
-    Friend WithEvents Chart1 As DataVisualization.Charting.Chart
     Friend WithEvents Label18 As Label
     Friend WithEvents Chart2 As DataVisualization.Charting.Chart
     Friend WithEvents GroupBox3 As GroupBox

@@ -248,9 +248,7 @@ Partial Class FormMainMenu
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(1551, 785)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(1551, 785)
         Me.Name = "FormMainMenu"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Geetha's Homemade Curries Point of Sales System"

@@ -1814,6 +1814,8 @@ Partial Public Class group22DataSet
         
         Private columnMenuItemPrice As Global.System.Data.DataColumn
         
+        Private columnCurrentMenuItem As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -1882,6 +1884,14 @@ Partial Public Class group22DataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CurrentMenuItemColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCurrentMenuItem
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1918,9 +1928,9 @@ Partial Public Class group22DataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddMenuItemRow(ByVal MenuItemID As Integer, ByVal MenuItemName As String, ByVal Category As String, ByVal MenuItemPrice As Decimal) As MenuItemRow
+        Public Overloads Function AddMenuItemRow(ByVal MenuItemID As Integer, ByVal MenuItemName As String, ByVal Category As String, ByVal MenuItemPrice As Decimal, ByVal CurrentMenuItem As Byte) As MenuItemRow
             Dim rowMenuItemRow As MenuItemRow = CType(Me.NewRow,MenuItemRow)
-            Dim columnValuesArray() As Object = New Object() {MenuItemID, MenuItemName, Category, MenuItemPrice}
+            Dim columnValuesArray() As Object = New Object() {MenuItemID, MenuItemName, Category, MenuItemPrice, CurrentMenuItem}
             rowMenuItemRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowMenuItemRow)
             Return rowMenuItemRow
@@ -1953,6 +1963,7 @@ Partial Public Class group22DataSet
             Me.columnMenuItemName = MyBase.Columns("MenuItemName")
             Me.columnCategory = MyBase.Columns("Category")
             Me.columnMenuItemPrice = MyBase.Columns("MenuItemPrice")
+            Me.columnCurrentMenuItem = MyBase.Columns("CurrentMenuItem")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1966,6 +1977,8 @@ Partial Public Class group22DataSet
             MyBase.Columns.Add(Me.columnCategory)
             Me.columnMenuItemPrice = New Global.System.Data.DataColumn("MenuItemPrice", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnMenuItemPrice)
+            Me.columnCurrentMenuItem = New Global.System.Data.DataColumn("CurrentMenuItem", GetType(Byte), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCurrentMenuItem)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnMenuItemID}, true))
             Me.columnMenuItemID.AllowDBNull = false
             Me.columnMenuItemID.Unique = true
@@ -1974,6 +1987,7 @@ Partial Public Class group22DataSet
             Me.columnCategory.AllowDBNull = false
             Me.columnCategory.MaxLength = 2147483647
             Me.columnMenuItemPrice.AllowDBNull = false
+            Me.columnCurrentMenuItem.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2798,6 +2812,17 @@ Partial Public Class group22DataSet
             End Get
             Set
                 Me(Me.tableMenuItem.MenuItemPriceColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CurrentMenuItem() As Byte
+            Get
+                Return CType(Me(Me.tableMenuItem.CurrentMenuItemColumn),Byte)
+            End Get
+            Set
+                Me(Me.tableMenuItem.CurrentMenuItemColumn) = value
             End Set
         End Property
         
@@ -5455,42 +5480,47 @@ Namespace group22DataSetTableAdapters
             tableMapping.ColumnMappings.Add("MenuItemName", "MenuItemName")
             tableMapping.ColumnMappings.Add("Category", "Category")
             tableMapping.ColumnMappings.Add("MenuItemPrice", "MenuItemPrice")
+            tableMapping.ColumnMappings.Add("CurrentMenuItem", "CurrentMenuItem")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[MenuItem] WHERE (([MenuItemID] = @Original_MenuItemID) AND ([M"& _ 
                 "enuItemName] = @Original_MenuItemName) AND ([MenuItemPrice] = @Original_MenuItem"& _ 
-                "Price))"
+                "Price) AND ([CurrentMenuItem] = @Original_CurrentMenuItem))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MenuItemID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MenuItemName", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemName", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MenuItemPrice", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 2, "MenuItemPrice", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CurrentMenuItem", Global.System.Data.SqlDbType.TinyInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CurrentMenuItem", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[MenuItem] ([MenuItemID], [MenuItemName], [Category], [MenuItem"& _ 
-                "Price]) VALUES (@MenuItemID, @MenuItemName, @Category, @MenuItemPrice);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT "& _ 
-                "MenuItemID, MenuItemName, Category, MenuItemPrice FROM MenuItem WHERE (MenuItemI"& _ 
-                "D = @MenuItemID)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[MenuItem] ([MenuItemName], [Category], [MenuItemPrice], [Curre"& _ 
+                "ntMenuItem]) VALUES (@MenuItemName, @Category, @MenuItemPrice, @CurrentMenuItem)"& _ 
+                ";"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT MenuItemID, MenuItemName, Category, MenuItemPrice, CurrentMenuItem FRO"& _ 
+                "M MenuItem WHERE (MenuItemID = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MenuItemID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MenuItemName", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Category", Global.System.Data.SqlDbType.Text, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Category", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MenuItemPrice", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 2, "MenuItemPrice", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CurrentMenuItem", Global.System.Data.SqlDbType.TinyInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CurrentMenuItem", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[MenuItem] SET [MenuItemID] = @MenuItemID, [MenuItemName] = @MenuIte"& _ 
-                "mName, [Category] = @Category, [MenuItemPrice] = @MenuItemPrice WHERE (([MenuIte"& _ 
-                "mID] = @Original_MenuItemID) AND ([MenuItemName] = @Original_MenuItemName) AND ("& _ 
-                "[MenuItemPrice] = @Original_MenuItemPrice));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT MenuItemID, MenuItemName, C"& _ 
-                "ategory, MenuItemPrice FROM MenuItem WHERE (MenuItemID = @MenuItemID)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[MenuItem] SET [MenuItemName] = @MenuItemName, [Category] = @Categor"& _ 
+                "y, [MenuItemPrice] = @MenuItemPrice, [CurrentMenuItem] = @CurrentMenuItem WHERE "& _ 
+                "(([MenuItemID] = @Original_MenuItemID) AND ([MenuItemName] = @Original_MenuItemN"& _ 
+                "ame) AND ([MenuItemPrice] = @Original_MenuItemPrice) AND ([CurrentMenuItem] = @O"& _ 
+                "riginal_CurrentMenuItem));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT MenuItemID, MenuItemName, Category, MenuItemP"& _ 
+                "rice, CurrentMenuItem FROM MenuItem WHERE (MenuItemID = @MenuItemID)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MenuItemID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MenuItemName", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Category", Global.System.Data.SqlDbType.Text, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Category", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MenuItemPrice", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 2, "MenuItemPrice", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CurrentMenuItem", Global.System.Data.SqlDbType.TinyInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CurrentMenuItem", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MenuItemID", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MenuItemName", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemName", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MenuItemPrice", Global.System.Data.SqlDbType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, 18, 2, "MenuItemPrice", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_CurrentMenuItem", Global.System.Data.SqlDbType.TinyInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CurrentMenuItem", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MenuItemID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5510,25 +5540,28 @@ Namespace group22DataSetTableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "DELETE FROM MenuItem"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MenuItemID = @MenuItemID)"
+            Me._commandCollection(1).CommandText = "UPDATE MenuItem"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET CurrentMenuItem = 0"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MenuItemID = @MenuItemID)"& _ 
+                ""
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MenuItemID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemID", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MenuItemID", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemID", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "SELECT * FROM dbo.MenuItem"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE CONVERT(VARCHAR, Category) = @Category"
+            Me._commandCollection(2).CommandText = "SELECT Category, CurrentMenuItem, MenuItemID, MenuItemName, MenuItemPrice FROM Me"& _ 
+                "nuItem WHERE (CONVERT (VARCHAR, Category) = @Category) AND CurrentMenuItem = 1"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Category", Global.System.Data.SqlDbType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, 0, 0, "", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
-            Me._commandCollection(3).CommandText = "INSERT INTO [dbo].[MenuItem] ([MenuItemName], [Category], [MenuItemPrice]) "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALU"& _ 
-                "ES ( @MenuItemName, @Category, @MenuItemPrice);"
+            Me._commandCollection(3).CommandText = "INSERT INTO [dbo].[MenuItem] ([MenuItemName], [Category], [MenuItemPrice],Current"& _ 
+                "MenuItem) "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES ( @MenuItemName, @Category, @MenuItemPrice,1);"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MenuItemName", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Category", Global.System.Data.SqlDbType.Text, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, "Category", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MenuItemPrice", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 18, 2, "MenuItemPrice", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(4).Connection = Me.Connection
-            Me._commandCollection(4).CommandText = "SELECT * FROM dbo.MenuItem"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE (MenuItemName LIKE '%' + @MenuItemName + '%')"
+            Me._commandCollection(4).CommandText = "SELECT Category, CurrentMenuItem, MenuItemID, MenuItemName, MenuItemPrice FROM Me"& _ 
+                "nuItem WHERE (MenuItemName LIKE '%' + @MenuItemName + '%')"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MenuItemName", Global.System.Data.SqlDbType.VarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "MenuItemName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
@@ -5651,7 +5684,7 @@ Namespace group22DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_MenuItemID As Integer, ByVal Original_MenuItemName As String, ByVal Original_MenuItemPrice As Decimal) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_MenuItemID As Integer, ByVal Original_MenuItemName As String, ByVal Original_MenuItemPrice As Decimal, ByVal Original_CurrentMenuItem As Byte) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_MenuItemID,Integer)
             If (Original_MenuItemName Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_MenuItemName")
@@ -5659,6 +5692,7 @@ Namespace group22DataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_MenuItemName,String)
             End If
             Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_MenuItemPrice,Decimal)
+            Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_CurrentMenuItem,Byte)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -5678,19 +5712,19 @@ Namespace group22DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal MenuItemID As Integer, ByVal MenuItemName As String, ByVal Category As String, ByVal MenuItemPrice As Decimal) As Integer
-            Me.Adapter.InsertCommand.Parameters(0).Value = CType(MenuItemID,Integer)
+        Public Overloads Overridable Function Insert(ByVal MenuItemName As String, ByVal Category As String, ByVal MenuItemPrice As Decimal, ByVal CurrentMenuItem As Byte) As Integer
             If (MenuItemName Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("MenuItemName")
             Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(MenuItemName,String)
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(MenuItemName,String)
             End If
             If (Category Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Category")
             Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Category,String)
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(Category,String)
             End If
-            Me.Adapter.InsertCommand.Parameters(3).Value = CType(MenuItemPrice,Decimal)
+            Me.Adapter.InsertCommand.Parameters(2).Value = CType(MenuItemPrice,Decimal)
+            Me.Adapter.InsertCommand.Parameters(3).Value = CType(CurrentMenuItem,Byte)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -5710,19 +5744,19 @@ Namespace group22DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal MenuItemID As Integer, ByVal MenuItemName As String, ByVal Category As String, ByVal MenuItemPrice As Decimal, ByVal Original_MenuItemID As Integer, ByVal Original_MenuItemName As String, ByVal Original_MenuItemPrice As Decimal) As Integer
-            Me.Adapter.UpdateCommand.Parameters(0).Value = CType(MenuItemID,Integer)
+        Public Overloads Overridable Function Update(ByVal MenuItemName As String, ByVal Category As String, ByVal MenuItemPrice As Decimal, ByVal CurrentMenuItem As Byte, ByVal Original_MenuItemID As Integer, ByVal Original_MenuItemName As String, ByVal Original_MenuItemPrice As Decimal, ByVal Original_CurrentMenuItem As Byte, ByVal MenuItemID As Integer) As Integer
             If (MenuItemName Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("MenuItemName")
             Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(MenuItemName,String)
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(MenuItemName,String)
             End If
             If (Category Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Category")
             Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Category,String)
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Category,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(MenuItemPrice,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(MenuItemPrice,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(CurrentMenuItem,Byte)
             Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_MenuItemID,Integer)
             If (Original_MenuItemName Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_MenuItemName")
@@ -5730,6 +5764,8 @@ Namespace group22DataSetTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_MenuItemName,String)
             End If
             Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_MenuItemPrice,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_CurrentMenuItem,Byte)
+            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(MenuItemID,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -5749,14 +5785,14 @@ Namespace group22DataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal MenuItemName As String, ByVal Category As String, ByVal MenuItemPrice As Decimal, ByVal Original_MenuItemID As Integer, ByVal Original_MenuItemName As String, ByVal Original_MenuItemPrice As Decimal) As Integer
-            Return Me.Update(Original_MenuItemID, MenuItemName, Category, MenuItemPrice, Original_MenuItemID, Original_MenuItemName, Original_MenuItemPrice)
+        Public Overloads Overridable Function Update(ByVal MenuItemName As String, ByVal Category As String, ByVal MenuItemPrice As Decimal, ByVal CurrentMenuItem As Byte, ByVal Original_MenuItemID As Integer, ByVal Original_MenuItemName As String, ByVal Original_MenuItemPrice As Decimal, ByVal Original_CurrentMenuItem As Byte) As Integer
+            Return Me.Update(MenuItemName, Category, MenuItemPrice, CurrentMenuItem, Original_MenuItemID, Original_MenuItemName, Original_MenuItemPrice, Original_CurrentMenuItem, Original_MenuItemID)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function DeleteQuery(ByVal MenuItemID As Integer) As Integer
+        Public Overloads Overridable Function DeleteQuery(ByVal MenuItemID As Integer) As Object
             Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
             command.Parameters(0).Value = CType(MenuItemID,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
@@ -5764,15 +5800,20 @@ Namespace group22DataSetTableAdapters
                         <> Global.System.Data.ConnectionState.Open) Then
                 command.Connection.Open
             End If
-            Dim returnValue As Integer
+            Dim returnValue As Object
             Try 
-                returnValue = command.ExecuteNonQuery
+                returnValue = command.ExecuteScalar
             Finally
                 If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
                     command.Connection.Close
                 End If
             End Try
-            Return returnValue
+            If ((returnValue Is Nothing)  _
+                        OrElse (returnValue.GetType Is GetType(Global.System.DBNull))) Then
+                Return Nothing
+            Else
+                Return CType(returnValue,Object)
+            End If
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
