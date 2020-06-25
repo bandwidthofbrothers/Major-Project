@@ -23,45 +23,39 @@ Partial Class FormReport
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ChartArea6 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend6 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea7 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend7 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series7 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea8 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend8 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series8 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim DataPoint3 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
-        Dim DataPoint4 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
-        Dim ChartArea9 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend9 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series9 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataPoint1 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
+        Dim DataPoint2 As System.Windows.Forms.DataVisualization.Charting.DataPoint = New System.Windows.Forms.DataVisualization.Charting.DataPoint(0R, 0R)
         Me.MonthCalendar = New System.Windows.Forms.MonthCalendar()
         Me.TabPageAllTime = New System.Windows.Forms.TabPage()
         Me.Label29 = New System.Windows.Forms.Label()
-        Me.Chart3 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.ChartAllTimeProductivity = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.Label30 = New System.Windows.Forms.Label()
+        Me.LabelAllTimeLeastSoldProduct = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
-        Me.Label32 = New System.Windows.Forms.Label()
+        Me.LabelAllTimeMostSoldProduct = New System.Windows.Forms.Label()
         Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
+        Me.LabelAllTimeProfitLoss = New System.Windows.Forms.Label()
+        Me.LabelTextAllTimeProfitLoss = New System.Windows.Forms.Label()
+        Me.LabelAllTimeExpenses = New System.Windows.Forms.Label()
         Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label38 = New System.Windows.Forms.Label()
+        Me.LabelAllTimeIncome = New System.Windows.Forms.Label()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.TabPageMonthly = New System.Windows.Forms.TabPage()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.ChartMonthlyProductivity = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Label19 = New System.Windows.Forms.Label()
+        Me.LabelMonthlyLeastSoldProduct = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
+        Me.LabelMonthlyMostSoldProduct = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.LabelMonthlyProfitLoss = New System.Windows.Forms.Label()
         Me.LabelTextMonthlyProfitLoss = New System.Windows.Forms.Label()
@@ -89,13 +83,11 @@ Partial Class FormReport
         Me.CustomerOrderTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.CustomerOrderTableAdapter()
         Me.MenuItemTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.MenuItemTableAdapter()
         Me.IngredientTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.IngredientTableAdapter()
-        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.Chart4 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.TabPageAllTime.SuspendLayout()
-        CType(Me.Chart3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ChartAllTimeProductivity, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
         Me.TabPageMonthly.SuspendLayout()
-        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ChartMonthlyProductivity, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         Me.TabPageDaily.SuspendLayout()
         CType(Me.ChartDailyProductivity, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -103,8 +95,6 @@ Partial Class FormReport
         Me.TabAllTime.SuspendLayout()
         CType(Me.CustomerOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Chart4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MonthCalendar
@@ -115,9 +105,8 @@ Partial Class FormReport
         '
         'TabPageAllTime
         '
-        Me.TabPageAllTime.Controls.Add(Me.Chart4)
         Me.TabPageAllTime.Controls.Add(Me.Label29)
-        Me.TabPageAllTime.Controls.Add(Me.Chart3)
+        Me.TabPageAllTime.Controls.Add(Me.ChartAllTimeProductivity)
         Me.TabPageAllTime.Controls.Add(Me.GroupBox4)
         Me.TabPageAllTime.Location = New System.Drawing.Point(4, 38)
         Me.TabPageAllTime.Name = "TabPageAllTime"
@@ -136,33 +125,33 @@ Partial Class FormReport
         Me.Label29.TabIndex = 2
         Me.Label29.Text = "Productivity"
         '
-        'Chart3
+        'ChartAllTimeProductivity
         '
-        ChartArea6.Name = "ChartArea1"
-        Me.Chart3.ChartAreas.Add(ChartArea6)
-        Legend6.Name = "Legend1"
-        Me.Chart3.Legends.Add(Legend6)
-        Me.Chart3.Location = New System.Drawing.Point(449, 115)
-        Me.Chart3.Name = "Chart3"
-        Series6.ChartArea = "ChartArea1"
-        Series6.Legend = "Legend1"
-        Series6.Name = "Series1"
-        Me.Chart3.Series.Add(Series6)
-        Me.Chart3.Size = New System.Drawing.Size(475, 454)
-        Me.Chart3.TabIndex = 1
-        Me.Chart3.Text = "Chart1"
+        ChartArea1.Name = "ChartArea1"
+        Me.ChartAllTimeProductivity.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.ChartAllTimeProductivity.Legends.Add(Legend1)
+        Me.ChartAllTimeProductivity.Location = New System.Drawing.Point(449, 115)
+        Me.ChartAllTimeProductivity.Name = "ChartAllTimeProductivity"
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Orders"
+        Me.ChartAllTimeProductivity.Series.Add(Series1)
+        Me.ChartAllTimeProductivity.Size = New System.Drawing.Size(475, 454)
+        Me.ChartAllTimeProductivity.TabIndex = 1
+        Me.ChartAllTimeProductivity.Text = "Chart1"
         '
         'GroupBox4
         '
-        Me.GroupBox4.Controls.Add(Me.Label30)
+        Me.GroupBox4.Controls.Add(Me.LabelAllTimeLeastSoldProduct)
         Me.GroupBox4.Controls.Add(Me.Label31)
-        Me.GroupBox4.Controls.Add(Me.Label32)
+        Me.GroupBox4.Controls.Add(Me.LabelAllTimeMostSoldProduct)
         Me.GroupBox4.Controls.Add(Me.Label33)
-        Me.GroupBox4.Controls.Add(Me.Label34)
-        Me.GroupBox4.Controls.Add(Me.Label35)
-        Me.GroupBox4.Controls.Add(Me.Label36)
+        Me.GroupBox4.Controls.Add(Me.LabelAllTimeProfitLoss)
+        Me.GroupBox4.Controls.Add(Me.LabelTextAllTimeProfitLoss)
+        Me.GroupBox4.Controls.Add(Me.LabelAllTimeExpenses)
         Me.GroupBox4.Controls.Add(Me.Label37)
-        Me.GroupBox4.Controls.Add(Me.Label38)
+        Me.GroupBox4.Controls.Add(Me.LabelAllTimeIncome)
         Me.GroupBox4.Controls.Add(Me.Label39)
         Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.Location = New System.Drawing.Point(18, 17)
@@ -172,15 +161,15 @@ Partial Class FormReport
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Statistics"
         '
-        'Label30
+        'LabelAllTimeLeastSoldProduct
         '
-        Me.Label30.AutoSize = True
-        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(214, 276)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(136, 25)
-        Me.Label30.TabIndex = 9
-        Me.Label30.Text = "Product Name"
+        Me.LabelAllTimeLeastSoldProduct.AutoSize = True
+        Me.LabelAllTimeLeastSoldProduct.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelAllTimeLeastSoldProduct.Location = New System.Drawing.Point(214, 276)
+        Me.LabelAllTimeLeastSoldProduct.Name = "LabelAllTimeLeastSoldProduct"
+        Me.LabelAllTimeLeastSoldProduct.Size = New System.Drawing.Size(136, 25)
+        Me.LabelAllTimeLeastSoldProduct.TabIndex = 9
+        Me.LabelAllTimeLeastSoldProduct.Text = "Product Name"
         '
         'Label31
         '
@@ -192,15 +181,15 @@ Partial Class FormReport
         Me.Label31.TabIndex = 8
         Me.Label31.Text = "Least Sold Product: "
         '
-        'Label32
+        'LabelAllTimeMostSoldProduct
         '
-        Me.Label32.AutoSize = True
-        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(214, 231)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(136, 25)
-        Me.Label32.TabIndex = 7
-        Me.Label32.Text = "Product Name"
+        Me.LabelAllTimeMostSoldProduct.AutoSize = True
+        Me.LabelAllTimeMostSoldProduct.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelAllTimeMostSoldProduct.Location = New System.Drawing.Point(214, 231)
+        Me.LabelAllTimeMostSoldProduct.Name = "LabelAllTimeMostSoldProduct"
+        Me.LabelAllTimeMostSoldProduct.Size = New System.Drawing.Size(136, 25)
+        Me.LabelAllTimeMostSoldProduct.TabIndex = 7
+        Me.LabelAllTimeMostSoldProduct.Text = "Product Name"
         '
         'Label33
         '
@@ -212,35 +201,35 @@ Partial Class FormReport
         Me.Label33.TabIndex = 6
         Me.Label33.Text = "Most Sold Product: "
         '
-        'Label34
+        'LabelAllTimeProfitLoss
         '
-        Me.Label34.AutoSize = True
-        Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(138, 150)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(61, 25)
-        Me.Label34.TabIndex = 5
-        Me.Label34.Text = "00,00"
+        Me.LabelAllTimeProfitLoss.AutoSize = True
+        Me.LabelAllTimeProfitLoss.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelAllTimeProfitLoss.Location = New System.Drawing.Point(138, 150)
+        Me.LabelAllTimeProfitLoss.Name = "LabelAllTimeProfitLoss"
+        Me.LabelAllTimeProfitLoss.Size = New System.Drawing.Size(61, 25)
+        Me.LabelAllTimeProfitLoss.TabIndex = 5
+        Me.LabelAllTimeProfitLoss.Text = "00,00"
         '
-        'Label35
+        'LabelTextAllTimeProfitLoss
         '
-        Me.Label35.AutoSize = True
-        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(17, 150)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(115, 25)
-        Me.Label35.TabIndex = 4
-        Me.Label35.Text = "Profit/Loss: "
+        Me.LabelTextAllTimeProfitLoss.AutoSize = True
+        Me.LabelTextAllTimeProfitLoss.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTextAllTimeProfitLoss.Location = New System.Drawing.Point(17, 150)
+        Me.LabelTextAllTimeProfitLoss.Name = "LabelTextAllTimeProfitLoss"
+        Me.LabelTextAllTimeProfitLoss.Size = New System.Drawing.Size(115, 25)
+        Me.LabelTextAllTimeProfitLoss.TabIndex = 4
+        Me.LabelTextAllTimeProfitLoss.Text = "Profit/Loss: "
         '
-        'Label36
+        'LabelAllTimeExpenses
         '
-        Me.Label36.AutoSize = True
-        Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.Location = New System.Drawing.Point(138, 98)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(61, 25)
-        Me.Label36.TabIndex = 3
-        Me.Label36.Text = "00,00"
+        Me.LabelAllTimeExpenses.AutoSize = True
+        Me.LabelAllTimeExpenses.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelAllTimeExpenses.Location = New System.Drawing.Point(138, 98)
+        Me.LabelAllTimeExpenses.Name = "LabelAllTimeExpenses"
+        Me.LabelAllTimeExpenses.Size = New System.Drawing.Size(61, 25)
+        Me.LabelAllTimeExpenses.TabIndex = 3
+        Me.LabelAllTimeExpenses.Text = "00,00"
         '
         'Label37
         '
@@ -252,15 +241,15 @@ Partial Class FormReport
         Me.Label37.TabIndex = 2
         Me.Label37.Text = "Expenses: "
         '
-        'Label38
+        'LabelAllTimeIncome
         '
-        Me.Label38.AutoSize = True
-        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.Location = New System.Drawing.Point(138, 49)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(61, 25)
-        Me.Label38.TabIndex = 1
-        Me.Label38.Text = "00,00"
+        Me.LabelAllTimeIncome.AutoSize = True
+        Me.LabelAllTimeIncome.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelAllTimeIncome.Location = New System.Drawing.Point(138, 49)
+        Me.LabelAllTimeIncome.Name = "LabelAllTimeIncome"
+        Me.LabelAllTimeIncome.Size = New System.Drawing.Size(61, 25)
+        Me.LabelAllTimeIncome.TabIndex = 1
+        Me.LabelAllTimeIncome.Text = "00,00"
         '
         'Label39
         '
@@ -274,9 +263,8 @@ Partial Class FormReport
         '
         'TabPageMonthly
         '
-        Me.TabPageMonthly.Controls.Add(Me.Chart1)
         Me.TabPageMonthly.Controls.Add(Me.Label18)
-        Me.TabPageMonthly.Controls.Add(Me.Chart2)
+        Me.TabPageMonthly.Controls.Add(Me.ChartMonthlyProductivity)
         Me.TabPageMonthly.Controls.Add(Me.GroupBox3)
         Me.TabPageMonthly.Location = New System.Drawing.Point(4, 38)
         Me.TabPageMonthly.Name = "TabPageMonthly"
@@ -295,27 +283,27 @@ Partial Class FormReport
         Me.Label18.TabIndex = 2
         Me.Label18.Text = "Productivity"
         '
-        'Chart2
+        'ChartMonthlyProductivity
         '
-        ChartArea7.Name = "ChartArea1"
-        Me.Chart2.ChartAreas.Add(ChartArea7)
-        Legend7.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend7)
-        Me.Chart2.Location = New System.Drawing.Point(449, 115)
-        Me.Chart2.Name = "Chart2"
-        Series7.ChartArea = "ChartArea1"
-        Series7.Legend = "Legend1"
-        Series7.Name = "Series1"
-        Me.Chart2.Series.Add(Series7)
-        Me.Chart2.Size = New System.Drawing.Size(475, 454)
-        Me.Chart2.TabIndex = 1
-        Me.Chart2.Text = "ChartMonthyProductivity"
+        ChartArea2.Name = "ChartArea1"
+        Me.ChartMonthlyProductivity.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.ChartMonthlyProductivity.Legends.Add(Legend2)
+        Me.ChartMonthlyProductivity.Location = New System.Drawing.Point(449, 115)
+        Me.ChartMonthlyProductivity.Name = "ChartMonthlyProductivity"
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Orders"
+        Me.ChartMonthlyProductivity.Series.Add(Series2)
+        Me.ChartMonthlyProductivity.Size = New System.Drawing.Size(475, 454)
+        Me.ChartMonthlyProductivity.TabIndex = 1
+        Me.ChartMonthlyProductivity.Text = "ChartMonthyProductivity"
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.Label19)
+        Me.GroupBox3.Controls.Add(Me.LabelMonthlyLeastSoldProduct)
         Me.GroupBox3.Controls.Add(Me.Label20)
-        Me.GroupBox3.Controls.Add(Me.Label21)
+        Me.GroupBox3.Controls.Add(Me.LabelMonthlyMostSoldProduct)
         Me.GroupBox3.Controls.Add(Me.Label22)
         Me.GroupBox3.Controls.Add(Me.LabelMonthlyProfitLoss)
         Me.GroupBox3.Controls.Add(Me.LabelTextMonthlyProfitLoss)
@@ -331,15 +319,15 @@ Partial Class FormReport
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Statistics"
         '
-        'Label19
+        'LabelMonthlyLeastSoldProduct
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(214, 257)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(136, 25)
-        Me.Label19.TabIndex = 9
-        Me.Label19.Text = "Product Name"
+        Me.LabelMonthlyLeastSoldProduct.AutoSize = True
+        Me.LabelMonthlyLeastSoldProduct.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelMonthlyLeastSoldProduct.Location = New System.Drawing.Point(214, 257)
+        Me.LabelMonthlyLeastSoldProduct.Name = "LabelMonthlyLeastSoldProduct"
+        Me.LabelMonthlyLeastSoldProduct.Size = New System.Drawing.Size(136, 25)
+        Me.LabelMonthlyLeastSoldProduct.TabIndex = 9
+        Me.LabelMonthlyLeastSoldProduct.Text = "Product Name"
         '
         'Label20
         '
@@ -351,15 +339,15 @@ Partial Class FormReport
         Me.Label20.TabIndex = 8
         Me.Label20.Text = "Least Sold Product: "
         '
-        'Label21
+        'LabelMonthlyMostSoldProduct
         '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(214, 212)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(136, 25)
-        Me.Label21.TabIndex = 7
-        Me.Label21.Text = "Product Name"
+        Me.LabelMonthlyMostSoldProduct.AutoSize = True
+        Me.LabelMonthlyMostSoldProduct.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelMonthlyMostSoldProduct.Location = New System.Drawing.Point(214, 212)
+        Me.LabelMonthlyMostSoldProduct.Name = "LabelMonthlyMostSoldProduct"
+        Me.LabelMonthlyMostSoldProduct.Size = New System.Drawing.Size(136, 25)
+        Me.LabelMonthlyMostSoldProduct.TabIndex = 7
+        Me.LabelMonthlyMostSoldProduct.Text = "Product Name"
         '
         'Label22
         '
@@ -455,21 +443,21 @@ Partial Class FormReport
         '
         'ChartDailyProductivity
         '
-        ChartArea8.Name = "ChartArea1"
-        Me.ChartDailyProductivity.ChartAreas.Add(ChartArea8)
+        ChartArea3.Name = "ChartArea1"
+        Me.ChartDailyProductivity.ChartAreas.Add(ChartArea3)
         Me.ChartDailyProductivity.DataSource = Me.CustomerOrderBindingSource
-        Legend8.Name = "Legend1"
-        Me.ChartDailyProductivity.Legends.Add(Legend8)
+        Legend3.Name = "Legend1"
+        Me.ChartDailyProductivity.Legends.Add(Legend3)
         Me.ChartDailyProductivity.Location = New System.Drawing.Point(449, 115)
         Me.ChartDailyProductivity.Name = "ChartDailyProductivity"
-        Series8.ChartArea = "ChartArea1"
-        Series8.Legend = "Legend1"
-        Series8.Name = "Productivity"
-        Series8.Points.Add(DataPoint3)
-        Series8.Points.Add(DataPoint4)
-        Series8.XValueMember = "OrderTime"
-        Series8.YValueMembers = "SaleID"
-        Me.ChartDailyProductivity.Series.Add(Series8)
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Productivity"
+        Series3.Points.Add(DataPoint1)
+        Series3.Points.Add(DataPoint2)
+        Series3.XValueMember = "OrderTime"
+        Series3.YValueMembers = "SaleID"
+        Me.ChartDailyProductivity.Series.Add(Series3)
         Me.ChartDailyProductivity.Size = New System.Drawing.Size(475, 454)
         Me.ChartDailyProductivity.TabIndex = 1
         Me.ChartDailyProductivity.Text = "ChartProductivity"
@@ -628,38 +616,6 @@ Partial Class FormReport
         '
         Me.IngredientTableAdapter.ClearBeforeFill = True
         '
-        'Chart1
-        '
-        ChartArea9.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea9)
-        Legend9.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend9)
-        Me.Chart1.Location = New System.Drawing.Point(18, 356)
-        Me.Chart1.Name = "Chart1"
-        Series9.ChartArea = "ChartArea1"
-        Series9.Legend = "Legend1"
-        Series9.Name = "Series1"
-        Me.Chart1.Series.Add(Series9)
-        Me.Chart1.Size = New System.Drawing.Size(407, 239)
-        Me.Chart1.TabIndex = 3
-        Me.Chart1.Text = "Chart1"
-        '
-        'Chart4
-        '
-        ChartArea5.Name = "ChartArea1"
-        Me.Chart4.ChartAreas.Add(ChartArea5)
-        Legend5.Name = "Legend1"
-        Me.Chart4.Legends.Add(Legend5)
-        Me.Chart4.Location = New System.Drawing.Point(18, 364)
-        Me.Chart4.Name = "Chart4"
-        Series5.ChartArea = "ChartArea1"
-        Series5.Legend = "Legend1"
-        Series5.Name = "Series1"
-        Me.Chart4.Series.Add(Series5)
-        Me.Chart4.Size = New System.Drawing.Size(407, 239)
-        Me.Chart4.TabIndex = 4
-        Me.Chart4.Text = "Chart4"
-        '
         'FormReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -673,12 +629,12 @@ Partial Class FormReport
         Me.Text = "Reports"
         Me.TabPageAllTime.ResumeLayout(False)
         Me.TabPageAllTime.PerformLayout()
-        CType(Me.Chart3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ChartAllTimeProductivity, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.TabPageMonthly.ResumeLayout(False)
         Me.TabPageMonthly.PerformLayout()
-        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ChartMonthlyProductivity, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.TabPageDaily.ResumeLayout(False)
@@ -689,8 +645,6 @@ Partial Class FormReport
         Me.TabAllTime.ResumeLayout(False)
         CType(Me.CustomerOrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Chart4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -703,25 +657,25 @@ Partial Class FormReport
     Friend WithEvents CustomerOrderBindingSource As BindingSource
     Friend WithEvents TabPageAllTime As TabPage
     Friend WithEvents Label29 As Label
-    Friend WithEvents Chart3 As DataVisualization.Charting.Chart
+    Friend WithEvents ChartAllTimeProductivity As DataVisualization.Charting.Chart
     Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents Label30 As Label
+    Friend WithEvents LabelAllTimeLeastSoldProduct As Label
     Friend WithEvents Label31 As Label
-    Friend WithEvents Label32 As Label
+    Friend WithEvents LabelAllTimeMostSoldProduct As Label
     Friend WithEvents Label33 As Label
-    Friend WithEvents Label34 As Label
-    Friend WithEvents Label35 As Label
-    Friend WithEvents Label36 As Label
+    Friend WithEvents LabelAllTimeProfitLoss As Label
+    Friend WithEvents LabelTextAllTimeProfitLoss As Label
+    Friend WithEvents LabelAllTimeExpenses As Label
     Friend WithEvents Label37 As Label
-    Friend WithEvents Label38 As Label
+    Friend WithEvents LabelAllTimeIncome As Label
     Friend WithEvents Label39 As Label
     Friend WithEvents TabPageMonthly As TabPage
     Friend WithEvents Label18 As Label
-    Friend WithEvents Chart2 As DataVisualization.Charting.Chart
+    Friend WithEvents ChartMonthlyProductivity As DataVisualization.Charting.Chart
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents Label19 As Label
+    Friend WithEvents LabelMonthlyLeastSoldProduct As Label
     Friend WithEvents Label20 As Label
-    Friend WithEvents Label21 As Label
+    Friend WithEvents LabelMonthlyMostSoldProduct As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents LabelMonthlyProfitLoss As Label
     Friend WithEvents LabelTextMonthlyProfitLoss As Label
@@ -744,6 +698,4 @@ Partial Class FormReport
     Friend WithEvents LabelIncome As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents TabAllTime As TabControl
-    Friend WithEvents Chart1 As DataVisualization.Charting.Chart
-    Friend WithEvents Chart4 As DataVisualization.Charting.Chart
 End Class
