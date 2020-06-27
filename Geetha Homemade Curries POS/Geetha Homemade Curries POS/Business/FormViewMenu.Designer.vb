@@ -23,8 +23,10 @@ Partial Class FormViewMenu
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TextBoxMenuItemID = New System.Windows.Forms.TextBox()
+        Me.MenuItemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBoxPrice = New System.Windows.Forms.TextBox()
         Me.TextBoxName = New System.Windows.Forms.TextBox()
@@ -36,21 +38,19 @@ Partial Class FormViewMenu
         Me.ButtonAdd = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuItemDataGridView = New System.Windows.Forms.DataGridView()
-        Me.ComboBoxCategory = New System.Windows.Forms.ComboBox()
-        Me.ButtonRefresh = New System.Windows.Forms.Button()
-        Me.TextBoxSearch = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.MenuItemBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
-        Me.MenuItemTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.MenuItemTableAdapter()
         Me.MenuItemIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MenuItemNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CategoryDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MenuItemPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CurrentMenuItem = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        CType(Me.MenuItemDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ComboBoxCategory = New System.Windows.Forms.ComboBox()
+        Me.ButtonRefresh = New System.Windows.Forms.Button()
+        Me.TextBoxSearch = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.MenuItemTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.MenuItemTableAdapter()
         CType(Me.MenuItemBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MenuItemDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBoxMenuItemID
@@ -62,6 +62,16 @@ Partial Class FormViewMenu
         Me.TextBoxMenuItemID.Name = "TextBoxMenuItemID"
         Me.TextBoxMenuItemID.Size = New System.Drawing.Size(305, 22)
         Me.TextBoxMenuItemID.TabIndex = 26
+        '
+        'MenuItemBindingSource
+        '
+        Me.MenuItemBindingSource.DataMember = "MenuItem"
+        Me.MenuItemBindingSource.DataSource = Me.Group22DataSet
+        '
+        'Group22DataSet
+        '
+        Me.Group22DataSet.DataSetName = "group22DataSet"
+        Me.Group22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label5
         '
@@ -187,6 +197,51 @@ Partial Class FormViewMenu
         Me.MenuItemDataGridView.Size = New System.Drawing.Size(707, 452)
         Me.MenuItemDataGridView.TabIndex = 14
         '
+        'MenuItemIDDataGridViewTextBoxColumn
+        '
+        Me.MenuItemIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.MenuItemIDDataGridViewTextBoxColumn.DataPropertyName = "MenuItemID"
+        Me.MenuItemIDDataGridViewTextBoxColumn.HeaderText = "MenuItemID"
+        Me.MenuItemIDDataGridViewTextBoxColumn.Name = "MenuItemIDDataGridViewTextBoxColumn"
+        Me.MenuItemIDDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MenuItemNameDataGridViewTextBoxColumn
+        '
+        Me.MenuItemNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.MenuItemNameDataGridViewTextBoxColumn.DataPropertyName = "MenuItemName"
+        Me.MenuItemNameDataGridViewTextBoxColumn.HeaderText = "MenuItemName"
+        Me.MenuItemNameDataGridViewTextBoxColumn.Name = "MenuItemNameDataGridViewTextBoxColumn"
+        Me.MenuItemNameDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CategoryDataGridViewTextBoxColumn
+        '
+        Me.CategoryDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.CategoryDataGridViewTextBoxColumn.DataPropertyName = "Category"
+        Me.CategoryDataGridViewTextBoxColumn.HeaderText = "Category"
+        Me.CategoryDataGridViewTextBoxColumn.Name = "CategoryDataGridViewTextBoxColumn"
+        Me.CategoryDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MenuItemPriceDataGridViewTextBoxColumn
+        '
+        Me.MenuItemPriceDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.MenuItemPriceDataGridViewTextBoxColumn.DataPropertyName = "MenuItemPrice"
+        DataGridViewCellStyle1.Format = "C2"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.MenuItemPriceDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
+        Me.MenuItemPriceDataGridViewTextBoxColumn.HeaderText = "MenuItemPrice"
+        Me.MenuItemPriceDataGridViewTextBoxColumn.Name = "MenuItemPriceDataGridViewTextBoxColumn"
+        Me.MenuItemPriceDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CurrentMenuItem
+        '
+        Me.CurrentMenuItem.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.CurrentMenuItem.DataPropertyName = "CurrentMenuItem"
+        Me.CurrentMenuItem.HeaderText = "CurrentMenuItem"
+        Me.CurrentMenuItem.Name = "CurrentMenuItem"
+        Me.CurrentMenuItem.ReadOnly = True
+        Me.CurrentMenuItem.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.CurrentMenuItem.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
         'ComboBoxCategory
         '
         Me.ComboBoxCategory.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MenuItemBindingSource, "Category", True))
@@ -229,64 +284,9 @@ Partial Class FormViewMenu
         Me.Label6.TabIndex = 28
         Me.Label6.Text = "Search: "
         '
-        'MenuItemBindingSource
-        '
-        Me.MenuItemBindingSource.DataMember = "MenuItem"
-        Me.MenuItemBindingSource.DataSource = Me.Group22DataSet
-        '
-        'Group22DataSet
-        '
-        Me.Group22DataSet.DataSetName = "group22DataSet"
-        Me.Group22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'MenuItemTableAdapter
         '
         Me.MenuItemTableAdapter.ClearBeforeFill = True
-        '
-        'MenuItemIDDataGridViewTextBoxColumn
-        '
-        Me.MenuItemIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.MenuItemIDDataGridViewTextBoxColumn.DataPropertyName = "MenuItemID"
-        Me.MenuItemIDDataGridViewTextBoxColumn.HeaderText = "MenuItemID"
-        Me.MenuItemIDDataGridViewTextBoxColumn.Name = "MenuItemIDDataGridViewTextBoxColumn"
-        Me.MenuItemIDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'MenuItemNameDataGridViewTextBoxColumn
-        '
-        Me.MenuItemNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.MenuItemNameDataGridViewTextBoxColumn.DataPropertyName = "MenuItemName"
-        Me.MenuItemNameDataGridViewTextBoxColumn.HeaderText = "MenuItemName"
-        Me.MenuItemNameDataGridViewTextBoxColumn.Name = "MenuItemNameDataGridViewTextBoxColumn"
-        Me.MenuItemNameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CategoryDataGridViewTextBoxColumn
-        '
-        Me.CategoryDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.CategoryDataGridViewTextBoxColumn.DataPropertyName = "Category"
-        Me.CategoryDataGridViewTextBoxColumn.HeaderText = "Category"
-        Me.CategoryDataGridViewTextBoxColumn.Name = "CategoryDataGridViewTextBoxColumn"
-        Me.CategoryDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'MenuItemPriceDataGridViewTextBoxColumn
-        '
-        Me.MenuItemPriceDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.MenuItemPriceDataGridViewTextBoxColumn.DataPropertyName = "MenuItemPrice"
-        DataGridViewCellStyle2.Format = "C2"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.MenuItemPriceDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
-        Me.MenuItemPriceDataGridViewTextBoxColumn.HeaderText = "MenuItemPrice"
-        Me.MenuItemPriceDataGridViewTextBoxColumn.Name = "MenuItemPriceDataGridViewTextBoxColumn"
-        Me.MenuItemPriceDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CurrentMenuItem
-        '
-        Me.CurrentMenuItem.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.CurrentMenuItem.DataPropertyName = "CurrentMenuItem"
-        Me.CurrentMenuItem.HeaderText = "CurrentMenuItem"
-        Me.CurrentMenuItem.Name = "CurrentMenuItem"
-        Me.CurrentMenuItem.ReadOnly = True
-        Me.CurrentMenuItem.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.CurrentMenuItem.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
         'FormViewMenu
         '
@@ -314,9 +314,9 @@ Partial Class FormViewMenu
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FormViewMenu"
         Me.Text = "FormViewMenu"
-        CType(Me.MenuItemDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MenuItemBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MenuItemDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -99,7 +99,7 @@ Partial Class FormAddMenuItem
         '
         Me.ComboBoxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBoxCategory.FormattingEnabled = True
-        Me.ComboBoxCategory.Items.AddRange(New Object() {"Briyani" & Global.Microsoft.VisualBasic.ChrW(9), "Bunnies", "Chutney", "Veg Curries", "Non-Veg Curries", "Veg Dishes", "Non-Veg Dishes", "Hot Drinks", "Cold Drinks", "Extras/Sides", "Pasta", "Regulars", "Roti Rolls", "Specials", "Toasted Sandwiches"})
+        Me.ComboBoxCategory.Items.AddRange(New Object() {"Briyani", "Bunnies", "Chutney", "Veg Curries", "Non-Veg Curries", "Veg Dishes", "Non-Veg Dishes", "Hot Drinks", "Cold Drinks", "Extras/Sides", "Pasta", "Regulars", "Roti Rolls", "Specials", "Toasted Sandwiches"})
         Me.ComboBoxCategory.Location = New System.Drawing.Point(220, 110)
         Me.ComboBoxCategory.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBoxCategory.Name = "ComboBoxCategory"

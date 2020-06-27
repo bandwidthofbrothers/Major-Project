@@ -6,18 +6,30 @@
     End Sub
 
     Private Sub ButtonDelete_Click(sender As Object, e As EventArgs) Handles ButtonDelete.Click
-        Try
+
+        If ButtonDelete.Text = "Add to Menu" Then
             Dim MenuItemID As Integer = MenuItemDataGridView.CurrentRow.Cells(0).Value
 
-            Me.MenuItemTableAdapter.DeleteQuery(MenuItemID)
+            Me.MenuItemTableAdapter.addToMenu(MenuItemID)
 
             Me.MenuItemTableAdapter.Fill(Me.Group22DataSet.MenuItem)
 
-            MessageBox.Show("Record deleted successfully")
+            MessageBox.Show("Menu Item added to Menu")
+        Else
+            Try
+                Dim MenuItemID As Integer = MenuItemDataGridView.CurrentRow.Cells(0).Value
 
-        Catch ex As Exception
-            MessageBox.Show("Error: Could not delete record")
-        End Try
+                Me.MenuItemTableAdapter.DeleteQuery(MenuItemID)
+
+                Me.MenuItemTableAdapter.Fill(Me.Group22DataSet.MenuItem)
+
+                MessageBox.Show("Menu Item removed from Menu")
+
+            Catch ex As Exception
+                MessageBox.Show("Error: Could not remove Menu Item")
+            End Try
+        End If
+
     End Sub
 
     Private Sub ButtonUpdate_Click(sender As Object, e As EventArgs) Handles ButtonUpdate.Click
@@ -55,7 +67,15 @@
         MenuItemTableAdapter.Fill(Group22DataSet.MenuItem)
     End Sub
 
-    Private Sub MenuItemDataGridView_Click(sender As Object, e As EventArgs) Handles MenuItemDataGridView.Click
+    Private Sub MenuItemDataGridView_SelectionChanged(sender As Object, e As EventArgs) Handles MenuItemDataGridView.SelectionChanged
+        If MenuItemDataGridView.Rows.Count = 0 Then
+            Exit Sub
+        End If
 
+        If MenuItemDataGridView.CurrentRow.Cells.Item(4).Value = 0 Then
+            ButtonDelete.Text = "Add to Menu"
+        Else
+            ButtonDelete.Text = "Remove from Menu"
+        End If
     End Sub
 End Class
