@@ -2,6 +2,9 @@
 End Class
 
 Namespace group22DataSetTableAdapters
+    Partial Public Class CustomerOrderTableAdapter
+    End Class
+
     Partial Public Class EmployeeTableAdapter
     End Class
 
