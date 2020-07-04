@@ -72,9 +72,7 @@ C:\Users\XPS\Source\Repos\bandwidthofbrothers\Major-Project\Geetha Homemade Curr
 C:\Users\micha\OneDrive\Development\Major Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.ViewCustomers.resources
 C:\Users\XPS\Source\Repos\bandwidthofbrothers\Major-Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.AddCustomer.resources
 C:\Users\micha\OneDrive\Development\Major Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormAddStaff.resources
-C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.AddCustomer.resources
 C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormAddStaff.resources
-C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.Menu.resources
 C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.ViewCustomers.resources
 C:\Users\micha\OneDrive\Development\Major Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSales.resources
 C:\Users\micha\OneDrive\Development\Major Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSalesCategories.resources
@@ -88,3 +86,15 @@ C:\Users\micha\OneDrive\Development\Major Project\Geetha Homemade Curries POS\Ge
 C:\Users\micha\OneDrive\Development\Major Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSalesAccount.resources
 C:\Users\micha\OneDrive\Development\Major Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormAddCustomer.resources
 C:\Users\micha\OneDrive\Development\Major Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormReport.resources
+C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormAddCustomer.resources
+C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormReport.resources
+C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormAddMenuItem.resources
+C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSales.resources
+C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSalesAccount.resources
+C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSalesCategories.resources
+C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSalesCheckout.resources
+C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSalesCurries.resources
+C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSalesDishes.resources
+C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSalesDrinks.resources
+C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSalesItems.resources
+C:\Users\Student\Documents\Visual Studio 2015\Projects\Major Project User Story\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormViewMenu.resources
