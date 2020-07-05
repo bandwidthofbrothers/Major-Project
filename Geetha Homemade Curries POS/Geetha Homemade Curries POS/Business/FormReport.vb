@@ -55,7 +55,7 @@ Public Class FormReport
 
             Try
                 conOne.Open()
-                cndOne = New SqlCommand("SELECT COUNT(CustomerOrderID) FROM CustomerOrder WHERE OrderDate = @d AND OrderTime >= @TimeOne AND OrderTime < @TimeTwo", conOne)
+                cndOne = New SqlCommand("SELECT DISTINCT COUNT(CustomerOrderID) FROM CustomerOrder WHERE OrderDate = @d AND OrderTime >= @TimeOne AND OrderTime < @TimeTwo", conOne)
                 cndOne.Parameters.Add("@d", SqlDbType.Date).Value = d
                 cndOne.Parameters.Add("@TimeOne", SqlDbType.Time).Value = TimeOne
                 cndOne.Parameters.Add("@TimeTwo", SqlDbType.Time).Value = TimeTwo
@@ -95,6 +95,147 @@ Public Class FormReport
 
         LabelMonthlyProfitLoss.Text = subtract.ToString("c")
 
+        Dim MonthlyMostSoldProduct As String = CustomerOrderTableAdapter.getMonthlyMostSoldProduct(dateSelected.Month, dateSelected.Year)
+        LabelMonthlyMostSoldProduct.Text = MonthlyMostSoldProduct
+
+        Dim MonthlyLeastSoldProduct As String = CustomerOrderTableAdapter.getMonthlyLeastSoldProduct(dateSelected.Month, dateSelected.Year)
+        LabelMonthlyLeastSoldProduct.Text = MonthlyLeastSoldProduct
+
+        drawMonthlyProductivtyGraph()
+
+        'All Time Reports
+
+        Dim income As Double = CustomerOrderTableAdapter.getAllTimeIncome()
+        LabelAllTimeIncome.Text = income.ToString("C")
+
+        Dim expenses As Double = IngredientTableAdapter.getAllTimeExpenses()
+        LabelAllTimeExpenses.Text = expenses.ToString("c")
+
+        subtract = income - expenses
+
+        If subtract = 0.0 Then
+            LabelTextAllTimeProfitLoss.Text = "Break Even: "
+        ElseIf subtract > 0.0 Then
+            LabelTextAllTimeProfitLoss.Text = "Profit: "
+        Else
+            LabelTextAllTimeProfitLoss.Text = "Loss:  "
+        End If
+
+        Dim MostSoldProduct As String = CustomerOrderTableAdapter.getAllTimeMostSoldProduct()
+        LabelAllTimeMostSoldProduct.Text = MostSoldProduct
+
+        Dim LeastSoldProduct As String = CustomerOrderTableAdapter.getAllTimeLeastSoldProduct()
+        LabelAllTimeLeastSoldProduct.Text = LeastSoldProduct
+
+        LabelAllTimeProfitLoss.Text = subtract.ToString("c")
+
+        drawAllTimeProductivityGraph()
+    End Sub
+
+    Private Sub drawMonthlyProductivtyGraph()
+        ChartMonthlyProductivity.Series(0).Points.Clear()
+
+        Dim Count As Integer = 0
+        Dim WeekDay As Integer = 1
+        Dim DayOfWeek As String
+
+        Do While Count < 7
+
+            If WeekDay = 1 Then
+                DayOfWeek = "Sunday"
+            ElseIf WeekDay = 2 Then
+                DayOfWeek = "Monday"
+            ElseIf WeekDay = 3 Then
+                DayOfWeek = "Tuesday"
+            ElseIf WeekDay = 4 Then
+                DayOfWeek = "Wednesday"
+            ElseIf WeekDay = 5 Then
+                DayOfWeek = "Thursday"
+            ElseIf WeekDay = 6 Then
+                DayOfWeek = "Friday"
+            ElseIf WeekDay = 7 Then
+                DayOfWeek = "Saturday"
+            End If
+
+            Dim conOne As SqlConnection
+            Dim cndOne As SqlCommand
+            conOne = New SqlConnection("Server = 146.230.177.46\ist3; Database = group22; User Id = group22; Password = n24mc")
+            Try
+                conOne.Open()
+                cndOne = New SqlCommand("SELECT COUNT(DISTINCT SaleID) FROM CustomerOrder WHERE DATEPART(WEEKDAY, OrderDate) = @WeekDay AND MONTH(OrderDate) = @Month AND YEAR(OrderDate) = @CurrentYear;", conOne)
+                cndOne.Parameters.Add("@WeekDay", SqlDbType.Int).Value = WeekDay
+                cndOne.Parameters.Add("@Month", SqlDbType.Int).Value = MonthCalendar.SelectionStart.Month
+                cndOne.Parameters.Add("@CurrentYear", SqlDbType.VarChar).Value = MonthCalendar.SelectionStart.Year
+
+                Dim drOne As SqlDataReader
+                drOne = cndOne.ExecuteReader
+                Do While drOne.Read
+                    Me.ChartMonthlyProductivity.Series("Orders").Points.AddXY(DayOfWeek, drOne.GetValue(0))
+                Loop
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+
+            conOne.Close()
+            conOne.Dispose()
+            conOne = Nothing
+
+            Count += 1
+            WeekDay += 1
+
+        Loop
+    End Sub
+
+    Private Sub drawAllTimeProductivityGraph()
+        ChartAllTimeProductivity.Series(0).Points.Clear()
+
+        Dim Count As Integer = 0
+        Dim WeekDay As Integer = 1
+        Dim DayOfWeek As String
+
+        Do While Count < 7
+
+            If WeekDay = 1 Then
+                DayOfWeek = "Sunday"
+            ElseIf WeekDay = 2 Then
+                DayOfWeek = "Monday"
+            ElseIf WeekDay = 3 Then
+                DayOfWeek = "Tuesday"
+            ElseIf WeekDay = 4 Then
+                DayOfWeek = "Wednesday"
+            ElseIf WeekDay = 5 Then
+                DayOfWeek = "Thursday"
+            ElseIf WeekDay = 6 Then
+                DayOfWeek = "Friday"
+            ElseIf WeekDay = 7 Then
+                DayOfWeek = "Saturday"
+            End If
+
+            Dim conOne As SqlConnection
+            Dim cndOne As SqlCommand
+            conOne = New SqlConnection("Server = 146.230.177.46\ist3; Database = group22; User Id = group22; Password = n24mc")
+            Try
+                conOne.Open()
+                cndOne = New SqlCommand("SELECT COUNT(DISTINCT SaleID) FROM CustomerOrder WHERE DATEPART(WEEKDAY, OrderDate) = @WeekDay;", conOne)
+                cndOne.Parameters.Add("@WeekDay", SqlDbType.Int).Value = WeekDay
+
+                Dim drOne As SqlDataReader
+                drOne = cndOne.ExecuteReader
+                Do While drOne.Read
+                    Me.ChartAllTimeProductivity.Series("Orders").Points.AddXY(DayOfWeek, drOne.GetValue(0))
+                Loop
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+
+            conOne.Close()
+            conOne.Dispose()
+            conOne = Nothing
+
+            Count += 1
+            WeekDay += 1
+
+        Loop
     End Sub
 
     Private Sub MonthCalendar_DateChanged(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar.DateChanged

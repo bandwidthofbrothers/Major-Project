@@ -130,10 +130,9 @@ Partial Class ViewCustomers
         Label1.AutoSize = True
         Label1.ForeColor = System.Drawing.Color.White
         Label1.Image = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
-        Label1.Location = New System.Drawing.Point(13, 83)
-        Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Label1.Location = New System.Drawing.Point(17, 102)
         Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(44, 13)
+        Label1.Size = New System.Drawing.Size(57, 17)
         Label1.TabIndex = 61
         Label1.Text = "Search:"
         '
