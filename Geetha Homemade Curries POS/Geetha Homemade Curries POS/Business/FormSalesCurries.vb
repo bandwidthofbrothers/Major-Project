@@ -22,7 +22,7 @@
     End Sub
 
     Private Sub PictureBoxNonVegCurries_Click(sender As Object, e As EventArgs) Handles PictureBoxNonVegCurries.Click
-        setUpSalesItemsForm("Non-Veg Curry")
+        setUpSalesItemsForm("Non-Veg Curries")
     End Sub
 
 End Class
