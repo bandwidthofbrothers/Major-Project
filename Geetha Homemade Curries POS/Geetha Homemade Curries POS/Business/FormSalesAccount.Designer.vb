@@ -26,6 +26,9 @@ Partial Class FormSalesAccount
         Me.CustomerDataGridView = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ButtonProceed = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBoxSearch = New System.Windows.Forms.TextBox()
+        Me.ButtonRefresh = New System.Windows.Forms.Button()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -48,7 +51,7 @@ Partial Class FormSalesAccount
         Me.CustomerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.CustomerDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.CustomerDataGridView.DataSource = Me.CustomerBindingSource
-        Me.CustomerDataGridView.Location = New System.Drawing.Point(12, 81)
+        Me.CustomerDataGridView.Location = New System.Drawing.Point(12, 125)
         Me.CustomerDataGridView.Name = "CustomerDataGridView"
         Me.CustomerDataGridView.ReadOnly = True
         Me.CustomerDataGridView.RowTemplate.Height = 24
@@ -69,12 +72,39 @@ Partial Class FormSalesAccount
         '
         'ButtonProceed
         '
-        Me.ButtonProceed.Location = New System.Drawing.Point(440, 473)
+        Me.ButtonProceed.Location = New System.Drawing.Point(440, 517)
         Me.ButtonProceed.Name = "ButtonProceed"
         Me.ButtonProceed.Size = New System.Drawing.Size(160, 41)
         Me.ButtonProceed.TabIndex = 17
         Me.ButtonProceed.Text = "Proceed"
         Me.ButtonProceed.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(12, 92)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(57, 17)
+        Me.Label2.TabIndex = 18
+        Me.Label2.Text = "Search:"
+        '
+        'TextBoxSearch
+        '
+        Me.TextBoxSearch.Location = New System.Drawing.Point(76, 92)
+        Me.TextBoxSearch.Name = "TextBoxSearch"
+        Me.TextBoxSearch.Size = New System.Drawing.Size(249, 22)
+        Me.TextBoxSearch.TabIndex = 19
+        '
+        'ButtonRefresh
+        '
+        Me.ButtonRefresh.Location = New System.Drawing.Point(331, 92)
+        Me.ButtonRefresh.Name = "ButtonRefresh"
+        Me.ButtonRefresh.Size = New System.Drawing.Size(127, 24)
+        Me.ButtonRefresh.TabIndex = 20
+        Me.ButtonRefresh.Text = "Refresh"
+        Me.ButtonRefresh.UseVisualStyleBackColor = True
         '
         'DataGridViewTextBoxColumn1
         '
@@ -146,7 +176,10 @@ Partial Class FormSalesAccount
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
-        Me.ClientSize = New System.Drawing.Size(618, 526)
+        Me.ClientSize = New System.Drawing.Size(618, 568)
+        Me.Controls.Add(Me.ButtonRefresh)
+        Me.Controls.Add(Me.TextBoxSearch)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.ButtonProceed)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CustomerDataGridView)
@@ -173,4 +206,7 @@ Partial Class FormSalesAccount
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents Label1 As Label
     Friend WithEvents ButtonProceed As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents TextBoxSearch As TextBox
+    Friend WithEvents ButtonRefresh As Button
 End Class

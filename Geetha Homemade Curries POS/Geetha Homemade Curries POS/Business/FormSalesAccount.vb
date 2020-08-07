@@ -29,4 +29,14 @@
             MessageBox.Show("Error: No customer selected", "Error")
         End Try
     End Sub
+
+    Private Sub TextBoxSearch_TextChanged(sender As Object, e As EventArgs) Handles TextBoxSearch.TextChanged
+        Me.CustomerTableAdapter.FillBySearch(Me.Group22DataSet.Customer, TextBoxSearch.Text)
+    End Sub
+
+    Private Sub ButtonRefresh_Click(sender As Object, e As EventArgs) Handles ButtonRefresh.Click
+        TextBoxSearch.Text = ""
+
+        Me.CustomerTableAdapter.Fill(Me.Group22DataSet.Customer)
+    End Sub
 End Class
