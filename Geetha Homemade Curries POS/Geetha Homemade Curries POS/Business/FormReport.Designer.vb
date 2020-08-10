@@ -38,7 +38,7 @@ Partial Class FormReport
         Me.TabPageAllTime = New System.Windows.Forms.TabPage()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.ChartAllTimeProductivity = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.GroupBoxAllTime = New System.Windows.Forms.GroupBox()
         Me.LabelAllTimeLeastSoldProduct = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.LabelAllTimeMostSoldProduct = New System.Windows.Forms.Label()
@@ -52,7 +52,7 @@ Partial Class FormReport
         Me.TabPageMonthly = New System.Windows.Forms.TabPage()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.ChartMonthlyProductivity = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.GroupBoxMonthly = New System.Windows.Forms.GroupBox()
         Me.LabelMonthlyLeastSoldProduct = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.LabelMonthlyMostSoldProduct = New System.Windows.Forms.Label()
@@ -68,7 +68,7 @@ Partial Class FormReport
         Me.ChartDailyProductivity = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.CustomerOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBoxDaily = New System.Windows.Forms.GroupBox()
         Me.LabelLeastSoldProductName = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.LabelMostSoldProductName = New System.Windows.Forms.Label()
@@ -85,15 +85,15 @@ Partial Class FormReport
         Me.IngredientTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.IngredientTableAdapter()
         Me.TabPageAllTime.SuspendLayout()
         CType(Me.ChartAllTimeProductivity, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox4.SuspendLayout()
+        Me.GroupBoxAllTime.SuspendLayout()
         Me.TabPageMonthly.SuspendLayout()
         CType(Me.ChartMonthlyProductivity, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox3.SuspendLayout()
+        Me.GroupBoxMonthly.SuspendLayout()
         Me.TabPageDaily.SuspendLayout()
         CType(Me.ChartDailyProductivity, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CustomerOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
+        Me.GroupBoxDaily.SuspendLayout()
         Me.TabAllTime.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -107,7 +107,7 @@ Partial Class FormReport
         '
         Me.TabPageAllTime.Controls.Add(Me.Label29)
         Me.TabPageAllTime.Controls.Add(Me.ChartAllTimeProductivity)
-        Me.TabPageAllTime.Controls.Add(Me.GroupBox4)
+        Me.TabPageAllTime.Controls.Add(Me.GroupBoxAllTime)
         Me.TabPageAllTime.Location = New System.Drawing.Point(4, 38)
         Me.TabPageAllTime.Name = "TabPageAllTime"
         Me.TabPageAllTime.Padding = New System.Windows.Forms.Padding(3)
@@ -141,25 +141,25 @@ Partial Class FormReport
         Me.ChartAllTimeProductivity.TabIndex = 1
         Me.ChartAllTimeProductivity.Text = "Chart1"
         '
-        'GroupBox4
+        'GroupBoxAllTime
         '
-        Me.GroupBox4.Controls.Add(Me.LabelAllTimeLeastSoldProduct)
-        Me.GroupBox4.Controls.Add(Me.Label31)
-        Me.GroupBox4.Controls.Add(Me.LabelAllTimeMostSoldProduct)
-        Me.GroupBox4.Controls.Add(Me.Label33)
-        Me.GroupBox4.Controls.Add(Me.LabelAllTimeProfitLoss)
-        Me.GroupBox4.Controls.Add(Me.LabelTextAllTimeProfitLoss)
-        Me.GroupBox4.Controls.Add(Me.LabelAllTimeExpenses)
-        Me.GroupBox4.Controls.Add(Me.Label37)
-        Me.GroupBox4.Controls.Add(Me.LabelAllTimeIncome)
-        Me.GroupBox4.Controls.Add(Me.Label39)
-        Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox4.Location = New System.Drawing.Point(18, 17)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(407, 330)
-        Me.GroupBox4.TabIndex = 0
-        Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "Statistics"
+        Me.GroupBoxAllTime.Controls.Add(Me.LabelAllTimeLeastSoldProduct)
+        Me.GroupBoxAllTime.Controls.Add(Me.Label31)
+        Me.GroupBoxAllTime.Controls.Add(Me.LabelAllTimeMostSoldProduct)
+        Me.GroupBoxAllTime.Controls.Add(Me.Label33)
+        Me.GroupBoxAllTime.Controls.Add(Me.LabelAllTimeProfitLoss)
+        Me.GroupBoxAllTime.Controls.Add(Me.LabelTextAllTimeProfitLoss)
+        Me.GroupBoxAllTime.Controls.Add(Me.LabelAllTimeExpenses)
+        Me.GroupBoxAllTime.Controls.Add(Me.Label37)
+        Me.GroupBoxAllTime.Controls.Add(Me.LabelAllTimeIncome)
+        Me.GroupBoxAllTime.Controls.Add(Me.Label39)
+        Me.GroupBoxAllTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBoxAllTime.Location = New System.Drawing.Point(18, 17)
+        Me.GroupBoxAllTime.Name = "GroupBoxAllTime"
+        Me.GroupBoxAllTime.Size = New System.Drawing.Size(407, 330)
+        Me.GroupBoxAllTime.TabIndex = 0
+        Me.GroupBoxAllTime.TabStop = False
+        Me.GroupBoxAllTime.Text = "Statistics"
         '
         'LabelAllTimeLeastSoldProduct
         '
@@ -269,7 +269,7 @@ Partial Class FormReport
         '
         Me.TabPageMonthly.Controls.Add(Me.Label18)
         Me.TabPageMonthly.Controls.Add(Me.ChartMonthlyProductivity)
-        Me.TabPageMonthly.Controls.Add(Me.GroupBox3)
+        Me.TabPageMonthly.Controls.Add(Me.GroupBoxMonthly)
         Me.TabPageMonthly.Location = New System.Drawing.Point(4, 38)
         Me.TabPageMonthly.Name = "TabPageMonthly"
         Me.TabPageMonthly.Padding = New System.Windows.Forms.Padding(3)
@@ -303,25 +303,25 @@ Partial Class FormReport
         Me.ChartMonthlyProductivity.TabIndex = 1
         Me.ChartMonthlyProductivity.Text = "ChartMonthyProductivity"
         '
-        'GroupBox3
+        'GroupBoxMonthly
         '
-        Me.GroupBox3.Controls.Add(Me.LabelMonthlyLeastSoldProduct)
-        Me.GroupBox3.Controls.Add(Me.Label20)
-        Me.GroupBox3.Controls.Add(Me.LabelMonthlyMostSoldProduct)
-        Me.GroupBox3.Controls.Add(Me.Label22)
-        Me.GroupBox3.Controls.Add(Me.LabelMonthlyProfitLoss)
-        Me.GroupBox3.Controls.Add(Me.LabelTextMonthlyProfitLoss)
-        Me.GroupBox3.Controls.Add(Me.LabelMonthlyExpenses)
-        Me.GroupBox3.Controls.Add(Me.Label26)
-        Me.GroupBox3.Controls.Add(Me.LabelMonthlyIncome)
-        Me.GroupBox3.Controls.Add(Me.Label28)
-        Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(18, 17)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(407, 316)
-        Me.GroupBox3.TabIndex = 0
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Statistics"
+        Me.GroupBoxMonthly.Controls.Add(Me.LabelMonthlyLeastSoldProduct)
+        Me.GroupBoxMonthly.Controls.Add(Me.Label20)
+        Me.GroupBoxMonthly.Controls.Add(Me.LabelMonthlyMostSoldProduct)
+        Me.GroupBoxMonthly.Controls.Add(Me.Label22)
+        Me.GroupBoxMonthly.Controls.Add(Me.LabelMonthlyProfitLoss)
+        Me.GroupBoxMonthly.Controls.Add(Me.LabelTextMonthlyProfitLoss)
+        Me.GroupBoxMonthly.Controls.Add(Me.LabelMonthlyExpenses)
+        Me.GroupBoxMonthly.Controls.Add(Me.Label26)
+        Me.GroupBoxMonthly.Controls.Add(Me.LabelMonthlyIncome)
+        Me.GroupBoxMonthly.Controls.Add(Me.Label28)
+        Me.GroupBoxMonthly.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBoxMonthly.Location = New System.Drawing.Point(18, 17)
+        Me.GroupBoxMonthly.Name = "GroupBoxMonthly"
+        Me.GroupBoxMonthly.Size = New System.Drawing.Size(407, 316)
+        Me.GroupBoxMonthly.TabIndex = 0
+        Me.GroupBoxMonthly.TabStop = False
+        Me.GroupBoxMonthly.Text = "Statistics"
         '
         'LabelMonthlyLeastSoldProduct
         '
@@ -431,7 +431,7 @@ Partial Class FormReport
         '
         Me.TabPageDaily.Controls.Add(Me.Label2)
         Me.TabPageDaily.Controls.Add(Me.ChartDailyProductivity)
-        Me.TabPageDaily.Controls.Add(Me.GroupBox1)
+        Me.TabPageDaily.Controls.Add(Me.GroupBoxDaily)
         Me.TabPageDaily.Location = New System.Drawing.Point(4, 38)
         Me.TabPageDaily.Name = "TabPageDaily"
         Me.TabPageDaily.Padding = New System.Windows.Forms.Padding(3)
@@ -480,25 +480,25 @@ Partial Class FormReport
         Me.Group22DataSet.DataSetName = "group22DataSet"
         Me.Group22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'GroupBox1
+        'GroupBoxDaily
         '
-        Me.GroupBox1.Controls.Add(Me.LabelLeastSoldProductName)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.LabelMostSoldProductName)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.LabelProfitLoss)
-        Me.GroupBox1.Controls.Add(Me.LabelTextProfitLoss)
-        Me.GroupBox1.Controls.Add(Me.LabelExpenses)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.LabelIncome)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(18, 17)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(407, 584)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Statistics"
+        Me.GroupBoxDaily.Controls.Add(Me.LabelLeastSoldProductName)
+        Me.GroupBoxDaily.Controls.Add(Me.Label6)
+        Me.GroupBoxDaily.Controls.Add(Me.LabelMostSoldProductName)
+        Me.GroupBoxDaily.Controls.Add(Me.Label5)
+        Me.GroupBoxDaily.Controls.Add(Me.LabelProfitLoss)
+        Me.GroupBoxDaily.Controls.Add(Me.LabelTextProfitLoss)
+        Me.GroupBoxDaily.Controls.Add(Me.LabelExpenses)
+        Me.GroupBoxDaily.Controls.Add(Me.Label3)
+        Me.GroupBoxDaily.Controls.Add(Me.LabelIncome)
+        Me.GroupBoxDaily.Controls.Add(Me.Label1)
+        Me.GroupBoxDaily.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBoxDaily.Location = New System.Drawing.Point(18, 17)
+        Me.GroupBoxDaily.Name = "GroupBoxDaily"
+        Me.GroupBoxDaily.Size = New System.Drawing.Size(407, 584)
+        Me.GroupBoxDaily.TabIndex = 0
+        Me.GroupBoxDaily.TabStop = False
+        Me.GroupBoxDaily.Text = "Statistics"
         '
         'LabelLeastSoldProductName
         '
@@ -642,20 +642,20 @@ Partial Class FormReport
         Me.TabPageAllTime.ResumeLayout(False)
         Me.TabPageAllTime.PerformLayout()
         CType(Me.ChartAllTimeProductivity, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox4.PerformLayout()
+        Me.GroupBoxAllTime.ResumeLayout(False)
+        Me.GroupBoxAllTime.PerformLayout()
         Me.TabPageMonthly.ResumeLayout(False)
         Me.TabPageMonthly.PerformLayout()
         CType(Me.ChartMonthlyProductivity, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
+        Me.GroupBoxMonthly.ResumeLayout(False)
+        Me.GroupBoxMonthly.PerformLayout()
         Me.TabPageDaily.ResumeLayout(False)
         Me.TabPageDaily.PerformLayout()
         CType(Me.ChartDailyProductivity, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CustomerOrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.GroupBoxDaily.ResumeLayout(False)
+        Me.GroupBoxDaily.PerformLayout()
         Me.TabAllTime.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -670,7 +670,7 @@ Partial Class FormReport
     Friend WithEvents TabPageAllTime As TabPage
     Friend WithEvents Label29 As Label
     Friend WithEvents ChartAllTimeProductivity As DataVisualization.Charting.Chart
-    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents GroupBoxAllTime As GroupBox
     Friend WithEvents LabelAllTimeLeastSoldProduct As Label
     Friend WithEvents Label31 As Label
     Friend WithEvents LabelAllTimeMostSoldProduct As Label
@@ -684,7 +684,7 @@ Partial Class FormReport
     Friend WithEvents TabPageMonthly As TabPage
     Friend WithEvents Label18 As Label
     Friend WithEvents ChartMonthlyProductivity As DataVisualization.Charting.Chart
-    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents GroupBoxMonthly As GroupBox
     Friend WithEvents LabelMonthlyLeastSoldProduct As Label
     Friend WithEvents Label20 As Label
     Friend WithEvents LabelMonthlyMostSoldProduct As Label
@@ -698,7 +698,7 @@ Partial Class FormReport
     Friend WithEvents TabPageDaily As TabPage
     Friend WithEvents Label2 As Label
     Friend WithEvents ChartDailyProductivity As DataVisualization.Charting.Chart
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents GroupBoxDaily As GroupBox
     Friend WithEvents LabelLeastSoldProductName As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents LabelMostSoldProductName As Label

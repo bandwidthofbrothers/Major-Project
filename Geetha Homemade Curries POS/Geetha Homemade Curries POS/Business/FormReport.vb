@@ -7,9 +7,18 @@ Public Class FormReport
 
     Private Sub updateReports()
 
+
         'Daily Reports
 
         Dim dateSelected As Date = MonthCalendar.SelectionStart.Date
+
+        GroupBoxDaily.Text = "Statistics - " + dateSelected.ToShortDateString
+        GroupBoxMonthly.Text = "Statistics - " + dateSelected.ToString("MMMM") + " " + dateSelected.ToString("yyyy")
+
+        Dim firstDate As Date = CustomerOrderTableAdapter.getFirstOrderDate()
+        Dim lastDate As Date = CustomerOrderTableAdapter.getLastOrderDate()
+
+        GroupBoxAllTime.Text = "Statistics - " + firstDate.ToShortDateString + " to " + lastDate.ToShortDateString
 
         Dim dailyExpenses As Double = IngredientTableAdapter.getDailyExpenses(dateSelected.ToShortDateString)
         LabelExpenses.Text = dailyExpenses.ToString("c")
