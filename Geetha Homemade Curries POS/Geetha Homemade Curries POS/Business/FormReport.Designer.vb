@@ -66,6 +66,8 @@ Partial Class FormReport
         Me.TabPageDaily = New System.Windows.Forms.TabPage()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ChartDailyProductivity = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.CustomerOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.LabelLeastSoldProductName = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -78,8 +80,6 @@ Partial Class FormReport
         Me.LabelIncome = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabAllTime = New System.Windows.Forms.TabControl()
-        Me.CustomerOrderBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
         Me.CustomerOrderTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.CustomerOrderTableAdapter()
         Me.MenuItemTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.MenuItemTableAdapter()
         Me.IngredientTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.IngredientTableAdapter()
@@ -91,10 +91,10 @@ Partial Class FormReport
         Me.GroupBox3.SuspendLayout()
         Me.TabPageDaily.SuspendLayout()
         CType(Me.ChartDailyProductivity, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
-        Me.TabAllTime.SuspendLayout()
         CType(Me.CustomerOrderBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        Me.TabAllTime.SuspendLayout()
         Me.SuspendLayout()
         '
         'MonthCalendar
@@ -205,6 +205,7 @@ Partial Class FormReport
         '
         Me.LabelAllTimeProfitLoss.AutoSize = True
         Me.LabelAllTimeProfitLoss.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelAllTimeProfitLoss.ForeColor = System.Drawing.Color.Transparent
         Me.LabelAllTimeProfitLoss.Location = New System.Drawing.Point(138, 150)
         Me.LabelAllTimeProfitLoss.Name = "LabelAllTimeProfitLoss"
         Me.LabelAllTimeProfitLoss.Size = New System.Drawing.Size(61, 25)
@@ -215,6 +216,7 @@ Partial Class FormReport
         '
         Me.LabelTextAllTimeProfitLoss.AutoSize = True
         Me.LabelTextAllTimeProfitLoss.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTextAllTimeProfitLoss.ForeColor = System.Drawing.Color.Transparent
         Me.LabelTextAllTimeProfitLoss.Location = New System.Drawing.Point(17, 150)
         Me.LabelTextAllTimeProfitLoss.Name = "LabelTextAllTimeProfitLoss"
         Me.LabelTextAllTimeProfitLoss.Size = New System.Drawing.Size(115, 25)
@@ -225,6 +227,7 @@ Partial Class FormReport
         '
         Me.LabelAllTimeExpenses.AutoSize = True
         Me.LabelAllTimeExpenses.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelAllTimeExpenses.ForeColor = System.Drawing.Color.Transparent
         Me.LabelAllTimeExpenses.Location = New System.Drawing.Point(138, 98)
         Me.LabelAllTimeExpenses.Name = "LabelAllTimeExpenses"
         Me.LabelAllTimeExpenses.Size = New System.Drawing.Size(61, 25)
@@ -235,6 +238,7 @@ Partial Class FormReport
         '
         Me.Label37.AutoSize = True
         Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.ForeColor = System.Drawing.Color.Transparent
         Me.Label37.Location = New System.Drawing.Point(17, 98)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(110, 25)
@@ -363,6 +367,7 @@ Partial Class FormReport
         '
         Me.LabelMonthlyProfitLoss.AutoSize = True
         Me.LabelMonthlyProfitLoss.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelMonthlyProfitLoss.ForeColor = System.Drawing.Color.Transparent
         Me.LabelMonthlyProfitLoss.Location = New System.Drawing.Point(138, 150)
         Me.LabelMonthlyProfitLoss.Name = "LabelMonthlyProfitLoss"
         Me.LabelMonthlyProfitLoss.Size = New System.Drawing.Size(61, 25)
@@ -373,6 +378,7 @@ Partial Class FormReport
         '
         Me.LabelTextMonthlyProfitLoss.AutoSize = True
         Me.LabelTextMonthlyProfitLoss.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTextMonthlyProfitLoss.ForeColor = System.Drawing.Color.Transparent
         Me.LabelTextMonthlyProfitLoss.Location = New System.Drawing.Point(17, 150)
         Me.LabelTextMonthlyProfitLoss.Name = "LabelTextMonthlyProfitLoss"
         Me.LabelTextMonthlyProfitLoss.Size = New System.Drawing.Size(115, 25)
@@ -383,6 +389,7 @@ Partial Class FormReport
         '
         Me.LabelMonthlyExpenses.AutoSize = True
         Me.LabelMonthlyExpenses.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelMonthlyExpenses.ForeColor = System.Drawing.Color.Transparent
         Me.LabelMonthlyExpenses.Location = New System.Drawing.Point(138, 98)
         Me.LabelMonthlyExpenses.Name = "LabelMonthlyExpenses"
         Me.LabelMonthlyExpenses.Size = New System.Drawing.Size(61, 25)
@@ -393,6 +400,7 @@ Partial Class FormReport
         '
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.ForeColor = System.Drawing.Color.Transparent
         Me.Label26.Location = New System.Drawing.Point(17, 98)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(110, 25)
@@ -462,6 +470,16 @@ Partial Class FormReport
         Me.ChartDailyProductivity.TabIndex = 1
         Me.ChartDailyProductivity.Text = "ChartProductivity"
         '
+        'CustomerOrderBindingSource
+        '
+        Me.CustomerOrderBindingSource.DataMember = "CustomerOrder"
+        Me.CustomerOrderBindingSource.DataSource = Me.Group22DataSet
+        '
+        'Group22DataSet
+        '
+        Me.Group22DataSet.DataSetName = "group22DataSet"
+        Me.Group22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.LabelLeastSoldProductName)
@@ -526,6 +544,7 @@ Partial Class FormReport
         '
         Me.LabelProfitLoss.AutoSize = True
         Me.LabelProfitLoss.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelProfitLoss.ForeColor = System.Drawing.Color.Transparent
         Me.LabelProfitLoss.Location = New System.Drawing.Point(138, 150)
         Me.LabelProfitLoss.Name = "LabelProfitLoss"
         Me.LabelProfitLoss.Size = New System.Drawing.Size(61, 25)
@@ -536,6 +555,7 @@ Partial Class FormReport
         '
         Me.LabelTextProfitLoss.AutoSize = True
         Me.LabelTextProfitLoss.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTextProfitLoss.ForeColor = System.Drawing.Color.Transparent
         Me.LabelTextProfitLoss.Location = New System.Drawing.Point(17, 150)
         Me.LabelTextProfitLoss.Name = "LabelTextProfitLoss"
         Me.LabelTextProfitLoss.Size = New System.Drawing.Size(115, 25)
@@ -546,6 +566,7 @@ Partial Class FormReport
         '
         Me.LabelExpenses.AutoSize = True
         Me.LabelExpenses.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelExpenses.ForeColor = System.Drawing.Color.Transparent
         Me.LabelExpenses.Location = New System.Drawing.Point(138, 98)
         Me.LabelExpenses.Name = "LabelExpenses"
         Me.LabelExpenses.Size = New System.Drawing.Size(61, 25)
@@ -556,6 +577,7 @@ Partial Class FormReport
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Transparent
         Me.Label3.Location = New System.Drawing.Point(17, 98)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(110, 25)
@@ -594,16 +616,6 @@ Partial Class FormReport
         Me.TabAllTime.Size = New System.Drawing.Size(938, 660)
         Me.TabAllTime.TabIndex = 1
         '
-        'CustomerOrderBindingSource
-        '
-        Me.CustomerOrderBindingSource.DataMember = "CustomerOrder"
-        Me.CustomerOrderBindingSource.DataSource = Me.Group22DataSet
-        '
-        'Group22DataSet
-        '
-        Me.Group22DataSet.DataSetName = "group22DataSet"
-        Me.Group22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'CustomerOrderTableAdapter
         '
         Me.CustomerOrderTableAdapter.ClearBeforeFill = True
@@ -640,11 +652,11 @@ Partial Class FormReport
         Me.TabPageDaily.ResumeLayout(False)
         Me.TabPageDaily.PerformLayout()
         CType(Me.ChartDailyProductivity, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CustomerOrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.TabAllTime.ResumeLayout(False)
-        CType(Me.CustomerOrderBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
