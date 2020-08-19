@@ -4,6 +4,7 @@
 
     Private Sub FormMainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FormSetUp(FormMain)
+        FormOrders.Show()
     End Sub
 
     Public Sub FormSetUp(ChildForm As Form)

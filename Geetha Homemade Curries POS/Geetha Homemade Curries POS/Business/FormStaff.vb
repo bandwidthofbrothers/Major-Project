@@ -65,7 +65,6 @@ Public Class FormStaff
                 TextBox4.Text = drTwo.GetValue(3)
                 TextBox5.Text = drTwo.GetValue(4)
                 TextBox6.Text = drTwo.GetValue(5)
-                TextBox7.Text = drTwo.GetValue(6)
             Loop
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -85,7 +84,6 @@ Public Class FormStaff
         Dim PhoneNumber As String = TextBox4.Text
         Dim JobTitle As String = "Former Employee"
         Dim Username As String = TextBox6.Text
-        Dim Password As String = TextBox7.Text
 
         Dim Result As Integer
         Result = MsgBox("Do you want to delete the profile of " + FName + " " + SName, vbQuestion + vbYesNo + vbDefaultButton2, "Delete")
@@ -96,14 +94,13 @@ Public Class FormStaff
 
         conThree.Open()
         If Result = 6 Then
-            cndThree = New SqlCommand("UPDATE Employee SET EmployeeFirstName = @FirstName, EmployeeSurname = @Surname, EmployeePhoneNumber = @PhoneNumber, JobTitle = @JobTitle, Username = @Username, Password = @Password WHERE EmployeeNumber = @EmployeeNumber", conThree)
+            cndThree = New SqlCommand("UPDATE Employee SET EmployeeFirstName = @FirstName, EmployeeSurname = @Surname, EmployeePhoneNumber = @PhoneNumber, JobTitle = @JobTitle, Username = @Username WHERE EmployeeNumber = @EmployeeNumber", conThree)
             cndThree.Parameters.Add("@EmployeeNumber", SqlDbType.Int).Value = EmployeeNumber
             cndThree.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = FName
             cndThree.Parameters.Add("@Surname", SqlDbType.VarChar).Value = SName
             cndThree.Parameters.Add("@PhoneNumber", SqlDbType.VarChar).Value = PhoneNumber
             cndThree.Parameters.Add("@JobTitle", SqlDbType.VarChar).Value = JobTitle
             cndThree.Parameters.Add("@UserName", SqlDbType.VarChar).Value = Username
-            cndThree.Parameters.Add("@Password", SqlDbType.VarChar).Value = Password
             Try
                 If cndThree.ExecuteNonQuery() = 1 Then
                     MessageBox.Show("Staff Access Deleted")
@@ -133,16 +130,15 @@ Public Class FormStaff
         Dim PhoneNumber As String = TextBox4.Text
         Dim JobTitle As String = TextBox5.Text
         Dim Username As String = TextBox6.Text
-        Dim Password As String = TextBox7.Text
 
         Dim conFour As SqlConnection
         Dim cndFour As SqlCommand
         conFour = New SqlConnection("Server = 146.230.177.46\ist3; Database = group22; User Id = group22; Password = n24mc")
 
         conFour.Open()
-        cndFour = New SqlCommand("UPDATE Employee SET EmployeeFirstName = @FirstName, EmployeeSurname = @Surname, EmployeePhoneNumber = @PhoneNumber, JobTitle = @JobTitle, Username = @Username, Password = @Password WHERE EmployeeNumber = @EmployeeNumber", conFour)
+        cndFour = New SqlCommand("UPDATE Employee SET EmployeeFirstName = @FirstName, EmployeeSurname = @Surname, EmployeePhoneNumber = @PhoneNumber, JobTitle = @JobTitle, Username = @Username WHERE EmployeeNumber = @EmployeeNumber", conFour)
 
-        If FirstName <> "" And Surname <> "" And PhoneNumber <> "" And JobTitle <> "" And Username <> "" And Password <> "" Then
+        If FirstName <> "" And Surname <> "" And PhoneNumber <> "" And JobTitle <> "" And Username <> "" Then
 
             Try
                 cndFour.Parameters.Add("@EmployeeNumber", SqlDbType.Int).Value = EmployeeNumber
@@ -151,7 +147,6 @@ Public Class FormStaff
                 cndFour.Parameters.Add("@PhoneNumber", SqlDbType.VarChar).Value = PhoneNumber
                 cndFour.Parameters.Add("@JobTitle", SqlDbType.VarChar).Value = JobTitle
                 cndFour.Parameters.Add("@UserName", SqlDbType.VarChar).Value = Username
-                cndFour.Parameters.Add("@Password", SqlDbType.VarChar).Value = Password
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
@@ -191,7 +186,7 @@ Public Class FormStaff
 
         Try
             conTwo.Open()
-            cndTwo = New SqlCommand("SELECT EmployeeNumber, EmployeeFirstName, EmployeeSurname, EmployeePhoneNumber, JobTitle, Username, Password FROM Employee WHERE EmployeeFirstName = @FirstName AND EmployeeSurname = @Surname", conTwo)
+            cndTwo = New SqlCommand("SELECT EmployeeNumber, EmployeeFirstName, EmployeeSurname, EmployeePhoneNumber, JobTitle, Username FROM Employee WHERE EmployeeFirstName = @FirstName AND EmployeeSurname = @Surname", conTwo)
             cndTwo.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = FirstName
             cndTwo.Parameters.Add("@Surname", SqlDbType.VarChar).Value = Surname
 
@@ -205,7 +200,6 @@ Public Class FormStaff
                 TextBox4.Text = drTwo.GetValue(3)
                 TextBox5.Text = drTwo.GetValue(4)
                 TextBox6.Text = drTwo.GetValue(5)
-                TextBox7.Text = drTwo.GetValue(6)
             Loop
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -247,5 +241,71 @@ Public Class FormStaff
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         FormAddStaff.Show()
+    End Sub
+
+    Private Sub ButtonResetPassword_Click(sender As Object, e As EventArgs) Handles ButtonResetPassword.Click
+        Dim Result As DialogResult = MessageBox.Show("Do you want to reset password?", "Reset Password", MessageBoxButtons.YesNo)
+
+        Dim ID As Integer = Integer.Parse(TextBox1.Text)
+        Dim FirstName As String = TextBox2.Text
+        Dim Surname As String = TextBox3.Text
+        Dim PhoneNumber As String = TextBox4.Text
+
+        Dim firstTwo_Name As String = FirstName.Substring(0, 2)
+
+        Dim firstTwo_Surname As String = Surname.Substring(0, 2)
+
+        Dim fourFive As String = PhoneNumber.Substring(4, 2)
+
+        Dim lastNum As String = PhoneNumber.Substring(9, 1)
+
+        Dim last As Integer = Integer.Parse(lastNum)
+        Dim specialChar As String
+
+        If last = 0 Or last = 1 Then
+            specialChar = "!"
+        ElseIf last = 2 Or last = 3 Then
+            specialChar = "@"
+        ElseIf last = 4 Or last = 5 Then
+            specialChar = "#"
+        ElseIf last = 6 Or last = 7 Then
+            specialChar = "$"
+        Else
+            specialChar = "%"
+        End If
+
+        Dim password As String = firstTwo_Name + "_" + fourFive + specialChar + firstTwo_Surname
+
+        Dim conOne As SqlConnection
+        Dim cndOne As SqlCommand
+        conOne = New SqlConnection("Server = 146.230.177.46\ist3; Database = group22; User Id = group22; Password = n24mc")
+
+        If Result = DialogResult.Yes Then
+
+            conOne.Open()
+            cndOne = New SqlCommand("UPDATE Employee SET Password = @Password WHERE EmployeeNumber = @EmployeeNumber", conOne)
+            cndOne.Parameters.Add("@Password", SqlDbType.VarChar).Value = password
+            cndOne.Parameters.Add("@EmployeeNumber", SqlDbType.Int).Value = ID
+
+            Try
+                If cndOne.ExecuteNonQuery() = 1 Then
+                    MessageBox.Show("Password Reset Completed")
+                    MessageBox.Show("Your new password is: " + password, "New Password")
+                Else
+                    MessageBox.Show("Password Reset NOT Completed")
+                End If
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+
+        Else
+
+            MessageBox.Show("Password Reset Cancelled")
+
+        End If
+
+        conOne.Close()
+        conOne.Dispose()
+        conOne = Nothing
     End Sub
 End Class

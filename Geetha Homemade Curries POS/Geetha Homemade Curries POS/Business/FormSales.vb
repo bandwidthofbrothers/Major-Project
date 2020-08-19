@@ -1,4 +1,6 @@
-﻿Public Class FormSales
+﻿Imports System.Web.Script.Serialization
+
+Public Class FormSales
 
     Friend currentCategory As String
     Friend employeeNumber As Integer
@@ -70,6 +72,47 @@
                                                              row.Cells(2).Value, row.Cells(3).Value,
                                                              row.Cells(4).Value)
             Next
+
+            Dim choice2 As DialogResult = MessageBox.Show("Is this order a delivery?", "Delivery", MessageBoxButtons.YesNo)
+
+            If choice2 = DialogResult.Yes Then
+                Dim address As String = InputBox("Please enter the address", "Delivery")
+
+                Dim from As String = "-29.572574, 31.115193"
+                Dim Destination As String = address
+
+                Dim webClient As New System.Net.WebClient
+                Dim result As String = webClient.DownloadString("https://api.distancematrix.ai/maps/api/distancematrix/json?origins=" + from + "&destinations=" + Destination + "&key=ctU1PkJH0wJAaWD1EM3ivMZ0FmfuI")
+
+                Try
+                    Dim j As Object = New JavaScriptSerializer().Deserialize(Of Object)(result)
+
+                    Dim distance As String = j("rows")(0)("elements")(0)("distance")("value")
+
+                    Dim deliveryDistance As Double
+                    deliveryDistance = Double.Parse(distance) / 1000
+
+                    Dim deliveryFee = 0.0
+
+                    If deliveryDistance < 0.5 Then
+                        deliveryFee = 5
+                    ElseIf deliveryDistance < 1 Then
+                        deliveryFee = 10
+                    ElseIf deliveryDistance < 1.5 Then
+                        deliveryFee = 15
+                    ElseIf deliveryDistance < 2 Then
+                        deliveryFee = 20
+                    ElseIf deliveryDistance > 2 Then
+                        deliveryFee = 25
+                    End If
+
+                    FormSalesCheckout.DataGridViewOrder.Rows.Add(0, "Delivery Fee", deliveryFee, 1, deliveryFee)
+
+                    Me.totalDue += deliveryFee
+                Catch ex As Exception
+                    MessageBox.Show(ex.ToString)
+                End Try
+            End If
 
             FormSalesCheckout.Show()
         End If

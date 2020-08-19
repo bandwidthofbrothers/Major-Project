@@ -39,15 +39,22 @@
         End If
 
         For Each row As DataGridViewRow In DataGridViewOrder.Rows
-            Dim menuItemID As Integer = row.Cells(0).Value
-            Dim quantity As Integer = row.Cells(3).Value
-            'Fix Timespan conversion
-            CustomerOrderTableAdapter.Insert(SaleID, menuItemID, quantity, orderDate, orderTime, employeeNumber)
+
+            If row.Cells(1).Value = "Delivery Fee" Then
+
+            Else
+                Dim menuItemID As Integer = row.Cells(0).Value
+                Dim quantity As Integer = row.Cells(3).Value
+                'Fix Timespan conversion
+                CustomerOrderTableAdapter.Insert(SaleID, menuItemID, quantity, orderDate, orderTime, employeeNumber)
+
+                FormOrders.addMenuItems(SaleID, row.Cells(1).Value, quantity)
+            End If
+
         Next
 
 
         PrintDocument.Print() 'For Customer
-        PrintDocument.Print() 'For Kitchen
 
         FormSales.Close()
         FormMainMenu.FormSetUp(FormSales)
@@ -76,7 +83,7 @@
         e.Graphics.DrawString(String.Format("{0,-20}{1,8}{2,8}", "Product Name", "Quantity", "Price"), ReceiptFont, Brushes.Black, 100, 260)
 
         For Each row As DataGridViewRow In DataGridViewOrder.Rows
-            Dim output As String = String.Format(format, row.Cells(1).Value.ToString, row.Cells(3).Value.ToString, row.Cells(4).Value.ToString)
+            Dim output As String = String.Format(format, row.Cells(1).Value.ToString, row.Cells(3).Value.ToString, row.Cells(4).Value.ToString())
             e.Graphics.DrawString(output, ReceiptFont, Brushes.Black, 110, y)
             y += 20
         Next

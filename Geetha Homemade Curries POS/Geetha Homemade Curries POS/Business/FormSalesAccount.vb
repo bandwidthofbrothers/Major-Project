@@ -21,9 +21,13 @@
             Dim amountOwed As Double = CustomerTableAdapter.getAmountDue(id)
             amountDue += amountOwed
 
-            CustomerTableAdapter.UpdateAmountDue(amountDue, id)
-            Me.Close()
-            FormSalesCheckout.processOrder()
+            If amountDue > 2000 Then
+                MessageBox.Show("Cannot pay on account, customer has reached account limit", "Account Limit", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Else
+                CustomerTableAdapter.UpdateAmountDue(amountDue, id)
+                Me.Close()
+                FormSalesCheckout.processOrder()
+            End If
 
         Catch ex As Exception
             MessageBox.Show("Error: No customer selected", "Error")
