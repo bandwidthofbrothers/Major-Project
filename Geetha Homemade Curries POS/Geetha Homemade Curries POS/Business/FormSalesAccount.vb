@@ -23,6 +23,7 @@
 
             If amountDue > 2000 Then
                 MessageBox.Show("Cannot pay on account, customer has reached account limit", "Account Limit", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                FormSalesCheckout.Show()
             Else
                 CustomerTableAdapter.UpdateAmountDue(amountDue, id)
                 Me.Close()
