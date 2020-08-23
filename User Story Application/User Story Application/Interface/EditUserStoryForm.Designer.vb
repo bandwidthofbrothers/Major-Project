@@ -280,7 +280,7 @@ Partial Class EditUserStoryForm
         Me.Controls.Add(Me.ListBoxUserStory)
         Me.Controls.Add(Me.Label1)
         Me.Name = "EditUserStoryForm"
-        Me.Text = "EditUserStoryForm"
+        Me.Text = "Edit User Story"
         CType(Me.UserStoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

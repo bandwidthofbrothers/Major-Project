@@ -23,13 +23,8 @@ Partial Class DeleteUserStoryForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.UserStoryDataGridView = New System.Windows.Forms.DataGridView()
-        Me.BSUserStory = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataSet = New User_Story_Application.DataSet()
-        Me.ButtonDelete = New System.Windows.Forms.Button()
-        Me.UserStoryTableAdapter = New User_Story_Application.DataSetTableAdapters.UserStoryTableAdapter()
-        Me.TestCasesTableAdapter = New User_Story_Application.DataSetTableAdapters.TestCasesTableAdapter()
-        Me.UserStory_MemberTableAdapter = New User_Story_Application.DataSetTableAdapters.UserStory_MemberTableAdapter()
         Me.UserStoryNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UserStoryTitleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UserRoleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -38,6 +33,12 @@ Partial Class DeleteUserStoryForm
         Me.UserStoryEndDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UserStoryStatusDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.UserStoryPriorityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BSUserStory = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet = New User_Story_Application.DataSet()
+        Me.ButtonDelete = New System.Windows.Forms.Button()
+        Me.UserStoryTableAdapter = New User_Story_Application.DataSetTableAdapters.UserStoryTableAdapter()
+        Me.TestCasesTableAdapter = New User_Story_Application.DataSetTableAdapters.TestCasesTableAdapter()
+        Me.UserStory_MemberTableAdapter = New User_Story_Application.DataSetTableAdapters.UserStory_MemberTableAdapter()
         CType(Me.UserStoryDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BSUserStory, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -49,45 +50,23 @@ Partial Class DeleteUserStoryForm
         Me.UserStoryDataGridView.AllowUserToAddRows = False
         Me.UserStoryDataGridView.AllowUserToDeleteRows = False
         Me.UserStoryDataGridView.AutoGenerateColumns = False
+        Me.UserStoryDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders
         Me.UserStoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.UserStoryDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.UserStoryNoDataGridViewTextBoxColumn, Me.UserStoryTitleDataGridViewTextBoxColumn, Me.UserRoleDataGridViewTextBoxColumn, Me.UserStoryDescriptionDataGridViewTextBoxColumn, Me.UserStoryStartDateDataGridViewTextBoxColumn, Me.UserStoryEndDateDataGridViewTextBoxColumn, Me.UserStoryStatusDataGridViewTextBoxColumn, Me.UserStoryPriorityDataGridViewTextBoxColumn})
         Me.UserStoryDataGridView.DataSource = Me.BSUserStory
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.UserStoryDataGridView.DefaultCellStyle = DataGridViewCellStyle1
         Me.UserStoryDataGridView.Location = New System.Drawing.Point(12, 12)
         Me.UserStoryDataGridView.Name = "UserStoryDataGridView"
         Me.UserStoryDataGridView.RowTemplate.Height = 24
         Me.UserStoryDataGridView.Size = New System.Drawing.Size(1245, 264)
         Me.UserStoryDataGridView.TabIndex = 2
-        '
-        'BSUserStory
-        '
-        Me.BSUserStory.DataMember = "UserStory"
-        Me.BSUserStory.DataSource = Me.DataSet
-        '
-        'DataSet
-        '
-        Me.DataSet.DataSetName = "DataSet"
-        Me.DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ButtonDelete
-        '
-        Me.ButtonDelete.Location = New System.Drawing.Point(546, 292)
-        Me.ButtonDelete.Name = "ButtonDelete"
-        Me.ButtonDelete.Size = New System.Drawing.Size(194, 60)
-        Me.ButtonDelete.TabIndex = 3
-        Me.ButtonDelete.Text = "Delete"
-        Me.ButtonDelete.UseVisualStyleBackColor = True
-        '
-        'UserStoryTableAdapter
-        '
-        Me.UserStoryTableAdapter.ClearBeforeFill = True
-        '
-        'TestCasesTableAdapter
-        '
-        Me.TestCasesTableAdapter.ClearBeforeFill = True
-        '
-        'UserStory_MemberTableAdapter
-        '
-        Me.UserStory_MemberTableAdapter.ClearBeforeFill = True
         '
         'UserStoryNoDataGridViewTextBoxColumn
         '
@@ -144,6 +123,37 @@ Partial Class DeleteUserStoryForm
         Me.UserStoryPriorityDataGridViewTextBoxColumn.DataPropertyName = "UserStoryPriority"
         Me.UserStoryPriorityDataGridViewTextBoxColumn.HeaderText = "UserStoryPriority"
         Me.UserStoryPriorityDataGridViewTextBoxColumn.Name = "UserStoryPriorityDataGridViewTextBoxColumn"
+        '
+        'BSUserStory
+        '
+        Me.BSUserStory.DataMember = "UserStory"
+        Me.BSUserStory.DataSource = Me.DataSet
+        '
+        'DataSet
+        '
+        Me.DataSet.DataSetName = "DataSet"
+        Me.DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ButtonDelete
+        '
+        Me.ButtonDelete.Location = New System.Drawing.Point(546, 292)
+        Me.ButtonDelete.Name = "ButtonDelete"
+        Me.ButtonDelete.Size = New System.Drawing.Size(194, 60)
+        Me.ButtonDelete.TabIndex = 3
+        Me.ButtonDelete.Text = "Delete"
+        Me.ButtonDelete.UseVisualStyleBackColor = True
+        '
+        'UserStoryTableAdapter
+        '
+        Me.UserStoryTableAdapter.ClearBeforeFill = True
+        '
+        'TestCasesTableAdapter
+        '
+        Me.TestCasesTableAdapter.ClearBeforeFill = True
+        '
+        'UserStory_MemberTableAdapter
+        '
+        Me.UserStory_MemberTableAdapter.ClearBeforeFill = True
         '
         'DeleteUserStoryForm
         '

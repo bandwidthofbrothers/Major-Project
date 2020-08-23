@@ -446,7 +446,7 @@ Partial Class UserStoryForm
         Me.Controls.Add(Me.TextBoxUserStoryTitle)
         Me.Controls.Add(Me.Label1)
         Me.Name = "UserStoryForm"
-        Me.Text = "UserStoryForm"
+        Me.Text = "Add User Story"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.BSProg1, System.ComponentModel.ISupportInitialize).EndInit()

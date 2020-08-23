@@ -10,7 +10,6 @@ Public Class MemberControlForm
             TextBox2.ReadOnly = True
             TextBox3.ReadOnly = True
             TextBox4.ReadOnly = True
-            TextBox5.ReadOnly = True
         End If
 
         If MainMenuForm.Edit = True Then
@@ -19,7 +18,6 @@ Public Class MemberControlForm
             TextBox2.ReadOnly = False
             TextBox3.ReadOnly = False
             TextBox4.ReadOnly = False
-            TextBox5.ReadOnly = False
         End If
 
         If MainMenuForm.Search = True Then
@@ -71,7 +69,7 @@ Public Class MemberControlForm
 
         Try
             conTwo.Open()
-            cndTwo = New SqlCommand("SELECT GroupMemberNo, FirstName, Surname, UserName, Password FROM Member WHERE FirstName = @FirstName", conTwo)
+            cndTwo = New SqlCommand("SELECT GroupMemberNo, FirstName, Surname, UserName FROM Member WHERE FirstName = @FirstName", conTwo)
 
             cndTwo.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = FirstName
 
@@ -83,7 +81,6 @@ Public Class MemberControlForm
                 TextBox2.Text = drTwo.GetValue(1)
                 TextBox3.Text = drTwo.GetValue(2)
                 TextBox4.Text = drTwo.GetValue(3)
-                TextBox5.Text = drTwo.GetValue(4)
             Loop
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -101,22 +98,20 @@ Public Class MemberControlForm
         Dim FirstName As String = TextBox2.Text
         Dim Surname As String = TextBox3.Text
         Dim UserName As String = TextBox4.Text
-        Dim Password As String = TextBox5.Text
 
         Dim conThree As SqlConnection
         Dim cndThree As SqlCommand
         conThree = New SqlConnection("Server = 146.230.177.46\ist3; Database = group22; User Id = group22; Password = n24mc")
 
         conThree.Open()
-        cndThree = New SqlCommand("UPDATE Member SET FirstName = @FirstName, Surname = @Surname, UserName = @UserName, Password = @Password WHERE GroupMemberNo = @GroupMemberNo", conThree)
+        cndThree = New SqlCommand("UPDATE Member SET FirstName = @FirstName, Surname = @Surname, UserName = @UserName WHERE GroupMemberNo = @GroupMemberNo", conThree)
 
-        If FirstName <> "" And Surname <> "" And UserName <> "" And Password <> "" Then
+        If FirstName <> "" And Surname <> "" And UserName <> "" Then
             Try
                 cndThree.Parameters.Add("@GroupMemberNo", SqlDbType.Int).Value = GroupMemberNo
                 cndThree.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = FirstName
                 cndThree.Parameters.Add("@Surname", SqlDbType.VarChar).Value = Surname
                 cndThree.Parameters.Add("@UserName", SqlDbType.VarChar).Value = UserName
-                cndThree.Parameters.Add("@Password", SqlDbType.VarChar).Value = Password
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
@@ -172,7 +167,7 @@ Public Class MemberControlForm
 
                     Try
                         conTwo.Open()
-                        cndTwo = New SqlCommand("SELECT GroupMemberNo, FirstName, Surname, UserName, Password FROM Member WHERE FirstName = @FirstName", conTwo)
+                        cndTwo = New SqlCommand("SELECT GroupMemberNo, FirstName, Surname, UserName FROM Member WHERE FirstName = @FirstName", conTwo)
 
                         cndTwo.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = FirstName
 
@@ -184,7 +179,6 @@ Public Class MemberControlForm
                             TextBox2.Text = drTwo.GetValue(1)
                             TextBox3.Text = drTwo.GetValue(2)
                             TextBox4.Text = drTwo.GetValue(3)
-                            TextBox5.Text = drTwo.GetValue(4)
                         Loop
                     Catch ex As Exception
                         MsgBox(ex.Message)
@@ -200,7 +194,6 @@ Public Class MemberControlForm
                 TextBox2.Text = ""
                 TextBox3.Text = ""
                 TextBox4.Text = ""
-                TextBox5.Text = ""
                 MessageBox.Show("Member Not Found")
             End If
         Catch ex As Exception
