@@ -160,7 +160,7 @@ Partial Class EditTestCaseForm
         Me.Controls.Add(Me.TestCaseBox)
         Me.Controls.Add(Me.ListBoxUserStory)
         Me.Name = "EditTestCaseForm"
-        Me.Text = "EditTestCaseForm"
+        Me.Text = "Edit Test Case"
         CType(Me.FKTestCasesUserStoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UserStoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet, System.ComponentModel.ISupportInitialize).EndInit()

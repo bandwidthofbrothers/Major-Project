@@ -64,7 +64,7 @@ Public Class FormReport
 
             Try
                 conOne.Open()
-                cndOne = New SqlCommand("SELECT DISTINCT COUNT(CustomerOrderID) FROM CustomerOrder WHERE OrderDate = @d AND OrderTime >= @TimeOne AND OrderTime < @TimeTwo", conOne)
+                cndOne = New SqlCommand("SELECT COUNT(DISTINCT SaleID) FROM CustomerOrder WHERE OrderDate = @d AND OrderTime >= @TimeOne AND OrderTime < @TimeTwo", conOne)
                 cndOne.Parameters.Add("@d", SqlDbType.Date).Value = d
                 cndOne.Parameters.Add("@TimeOne", SqlDbType.Time).Value = TimeOne
                 cndOne.Parameters.Add("@TimeTwo", SqlDbType.Time).Value = TimeTwo

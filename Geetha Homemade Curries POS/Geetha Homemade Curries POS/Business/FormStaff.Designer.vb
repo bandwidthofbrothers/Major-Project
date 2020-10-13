@@ -37,13 +37,12 @@ Partial Class FormStaff
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.ButtonResetPassword = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ListBox1
@@ -193,7 +192,7 @@ Partial Class FormStaff
         Me.Button1.BackColor = System.Drawing.Color.White
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(286, 521)
+        Me.Button1.Location = New System.Drawing.Point(210, 521)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(96, 31)
@@ -206,35 +205,13 @@ Partial Class FormStaff
         Me.Button2.BackColor = System.Drawing.Color.White
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(431, 521)
+        Me.Button2.Location = New System.Drawing.Point(343, 521)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(96, 31)
         Me.Button2.TabIndex = 15
         Me.Button2.Text = "Delete"
         Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(295, 419)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(103, 22)
-        Me.Label8.TabIndex = 17
-        Me.Label8.Text = "Password"
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(466, 416)
-        Me.TextBox7.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.ReadOnly = True
-        Me.TextBox7.Size = New System.Drawing.Size(152, 29)
-        Me.TextBox7.TabIndex = 18
         '
         'TextBox8
         '
@@ -286,13 +263,26 @@ Partial Class FormStaff
         Me.Button5.BackColor = System.Drawing.Color.White
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button5.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(84, 521)
+        Me.Button5.Location = New System.Drawing.Point(23, 521)
         Me.Button5.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(151, 31)
         Me.Button5.TabIndex = 24
         Me.Button5.Text = "New Staff Member"
         Me.Button5.UseVisualStyleBackColor = False
+        '
+        'ButtonResetPassword
+        '
+        Me.ButtonResetPassword.BackColor = System.Drawing.Color.White
+        Me.ButtonResetPassword.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ButtonResetPassword.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonResetPassword.Location = New System.Drawing.Point(466, 521)
+        Me.ButtonResetPassword.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.ButtonResetPassword.Name = "ButtonResetPassword"
+        Me.ButtonResetPassword.Size = New System.Drawing.Size(163, 31)
+        Me.ButtonResetPassword.TabIndex = 25
+        Me.ButtonResetPassword.Text = "Reset Password"
+        Me.ButtonResetPassword.UseVisualStyleBackColor = False
         '
         'FormStaff
         '
@@ -301,13 +291,12 @@ Partial Class FormStaff
         Me.BackgroundImage = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
         Me.ClientSize = New System.Drawing.Size(642, 574)
         Me.ControlBox = False
+        Me.Controls.Add(Me.ButtonResetPassword)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.TextBox8)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox6)
@@ -347,11 +336,10 @@ Partial Class FormStaff
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox7 As TextBox
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents Button4 As Button
     Friend WithEvents Label10 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Button5 As Button
+    Friend WithEvents ButtonResetPassword As Button
 End Class

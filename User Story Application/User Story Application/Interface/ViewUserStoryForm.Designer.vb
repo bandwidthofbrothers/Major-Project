@@ -23,20 +23,14 @@ Partial Class ViewUserStoryForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataSet = New User_Story_Application.DataSet()
         Me.UserStoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UserStoryTableAdapter = New User_Story_Application.DataSetTableAdapters.UserStoryTableAdapter()
         Me.TableAdapterManager = New User_Story_Application.DataSetTableAdapters.TableAdapterManager()
         Me.TestCasesTableAdapter = New User_Story_Application.DataSetTableAdapters.TestCasesTableAdapter()
         Me.UserStoryDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TestCasesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ListBoxTestCases = New System.Windows.Forms.ListBox()
         Me.UserStory_MemberBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -52,6 +46,14 @@ Partial Class ViewUserStoryForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataSet1 = New User_Story_Application.DataSet()
         Me.MemberTableAdapter = New User_Story_Application.DataSetTableAdapters.MemberTableAdapter()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserStoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserStoryDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -96,70 +98,18 @@ Partial Class ViewUserStoryForm
         Me.UserStoryDataGridView.AllowUserToAddRows = False
         Me.UserStoryDataGridView.AllowUserToDeleteRows = False
         Me.UserStoryDataGridView.AutoGenerateColumns = False
+        Me.UserStoryDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders
         Me.UserStoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.UserStoryDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
         Me.UserStoryDataGridView.DataSource = Me.UserStoryBindingSource
         Me.UserStoryDataGridView.Location = New System.Drawing.Point(0, 32)
         Me.UserStoryDataGridView.Name = "UserStoryDataGridView"
+        Me.UserStoryDataGridView.ReadOnly = True
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.UserStoryDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.UserStoryDataGridView.RowTemplate.Height = 24
         Me.UserStoryDataGridView.Size = New System.Drawing.Size(1245, 264)
         Me.UserStoryDataGridView.TabIndex = 1
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "UserStoryNo"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "UserStoryNo"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "UserStoryTitle"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "UserStoryTitle"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "UserRole"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "UserRole"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "UserStoryDescription"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "UserStoryDescription"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "UserStoryStartDate"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "UserStoryStartDate"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "UserStoryEndDate"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "UserStoryEndDate"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "UserStoryStatus"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "UserStoryStatus"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "UserStoryPriority"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "UserStoryPriority"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
         '
         'TestCasesBindingSource
         '
@@ -281,6 +231,72 @@ Partial Class ViewUserStoryForm
         '
         Me.MemberTableAdapter.ClearBeforeFill = True
         '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "UserStoryNo"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "UserStoryNo"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "UserStoryTitle"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "UserStoryTitle"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "UserRole"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "UserRole"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "UserStoryDescription"
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridViewTextBoxColumn4.HeaderText = "UserStoryDescription"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "UserStoryStartDate"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "UserStoryStartDate"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "UserStoryEndDate"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "UserStoryEndDate"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "UserStoryStatus"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "UserStoryStatus"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "UserStoryPriority"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "UserStoryPriority"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        '
         'ViewUserStoryForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -327,6 +343,8 @@ Partial Class ViewUserStoryForm
     Friend WithEvents MemberBindingSource As BindingSource
     Friend WithEvents DataSet1 As DataSet
     Friend WithEvents MemberTableAdapter As DataSetTableAdapters.MemberTableAdapter
+    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
@@ -335,6 +353,4 @@ Partial Class ViewUserStoryForm
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
 End Class

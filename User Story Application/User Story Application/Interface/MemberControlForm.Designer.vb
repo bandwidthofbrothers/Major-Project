@@ -33,12 +33,10 @@ Partial Class MemberControlForm
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -157,14 +155,6 @@ Partial Class MemberControlForm
         Me.TextBox4.Size = New System.Drawing.Size(132, 22)
         Me.TextBox4.TabIndex = 14
         '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(489, 330)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(132, 22)
-        Me.TextBox5.TabIndex = 15
-        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(16, 398)
@@ -205,18 +195,6 @@ Partial Class MemberControlForm
         Me.Button3.UseVisualStyleBackColor = True
         Me.Button3.Visible = False
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(297, 334)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(69, 17)
-        Me.Label7.TabIndex = 20
-        Me.Label7.Text = "Password"
-        '
         'Button4
         '
         Me.Button4.Location = New System.Drawing.Point(16, 222)
@@ -236,12 +214,10 @@ Partial Class MemberControlForm
         Me.ClientSize = New System.Drawing.Size(649, 485)
         Me.ControlBox = False
         Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.TextBox2)
@@ -272,11 +248,9 @@ Partial Class MemberControlForm
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents Button3 As Button
-    Friend WithEvents Label7 As Label
     Friend WithEvents Button4 As Button
 End Class

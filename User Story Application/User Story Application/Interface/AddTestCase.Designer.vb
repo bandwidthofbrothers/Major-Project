@@ -160,7 +160,7 @@ Partial Class AddTestCase
         Me.Controls.Add(Me.ListBoxUserStory)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "AddTestCase"
-        Me.Text = "AddTestCase"
+        Me.Text = "Add Test Case"
         CType(Me.UserStoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FKTestCasesUserStoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

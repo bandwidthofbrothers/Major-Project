@@ -209,7 +209,7 @@ Partial Class TestCaseViewSearchDeleteForm
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "TestCaseViewSearchDeleteForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form3"
+        Me.Text = "Test Case"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

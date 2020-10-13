@@ -99,3 +99,4 @@ C:\Users\XPS\Source\Repos\bandwidthofbrothers\Major-Project\Geetha Homemade Curr
 C:\Users\XPS\Source\Repos\bandwidthofbrothers\Major-Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSalesItems.resources
 C:\Users\XPS\Source\Repos\bandwidthofbrothers\Major-Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormAddStaff.resources
 C:\Users\XPS\Source\Repos\bandwidthofbrothers\Major-Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormViewMenu.resources
+C:\Users\micha\OneDrive\Development\Major Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormOrders.resources
