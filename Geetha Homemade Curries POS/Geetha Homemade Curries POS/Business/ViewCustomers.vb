@@ -92,4 +92,7 @@ Public Class ViewCustomers
 
     End Sub
 
+    Private Sub CustomerOrderDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles CustomerOrderDataGridView.CellContentClick
+
+    End Sub
 End Class

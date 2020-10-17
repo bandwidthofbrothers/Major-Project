@@ -11,7 +11,9 @@
         Dim conversionSuccessful As Boolean = False
         Dim AmountDue As Decimal = Decimal.TryParse(TextBoxAmountDue.Text, conversionSuccessful)
 
-        If conversionSuccessful Then
+
+
+        If (conversionSuccessful = True) And (TextBoxPhoneNumber.Text <> "") And (TextBoxFirstName.Text <> "") And (TextBoxSurname.Text <> "") Then
             Try
                 AmountDue = Decimal.Parse(TextBoxAmountDue.Text, System.Globalization.NumberFormatInfo.CurrentInfo)
 
@@ -25,11 +27,12 @@
                 End With
 
                 Me.TopMost = True
+
             Catch ex As Exception
                 MessageBox.Show("Error: Record added unsuccessfully")
             End Try
         Else
-            MessageBox.Show("Error: Record added unsuccessfully")
+            MessageBox.Show("Error: Record added unsuccessfully. Ensure Fields are not blank")
         End If
 
         TextBoxFirstName.Text = ""

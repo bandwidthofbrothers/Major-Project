@@ -70,9 +70,9 @@ Partial Class ViewCustomers
         FirstNameLabel.AutoSize = True
         FirstNameLabel.BackColor = System.Drawing.Color.Transparent
         FirstNameLabel.ForeColor = System.Drawing.Color.White
-        FirstNameLabel.Location = New System.Drawing.Point(804, 258)
+        FirstNameLabel.Location = New System.Drawing.Point(904, 322)
         FirstNameLabel.Name = "FirstNameLabel"
-        FirstNameLabel.Size = New System.Drawing.Size(80, 17)
+        FirstNameLabel.Size = New System.Drawing.Size(90, 20)
         FirstNameLabel.TabIndex = 48
         FirstNameLabel.Text = "First Name:"
         '
@@ -81,9 +81,9 @@ Partial Class ViewCustomers
         SurnameLabel.AutoSize = True
         SurnameLabel.BackColor = System.Drawing.Color.Transparent
         SurnameLabel.ForeColor = System.Drawing.Color.White
-        SurnameLabel.Location = New System.Drawing.Point(804, 309)
+        SurnameLabel.Location = New System.Drawing.Point(904, 386)
         SurnameLabel.Name = "SurnameLabel"
-        SurnameLabel.Size = New System.Drawing.Size(69, 17)
+        SurnameLabel.Size = New System.Drawing.Size(78, 20)
         SurnameLabel.TabIndex = 50
         SurnameLabel.Text = "Surname:"
         '
@@ -92,9 +92,9 @@ Partial Class ViewCustomers
         PhoneNumberLabel.AutoSize = True
         PhoneNumberLabel.BackColor = System.Drawing.Color.Transparent
         PhoneNumberLabel.ForeColor = System.Drawing.Color.White
-        PhoneNumberLabel.Location = New System.Drawing.Point(804, 358)
+        PhoneNumberLabel.Location = New System.Drawing.Point(904, 448)
         PhoneNumberLabel.Name = "PhoneNumberLabel"
-        PhoneNumberLabel.Size = New System.Drawing.Size(107, 17)
+        PhoneNumberLabel.Size = New System.Drawing.Size(119, 20)
         PhoneNumberLabel.TabIndex = 52
         PhoneNumberLabel.Text = "Phone Number:"
         '
@@ -103,9 +103,9 @@ Partial Class ViewCustomers
         AmountDueLabel.AutoSize = True
         AmountDueLabel.BackColor = System.Drawing.Color.Transparent
         AmountDueLabel.ForeColor = System.Drawing.Color.White
-        AmountDueLabel.Location = New System.Drawing.Point(804, 415)
+        AmountDueLabel.Location = New System.Drawing.Point(904, 519)
         AmountDueLabel.Name = "AmountDueLabel"
-        AmountDueLabel.Size = New System.Drawing.Size(90, 17)
+        AmountDueLabel.Size = New System.Drawing.Size(103, 20)
         AmountDueLabel.TabIndex = 54
         AmountDueLabel.Text = "Amount Due:"
         '
@@ -114,9 +114,9 @@ Partial Class ViewCustomers
         CustomerIDLabel.AutoSize = True
         CustomerIDLabel.ForeColor = System.Drawing.Color.White
         CustomerIDLabel.Image = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
-        CustomerIDLabel.Location = New System.Drawing.Point(804, 203)
+        CustomerIDLabel.Location = New System.Drawing.Point(904, 254)
         CustomerIDLabel.Name = "CustomerIDLabel"
-        CustomerIDLabel.Size = New System.Drawing.Size(89, 17)
+        CustomerIDLabel.Size = New System.Drawing.Size(103, 20)
         CustomerIDLabel.TabIndex = 59
         CustomerIDLabel.Text = "Customer ID:"
         '
@@ -125,10 +125,10 @@ Partial Class ViewCustomers
         Label1.AutoSize = True
         Label1.ForeColor = System.Drawing.Color.White
         Label1.Image = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
-        Label1.Location = New System.Drawing.Point(17, 103)
+        Label1.Location = New System.Drawing.Point(19, 129)
         Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(57, 17)
+        Label1.Size = New System.Drawing.Size(64, 20)
         Label1.TabIndex = 61
         Label1.Text = "Search:"
         '
@@ -138,10 +138,10 @@ Partial Class ViewCustomers
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Gabriola", 27.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(21, -2)
+        Me.Label10.Location = New System.Drawing.Point(24, -2)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(379, 87)
+        Me.Label10.Size = New System.Drawing.Size(444, 103)
         Me.Label10.TabIndex = 45
         Me.Label10.Text = "Customer Information"
         '
@@ -183,12 +183,12 @@ Partial Class ViewCustomers
         Me.CustomerOrderDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.CustomerOrderDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CustomerIDDataGridViewTextBoxColumn, Me.FirstNameDataGridViewTextBoxColumn, Me.SurnameDataGridViewTextBoxColumn, Me.PhoneNumberDataGridViewTextBoxColumn, Me.AmountDueDataGridViewTextBoxColumn})
         Me.CustomerOrderDataGridView.DataSource = Me.CustomerBindingSource
-        Me.CustomerOrderDataGridView.Location = New System.Drawing.Point(20, 135)
+        Me.CustomerOrderDataGridView.Location = New System.Drawing.Point(22, 169)
         Me.CustomerOrderDataGridView.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CustomerOrderDataGridView.Name = "CustomerOrderDataGridView"
         Me.CustomerOrderDataGridView.ReadOnly = True
         Me.CustomerOrderDataGridView.RowTemplate.Height = 28
-        Me.CustomerOrderDataGridView.Size = New System.Drawing.Size(724, 460)
+        Me.CustomerOrderDataGridView.Size = New System.Drawing.Size(814, 575)
         Me.CustomerOrderDataGridView.TabIndex = 46
         '
         'CustomerIDDataGridViewTextBoxColumn
@@ -242,65 +242,65 @@ Partial Class ViewCustomers
         'FirstNameTextBox
         '
         Me.FirstNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "FirstName", True))
-        Me.FirstNameTextBox.Location = New System.Drawing.Point(949, 256)
+        Me.FirstNameTextBox.Location = New System.Drawing.Point(1068, 320)
         Me.FirstNameTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.FirstNameTextBox.Name = "FirstNameTextBox"
-        Me.FirstNameTextBox.Size = New System.Drawing.Size(297, 22)
+        Me.FirstNameTextBox.Size = New System.Drawing.Size(334, 26)
         Me.FirstNameTextBox.TabIndex = 1
         '
         'SurnameTextBox
         '
         Me.SurnameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "Surname", True))
-        Me.SurnameTextBox.Location = New System.Drawing.Point(949, 306)
+        Me.SurnameTextBox.Location = New System.Drawing.Point(1068, 382)
         Me.SurnameTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.SurnameTextBox.Name = "SurnameTextBox"
-        Me.SurnameTextBox.Size = New System.Drawing.Size(297, 22)
+        Me.SurnameTextBox.Size = New System.Drawing.Size(334, 26)
         Me.SurnameTextBox.TabIndex = 2
         '
         'PhoneNumberTextBox
         '
         Me.PhoneNumberTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "PhoneNumber", True))
-        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(949, 356)
+        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(1068, 445)
         Me.PhoneNumberTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PhoneNumberTextBox.Name = "PhoneNumberTextBox"
-        Me.PhoneNumberTextBox.Size = New System.Drawing.Size(297, 22)
+        Me.PhoneNumberTextBox.Size = New System.Drawing.Size(334, 26)
         Me.PhoneNumberTextBox.TabIndex = 3
         '
         'AmountDueTextBox
         '
         Me.AmountDueTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "AmountDue", True))
-        Me.AmountDueTextBox.Location = New System.Drawing.Point(949, 414)
+        Me.AmountDueTextBox.Location = New System.Drawing.Point(1068, 518)
         Me.AmountDueTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.AmountDueTextBox.Name = "AmountDueTextBox"
-        Me.AmountDueTextBox.Size = New System.Drawing.Size(297, 22)
+        Me.AmountDueTextBox.Size = New System.Drawing.Size(334, 26)
         Me.AmountDueTextBox.TabIndex = 4
         '
         'AddCustBtn
         '
-        Me.AddCustBtn.Location = New System.Drawing.Point(357, 625)
+        Me.AddCustBtn.Location = New System.Drawing.Point(402, 781)
         Me.AddCustBtn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.AddCustBtn.Name = "AddCustBtn"
-        Me.AddCustBtn.Size = New System.Drawing.Size(204, 50)
+        Me.AddCustBtn.Size = New System.Drawing.Size(230, 62)
         Me.AddCustBtn.TabIndex = 5
         Me.AddCustBtn.Text = "Add"
         Me.AddCustBtn.UseVisualStyleBackColor = True
         '
         'DltCustBtn
         '
-        Me.DltCustBtn.Location = New System.Drawing.Point(821, 625)
+        Me.DltCustBtn.Location = New System.Drawing.Point(924, 781)
         Me.DltCustBtn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DltCustBtn.Name = "DltCustBtn"
-        Me.DltCustBtn.Size = New System.Drawing.Size(204, 50)
+        Me.DltCustBtn.Size = New System.Drawing.Size(230, 62)
         Me.DltCustBtn.TabIndex = 56
         Me.DltCustBtn.Text = "Delete"
         Me.DltCustBtn.UseVisualStyleBackColor = True
         '
         'UpdateCustBtn
         '
-        Me.UpdateCustBtn.Location = New System.Drawing.Point(591, 625)
+        Me.UpdateCustBtn.Location = New System.Drawing.Point(665, 781)
         Me.UpdateCustBtn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.UpdateCustBtn.Name = "UpdateCustBtn"
-        Me.UpdateCustBtn.Size = New System.Drawing.Size(204, 50)
+        Me.UpdateCustBtn.Size = New System.Drawing.Size(230, 62)
         Me.UpdateCustBtn.TabIndex = 57
         Me.UpdateCustBtn.Text = "Update"
         Me.UpdateCustBtn.UseVisualStyleBackColor = True
@@ -308,18 +308,18 @@ Partial Class ViewCustomers
         'SearchTextBox
         '
         Me.SearchTextBox.ForeColor = System.Drawing.Color.Gray
-        Me.SearchTextBox.Location = New System.Drawing.Point(80, 98)
+        Me.SearchTextBox.Location = New System.Drawing.Point(90, 122)
         Me.SearchTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.SearchTextBox.Name = "SearchTextBox"
-        Me.SearchTextBox.Size = New System.Drawing.Size(296, 22)
+        Me.SearchTextBox.Size = New System.Drawing.Size(332, 26)
         Me.SearchTextBox.TabIndex = 58
         '
         'buttonRefresh
         '
-        Me.buttonRefresh.Location = New System.Drawing.Point(393, 94)
+        Me.buttonRefresh.Location = New System.Drawing.Point(442, 118)
         Me.buttonRefresh.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.buttonRefresh.Name = "buttonRefresh"
-        Me.buttonRefresh.Size = New System.Drawing.Size(204, 34)
+        Me.buttonRefresh.Size = New System.Drawing.Size(230, 42)
         Me.buttonRefresh.TabIndex = 59
         Me.buttonRefresh.Text = "Refresh"
         Me.buttonRefresh.UseVisualStyleBackColor = True
@@ -327,19 +327,19 @@ Partial Class ViewCustomers
         'CustomerIDTextBox
         '
         Me.CustomerIDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomerBindingSource, "CustomerID", True))
-        Me.CustomerIDTextBox.Location = New System.Drawing.Point(948, 203)
+        Me.CustomerIDTextBox.Location = New System.Drawing.Point(1066, 254)
         Me.CustomerIDTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CustomerIDTextBox.Name = "CustomerIDTextBox"
         Me.CustomerIDTextBox.ReadOnly = True
-        Me.CustomerIDTextBox.Size = New System.Drawing.Size(297, 22)
+        Me.CustomerIDTextBox.Size = New System.Drawing.Size(334, 26)
         Me.CustomerIDTextBox.TabIndex = 60
         '
         'ViewCustomers
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
-        Me.ClientSize = New System.Drawing.Size(1300, 710)
+        Me.ClientSize = New System.Drawing.Size(1462, 888)
         Me.ControlBox = False
         Me.Controls.Add(Label1)
         Me.Controls.Add(CustomerIDLabel)
