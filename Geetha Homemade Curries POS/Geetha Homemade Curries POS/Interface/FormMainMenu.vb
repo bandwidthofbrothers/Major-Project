@@ -137,4 +137,12 @@
     Private Sub StaffToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StaffToolStripMenuItem.Click
         FormSetUp(FormStaff)
     End Sub
+
+    Private Sub ButtonHelp_Click(sender As Object, e As EventArgs) Handles ButtonHelp.Click
+        FormSetUp(FormHelp)
+    End Sub
+
+    Private Sub HelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HelpToolStripMenuItem.Click
+        FormSetUp(FormHelp)
+    End Sub
 End Class
