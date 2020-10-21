@@ -35,10 +35,5 @@
             MessageBox.Show("Error: Record added unsuccessfully. Ensure Fields are not blank")
         End If
 
-        TextBoxFirstName.Text = ""
-        TextBoxSurname.Text = ""
-        TextBoxPhoneNumber.Text = ""
-        TextBoxAmountDue.Text = ""
-
     End Sub
 End Class
