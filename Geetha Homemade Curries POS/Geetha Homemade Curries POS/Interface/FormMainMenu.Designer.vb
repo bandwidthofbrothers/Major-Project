@@ -34,13 +34,6 @@ Partial Class FormMainMenu
         Me.AccountsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExpensesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StaffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ButtonLogin = New System.Windows.Forms.Button()
-        Me.ButtonSale = New System.Windows.Forms.Button()
-        Me.ButtonReports = New System.Windows.Forms.Button()
-        Me.ButtonMenu = New System.Windows.Forms.Button()
-        Me.ButtonAccounts = New System.Windows.Forms.Button()
-        Me.ButtonExit = New System.Windows.Forms.Button()
-        Me.ButtonExpenses = New System.Windows.Forms.Button()
         Me.ToolTipLogin = New System.Windows.Forms.ToolTip(Me.components)
         Me.ToolTipSales = New System.Windows.Forms.ToolTip(Me.components)
         Me.ToolTipMenu = New System.Windows.Forms.ToolTip(Me.components)
@@ -48,15 +41,25 @@ Partial Class FormMainMenu
         Me.ToolTipExpenses = New System.Windows.Forms.ToolTip(Me.components)
         Me.ToolTipExit = New System.Windows.Forms.ToolTip(Me.components)
         Me.ToolTipReports = New System.Windows.Forms.ToolTip(Me.components)
-        Me.ButtonStaff = New System.Windows.Forms.Button()
         Me.ToolTipStaff = New System.Windows.Forms.ToolTip(Me.components)
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolTipHelp = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ButtonHelp = New System.Windows.Forms.Button()
+        Me.ButtonStaff = New System.Windows.Forms.Button()
+        Me.ButtonExpenses = New System.Windows.Forms.Button()
+        Me.ButtonExit = New System.Windows.Forms.Button()
+        Me.ButtonAccounts = New System.Windows.Forms.Button()
+        Me.ButtonMenu = New System.Windows.Forms.Button()
+        Me.ButtonReports = New System.Windows.Forms.Button()
+        Me.ButtonSale = New System.Windows.Forms.Button()
+        Me.ButtonLogin = New System.Windows.Forms.Button()
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip
         '
         Me.MenuStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AccessControlToolStripMenuItem, Me.SaleToolStripMenuItem, Me.MenuToolStripMenuItem, Me.ReportsToolStripMenuItem, Me.AccountsToolStripMenuItem, Me.ExpensesToolStripMenuItem, Me.StaffToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AccessControlToolStripMenuItem, Me.SaleToolStripMenuItem, Me.MenuToolStripMenuItem, Me.ReportsToolStripMenuItem, Me.AccountsToolStripMenuItem, Me.ExpensesToolStripMenuItem, Me.StaffToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.Name = "MenuStrip"
         Me.MenuStrip.Size = New System.Drawing.Size(1533, 28)
@@ -124,98 +127,27 @@ Partial Class FormMainMenu
         Me.StaffToolStripMenuItem.Size = New System.Drawing.Size(52, 24)
         Me.StaffToolStripMenuItem.Text = "Staff"
         '
-        'ButtonLogin
-        '
-        Me.ButtonLogin.BackgroundImage = CType(resources.GetObject("ButtonLogin.BackgroundImage"), System.Drawing.Image)
-        Me.ButtonLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ButtonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonLogin.Location = New System.Drawing.Point(1331, 31)
-        Me.ButtonLogin.Name = "ButtonLogin"
-        Me.ButtonLogin.Size = New System.Drawing.Size(202, 91)
-        Me.ButtonLogin.TabIndex = 3
-        Me.ToolTipLogin.SetToolTip(Me.ButtonLogin, "Login")
-        Me.ButtonLogin.UseVisualStyleBackColor = True
-        '
-        'ButtonSale
-        '
-        Me.ButtonSale.BackgroundImage = CType(resources.GetObject("ButtonSale.BackgroundImage"), System.Drawing.Image)
-        Me.ButtonSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ButtonSale.Enabled = False
-        Me.ButtonSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonSale.Location = New System.Drawing.Point(1331, 119)
-        Me.ButtonSale.Name = "ButtonSale"
-        Me.ButtonSale.Size = New System.Drawing.Size(202, 91)
-        Me.ButtonSale.TabIndex = 4
-        Me.ToolTipSales.SetToolTip(Me.ButtonSale, "Sales")
-        Me.ButtonSale.UseVisualStyleBackColor = True
-        '
-        'ButtonReports
-        '
-        Me.ButtonReports.BackgroundImage = CType(resources.GetObject("ButtonReports.BackgroundImage"), System.Drawing.Image)
-        Me.ButtonReports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ButtonReports.Enabled = False
-        Me.ButtonReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonReports.Location = New System.Drawing.Point(1331, 292)
-        Me.ButtonReports.Name = "ButtonReports"
-        Me.ButtonReports.Size = New System.Drawing.Size(202, 91)
-        Me.ButtonReports.TabIndex = 5
-        Me.ToolTipReports.SetToolTip(Me.ButtonReports, "Reports")
-        Me.ButtonReports.UseVisualStyleBackColor = True
-        '
-        'ButtonMenu
-        '
-        Me.ButtonMenu.BackgroundImage = CType(resources.GetObject("ButtonMenu.BackgroundImage"), System.Drawing.Image)
-        Me.ButtonMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ButtonMenu.Enabled = False
-        Me.ButtonMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonMenu.Location = New System.Drawing.Point(1331, 205)
-        Me.ButtonMenu.Name = "ButtonMenu"
-        Me.ButtonMenu.Size = New System.Drawing.Size(202, 91)
-        Me.ButtonMenu.TabIndex = 6
-        Me.ToolTipMenu.SetToolTip(Me.ButtonMenu, "Menu")
-        Me.ButtonMenu.UseVisualStyleBackColor = True
-        '
-        'ButtonAccounts
-        '
-        Me.ButtonAccounts.BackgroundImage = CType(resources.GetObject("ButtonAccounts.BackgroundImage"), System.Drawing.Image)
-        Me.ButtonAccounts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ButtonAccounts.Enabled = False
-        Me.ButtonAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonAccounts.Location = New System.Drawing.Point(1331, 380)
-        Me.ButtonAccounts.Name = "ButtonAccounts"
-        Me.ButtonAccounts.Size = New System.Drawing.Size(202, 91)
-        Me.ButtonAccounts.TabIndex = 7
-        Me.ToolTipAccounts.SetToolTip(Me.ButtonAccounts, "Accounts")
-        Me.ButtonAccounts.UseVisualStyleBackColor = True
-        '
-        'ButtonExit
-        '
-        Me.ButtonExit.BackgroundImage = CType(resources.GetObject("ButtonExit.BackgroundImage"), System.Drawing.Image)
-        Me.ButtonExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ButtonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonExit.Location = New System.Drawing.Point(1331, 644)
-        Me.ButtonExit.Name = "ButtonExit"
-        Me.ButtonExit.Size = New System.Drawing.Size(202, 91)
-        Me.ButtonExit.TabIndex = 9
-        Me.ToolTipExit.SetToolTip(Me.ButtonExit, "Exit")
-        Me.ButtonExit.UseVisualStyleBackColor = True
-        '
-        'ButtonExpenses
-        '
-        Me.ButtonExpenses.BackgroundImage = CType(resources.GetObject("ButtonExpenses.BackgroundImage"), System.Drawing.Image)
-        Me.ButtonExpenses.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ButtonExpenses.Enabled = False
-        Me.ButtonExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonExpenses.Location = New System.Drawing.Point(1331, 468)
-        Me.ButtonExpenses.Name = "ButtonExpenses"
-        Me.ButtonExpenses.Size = New System.Drawing.Size(202, 91)
-        Me.ButtonExpenses.TabIndex = 11
-        Me.ToolTipExpenses.SetToolTip(Me.ButtonExpenses, "Expenses")
-        Me.ButtonExpenses.UseVisualStyleBackColor = True
-        '
         'ToolTipLogin
         '
         Me.ToolTipLogin.Tag = ""
+        '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(53, 24)
+        Me.HelpToolStripMenuItem.Text = "Help"
+        '
+        'ButtonHelp
+        '
+        Me.ButtonHelp.BackgroundImage = CType(resources.GetObject("ButtonHelp.BackgroundImage"), System.Drawing.Image)
+        Me.ButtonHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonHelp.Location = New System.Drawing.Point(1331, 641)
+        Me.ButtonHelp.Name = "ButtonHelp"
+        Me.ButtonHelp.Size = New System.Drawing.Size(202, 91)
+        Me.ButtonHelp.TabIndex = 15
+        Me.ToolTipHelp.SetToolTip(Me.ButtonHelp, "Help")
+        Me.ButtonHelp.UseVisualStyleBackColor = True
         '
         'ButtonStaff
         '
@@ -230,12 +162,102 @@ Partial Class FormMainMenu
         Me.ToolTipStaff.SetToolTip(Me.ButtonStaff, "Staff")
         Me.ButtonStaff.UseVisualStyleBackColor = True
         '
+        'ButtonExpenses
+        '
+        Me.ButtonExpenses.BackgroundImage = CType(resources.GetObject("ButtonExpenses.BackgroundImage"), System.Drawing.Image)
+        Me.ButtonExpenses.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonExpenses.Enabled = False
+        Me.ButtonExpenses.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonExpenses.Location = New System.Drawing.Point(1331, 468)
+        Me.ButtonExpenses.Name = "ButtonExpenses"
+        Me.ButtonExpenses.Size = New System.Drawing.Size(202, 91)
+        Me.ButtonExpenses.TabIndex = 11
+        Me.ToolTipExpenses.SetToolTip(Me.ButtonExpenses, "Expenses")
+        Me.ButtonExpenses.UseVisualStyleBackColor = True
+        '
+        'ButtonExit
+        '
+        Me.ButtonExit.BackgroundImage = CType(resources.GetObject("ButtonExit.BackgroundImage"), System.Drawing.Image)
+        Me.ButtonExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonExit.Location = New System.Drawing.Point(1331, 729)
+        Me.ButtonExit.Name = "ButtonExit"
+        Me.ButtonExit.Size = New System.Drawing.Size(202, 91)
+        Me.ButtonExit.TabIndex = 9
+        Me.ToolTipExit.SetToolTip(Me.ButtonExit, "Exit")
+        Me.ButtonExit.UseVisualStyleBackColor = True
+        '
+        'ButtonAccounts
+        '
+        Me.ButtonAccounts.BackgroundImage = CType(resources.GetObject("ButtonAccounts.BackgroundImage"), System.Drawing.Image)
+        Me.ButtonAccounts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonAccounts.Enabled = False
+        Me.ButtonAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonAccounts.Location = New System.Drawing.Point(1331, 380)
+        Me.ButtonAccounts.Name = "ButtonAccounts"
+        Me.ButtonAccounts.Size = New System.Drawing.Size(202, 91)
+        Me.ButtonAccounts.TabIndex = 7
+        Me.ToolTipAccounts.SetToolTip(Me.ButtonAccounts, "Accounts")
+        Me.ButtonAccounts.UseVisualStyleBackColor = True
+        '
+        'ButtonMenu
+        '
+        Me.ButtonMenu.BackgroundImage = CType(resources.GetObject("ButtonMenu.BackgroundImage"), System.Drawing.Image)
+        Me.ButtonMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonMenu.Enabled = False
+        Me.ButtonMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonMenu.Location = New System.Drawing.Point(1331, 205)
+        Me.ButtonMenu.Name = "ButtonMenu"
+        Me.ButtonMenu.Size = New System.Drawing.Size(202, 91)
+        Me.ButtonMenu.TabIndex = 6
+        Me.ToolTipMenu.SetToolTip(Me.ButtonMenu, "Menu")
+        Me.ButtonMenu.UseVisualStyleBackColor = True
+        '
+        'ButtonReports
+        '
+        Me.ButtonReports.BackgroundImage = CType(resources.GetObject("ButtonReports.BackgroundImage"), System.Drawing.Image)
+        Me.ButtonReports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonReports.Enabled = False
+        Me.ButtonReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonReports.Location = New System.Drawing.Point(1331, 292)
+        Me.ButtonReports.Name = "ButtonReports"
+        Me.ButtonReports.Size = New System.Drawing.Size(202, 91)
+        Me.ButtonReports.TabIndex = 5
+        Me.ToolTipReports.SetToolTip(Me.ButtonReports, "Reports")
+        Me.ButtonReports.UseVisualStyleBackColor = True
+        '
+        'ButtonSale
+        '
+        Me.ButtonSale.BackgroundImage = CType(resources.GetObject("ButtonSale.BackgroundImage"), System.Drawing.Image)
+        Me.ButtonSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonSale.Enabled = False
+        Me.ButtonSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonSale.Location = New System.Drawing.Point(1331, 119)
+        Me.ButtonSale.Name = "ButtonSale"
+        Me.ButtonSale.Size = New System.Drawing.Size(202, 91)
+        Me.ButtonSale.TabIndex = 4
+        Me.ToolTipSales.SetToolTip(Me.ButtonSale, "Sales")
+        Me.ButtonSale.UseVisualStyleBackColor = True
+        '
+        'ButtonLogin
+        '
+        Me.ButtonLogin.BackgroundImage = CType(resources.GetObject("ButtonLogin.BackgroundImage"), System.Drawing.Image)
+        Me.ButtonLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ButtonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonLogin.Location = New System.Drawing.Point(1331, 31)
+        Me.ButtonLogin.Name = "ButtonLogin"
+        Me.ButtonLogin.Size = New System.Drawing.Size(202, 91)
+        Me.ButtonLogin.TabIndex = 3
+        Me.ToolTipLogin.SetToolTip(Me.ButtonLogin, "Login")
+        Me.ButtonLogin.UseVisualStyleBackColor = True
+        '
         'FormMainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(1533, 738)
+        Me.ClientSize = New System.Drawing.Size(1533, 823)
+        Me.Controls.Add(Me.ButtonHelp)
         Me.Controls.Add(Me.ButtonStaff)
         Me.Controls.Add(Me.ButtonExpenses)
         Me.Controls.Add(Me.ButtonExit)
@@ -284,4 +306,7 @@ Partial Class FormMainMenu
     Friend WithEvents ToolTipStaff As ToolTip
     Friend WithEvents LoginToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ButtonHelp As Button
+    Friend WithEvents ToolTipHelp As ToolTip
 End Class

@@ -100,4 +100,37 @@ C:\Users\XPS\Source\Repos\bandwidthofbrothers\Major-Project\Geetha Homemade Curr
 C:\Users\XPS\Source\Repos\bandwidthofbrothers\Major-Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormAddStaff.resources
 C:\Users\XPS\Source\Repos\bandwidthofbrothers\Major-Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormViewMenu.resources
 C:\Users\micha\OneDrive\Development\Major Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormOrders.resources
-C:\Users\XPS\Source\Repos\bandwidthofbrothers\Major-Project\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormOrders.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\bin\Debug\Geetha Homemade Curries POS.exe.config
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha Homemade Curries POS.exe
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha Homemade Curries POS.pdb
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\bin\Debug\Geetha Homemade Curries POS.exe
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\bin\Debug\Geetha Homemade Curries POS.pdb
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\bin\Debug\Geetha Homemade Curries POS.xml
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha Homemade Curries POS.vbprojResolveAssemblyReference.cache
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormAddCustomer.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormOrders.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormReport.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormReports.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormAddMenuItem.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSales.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSalesAccount.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSalesCategories.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSalesCheckout.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSalesCurries.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSalesDishes.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSalesDrinks.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSalesItems.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormStaff.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormAddStaff.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormAddExpense.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormViewMenu.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.ViewCustomers.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormLogin.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormMain.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormMainMenu.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormSplashScreen.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormViewExpenses.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.Resources.resources
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha Homemade Curries POS.vbproj.GenerateResource.Cache
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha Homemade Curries POS.xml
+D:\OneDrive\Development\Major Project Semester 2\Geetha Homemade Curries POS\Geetha Homemade Curries POS\obj\Debug\Geetha_Homemade_Curries_POS.FormHelp.resources

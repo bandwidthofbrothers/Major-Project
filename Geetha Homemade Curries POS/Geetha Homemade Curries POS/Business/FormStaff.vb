@@ -118,7 +118,7 @@ Public Class FormStaff
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) 
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 
@@ -177,37 +177,44 @@ Public Class FormStaff
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
 
         Dim EmployeeFullName As String = TextBox8.Text
-        Dim FirstName As String = EmployeeFullName.Substring(EmployeeFullName.IndexOf(" ") + 1)
-        Dim Surname As String = EmployeeFullName.Substring(0, EmployeeFullName.IndexOf(" "))
-
-        Dim conTwo As SqlConnection
-        Dim cndTwo As SqlCommand
-        conTwo = New SqlConnection("Server = 146.230.177.46\ist3; Database = group22; User Id = group22; Password = n24mc")
 
         Try
-            conTwo.Open()
-            cndTwo = New SqlCommand("SELECT EmployeeNumber, EmployeeFirstName, EmployeeSurname, EmployeePhoneNumber, JobTitle, Username FROM Employee WHERE EmployeeFirstName = @FirstName AND EmployeeSurname = @Surname", conTwo)
-            cndTwo.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = FirstName
-            cndTwo.Parameters.Add("@Surname", SqlDbType.VarChar).Value = Surname
+            Dim FirstName As String = EmployeeFullName.Substring(EmployeeFullName.IndexOf(" ") + 1)
+            Dim Surname As String = EmployeeFullName.Substring(0, EmployeeFullName.IndexOf(" "))
 
-            Dim drTwo As SqlDataReader
-            drTwo = cndTwo.ExecuteReader
+            Dim conTwo As SqlConnection
+            Dim cndTwo As SqlCommand
+            conTwo = New SqlConnection("Server = 146.230.177.46\ist3; Database = group22; User Id = group22; Password = n24mc")
 
-            Do While drTwo.Read
-                TextBox1.Text = drTwo.GetValue(0).ToString
-                TextBox2.Text = drTwo.GetValue(1)
-                TextBox3.Text = drTwo.GetValue(2)
-                TextBox4.Text = drTwo.GetValue(3)
-                TextBox5.Text = drTwo.GetValue(4)
-                TextBox6.Text = drTwo.GetValue(5)
-            Loop
+            Try
+                conTwo.Open()
+                cndTwo = New SqlCommand("SELECT EmployeeNumber, EmployeeFirstName, EmployeeSurname, EmployeePhoneNumber, JobTitle, Username FROM Employee WHERE EmployeeFirstName = @FirstName AND EmployeeSurname = @Surname", conTwo)
+                cndTwo.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = FirstName
+                cndTwo.Parameters.Add("@Surname", SqlDbType.VarChar).Value = Surname
+
+                Dim drTwo As SqlDataReader
+                drTwo = cndTwo.ExecuteReader
+
+                Do While drTwo.Read
+                    TextBox1.Text = drTwo.GetValue(0).ToString
+                    TextBox2.Text = drTwo.GetValue(1)
+                    TextBox3.Text = drTwo.GetValue(2)
+                    TextBox4.Text = drTwo.GetValue(3)
+                    TextBox5.Text = drTwo.GetValue(4)
+                    TextBox6.Text = drTwo.GetValue(5)
+                Loop
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+
+            conTwo.Close()
+            conTwo.Dispose()
+            conTwo = Nothing
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show("No results found")
         End Try
 
-        conTwo.Close()
-        conTwo.Dispose()
-        conTwo = Nothing
+
     End Sub
 
     Private Sub TextBox8_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles TextBox8.MouseDoubleClick
