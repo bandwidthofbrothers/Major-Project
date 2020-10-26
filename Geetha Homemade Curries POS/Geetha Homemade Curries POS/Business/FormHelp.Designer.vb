@@ -29,7 +29,7 @@ Partial Class FormHelp
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
-        Me.ClientSize = New System.Drawing.Size(579, 457)
+        Me.ClientSize = New System.Drawing.Size(771, 524)
         Me.ControlBox = False
         Me.Name = "FormHelp"
         Me.Text = "Help"
