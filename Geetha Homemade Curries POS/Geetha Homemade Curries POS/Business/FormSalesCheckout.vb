@@ -1,4 +1,7 @@
 ﻿Public Class FormSalesCheckout
+
+    Friend customerID = 4
+
     Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
         Me.Close()
     End Sub
@@ -46,7 +49,18 @@
                 Dim menuItemID As Integer = row.Cells(0).Value
                 Dim quantity As Integer = row.Cells(3).Value
                 'Fix Timespan conversion
-                CustomerOrderTableAdapter.Insert(SaleID, menuItemID, quantity, orderDate, orderTime, employeeNumber)
+
+                Dim choice = MessageBox.Show("Is this order placed over the phone?", "Phone Order?", MessageBoxButtons.YesNo)
+
+                Dim orderMethod As String = ""
+
+                If choice = DialogResult.Yes Then
+                    orderMethod = "Phone"
+                Else
+                    orderMethod = "Store"
+                End If
+
+                CustomerOrderTableAdapter.Insert(SaleID, menuItemID, quantity, orderDate, orderTime, employeeNumber, "In Progress", Me.customerID, orderMethod)
 
                 FormOrders.addMenuItems(SaleID, row.Cells(1).Value, quantity)
             End If

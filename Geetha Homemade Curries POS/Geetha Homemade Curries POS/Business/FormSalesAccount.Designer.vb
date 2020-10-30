@@ -24,20 +24,21 @@ Partial Class FormSalesAccount
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.CustomerDataGridView = New System.Windows.Forms.DataGridView()
+        Me.CustomerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ButtonProceed = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBoxSearch = New System.Windows.Forms.TextBox()
         Me.ButtonRefresh = New System.Windows.Forms.Button()
+        Me.CustomerTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.CustomerTableAdapter()
+        Me.TableAdapterManager = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.TableAdapterManager()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CustomerBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Group22DataSet = New Geetha_Homemade_Curries_POS.group22DataSet()
-        Me.CustomerTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.CustomerTableAdapter()
-        Me.TableAdapterManager = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.TableAdapterManager()
+        Me.AmountCap = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.CustomerDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CustomerBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Group22DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -49,14 +50,24 @@ Partial Class FormSalesAccount
         Me.CustomerDataGridView.AllowUserToDeleteRows = False
         Me.CustomerDataGridView.AutoGenerateColumns = False
         Me.CustomerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.CustomerDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
+        Me.CustomerDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.AmountCap})
         Me.CustomerDataGridView.DataSource = Me.CustomerBindingSource
         Me.CustomerDataGridView.Location = New System.Drawing.Point(12, 125)
         Me.CustomerDataGridView.Name = "CustomerDataGridView"
         Me.CustomerDataGridView.ReadOnly = True
         Me.CustomerDataGridView.RowTemplate.Height = 24
-        Me.CustomerDataGridView.Size = New System.Drawing.Size(588, 371)
+        Me.CustomerDataGridView.Size = New System.Drawing.Size(730, 371)
         Me.CustomerDataGridView.TabIndex = 1
+        '
+        'CustomerBindingSource
+        '
+        Me.CustomerBindingSource.DataMember = "Customer"
+        Me.CustomerBindingSource.DataSource = Me.Group22DataSet
+        '
+        'Group22DataSet
+        '
+        Me.Group22DataSet.DataSetName = "group22DataSet"
+        Me.Group22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label1
         '
@@ -72,7 +83,7 @@ Partial Class FormSalesAccount
         '
         'ButtonProceed
         '
-        Me.ButtonProceed.Location = New System.Drawing.Point(440, 517)
+        Me.ButtonProceed.Location = New System.Drawing.Point(582, 515)
         Me.ButtonProceed.Name = "ButtonProceed"
         Me.ButtonProceed.Size = New System.Drawing.Size(160, 41)
         Me.ButtonProceed.TabIndex = 17
@@ -105,6 +116,21 @@ Partial Class FormSalesAccount
         Me.ButtonRefresh.TabIndex = 20
         Me.ButtonRefresh.Text = "Refresh"
         Me.ButtonRefresh.UseVisualStyleBackColor = True
+        '
+        'CustomerTableAdapter
+        '
+        Me.CustomerTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CustomerOrderTableAdapter = Nothing
+        Me.TableAdapterManager.CustomerTableAdapter = Me.CustomerTableAdapter
+        Me.TableAdapterManager.EmployeeTableAdapter = Nothing
+        Me.TableAdapterManager.IngredientTableAdapter = Nothing
+        Me.TableAdapterManager.MenuItemIngredientTableAdapter = Nothing
+        Me.TableAdapterManager.MenuItemTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'DataGridViewTextBoxColumn1
         '
@@ -146,37 +172,19 @@ Partial Class FormSalesAccount
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         Me.DataGridViewTextBoxColumn5.ReadOnly = True
         '
-        'CustomerBindingSource
+        'AmountCap
         '
-        Me.CustomerBindingSource.DataMember = "Customer"
-        Me.CustomerBindingSource.DataSource = Me.Group22DataSet
-        '
-        'Group22DataSet
-        '
-        Me.Group22DataSet.DataSetName = "group22DataSet"
-        Me.Group22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'CustomerTableAdapter
-        '
-        Me.CustomerTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.CustomerOrderTableAdapter = Nothing
-        Me.TableAdapterManager.CustomerTableAdapter = Me.CustomerTableAdapter
-        Me.TableAdapterManager.EmployeeTableAdapter = Nothing
-        Me.TableAdapterManager.IngredientTableAdapter = Nothing
-        Me.TableAdapterManager.MenuItemIngredientTableAdapter = Nothing
-        Me.TableAdapterManager.MenuItemTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.AmountCap.DataPropertyName = "AmountCap"
+        Me.AmountCap.HeaderText = "Amount Cap"
+        Me.AmountCap.Name = "AmountCap"
+        Me.AmountCap.ReadOnly = True
         '
         'FormSalesAccount
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
-        Me.ClientSize = New System.Drawing.Size(618, 568)
+        Me.ClientSize = New System.Drawing.Size(754, 568)
         Me.Controls.Add(Me.ButtonRefresh)
         Me.Controls.Add(Me.TextBoxSearch)
         Me.Controls.Add(Me.Label2)
@@ -199,14 +207,15 @@ Partial Class FormSalesAccount
     Friend WithEvents CustomerTableAdapter As group22DataSetTableAdapters.CustomerTableAdapter
     Friend WithEvents TableAdapterManager As group22DataSetTableAdapters.TableAdapterManager
     Friend WithEvents CustomerDataGridView As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents Label1 As Label
     Friend WithEvents ButtonProceed As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBoxSearch As TextBox
     Friend WithEvents ButtonRefresh As Button
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents AmountCap As DataGridViewTextBoxColumn
 End Class

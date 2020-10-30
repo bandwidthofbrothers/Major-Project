@@ -48,7 +48,7 @@ Public Class ViewCustomers
         Try
             Dim CustomerID As Integer = CustomerOrderDataGridView.CurrentRow.Cells(0).Value
 
-            CustomerTableAdapter.Delete(CustomerID)
+            CustomerTableAdapter.DeleteQuery(CustomerID)
 
             CustomerTableAdapter.Fill(Me.Group22DataSet.Customer)
 
@@ -64,16 +64,24 @@ Public Class ViewCustomers
 
         If Not CustomerIDTextBox.Text = "" Then
             'Add try catch statement
-            Dim ID As Integer = Integer.Parse(CustomerIDTextBox.Text)
-            Dim FirstName As String = FirstNameTextBox.Text
-            Dim Surname As String = SurnameTextBox.Text
-            Dim PhoneNumber As String = PhoneNumberTextBox.Text
-            Dim AmountDue As Double = Double.Parse(AmountDueTextBox.Text)
 
-            CustomerTableAdapter.Update1(FirstName, Surname, PhoneNumber, AmountDue, ID)
-            CustomerTableAdapter.Fill(Me.Group22DataSet.Customer)
+            Try
+                Dim ID As Integer = Integer.Parse(CustomerIDTextBox.Text)
+                Dim FirstName As String = FirstNameTextBox.Text
+                Dim Surname As String = SurnameTextBox.Text
+                Dim PhoneNumber As String = PhoneNumberTextBox.Text
+                Dim AmountDue As Double = Double.Parse(AmountDueTextBox.Text)
+                Dim AmountCap As Double = Double.Parse(TextBoxAmountCap.Text)
+                Dim PhysicalAddress As String = TextBoxPhysicalAddress.Text
 
-            MessageBox.Show("Record updated successfully", "Update Successful")
+                CustomerTableAdapter.Update1(FirstName, Surname, PhoneNumber, AmountCap, PhysicalAddress, ID)
+                CustomerTableAdapter.Fill(Me.Group22DataSet.Customer)
+
+                MessageBox.Show("Record updated successfully", "Update Successful")
+            Catch ex As Exception
+                MessageBox.Show("Error: Please enter all the fields with valid information", "Error")
+            End Try
+
         Else
             MessageBox.Show("Error: No record selected", "Error")
         End If
@@ -95,4 +103,5 @@ Public Class ViewCustomers
     Private Sub CustomerOrderDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles CustomerOrderDataGridView.CellContentClick
 
     End Sub
+
 End Class

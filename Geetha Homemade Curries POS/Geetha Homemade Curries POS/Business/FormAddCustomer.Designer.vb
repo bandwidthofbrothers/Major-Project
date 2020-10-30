@@ -33,6 +33,14 @@ Partial Class FormAddCustomer
         Me.ButtonClose = New System.Windows.Forms.Button()
         Me.ButtonAdd = New System.Windows.Forms.Button()
         Me.CustomerTableAdapter = New Geetha_Homemade_Curries_POS.group22DataSetTableAdapters.CustomerTableAdapter()
+        Me.TextBoxAmountCap = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TextBoxPhysicalAddress = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBoxEmailAddress = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBoxPassword = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'TextBoxFirstName
@@ -113,7 +121,7 @@ Partial Class FormAddCustomer
         '
         'ButtonClose
         '
-        Me.ButtonClose.Location = New System.Drawing.Point(45, 300)
+        Me.ButtonClose.Location = New System.Drawing.Point(48, 567)
         Me.ButtonClose.Name = "ButtonClose"
         Me.ButtonClose.Size = New System.Drawing.Size(100, 37)
         Me.ButtonClose.TabIndex = 14
@@ -122,7 +130,7 @@ Partial Class FormAddCustomer
         '
         'ButtonAdd
         '
-        Me.ButtonAdd.Location = New System.Drawing.Point(218, 300)
+        Me.ButtonAdd.Location = New System.Drawing.Point(221, 567)
         Me.ButtonAdd.Name = "ButtonAdd"
         Me.ButtonAdd.Size = New System.Drawing.Size(306, 36)
         Me.ButtonAdd.TabIndex = 13
@@ -133,12 +141,96 @@ Partial Class FormAddCustomer
         '
         Me.CustomerTableAdapter.ClearBeforeFill = True
         '
+        'TextBoxAmountCap
+        '
+        Me.TextBoxAmountCap.Location = New System.Drawing.Point(218, 311)
+        Me.TextBoxAmountCap.Name = "TextBoxAmountCap"
+        Me.TextBoxAmountCap.Size = New System.Drawing.Size(306, 22)
+        Me.TextBoxAmountCap.TabIndex = 16
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(41, 310)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(89, 17)
+        Me.Label5.TabIndex = 15
+        Me.Label5.Text = "Amount Cap:"
+        '
+        'TextBoxPhysicalAddress
+        '
+        Me.TextBoxPhysicalAddress.Location = New System.Drawing.Point(218, 371)
+        Me.TextBoxPhysicalAddress.Name = "TextBoxPhysicalAddress"
+        Me.TextBoxPhysicalAddress.Size = New System.Drawing.Size(306, 22)
+        Me.TextBoxPhysicalAddress.TabIndex = 18
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(41, 370)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(120, 17)
+        Me.Label6.TabIndex = 17
+        Me.Label6.Text = "Physical Address:"
+        '
+        'TextBoxEmailAddress
+        '
+        Me.TextBoxEmailAddress.Location = New System.Drawing.Point(218, 441)
+        Me.TextBoxEmailAddress.Name = "TextBoxEmailAddress"
+        Me.TextBoxEmailAddress.Size = New System.Drawing.Size(306, 22)
+        Me.TextBoxEmailAddress.TabIndex = 20
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(41, 440)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(102, 17)
+        Me.Label7.TabIndex = 19
+        Me.Label7.Text = "Email Address:"
+        '
+        'TextBoxPassword
+        '
+        Me.TextBoxPassword.Location = New System.Drawing.Point(218, 501)
+        Me.TextBoxPassword.Name = "TextBoxPassword"
+        Me.TextBoxPassword.Size = New System.Drawing.Size(306, 22)
+        Me.TextBoxPassword.TabIndex = 22
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(41, 500)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(73, 17)
+        Me.Label8.TabIndex = 21
+        Me.Label8.Text = "Password:"
+        '
         'FormAddCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
-        Me.ClientSize = New System.Drawing.Size(600, 366)
+        Me.ClientSize = New System.Drawing.Size(600, 646)
+        Me.Controls.Add(Me.TextBoxPassword)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.TextBoxEmailAddress)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.TextBoxPhysicalAddress)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.TextBoxAmountCap)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.ButtonClose)
         Me.Controls.Add(Me.ButtonAdd)
         Me.Controls.Add(Me.TextBoxAmountDue)
@@ -168,4 +260,12 @@ Partial Class FormAddCustomer
     Friend WithEvents ButtonClose As Button
     Friend WithEvents ButtonAdd As Button
     Friend WithEvents CustomerTableAdapter As group22DataSetTableAdapters.CustomerTableAdapter
+    Friend WithEvents TextBoxAmountCap As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents TextBoxPhysicalAddress As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents TextBoxEmailAddress As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents TextBoxPassword As TextBox
+    Friend WithEvents Label8 As Label
 End Class

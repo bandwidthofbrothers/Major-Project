@@ -11,13 +11,19 @@
         Dim conversionSuccessful As Boolean = False
         Dim AmountDue As Decimal = Decimal.TryParse(TextBoxAmountDue.Text, conversionSuccessful)
 
+        Dim conversionSuccessful2 As Boolean = False
+        Dim AmountCap As Decimal = Decimal.TryParse(TextBoxAmountCap.Text, conversionSuccessful2)
 
+        Dim PhysicalAddress As String = TextBoxPhysicalAddress.Text
+        Dim EmailAddress As String = TextBoxEmailAddress.Text
+        Dim Password As String = TextBoxPassword.Text
 
-        If (conversionSuccessful = True) And (TextBoxPhoneNumber.Text <> "") And (TextBoxFirstName.Text <> "") And (TextBoxSurname.Text <> "") Then
+        If (conversionSuccessful2 = True) And (conversionSuccessful = True) And (TextBoxPhoneNumber.Text <> "") And (TextBoxFirstName.Text <> "") And (TextBoxSurname.Text <> "") Then
             Try
                 AmountDue = Decimal.Parse(TextBoxAmountDue.Text, System.Globalization.NumberFormatInfo.CurrentInfo)
+                AmountCap = Decimal.Parse(TextBoxAmountCap.Text, System.Globalization.NumberFormatInfo.CurrentInfo)
 
-                CustomerTableAdapter.insert1(FirstName, Surname, PhoneNumber, AmountDue)
+                CustomerTableAdapter.insert1(FirstName, Surname, PhoneNumber, AmountDue, AmountCap, PhysicalAddress, EmailAddress, Password)
 
                 MessageBox.Show("Record added successfully")
 
