@@ -7,7 +7,7 @@ Public Class FormPayAccounts
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        command = New SqlCommand("SELECT CustomerID, FirstName, Surname, PhoneNumber, AmountDue, AmountCap FROM Customer", connection)
+        command = New SqlCommand("SELECT CustomerID, FirstName, Surname, PhoneNumber, AmountDue, AmountCap FROM Customer WHERE  (CustomerID <> 4)", connection)
         PopulateGrid(command)
 
     End Sub
@@ -26,7 +26,7 @@ Public Class FormPayAccounts
 
         Dim search As String = TextBox1.Text
 
-        Dim command As New SqlCommand("SELECT CustomerID, FirstName, Surname, PhoneNumber, AmountDue, AmountCap FROM Customer WHERE PhoneNumber LIKE @PhoneNumber + '%'", connection)
+        Dim command As New SqlCommand("SELECT CustomerID, FirstName, Surname, PhoneNumber, AmountDue, AmountCap FROM Customer WHERE PhoneNumber LIKE @PhoneNumber + '%' AND (CustomerID <> 4)", connection)
         command.Parameters.Add("@PhoneNumber", SqlDbType.VarChar).Value = search
 
         PopulateGrid(command)
@@ -115,7 +115,7 @@ Public Class FormPayAccounts
         TextBox3.Text = ""
         TextBox4.Text = ""
 
-        command = New SqlCommand("SELECT CustomerID, FirstName, Surname, PhoneNumber, AmountDue, AmountCap FROM Customer", connection)
+        command = New SqlCommand("SELECT CustomerID, FirstName, Surname, PhoneNumber, AmountDue, AmountCap FROM Customer WHERE (CustomerID <> 4)", connection)
         PopulateGrid(command)
 
     End Sub
