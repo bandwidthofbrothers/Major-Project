@@ -163,9 +163,10 @@ Partial Class FormPayAccounts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(16.0!, 31.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImage = Global.Geetha_Homemade_Curries_POS.My.Resources.Resources.Background
-        Me.ClientSize = New System.Drawing.Size(2584, 1077)
+        Me.ClientSize = New System.Drawing.Size(2547, 1065)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TextBox3)

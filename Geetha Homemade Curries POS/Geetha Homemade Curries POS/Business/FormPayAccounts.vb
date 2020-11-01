@@ -101,7 +101,7 @@ Public Class FormPayAccounts
                     MessageBox.Show("Amount Due Not Updated")
                 End If
             Catch ex As Exception
-                MsgBox(ex.Message)
+                '' MsgBox(ex.Message)
             End Try
         Else
             MessageBox.Show("Update Cancelled")
@@ -117,6 +117,11 @@ Public Class FormPayAccounts
 
         command = New SqlCommand("SELECT CustomerID, FirstName, Surname, PhoneNumber, AmountDue, AmountCap FROM Customer WHERE (CustomerID <> 4)", connection)
         PopulateGrid(command)
+
+        With FormMainMenu
+            .FormSetUp(FormMain)
+            .FormSetUp(ViewCustomers)
+        End With
 
     End Sub
 
