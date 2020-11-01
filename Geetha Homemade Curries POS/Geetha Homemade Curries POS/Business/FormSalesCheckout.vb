@@ -60,6 +60,30 @@
                     orderMethod = "Store"
                 End If
 
+                choice = MessageBox.Show("Is this a cash sale?", "Phone Order?", MessageBoxButtons.YesNo)
+                Dim change As Double = 0
+
+                If choice = DialogResult.Yes Then
+
+                    Dim incorrectInput As Boolean = True
+
+                    While incorrectInput
+                        Dim check As Boolean = False
+                        Dim cash As Double = Double.TryParse(InputBox("Cash:"), check)
+
+
+                        If check = True Then
+                            change = cash - FormSales.totalDue
+                            incorrectInput = False
+                        Else
+                            MessageBox.Show("Error: Please enter the correct amount")
+                        End If
+
+                    End While
+
+                    MessageBox.Show("Change: " + change.ToString("c"))
+                End If
+
                 CustomerOrderTableAdapter.Insert(SaleID, menuItemID, quantity, orderDate, orderTime, employeeNumber, "In Progress", Me.customerID, orderMethod)
 
                 FormOrders.addMenuItems(SaleID, row.Cells(1).Value, quantity)

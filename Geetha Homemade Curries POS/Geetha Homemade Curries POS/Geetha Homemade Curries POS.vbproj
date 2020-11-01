@@ -79,6 +79,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Business\FormPayAccounts.Designer.vb">
+      <DependentUpon>FormPayAccounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Business\FormPayAccounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Business\FormAddCustomer.Designer.vb">
       <DependentUpon>FormAddCustomer.vb</DependentUpon>
     </Compile>
@@ -255,6 +261,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Business\FormPayAccounts.resx">
+      <DependentUpon>FormPayAccounts.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Business\FormAddCustomer.resx">
       <DependentUpon>FormAddCustomer.vb</DependentUpon>
     </EmbeddedResource>

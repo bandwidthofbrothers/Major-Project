@@ -104,4 +104,7 @@ Public Class ViewCustomers
 
     End Sub
 
+    Private Sub ButtonPayAccounts_Click(sender As Object, e As EventArgs) Handles ButtonPayAccounts.Click
+        FormPayAccounts.Show()
+    End Sub
 End Class
