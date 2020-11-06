@@ -64,19 +64,31 @@
             FormSetUp(FormMain)
 
             ButtonSale.Enabled = False
+            ButtonSale.Visible = False
             ButtonMenu.Enabled = False
+            ButtonMenu.Visible = False
             ButtonReports.Enabled = False
+            ButtonReports.Visible = False
             ButtonAccounts.Enabled = False
+            ButtonAccounts.Visible = False
             ButtonExpenses.Enabled = False
+            ButtonExpenses.Visible = False
             ButtonStaff.Enabled = False
+            ButtonStaff.Visible = False
 
             With MenuStrip
                 .Items(1).Enabled = False
+                .Items(1).Visible = False
                 .Items(2).Enabled = False
+                .Items(2).Visible = False
                 .Items(3).Enabled = False
+                .Items(3).Visible = False
                 .Items(4).Enabled = False
+                .Items(4).Visible = False
                 .Items(5).Enabled = False
+                .Items(5).Visible = False
                 .Items(6).Enabled = False
+                .Items(6).Visible = False
             End With
 
             LoginToolStripMenuItem.Text = "Login"

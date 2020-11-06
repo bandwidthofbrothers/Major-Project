@@ -22,19 +22,31 @@
             If jobTitle = "Manager" Or jobTitle = "Administrator" Then
                 With FormMainMenu
                     .ButtonSale.Enabled = True
+                    .ButtonSale.Visible = True
                     .ButtonMenu.Enabled = True
+                    .ButtonMenu.Visible = True
                     .ButtonReports.Enabled = True
+                    .ButtonReports.Visible = True
                     .ButtonAccounts.Enabled = True
+                    .ButtonAccounts.Visible = True
                     .ButtonExpenses.Enabled = True
+                    .ButtonExpenses.Visible = True
                     .ButtonStaff.Enabled = True
+                    .ButtonStaff.Visible = True
 
                     With .MenuStrip
                         .Items(1).Enabled = True
+                        .Items(1).Visible = True
                         .Items(2).Enabled = True
+                        .Items(2).Visible = True
                         .Items(3).Enabled = True
+                        .Items(3).Visible = True
                         .Items(4).Enabled = True
+                        .Items(4).Visible = True
                         .Items(5).Enabled = True
+                        .Items(5).Visible = True
                         .Items(6).Enabled = True
+                        .Items(6).Visible = True
                     End With
 
                     .AccessControlToolStripMenuItem.DropDownItems(0).Text = "Sign Out"
@@ -44,9 +56,11 @@
             Else
                 With FormMainMenu
                     .ButtonSale.Enabled = True
+                    .ButtonSale.Visible = True
 
                     With .MenuStrip
                         .Items(1).Enabled = True
+                        .Items(1).Visible = True
                     End With
 
                     .AccessControlToolStripMenuItem.DropDownItems(0).Text = "Sign Out"
