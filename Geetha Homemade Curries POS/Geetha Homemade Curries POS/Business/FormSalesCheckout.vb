@@ -1,6 +1,7 @@
 ﻿Public Class FormSalesCheckout
 
     Friend customerID = 4
+    Dim change As Decimal = 0.0
 
     Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
         Me.Close()
@@ -68,20 +69,26 @@
                     Dim incorrectInput As Boolean = True
 
                     While incorrectInput
-                        Dim check As Boolean = False
-                        Dim cash As Double = Double.TryParse(InputBox("Cash:"), check)
 
+                        Try
+                            Dim cash As Decimal = Convert.ToDecimal(InputBox("Cash"))
 
-                        If check = True Then
                             change = cash - FormSales.totalDue
                             incorrectInput = False
-                        Else
-                            MessageBox.Show("Error: Please enter the correct amount")
-                        End If
+
+                            If change < 0 Then
+                                incorrectInput = True
+                                MessageBox.Show("Invalid Amount, please enter the correct amount")
+                            End If
+
+                        Catch ex As Exception
+                            MessageBox.Show("Please enter the correct amount")
+                        End Try
 
                     End While
 
                     MessageBox.Show("Change: " + change.ToString("c"))
+                    Me.change = change
                 End If
 
                 CustomerOrderTableAdapter.Insert(SaleID, menuItemID, quantity, orderDate, orderTime, employeeNumber, "In Progress", Me.customerID, orderMethod)
@@ -131,6 +138,11 @@
 
         y += 25
         e.Graphics.DrawString("Total: " + LabelTotal.Text, ReceiptFont, Brushes.Black, 100, y)
+
+        Dim change = Me.change.ToString("c")
+
+        y += 25
+        e.Graphics.DrawString("Change: " + change, ReceiptFont, Brushes.Black, 100, y)
 
         y += 25
         e.Graphics.DrawString("==============================", ReceiptFont, Brushes.Black, 100, y)
